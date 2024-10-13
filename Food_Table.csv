@@ -1,306 +1,306 @@
 id,food name,quantity,calories,protein,fat,saturated fat,fiber,carbohydrates,category,frequent,recent
-1,Cow's Milk,240.00,149.00,8.00,8.00,5.00,0.00,12.00,Dairy products,FALSE,FALSE
-2,Skim Milk,240.00,83.00,8.00,0.20,0.10,0.00,12.00,Dairy products,FALSE,FALSE
-3,Buttermilk,240.00,98.00,8.00,2.00,1.00,0.00,12.00,Dairy products,FALSE,FALSE
-4,Evaporated Milk,240.00,338.00,17.00,19.00,12.00,0.00,30.00,Dairy products,FALSE,FALSE
-5,Fortified Milk,240.00,150.00,8.00,8.00,5.00,0.00,12.00,Dairy products,FALSE,FALSE
-6,Powdered Milk,30.00,360.00,36.00,1.00,0.50,0.00,56.00,Dairy products,FALSE,FALSE
-7,Skim Milk Powder,30.00,80.00,8.00,0.40,0.20,0.00,12.00,Dairy products,FALSE,FALSE
-8,Goat's Milk,240.00,168.00,9.00,10.00,6.00,0.00,11.00,Dairy products,FALSE,FALSE
-9,Ice Cream,66.00,137.00,2.00,7.00,4.00,0.00,14.00,Dairy products,FALSE,FALSE
-10,Cocoa Powder,5.00,12.00,1.00,0.50,0.20,1.00,3.00,Dairy products,FALSE,FALSE
-11,Skim Milk,240.00,83.00,8.00,0.20,0.10,0.00,12.00,Dairy products,FALSE,FALSE
-12,Cornstarch,30.00,100.00,0.00,0.00,0.00,0.00,30.00,Dairy products,FALSE,FALSE
-13,Custard,120.00,150.00,4.00,6.00,4.00,0.00,20.00,Dairy products,FALSE,FALSE
-14,Ice Cream,66.00,137.00,2.00,7.00,4.00,0.00,14.00,Dairy products,FALSE,FALSE
-15,Ice Milk,66.00,110.00,3.00,4.00,2.00,0.00,16.00,Dairy products,FALSE,FALSE
-16,Cream (Half-and-Half),30.00,60.00,1.00,5.00,3.00,0.00,2.00,Dairy products,FALSE,FALSE
-17,Cheese (Uncreamed),28.00,113.00,7.00,9.00,6.00,0.00,1.00,Dairy products,FALSE,FALSE
-18,Cheddar,28.00,113.00,7.00,9.00,6.00,0.00,1.00,Dairy products,FALSE,FALSE
-19,Cheddar (Grated),28.00,113.00,7.00,9.00,6.00,0.00,1.00,Dairy products,FALSE,FALSE
-20,Cream Cheese,28.00,99.00,2.00,9.00,5.00,0.00,2.00,Dairy products,FALSE,FALSE
-21,Processed Cheese,28.00,73.00,5.00,5.00,3.00,0.00,1.00,Dairy products,FALSE,FALSE
-22,Roquefort Type Cheese,28.00,100.00,6.00,8.00,5.00,0.00,1.00,Dairy products,FALSE,FALSE
-23,Swiss Cheese,28.00,106.00,8.00,8.00,5.00,0.00,1.00,Dairy products,FALSE,FALSE
-24,Eggs (Raw),50.00,72.00,6.00,5.00,1.60,0.00,0.60,Dairy products,FALSE,FALSE
-25,Eggs (Scrambled or Fried),50.00,91.00,6.00,7.00,2.00,0.00,1.00,Dairy products,FALSE,FALSE
-26,Egg Yolks,17.00,55.00,3.00,4.50,1.60,0.00,0.60,Dairy products,FALSE,FALSE
-27,Butter,14.00,102.00,0.10,11.50,7.20,0.00,0.10,Fats/ Oils/ Shortenings,FALSE,FALSE
-28,Hydrogenated Cooking Fat,14.00,117.00,0.00,13.50,5.30,0.00,0.00,Fats/ Oils/ Shortenings,FALSE,FALSE
-29,Lard,14.00,115.00,0.20,13.00,5.20,0.00,0.00,Fats/ Oils/ Shortenings,FALSE,FALSE
-30,Margarine,14.00,100.00,0.10,11.50,3.50,0.00,0.10,Fats/ Oils/ Shortenings,FALSE,FALSE
-31,Margarine (2 pats),10.00,70.00,0.00,8.00,2.50,0.00,0.00,Fats/ Oils/ Shortenings,FALSE,FALSE
-32,Mayonnaise,15.00,100.00,0.40,11.00,1.50,0.00,0.20,Fats/ Oils/ Shortenings,FALSE,FALSE
-33,Corn Oil,14.00,120.00,0.00,14.00,1.50,0.00,0.00,Fats/ Oils/ Shortenings,FALSE,FALSE
-34,Olive Oil,14.00,120.00,0.00,14.00,2.00,0.00,0.00,Fats/ Oils/ Shortenings,FALSE,FALSE
-35,Safflower Seed Oil,14.00,120.00,0.00,14.00,1.20,0.00,0.00,Fats/ Oils/ Shortenings,FALSE,FALSE
-36,French Dressing,15.00,73.00,0.10,7.50,1.00,0.00,1.50,Fats/ Oils/ Shortenings,FALSE,FALSE
-37,Thousand Island Sauce,15.00,85.00,0.10,8.00,1.00,0.00,2.50,Fats/ Oils/ Shortenings,FALSE,FALSE
-38,Salt Pork,28.00,107.00,7.00,9.60,3.40,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-39,Bacon,28.00,42.00,3.00,3.30,1.10,0.00,0.10,Meat/ Poultry,FALSE,FALSE
-40,Beef,85.00,250.00,26.00,17.00,7.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-41,Hamburger,85.00,250.00,18.00,18.00,7.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-42,Ground Lean Beef,85.00,230.00,26.00,14.00,6.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-43,Roast Beef,85.00,240.00,25.00,16.00,6.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-44,Steak,85.00,279.00,24.00,20.00,9.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-45,"Steak (Lean, Round)",85.00,230.00,25.00,11.00,4.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-46,Corned Beef,85.00,213.00,26.00,11.00,4.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-47,Corned Beef Hash (Canned),120.00,300.00,12.00,22.00,8.00,2.00,22.00,Meat/ Poultry,FALSE,FALSE
-48,Corned Beef Hash (Dried),28.00,88.00,9.00,5.50,2.20,0.00,0.80,Meat/ Poultry,FALSE,FALSE
-49,Pot-Pie,120.00,350.00,12.00,20.00,6.00,1.00,35.00,Meat/ Poultry,FALSE,FALSE
-50,Corned Beef Hash (Stew),240.00,305.00,12.00,22.00,7.00,3.00,20.00,Meat/ Poultry,FALSE,FALSE
-51,Fried Chicken (Breast or Leg),85.00,250.00,24.00,16.00,6.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-52,Roasted Chicken,85.00,190.00,30.00,8.00,2.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-53,Chicken Livers (Fried),85.00,165.00,25.00,7.00,2.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-54,Duck (Domestic),85.00,337.00,25.00,27.00,9.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-55,Lamb Chop (Broiled),85.00,290.00,23.00,22.00,10.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-56,Leg (Roasted),85.00,220.00,31.00,10.00,4.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-57,Shoulder (Braised),85.00,265.00,22.00,19.00,8.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-58,Pork Chop (1 Thick),85.00,265.00,24.00,18.00,7.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-59,Ham (Pan-Broiled),85.00,160.00,21.00,7.00,3.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-60,Ham (As),85.00,145.00,18.00,6.00,2.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-61,"Ham (Canned, Spiced)",85.00,180.00,13.00,12.00,5.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-62,Pork Roast,85.00,250.00,27.00,14.00,6.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-63,Pork Sausage,85.00,300.00,13.00,26.00,10.00,0.00,2.00,Meat/ Poultry,FALSE,FALSE
-64,Turkey (Roasted),85.00,135.00,30.00,1.00,0.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-65,Veal (Roast),85.00,270.00,27.00,18.00,7.00,0.00,0.00,Meat/ Poultry,FALSE,FALSE
-66,Clams,85.00,70.00,13.00,1.00,0.00,0.00,5.00,Fish/ Seafood,FALSE,FALSE
-67,Cod,85.00,90.00,20.00,1.00,0.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-68,Crab Meat,85.00,80.00,16.00,1.00,0.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-69,Fish Sticks (Fried),85.00,210.00,10.00,10.00,1.00,1.00,24.00,Fish/ Seafood,FALSE,FALSE
-70,Flounder,85.00,90.00,19.00,1.00,0.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-71,Haddock,85.00,90.00,20.00,1.00,0.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-72,Halibut,85.00,140.00,30.00,4.00,1.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-73,Herring,85.00,170.00,20.00,10.00,2.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-74,Lobster,85.00,80.00,16.00,1.00,0.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-75,Mackerel,85.00,230.00,21.00,16.00,3.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-76,Oysters,85.00,70.00,8.00,2.00,0.00,0.00,5.00,Fish/ Seafood,FALSE,FALSE
-77,Oyster Stew,85.00,120.00,10.00,8.00,2.00,0.00,6.00,Fish/ Seafood,FALSE,FALSE
-78,Salmon,85.00,200.00,23.00,13.00,3.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-79,Sardines,85.00,200.00,25.00,10.00,2.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-80,Scallops,85.00,90.00,19.00,1.00,0.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-81,Shad,85.00,180.00,19.00,10.00,2.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-82,Shrimp,85.00,80.00,18.00,1.00,0.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-83,Swordfish,85.00,180.00,23.00,8.00,2.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-84,Tuna,85.00,130.00,28.00,1.00,0.00,0.00,0.00,Fish/ Seafood,FALSE,FALSE
-85,Artichoke,100.00,44.00,2.00,0.00,0.00,2.00,10.00,Vegetables,FALSE,FALSE
-86,Asparagus,85.00,20.00,2.00,0.00,0.00,2.00,4.00,Vegetables,FALSE,FALSE
-87,Beans,85.00,130.00,8.00,0.50,0.00,6.00,22.00,Vegetables,FALSE,FALSE
-88,Lima Beans,85.00,120.00,7.00,0.50,0.00,6.00,22.00,Vegetables,FALSE,FALSE
-89,"Lima (Dry, Cooked)",85.00,120.00,7.00,0.50,0.00,6.00,22.00,Vegetables,FALSE,FALSE
-90,Navy Beans (Baked with Pork),85.00,140.00,8.00,0.50,0.00,5.00,25.00,Vegetables,FALSE,FALSE
-91,Red Kidney Beans,85.00,110.00,7.00,0.50,0.00,5.00,20.00,Vegetables,FALSE,FALSE
-92,Bean Sprouts,85.00,30.00,3.00,0.00,0.00,1.00,6.00,Vegetables,FALSE,FALSE
-93,Beet Greens,85.00,20.00,2.00,0.00,0.00,2.00,4.00,Vegetables,FALSE,FALSE
-94,Beetroots,85.00,40.00,2.00,0.00,0.00,3.00,9.00,Vegetables,FALSE,FALSE
-95,Broccoli,85.00,30.00,3.00,0.50,0.00,3.00,6.00,Vegetables,FALSE,FALSE
-96,Brussels Sprouts,85.00,40.00,4.00,0.50,0.00,3.00,8.00,Vegetables,FALSE,FALSE
-97,Sauerkraut,85.00,20.00,1.00,0.00,0.00,2.00,4.00,Vegetables,FALSE,FALSE
-98,Steamed Cabbage,85.00,20.00,1.00,0.00,0.00,3.00,4.00,Vegetables,FALSE,FALSE
-99,"Carrots (Raw, Grated)",85.00,35.00,1.00,0.00,0.00,2.00,8.00,Vegetables,FALSE,FALSE
-100,"Carrots (Raw, Strips)",85.00,35.00,1.00,0.00,0.00,2.00,8.00,Vegetables,FALSE,FALSE
-101,Cauliflower,85.00,25.00,2.00,0.00,0.00,2.00,5.00,Vegetables,FALSE,FALSE
-102,"Celery (Raw, Stalk)",85.00,15.00,1.00,0.00,0.00,1.00,3.00,Vegetables,FALSE,FALSE
-103,Chard (Steamed),85.00,35.00,3.00,0.00,0.00,4.00,7.00,Vegetables,FALSE,FALSE
-104,Collards,85.00,50.00,5.00,1.00,0.00,5.00,9.00,Vegetables,FALSE,FALSE
-105,Corn (Cooked or Canned),85.00,90.00,3.00,1.00,0.00,2.00,20.00,Vegetables,FALSE,FALSE
-106,Cucumbers,85.00,16.00,1.00,0.20,0.00,1.00,4.00,Vegetables,FALSE,FALSE
-107,Dandelion Greens,85.00,45.00,4.00,0.50,0.00,3.00,9.00,Vegetables,FALSE,FALSE
-108,Eggplant,85.00,20.00,1.00,0.20,0.00,3.00,5.00,Vegetables,FALSE,FALSE
-109,Endive,85.00,15.00,1.00,0.00,0.00,1.00,3.00,Vegetables,FALSE,FALSE
-110,Kale,85.00,33.00,3.00,0.50,0.00,3.00,7.00,Vegetables,FALSE,FALSE
-111,Kohlrabi,85.00,27.00,2.00,0.10,0.00,5.00,6.00,Vegetables,FALSE,FALSE
-112,Lambs Quarters (Steamed),85.00,22.00,2.00,0.50,0.00,3.00,4.00,Vegetables,FALSE,FALSE
-113,Lentils,85.00,116.00,9.00,0.40,0.00,8.00,20.00,Vegetables,FALSE,FALSE
-114,Lettuce,85.00,15.00,1.00,0.00,0.00,1.00,3.00,Vegetables,FALSE,FALSE
-115,Iceberg Lettuce,85.00,10.00,1.00,0.00,0.00,1.00,2.00,Vegetables,FALSE,FALSE
-116,Mushrooms (Canned),85.00,30.00,4.00,0.30,0.00,1.00,6.00,Vegetables,FALSE,FALSE
-117,Mustard Greens,85.00,27.00,3.00,0.50,0.00,3.00,5.00,Vegetables,FALSE,FALSE
-118,Okra,85.00,30.00,2.00,0.20,0.00,3.00,7.00,Vegetables,FALSE,FALSE
-119,"Onions (Raw, Green)",85.00,30.00,1.00,0.10,0.00,2.00,7.00,Vegetables,FALSE,FALSE
-120,Parsley,85.00,22.00,2.00,0.50,0.00,3.00,4.00,Vegetables,FALSE,FALSE
-121,Parsnips,85.00,75.00,1.00,0.20,0.00,6.00,18.00,Vegetables,FALSE,FALSE
-122,"Peas (Fresh, Steamed)",85.00,62.00,4.00,0.20,0.00,4.00,11.00,Vegetables,FALSE,FALSE
-123,Peas (Frozen),85.00,62.00,4.00,0.20,0.00,4.00,11.00,Vegetables,FALSE,FALSE
-124,Split Peas (Cooked),85.00,115.00,9.00,0.40,0.00,8.00,20.00,Vegetables,FALSE,FALSE
-125,Heated Peas,85.00,62.00,4.00,0.20,0.00,4.00,11.00,Vegetables,FALSE,FALSE
-126,Peppers (Canned),85.00,28.00,1.00,0.30,0.00,2.00,6.00,Vegetables,FALSE,FALSE
-127,"Peppers (Raw, Green, Sweet)",85.00,20.00,1.00,0.20,0.00,2.00,5.00,Vegetables,FALSE,FALSE
-128,Peppers (With Beef and Crumbs),85.00,186.00,11.00,10.00,4.00,2.00,16.00,Vegetables,FALSE,FALSE
-129,Potatoes (Baked),85.00,93.00,2.00,0.20,0.00,2.00,21.00,Vegetables,FALSE,FALSE
-130,Potatoes (French-Fried),85.00,319.00,3.00,17.00,3.00,3.00,39.00,Vegetables,FALSE,FALSE
-131,Potatoes (Mashed with Milk and Butter),85.00,118.00,2.00,5.00,2.00,1.00,17.00,Vegetables,FALSE,FALSE
-132,Potatoes (Pan-Fried),85.00,218.00,3.00,10.00,2.00,3.00,32.00,Vegetables,FALSE,FALSE
-133,Potatoes (Scalloped with Cheese),85.00,173.00,5.00,9.00,5.00,2.00,21.00,Vegetables,FALSE,FALSE
-134,Potatoes (Steamed Before Peeling),85.00,77.00,2.00,0.20,0.00,2.00,17.00,Vegetables,FALSE,FALSE
-135,Potato Chips,28.00,152.00,2.00,10.00,1.00,1.00,15.00,Vegetables,FALSE,FALSE
-136,Radishes,85.00,16.00,0.40,0.10,0.00,1.00,4.00,Vegetables,FALSE,FALSE
-137,Rutabagas,85.00,50.00,1.00,0.20,0.00,4.00,12.00,Vegetables,FALSE,FALSE
-138,Soybeans,85.00,141.00,13.00,7.00,1.00,6.00,9.00,Vegetables,FALSE,FALSE
-139,Spinach,85.00,20.00,2.00,0.30,0.00,2.00,3.00,Vegetables,FALSE,FALSE
-140,Squash,85.00,20.00,1.00,0.10,0.00,1.00,4.00,Vegetables,FALSE,FALSE
-141,Winter Squash (Mashed),85.00,40.00,1.00,0.10,0.00,3.00,10.00,Vegetables,FALSE,FALSE
-142,Sweet Potatoes,85.00,90.00,2.00,0.20,0.00,3.00,21.00,Vegetables,FALSE,FALSE
-143,Sweet Potatoes (Candied),85.00,139.00,1.00,0.20,0.00,3.00,33.00,Vegetables,FALSE,FALSE
-144,"Tomatoes (Raw, 2 by 2 1/2 inches)",85.00,18.00,1.00,0.20,0.00,1.00,4.00,Vegetables,FALSE,FALSE
-145,Tomato Juice,240.00,41.00,2.00,0.10,0.00,1.00,9.00,Vegetables,FALSE,FALSE
-146,Tomato Ketchup,15.00,15.00,0.20,0.10,0.00,0.00,4.00,Vegetables,FALSE,FALSE
-147,Turnip Greens,85.00,36.00,3.00,0.40,0.00,2.00,7.00,Vegetables,FALSE,FALSE
-148,Turnips (Steamed),85.00,34.00,1.00,0.20,0.00,2.00,8.00,Vegetables,FALSE,FALSE
-149,"Watercress (Stems, Raw)",85.00,11.00,1.00,0.20,0.00,1.00,2.00,Fruits,FALSE,FALSE
-150,Apple Juice (Canned),240.00,114.00,0.20,0.30,0.00,0.00,28.00,Fruits,FALSE,FALSE
-151,Apple Vinegar,15.00,3.00,0.00,0.00,0.00,0.00,0.00,Fruits,FALSE,FALSE
-152,Apples (Raw),182.00,95.00,0.50,0.30,0.00,4.00,25.00,Fruits,FALSE,FALSE
-153,Apples (Stewed or Canned),122.00,83.00,0.20,0.30,0.00,3.00,22.00,Fruits,FALSE,FALSE
-154,Apricots (Fresh),100.00,48.00,1.00,0.10,0.00,2.00,12.00,Fruits,FALSE,FALSE
-155,"Apricots (Dried, Uncooked)",100.00,241.00,3.00,0.50,0.00,7.00,63.00,Fruits,FALSE,FALSE
-156,Nectar (or Juice),240.00,120.00,0.50,0.10,0.00,0.00,30.00,Fruits,FALSE,FALSE
-157,Avocado,100.00,160.00,2.00,15.00,2.00,7.00,9.00,Fruits,FALSE,FALSE
-158,Banana,118.00,105.00,1.30,0.30,0.00,3.00,27.00,Fruits,FALSE,FALSE
-159,Blackberries,100.00,43.00,1.40,0.50,0.00,5.00,10.00,Fruits,FALSE,FALSE
-160,Blueberries,100.00,57.00,0.70,0.30,0.00,2.00,14.00,Fruits,FALSE,FALSE
-161,Cantaloupe,100.00,34.00,0.80,0.20,0.00,1.00,8.00,Fruits,FALSE,FALSE
-162,"Cherries (Fresh, Raw)",100.00,63.00,1.00,0.20,0.00,2.00,16.00,Fruits,FALSE,FALSE
-163,Cranberry Sauce (Sweetened),100.00,139.00,0.20,0.10,0.00,2.00,35.00,Fruits,FALSE,FALSE
-164,Dates,100.00,277.00,2.00,0.20,0.00,8.00,75.00,Fruits,FALSE,FALSE
-165,"Figs (Fresh, Raw)",100.00,74.00,0.80,0.30,0.00,3.00,19.00,Fruits,FALSE,FALSE
-166,Figs (Canned with Syrup),100.00,249.00,0.60,0.20,0.00,2.00,64.00,Fruits,FALSE,FALSE
-167,Grapefruit Sections,123.00,42.00,1.20,0.10,0.00,2.00,10.00,Fruits,FALSE,FALSE
-168,"Grapefruit (Fresh, 5"" Diameter)",250.00,96.00,2.00,0.20,0.00,4.00,24.00,Fruits,FALSE,FALSE
-169,Grapefruit Juice,240.00,96.00,1.30,0.20,0.00,0.00,24.00,Fruits,FALSE,FALSE
-170,"Grapes (European, Muscat/Tokay)",100.00,69.00,0.70,0.20,0.00,0.90,18.00,Fruits,FALSE,FALSE
-171,Grape Juice,240.00,150.00,0.50,0.10,0.00,0.00,36.00,Fruits,FALSE,FALSE
-172,Lemon Juice,15.00,4.00,0.00,0.00,0.00,0.00,1.00,Fruits,FALSE,FALSE
-173,Lemonade Concentrate (Frozen),100.00,38.00,0.00,0.00,0.00,0.00,10.00,Fruits,FALSE,FALSE
-174,Limeade Concentrate (Frozen),100.00,44.00,0.00,0.00,0.00,0.00,11.00,Fruits,FALSE,FALSE
-175,Olives (Large),100.00,145.00,0.80,15.00,2.00,3.00,8.00,Fruits,FALSE,FALSE
-176,Olives (Ripe),100.00,115.00,0.80,10.00,1.50,3.00,6.00,Fruits,FALSE,FALSE
-177,"Oranges (3"" Diameter)",184.00,86.00,1.20,0.20,0.00,4.00,22.00,Fruits,FALSE,FALSE
-178,Orange Juice,240.00,110.00,1.60,0.50,0.00,0.00,26.00,Fruits,FALSE,FALSE
-179,Papaya,100.00,43.00,0.50,0.10,0.00,1.70,11.00,Fruits,FALSE,FALSE
-180,"Peaches (Fresh, Raw)",100.00,39.00,0.90,0.30,0.00,1.50,10.00,Fruits,FALSE,FALSE
-181,"Pears (Raw, 3 by 2½)",100.00,57.00,0.40,0.10,0.00,3.10,15.00,Fruits,FALSE,FALSE
-182,Persimmons,100.00,81.00,0.60,0.20,0.00,3.60,21.00,Fruits,FALSE,FALSE
-183,Pineapple,100.00,50.00,0.50,0.10,0.00,1.40,13.00,Fruits,FALSE,FALSE
-184,Pineapple (Crushed),100.00,50.00,0.50,0.10,0.00,1.40,13.00,Fruits,FALSE,FALSE
-185,"Pineapple (Raw, Diced)",100.00,50.00,0.50,0.10,0.00,1.40,13.00,Fruits,FALSE,FALSE
-186,Pineapple Juice,240.00,130.00,0.50,0.40,0.00,0.00,33.00,Fruits,FALSE,FALSE
-187,"Plums (Raw, 2"" Diameter)",66.00,30.00,0.50,0.10,0.00,1.00,8.00,Fruits,FALSE,FALSE
-188,Prunes,100.00,240.00,2.20,0.20,0.00,7.10,64.00,Fruits,FALSE,FALSE
-189,Prune Juice,240.00,182.00,0.60,0.20,0.00,0.00,46.00,Fruits,FALSE,FALSE
-190,Raisins,100.00,299.00,2.50,0.50,0.10,3.70,79.00,Fruits,FALSE,FALSE
-191,"Raspberries (Raw, Red)",100.00,52.00,1.20,0.70,0.10,6.50,12.00,Fruits,FALSE,FALSE
-192,Rhubarb (Sweetened),100.00,88.00,0.50,0.10,0.00,1.80,23.00,Fruits,FALSE,FALSE
-193,Strawberries (Raw),100.00,32.00,0.70,0.30,0.00,2.00,7.00,Fruits,FALSE,FALSE
-194,Tangerines,100.00,53.00,0.80,0.20,0.00,1.80,13.00,Fruits,FALSE,FALSE
-195,Watermelon,100.00,30.00,0.60,0.20,0.00,0.40,8.00,Fruits,FALSE,FALSE
-196,Biscuits,28.00,140.00,2.10,5.60,2.10,0.40,20.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-197,Bran Flakes,60.00,210.00,6.00,1.50,0.20,7.00,45.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-198,Bread (Cracked Wheat),28.00,70.00,3.00,1.00,0.20,1.40,13.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-199,Rye Bread,28.00,70.00,2.50,1.00,0.20,1.80,13.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-200,White Bread (20 slices),28.00,70.00,2.00,1.00,0.20,0.80,13.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-201,Whole-Wheat Bread,28.00,80.00,3.00,1.00,0.20,1.90,14.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-202,Cornbread (Ground Meal),100.00,200.00,4.00,6.00,1.50,2.00,36.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-203,Cornflakes,30.00,120.00,2.00,0.50,0.10,1.00,27.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-204,Corn Grits (Cooked),100.00,70.00,1.30,0.50,0.00,1.00,15.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-205,Corn Meal,100.00,370.00,9.00,1.50,0.30,7.00,78.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-206,"Crackers (Soda, 2.5"" square)",5.00,20.00,0.30,0.70,0.10,0.20,3.50,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-207,Farina,60.00,210.00,7.00,0.50,0.10,1.00,45.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-208,"Flour (Wheat, All Purpose)",100.00,364.00,10.00,1.00,0.20,2.70,76.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-209,"Flour (Wheat, Whole)",100.00,340.00,13.00,2.00,0.30,12.00,72.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-210,Macaroni,100.00,371.00,13.00,1.50,0.30,3.00,75.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-211,Macaroni (Baked with Cheese),100.00,330.00,10.00,15.00,7.00,1.00,40.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-212,Muffins,50.00,190.00,3.00,8.00,1.50,1.00,29.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-213,Noodles,100.00,200.00,7.00,1.00,0.20,2.00,42.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-214,Oatmeal,100.00,68.00,2.50,1.50,0.30,1.40,12.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-215,"Pancakes (4"" Diameter)",50.00,90.00,2.50,3.00,1.00,0.50,15.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-216,"Wheat Pancakes (4"" Diameter)",50.00,90.00,2.50,3.00,1.00,0.50,15.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-217,"Pizza (14"" Diameter)",1 slice (100g),285.00,12.00,10.00,4.00,2.00,36.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-218,Popcorn (Salted),100.00,387.00,12.00,16.00,2.00,15.00,78.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-219,Puffed Rice,100.00,386.00,7.00,1.00,0.20,1.00,86.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-220,Puffed Wheat (Presweetened),100.00,375.00,7.00,1.00,0.20,3.00,86.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-221,Rice (Converted),100.00,130.00,2.70,0.30,0.10,0.60,28.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-222,Rice (White),100.00,130.00,2.70,0.30,0.10,0.60,28.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-223,Rice Flakes,100.00,359.00,6.00,1.50,0.20,2.00,77.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-224,Rice Polish,100.00,363.00,6.00,1.50,0.20,2.00,76.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-225,Rolls (Refined Flour),30.00,80.00,2.00,0.50,0.10,1.00,15.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-226,Rolls (Whole-Wheat),30.00,80.00,3.00,1.00,0.20,1.90,14.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-227,Spaghetti (with Meat Sauce),100.00,160.00,7.00,5.00,1.00,3.00,24.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-228,Spaghetti (with Tomatoes and Cheese),100.00,210.00,10.00,8.00,3.00,2.00,24.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-229,Spanish Rice,100.00,150.00,3.00,1.50,0.30,2.00,32.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-230,Shredded Wheat Biscuit,60.00,210.00,7.00,0.50,0.10,6.00,45.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-231,Waffles,70.00,250.00,6.00,9.00,2.00,1.00,38.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-232,Wheat Germ,28.00,100.00,6.00,0.50,0.10,4.00,21.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-233,Wheat-Germ Cereal (Toasted),60.00,220.00,6.00,1.00,0.20,5.00,45.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-234,Wheat Meal Cereal (Unrefined),60.00,240.00,8.00,1.50,0.30,6.00,50.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-235,Wheat (Cooked),100.00,140.00,5.00,0.50,0.10,1.80,30.00,Breads/ cereals/ fastfood/grains,FALSE,FALSE
-236,Bean Soup,240.00,180.00,12.00,2.50,0.50,8.00,30.00,Soups,FALSE,FALSE
-237,Beef Soup,240.00,250.00,20.00,10.00,4.00,2.00,25.00,Soups,FALSE,FALSE
-238,Bouillon,240.00,15.00,1.00,0.50,0.10,0.00,2.00,Soups,FALSE,FALSE
-239,Chicken Soup,240.00,150.00,15.00,5.00,1.50,2.00,15.00,Soups,FALSE,FALSE
-240,Clam Chowder,240.00,220.00,7.00,11.00,6.00,2.00,23.00,Soups,FALSE,FALSE
-241,Cream Soups,240.00,250.00,5.00,15.00,8.00,1.00,20.00,Soups,FALSE,FALSE
-242,Noodle Soup,240.00,180.00,6.00,5.00,2.00,2.00,29.00,Soups,FALSE,FALSE
-243,Split-Pea Soup,240.00,200.00,13.00,1.00,0.20,7.00,35.00,Soups,FALSE,FALSE
-244,Tomato Soup,240.00,90.00,3.00,1.00,0.20,2.00,20.00,Soups,FALSE,FALSE
-245,Vegetable Soup,240.00,70.00,3.00,1.00,0.20,4.00,13.00,Soups,FALSE,FALSE
-246,Apple Betty,240.00,210.00,1.50,5.00,2.00,3.00,40.00,Desserts/ sweets,FALSE,FALSE
-247,Bread Pudding,240.00,250.00,6.00,7.00,4.00,2.00,45.00,Desserts/ sweets,FALSE,FALSE
-248,Cakes,100.00,280.00,3.00,12.00,5.00,1.00,44.00,Desserts/ sweets,FALSE,FALSE
-249,Chocolate Fudge,100.00,380.00,4.00,20.00,12.00,1.00,50.00,Desserts/ sweets,FALSE,FALSE
-250,Cupcake,100.00,320.00,3.00,12.00,5.00,1.00,48.00,Desserts/ sweets,FALSE,FALSE
-251,Fruit Cake,100.00,350.00,3.00,14.00,6.00,1.00,54.00,Desserts/ sweets,FALSE,FALSE
-252,Gingerbread,100.00,340.00,4.00,12.00,3.00,1.00,54.00,Desserts/ sweets,FALSE,FALSE
-253,Plain Cake (no icing),100.00,250.00,3.00,10.00,3.00,1.00,38.00,Desserts/ sweets,FALSE,FALSE
-254,Sponge Cake,100.00,220.00,3.00,8.00,3.00,0.50,37.00,Desserts/ sweets,FALSE,FALSE
-255,Candy,100.00,400.00,0.00,0.00,0.00,0.00,100.00,Desserts/ sweets,FALSE,FALSE
-256,Chocolate Creams,100.00,500.00,5.00,30.00,15.00,1.00,50.00,Desserts/ sweets,FALSE,FALSE
-257,Fudge,100.00,400.00,4.00,20.00,12.00,0.50,55.00,Desserts/ sweets,FALSE,FALSE
-258,Hard Candies,100.00,400.00,0.00,0.00,0.00,0.00,100.00,Desserts/ sweets,FALSE,FALSE
-259,Marshmallows,100.00,300.00,1.00,0.00,0.00,0.00,75.00,Desserts/ sweets,FALSE,FALSE
-260,Milk Chocolate,100.00,535.00,7.00,30.00,18.00,3.00,58.00,Desserts/ sweets,FALSE,FALSE
-261,Chocolate Syrup,100.00,300.00,0.00,0.00,0.00,0.00,75.00,Desserts/ sweets,FALSE,FALSE
-262,Doughnuts,100.00,450.00,5.00,25.00,10.00,1.00,50.00,Desserts/ sweets,FALSE,FALSE
-263,Gelatin (made with water),100.00,60.00,1.00,0.00,0.00,0.00,14.00,Desserts/ sweets,FALSE,FALSE
-264,Honey,100.00,304.00,0.30,0.00,0.00,0.20,82.40,Jams/ Jellies,FALSE,FALSE
-265,Ice Cream,100.00,207.00,3.50,11.00,7.00,0.00,24.00,Desserts/ sweets,FALSE,FALSE
-266,Ices,100.00,150.00,0.20,0.00,0.00,0.00,37.00,Desserts/ sweets,FALSE,FALSE
-267,Preserves,100.00,250.00,0.20,0.00,0.00,0.50,65.00,Jams/ Jellies,FALSE,FALSE
-268,Jellies,100.00,250.00,0.00,0.00,0.00,0.00,65.00,Jams/ Jellies,FALSE,FALSE
-269,Molasses,100.00,290.00,0.50,0.10,0.00,0.00,75.00,Jams/ Jellies,FALSE,FALSE
-270,Cane Syrup,100.00,290.00,0.00,0.00,0.00,0.00,75.00,Jams/ Jellies,FALSE,FALSE
-271,"9"" diameter pie",100.00,300.00,2.00,15.00,5.00,1.00,40.00,Desserts/ sweets,FALSE,FALSE
-272,Cherry Pie,100.00,290.00,2.00,10.00,4.00,1.50,50.00,Desserts/ sweets,FALSE,FALSE
-273,Custard,100.00,130.00,3.00,5.00,3.00,0.00,20.00,Desserts/ sweets,FALSE,FALSE
-274,Lemon Meringue Pie,100.00,350.00,3.00,14.00,6.00,1.00,54.00,Desserts/ sweets,FALSE,FALSE
-275,Mince Pie,100.00,320.00,5.00,14.00,6.00,1.00,45.00,Desserts/ sweets,FALSE,FALSE
-276,Pumpkin Pie,100.00,320.00,3.00,12.00,5.00,2.00,54.00,Desserts/ sweets,FALSE,FALSE
-277,Puddings,100.00,150.00,2.00,2.00,1.00,0.00,30.00,Desserts/ sweets,FALSE,FALSE
-278,Sugar,12.00,48.00,0.00,0.00,0.00,0.00,12.00,Desserts/ sweets,FALSE,FALSE
-279,"Brown Sugar (firm-packed, dark)",100.00,380.00,0.30,0.10,0.00,0.00,98.00,Jams/ Jellies,FALSE,FALSE
-280,Syrup,100.00,300.00,0.00,0.00,0.00,0.00,80.00,Jams/ Jellies,FALSE,FALSE
-281,Table Blends Sugar,100.00,400.00,0.00,0.00,0.00,0.00,100.00,Jams/ Jellies,FALSE,FALSE
-282,Tapioca Cream Pudding,100.00,120.00,2.00,2.00,1.00,0.00,24.00,Desserts/ sweets,FALSE,FALSE
-283,Almonds (roasted and salted),100.00,579.00,21.00,50.00,3.70,12.50,21.60,Seeds and Nuts,FALSE,FALSE
-284,Brazil Nuts,100.00,659.00,14.00,66.00,15.00,7.50,12.00,Seeds and Nuts,FALSE,FALSE
-285,Cashews,100.00,553.00,18.00,44.00,7.80,3.30,30.20,Seeds and Nuts,FALSE,FALSE
-286,Coconut (sweetened),100.00,354.00,3.30,33.50,30.00,9.00,15.20,Seeds and Nuts,FALSE,FALSE
-287,Peanut Butter,100.00,588.00,25.00,50.00,10.00,6.00,20.00,Seeds and Nuts,FALSE,FALSE
-288,Peanut Butter (natural),100.00,588.00,25.00,50.00,10.00,6.00,20.00,Seeds and Nuts,FALSE,FALSE
-289,Peanuts,100.00,567.00,25.80,49.20,6.80,8.50,16.10,Seeds and Nuts,FALSE,FALSE
-290,Pecans,100.00,691.00,9.20,72.00,6.20,9.60,13.90,Seeds and Nuts,FALSE,FALSE
-291,Sesame Seeds,100.00,573.00,17.00,50.00,7.40,9.00,23.50,Seeds and Nuts,FALSE,FALSE
-292,Sunflower Seeds,100.00,584.00,21.00,51.00,4.50,8.60,20.00,Seeds and Nuts,FALSE,FALSE
-293,Walnuts,100.00,654.00,15.20,65.00,6.10,6.70,13.70,Seeds and Nuts,FALSE,FALSE
-294,"Beer (average, 5% alcohol)",100.00,43.00,0.50,0.00,0.00,0.00,3.60,Drinks/Alcohol/ Beverages,FALSE,FALSE
-295,Gin,100.00,263.00,0.00,0.00,0.00,0.00,0.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
-296,Wines,100.00,83.00,0.10,0.00,0.00,0.00,2.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
-297,Table Wine (12.2% alcohol),100.00,83.00,0.10,0.00,0.00,0.00,2.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
-298,Carbonated Drinks (Artificially Sweetened),100.00,1.00,0.00,0.00,0.00,0.00,0.40,Drinks/Alcohol/ Beverages,FALSE,FALSE
-299,Club Soda,100.00,0.00,0.00,0.00,0.00,0.00,0.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
-300,Cola Drinks,100.00,42.00,0.00,0.00,0.00,0.00,11.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
-301,Fruit-Flavored Soda,100.00,46.00,0.00,0.00,0.00,0.00,12.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
-302,Ginger Ale,100.00,39.00,0.00,0.00,0.00,0.00,10.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
-303,Root Beer,100.00,69.00,0.00,0.00,0.00,0.00,17.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
-304,"Coffee (black, brewed)",100.00,2.00,0.30,0.00,0.00,0.00,0.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
-305,"Tea (black, brewed)",100.00,1.00,0.20,0.00,0.00,0.00,0.00,Drinks/Alcohol/ Beverages,FALSE,FALSE
+1,Cow's Milk,240.00,149.00,8.00,8.00,5.00,0.00,12.00,dairy products,FALSE,FALSE
+2,Skim Milk,240.00,83.00,8.00,0.20,0.10,0.00,12.00,dairy products,FALSE,FALSE
+3,Buttermilk,240.00,98.00,8.00,2.00,1.00,0.00,12.00,dairy products,FALSE,FALSE
+4,Evaporated Milk,240.00,338.00,17.00,19.00,12.00,0.00,30.00,dairy products,FALSE,FALSE
+5,Fortified Milk,240.00,150.00,8.00,8.00,5.00,0.00,12.00,dairy products,FALSE,FALSE
+6,Powdered Milk,30.00,360.00,36.00,1.00,0.50,0.00,56.00,dairy products,FALSE,FALSE
+7,Skim Milk Powder,30.00,80.00,8.00,0.40,0.20,0.00,12.00,dairy products,FALSE,FALSE
+8,Goat's Milk,240.00,168.00,9.00,10.00,6.00,0.00,11.00,dairy products,FALSE,FALSE
+9,Ice Cream,66.00,137.00,2.00,7.00,4.00,0.00,14.00,dairy products,FALSE,FALSE
+10,Cocoa Powder,5.00,12.00,1.00,0.50,0.20,1.00,3.00,dairy products,FALSE,FALSE
+11,Skim Milk,240.00,83.00,8.00,0.20,0.10,0.00,12.00,dairy products,FALSE,FALSE
+12,Cornstarch,30.00,100.00,0.00,0.00,0.00,0.00,30.00,dairy products,FALSE,FALSE
+13,Custard,120.00,150.00,4.00,6.00,4.00,0.00,20.00,dairy products,FALSE,FALSE
+14,Ice Cream,66.00,137.00,2.00,7.00,4.00,0.00,14.00,dairy products,FALSE,FALSE
+15,Ice Milk,66.00,110.00,3.00,4.00,2.00,0.00,16.00,dairy products,FALSE,FALSE
+16,Cream (Half-and-Half),30.00,60.00,1.00,5.00,3.00,0.00,2.00,dairy products,FALSE,FALSE
+17,Cheese (Uncreamed),28.00,113.00,7.00,9.00,6.00,0.00,1.00,dairy products,FALSE,FALSE
+18,Cheddar,28.00,113.00,7.00,9.00,6.00,0.00,1.00,dairy products,FALSE,FALSE
+19,Cheddar (Grated),28.00,113.00,7.00,9.00,6.00,0.00,1.00,dairy products,FALSE,FALSE
+20,Cream Cheese,28.00,99.00,2.00,9.00,5.00,0.00,2.00,dairy products,FALSE,FALSE
+21,Processed Cheese,28.00,73.00,5.00,5.00,3.00,0.00,1.00,dairy products,FALSE,FALSE
+22,Roquefort Type Cheese,28.00,100.00,6.00,8.00,5.00,0.00,1.00,dairy products,FALSE,FALSE
+23,Swiss Cheese,28.00,106.00,8.00,8.00,5.00,0.00,1.00,dairy products,FALSE,FALSE
+24,Eggs (Raw),50.00,72.00,6.00,5.00,1.60,0.00,0.60,dairy products,FALSE,FALSE
+25,Eggs (Scrambled or Fried),50.00,91.00,6.00,7.00,2.00,0.00,1.00,dairy products,FALSE,FALSE
+26,Egg Yolks,17.00,55.00,3.00,4.50,1.60,0.00,0.60,dairy products,FALSE,FALSE
+27,Butter,14.00,102.00,0.10,11.50,7.20,0.00,0.10,fats/oils/shortenings,FALSE,FALSE
+28,Hydrogenated Cooking Fat,14.00,117.00,0.00,13.50,5.30,0.00,0.00,fats/oils/shortenings,FALSE,FALSE
+29,Lard,14.00,115.00,0.20,13.00,5.20,0.00,0.00,fats/oils/shortenings,FALSE,FALSE
+30,Margarine,14.00,100.00,0.10,11.50,3.50,0.00,0.10,fats/oils/shortenings,FALSE,FALSE
+31,Margarine (2 pats),10.00,70.00,0.00,8.00,2.50,0.00,0.00,fats/oils/shortenings,FALSE,FALSE
+32,Mayonnaise,15.00,100.00,0.40,11.00,1.50,0.00,0.20,fats/oils/shortenings,FALSE,FALSE
+33,Corn Oil,14.00,120.00,0.00,14.00,1.50,0.00,0.00,fats/oils/shortenings,FALSE,FALSE
+34,Olive Oil,14.00,120.00,0.00,14.00,2.00,0.00,0.00,fats/oils/shortenings,FALSE,FALSE
+35,Safflower Seed Oil,14.00,120.00,0.00,14.00,1.20,0.00,0.00,fats/oils/shortenings,FALSE,FALSE
+36,French Dressing,15.00,73.00,0.10,7.50,1.00,0.00,1.50,fats/oils/shortenings,FALSE,FALSE
+37,Thousand Island Sauce,15.00,85.00,0.10,8.00,1.00,0.00,2.50,fats/oils/shortenings,FALSE,FALSE
+38,Salt Pork,28.00,107.00,7.00,9.60,3.40,0.00,0.00,meat/poultry,FALSE,FALSE
+39,Bacon,28.00,42.00,3.00,3.30,1.10,0.00,0.10,meat/poultry,FALSE,FALSE
+40,Beef,85.00,250.00,26.00,17.00,7.00,0.00,0.00,meat/poultry,FALSE,FALSE
+41,Hamburger,85.00,250.00,18.00,18.00,7.00,0.00,0.00,meat/poultry,FALSE,FALSE
+42,Ground Lean Beef,85.00,230.00,26.00,14.00,6.00,0.00,0.00,meat/poultry,FALSE,FALSE
+43,Roast Beef,85.00,240.00,25.00,16.00,6.00,0.00,0.00,meat/poultry,FALSE,FALSE
+44,Steak,85.00,279.00,24.00,20.00,9.00,0.00,0.00,meat/poultry,FALSE,FALSE
+45,"Steak (Lean, Round)",85.00,230.00,25.00,11.00,4.00,0.00,0.00,meat/poultry,FALSE,FALSE
+46,Corned Beef,85.00,213.00,26.00,11.00,4.00,0.00,0.00,meat/poultry,FALSE,FALSE
+47,Corned Beef Hash (Canned),120.00,300.00,12.00,22.00,8.00,2.00,22.00,meat/poultry,FALSE,FALSE
+48,Corned Beef Hash (Dried),28.00,88.00,9.00,5.50,2.20,0.00,0.80,meat/poultry,FALSE,FALSE
+49,Pot-Pie,120.00,350.00,12.00,20.00,6.00,1.00,35.00,meat/poultry,FALSE,FALSE
+50,Corned Beef Hash (Stew),240.00,305.00,12.00,22.00,7.00,3.00,20.00,meat/poultry,FALSE,FALSE
+51,Fried Chicken (Breast or Leg),85.00,250.00,24.00,16.00,6.00,0.00,0.00,meat/poultry,FALSE,FALSE
+52,Roasted Chicken,85.00,190.00,30.00,8.00,2.00,0.00,0.00,meat/poultry,FALSE,FALSE
+53,Chicken Livers (Fried),85.00,165.00,25.00,7.00,2.00,0.00,0.00,meat/poultry,FALSE,FALSE
+54,Duck (Domestic),85.00,337.00,25.00,27.00,9.00,0.00,0.00,meat/poultry,FALSE,FALSE
+55,Lamb Chop (Broiled),85.00,290.00,23.00,22.00,10.00,0.00,0.00,meat/poultry,FALSE,FALSE
+56,Leg (Roasted),85.00,220.00,31.00,10.00,4.00,0.00,0.00,meat/poultry,FALSE,FALSE
+57,Shoulder (Braised),85.00,265.00,22.00,19.00,8.00,0.00,0.00,meat/poultry,FALSE,FALSE
+58,Pork Chop (1 Thick),85.00,265.00,24.00,18.00,7.00,0.00,0.00,meat/poultry,FALSE,FALSE
+59,Ham (Pan-Broiled),85.00,160.00,21.00,7.00,3.00,0.00,0.00,meat/poultry,FALSE,FALSE
+60,Ham (As),85.00,145.00,18.00,6.00,2.00,0.00,0.00,meat/poultry,FALSE,FALSE
+61,"Ham (Canned, Spiced)",85.00,180.00,13.00,12.00,5.00,0.00,0.00,meat/poultry,FALSE,FALSE
+62,Pork Roast,85.00,250.00,27.00,14.00,6.00,0.00,0.00,meat/poultry,FALSE,FALSE
+63,Pork Sausage,85.00,300.00,13.00,26.00,10.00,0.00,2.00,meat/poultry,FALSE,FALSE
+64,Turkey (Roasted),85.00,135.00,30.00,1.00,0.00,0.00,0.00,meat/poultry,FALSE,FALSE
+65,Veal (Roast),85.00,270.00,27.00,18.00,7.00,0.00,0.00,meat/poultry,FALSE,FALSE
+66,Clams,85.00,70.00,13.00,1.00,0.00,0.00,5.00,fish/seafood,FALSE,FALSE
+67,Cod,85.00,90.00,20.00,1.00,0.00,0.00,0.00,fish/seafood,FALSE,FALSE
+68,Crab Meat,85.00,80.00,16.00,1.00,0.00,0.00,0.00,fish/seafood,FALSE,FALSE
+69,Fish Sticks (Fried),85.00,210.00,10.00,10.00,1.00,1.00,24.00,fish/seafood,FALSE,FALSE
+70,Flounder,85.00,90.00,19.00,1.00,0.00,0.00,0.00,fish/seafood,FALSE,FALSE
+71,Haddock,85.00,90.00,20.00,1.00,0.00,0.00,0.00,fish/seafood,FALSE,FALSE
+72,Halibut,85.00,140.00,30.00,4.00,1.00,0.00,0.00,fish/seafood,FALSE,FALSE
+73,Herring,85.00,170.00,20.00,10.00,2.00,0.00,0.00,fish/seafood,FALSE,FALSE
+74,Lobster,85.00,80.00,16.00,1.00,0.00,0.00,0.00,fish/seafood,FALSE,FALSE
+75,Mackerel,85.00,230.00,21.00,16.00,3.00,0.00,0.00,fish/seafood,FALSE,FALSE
+76,Oysters,85.00,70.00,8.00,2.00,0.00,0.00,5.00,fish/seafood,FALSE,FALSE
+77,Oyster Stew,85.00,120.00,10.00,8.00,2.00,0.00,6.00,fish/seafood,FALSE,FALSE
+78,Salmon,85.00,200.00,23.00,13.00,3.00,0.00,0.00,fish/seafood,FALSE,FALSE
+79,Sardines,85.00,200.00,25.00,10.00,2.00,0.00,0.00,fish/seafood,FALSE,FALSE
+80,Scallops,85.00,90.00,19.00,1.00,0.00,0.00,0.00,fish/seafood,FALSE,FALSE
+81,Shad,85.00,180.00,19.00,10.00,2.00,0.00,0.00,fish/seafood,FALSE,FALSE
+82,Shrimp,85.00,80.00,18.00,1.00,0.00,0.00,0.00,fish/seafood,FALSE,FALSE
+83,Swordfish,85.00,180.00,23.00,8.00,2.00,0.00,0.00,fish/seafood,FALSE,FALSE
+84,Tuna,85.00,130.00,28.00,1.00,0.00,0.00,0.00,fish/seafood,FALSE,FALSE
+85,Artichoke,100.00,44.00,2.00,0.00,0.00,2.00,10.00,vegetables,FALSE,FALSE
+86,Asparagus,85.00,20.00,2.00,0.00,0.00,2.00,4.00,vegetables,FALSE,FALSE
+87,Beans,85.00,130.00,8.00,0.50,0.00,6.00,22.00,vegetables,FALSE,FALSE
+88,Lima Beans,85.00,120.00,7.00,0.50,0.00,6.00,22.00,vegetables,FALSE,FALSE
+89,"Lima (Dry, Cooked)",85.00,120.00,7.00,0.50,0.00,6.00,22.00,vegetables,FALSE,FALSE
+90,Navy Beans (Baked with Pork),85.00,140.00,8.00,0.50,0.00,5.00,25.00,vegetables,FALSE,FALSE
+91,Red Kidney Beans,85.00,110.00,7.00,0.50,0.00,5.00,20.00,vegetables,FALSE,FALSE
+92,Bean Sprouts,85.00,30.00,3.00,0.00,0.00,1.00,6.00,vegetables,FALSE,FALSE
+93,Beet Greens,85.00,20.00,2.00,0.00,0.00,2.00,4.00,vegetables,FALSE,FALSE
+94,Beetroots,85.00,40.00,2.00,0.00,0.00,3.00,9.00,vegetables,FALSE,FALSE
+95,Broccoli,85.00,30.00,3.00,0.50,0.00,3.00,6.00,vegetables,FALSE,FALSE
+96,Brussels Sprouts,85.00,40.00,4.00,0.50,0.00,3.00,8.00,vegetables,FALSE,FALSE
+97,Sauerkraut,85.00,20.00,1.00,0.00,0.00,2.00,4.00,vegetables,FALSE,FALSE
+98,Steamed Cabbage,85.00,20.00,1.00,0.00,0.00,3.00,4.00,vegetables,FALSE,FALSE
+99,"Carrots (Raw, Grated)",85.00,35.00,1.00,0.00,0.00,2.00,8.00,vegetables,FALSE,FALSE
+100,"Carrots (Raw, Strips)",85.00,35.00,1.00,0.00,0.00,2.00,8.00,vegetables,FALSE,FALSE
+101,Cauliflower,85.00,25.00,2.00,0.00,0.00,2.00,5.00,vegetables,FALSE,FALSE
+102,"Celery (Raw, Stalk)",85.00,15.00,1.00,0.00,0.00,1.00,3.00,vegetables,FALSE,FALSE
+103,Chard (Steamed),85.00,35.00,3.00,0.00,0.00,4.00,7.00,vegetables,FALSE,FALSE
+104,Collards,85.00,50.00,5.00,1.00,0.00,5.00,9.00,vegetables,FALSE,FALSE
+105,Corn (Cooked or Canned),85.00,90.00,3.00,1.00,0.00,2.00,20.00,vegetables,FALSE,FALSE
+106,Cucumbers,85.00,16.00,1.00,0.20,0.00,1.00,4.00,vegetables,FALSE,FALSE
+107,Dandelion Greens,85.00,45.00,4.00,0.50,0.00,3.00,9.00,vegetables,FALSE,FALSE
+108,Eggplant,85.00,20.00,1.00,0.20,0.00,3.00,5.00,vegetables,FALSE,FALSE
+109,Endive,85.00,15.00,1.00,0.00,0.00,1.00,3.00,vegetables,FALSE,FALSE
+110,Kale,85.00,33.00,3.00,0.50,0.00,3.00,7.00,vegetables,FALSE,FALSE
+111,Kohlrabi,85.00,27.00,2.00,0.10,0.00,5.00,6.00,vegetables,FALSE,FALSE
+112,Lambs Quarters (Steamed),85.00,22.00,2.00,0.50,0.00,3.00,4.00,vegetables,FALSE,FALSE
+113,Lentils,85.00,116.00,9.00,0.40,0.00,8.00,20.00,vegetables,FALSE,FALSE
+114,Lettuce,85.00,15.00,1.00,0.00,0.00,1.00,3.00,vegetables,FALSE,FALSE
+115,Iceberg Lettuce,85.00,10.00,1.00,0.00,0.00,1.00,2.00,vegetables,FALSE,FALSE
+116,Mushrooms (Canned),85.00,30.00,4.00,0.30,0.00,1.00,6.00,vegetables,FALSE,FALSE
+117,Mustard Greens,85.00,27.00,3.00,0.50,0.00,3.00,5.00,vegetables,FALSE,FALSE
+118,Okra,85.00,30.00,2.00,0.20,0.00,3.00,7.00,vegetables,FALSE,FALSE
+119,"Onions (Raw, Green)",85.00,30.00,1.00,0.10,0.00,2.00,7.00,vegetables,FALSE,FALSE
+120,Parsley,85.00,22.00,2.00,0.50,0.00,3.00,4.00,vegetables,FALSE,FALSE
+121,Parsnips,85.00,75.00,1.00,0.20,0.00,6.00,18.00,vegetables,FALSE,FALSE
+122,"Peas (Fresh, Steamed)",85.00,62.00,4.00,0.20,0.00,4.00,11.00,vegetables,FALSE,FALSE
+123,Peas (Frozen),85.00,62.00,4.00,0.20,0.00,4.00,11.00,vegetables,FALSE,FALSE
+124,Split Peas (Cooked),85.00,115.00,9.00,0.40,0.00,8.00,20.00,vegetables,FALSE,FALSE
+125,Heated Peas,85.00,62.00,4.00,0.20,0.00,4.00,11.00,vegetables,FALSE,FALSE
+126,Peppers (Canned),85.00,28.00,1.00,0.30,0.00,2.00,6.00,vegetables,FALSE,FALSE
+127,"Peppers (Raw, Green, Sweet)",85.00,20.00,1.00,0.20,0.00,2.00,5.00,vegetables,FALSE,FALSE
+128,Peppers (With Beef and Crumbs),85.00,186.00,11.00,10.00,4.00,2.00,16.00,vegetables,FALSE,FALSE
+129,Potatoes (Baked),85.00,93.00,2.00,0.20,0.00,2.00,21.00,vegetables,FALSE,FALSE
+130,Potatoes (French-Fried),85.00,319.00,3.00,17.00,3.00,3.00,39.00,vegetables,FALSE,FALSE
+131,Potatoes (Mashed with Milk and Butter),85.00,118.00,2.00,5.00,2.00,1.00,17.00,vegetables,FALSE,FALSE
+132,Potatoes (Pan-Fried),85.00,218.00,3.00,10.00,2.00,3.00,32.00,vegetables,FALSE,FALSE
+133,Potatoes (Scalloped with Cheese),85.00,173.00,5.00,9.00,5.00,2.00,21.00,vegetables,FALSE,FALSE
+134,Potatoes (Steamed Before Peeling),85.00,77.00,2.00,0.20,0.00,2.00,17.00,vegetables,FALSE,FALSE
+135,Potato Chips,28.00,152.00,2.00,10.00,1.00,1.00,15.00,vegetables,FALSE,FALSE
+136,Radishes,85.00,16.00,0.40,0.10,0.00,1.00,4.00,vegetables,FALSE,FALSE
+137,Rutabagas,85.00,50.00,1.00,0.20,0.00,4.00,12.00,vegetables,FALSE,FALSE
+138,Soybeans,85.00,141.00,13.00,7.00,1.00,6.00,9.00,vegetables,FALSE,FALSE
+139,Spinach,85.00,20.00,2.00,0.30,0.00,2.00,3.00,vegetables,FALSE,FALSE
+140,Squash,85.00,20.00,1.00,0.10,0.00,1.00,4.00,vegetables,FALSE,FALSE
+141,Winter Squash (Mashed),85.00,40.00,1.00,0.10,0.00,3.00,10.00,vegetables,FALSE,FALSE
+142,Sweet Potatoes,85.00,90.00,2.00,0.20,0.00,3.00,21.00,vegetables,FALSE,FALSE
+143,Sweet Potatoes (Candied),85.00,139.00,1.00,0.20,0.00,3.00,33.00,vegetables,FALSE,FALSE
+144,"Tomatoes (Raw, 2 by 2 1/2 inches)",85.00,18.00,1.00,0.20,0.00,1.00,4.00,vegetables,FALSE,FALSE
+145,Tomato Juice,240.00,41.00,2.00,0.10,0.00,1.00,9.00,vegetables,FALSE,FALSE
+146,Tomato Ketchup,15.00,15.00,0.20,0.10,0.00,0.00,4.00,vegetables,FALSE,FALSE
+147,Turnip Greens,85.00,36.00,3.00,0.40,0.00,2.00,7.00,vegetables,FALSE,FALSE
+148,Turnips (Steamed),85.00,34.00,1.00,0.20,0.00,2.00,8.00,vegetables,FALSE,FALSE
+149,"Watercress (Stems, Raw)",85.00,11.00,1.00,0.20,0.00,1.00,2.00,fruits,FALSE,FALSE
+150,Apple Juice (Canned),240.00,114.00,0.20,0.30,0.00,0.00,28.00,fruits,FALSE,FALSE
+151,Apple Vinegar,15.00,3.00,0.00,0.00,0.00,0.00,0.00,fruits,FALSE,FALSE
+152,Apples (Raw),182.00,95.00,0.50,0.30,0.00,4.00,25.00,fruits,FALSE,FALSE
+153,Apples (Stewed or Canned),122.00,83.00,0.20,0.30,0.00,3.00,22.00,fruits,FALSE,FALSE
+154,Apricots (Fresh),100.00,48.00,1.00,0.10,0.00,2.00,12.00,fruits,FALSE,FALSE
+155,"Apricots (Dried, Uncooked)",100.00,241.00,3.00,0.50,0.00,7.00,63.00,fruits,FALSE,FALSE
+156,Nectar (or Juice),240.00,120.00,0.50,0.10,0.00,0.00,30.00,fruits,FALSE,FALSE
+157,Avocado,100.00,160.00,2.00,15.00,2.00,7.00,9.00,fruits,FALSE,FALSE
+158,Banana,118.00,105.00,1.30,0.30,0.00,3.00,27.00,fruits,FALSE,FALSE
+159,Blackberries,100.00,43.00,1.40,0.50,0.00,5.00,10.00,fruits,FALSE,FALSE
+160,Blueberries,100.00,57.00,0.70,0.30,0.00,2.00,14.00,fruits,FALSE,FALSE
+161,Cantaloupe,100.00,34.00,0.80,0.20,0.00,1.00,8.00,fruits,FALSE,FALSE
+162,"Cherries (Fresh, Raw)",100.00,63.00,1.00,0.20,0.00,2.00,16.00,fruits,FALSE,FALSE
+163,Cranberry Sauce (Sweetened),100.00,139.00,0.20,0.10,0.00,2.00,35.00,fruits,FALSE,FALSE
+164,Dates,100.00,277.00,2.00,0.20,0.00,8.00,75.00,fruits,FALSE,FALSE
+165,"Figs (Fresh, Raw)",100.00,74.00,0.80,0.30,0.00,3.00,19.00,fruits,FALSE,FALSE
+166,Figs (Canned with Syrup),100.00,249.00,0.60,0.20,0.00,2.00,64.00,fruits,FALSE,FALSE
+167,Grapefruit Sections,123.00,42.00,1.20,0.10,0.00,2.00,10.00,fruits,FALSE,FALSE
+168,"Grapefruit (Fresh, 5"" Diameter)",250.00,96.00,2.00,0.20,0.00,4.00,24.00,fruits,FALSE,FALSE
+169,Grapefruit Juice,240.00,96.00,1.30,0.20,0.00,0.00,24.00,fruits,FALSE,FALSE
+170,"Grapes (European, Muscat/Tokay)",100.00,69.00,0.70,0.20,0.00,0.90,18.00,fruits,FALSE,FALSE
+171,Grape Juice,240.00,150.00,0.50,0.10,0.00,0.00,36.00,fruits,FALSE,FALSE
+172,Lemon Juice,15.00,4.00,0.00,0.00,0.00,0.00,1.00,fruits,FALSE,FALSE
+173,Lemonade Concentrate (Frozen),100.00,38.00,0.00,0.00,0.00,0.00,10.00,fruits,FALSE,FALSE
+174,Limeade Concentrate (Frozen),100.00,44.00,0.00,0.00,0.00,0.00,11.00,fruits,FALSE,FALSE
+175,Olives (Large),100.00,145.00,0.80,15.00,2.00,3.00,8.00,fruits,FALSE,FALSE
+176,Olives (Ripe),100.00,115.00,0.80,10.00,1.50,3.00,6.00,fruits,FALSE,FALSE
+177,"Oranges (3"" Diameter)",184.00,86.00,1.20,0.20,0.00,4.00,22.00,fruits,FALSE,FALSE
+178,Orange Juice,240.00,110.00,1.60,0.50,0.00,0.00,26.00,fruits,FALSE,FALSE
+179,Papaya,100.00,43.00,0.50,0.10,0.00,1.70,11.00,fruits,FALSE,FALSE
+180,"Peaches (Fresh, Raw)",100.00,39.00,0.90,0.30,0.00,1.50,10.00,fruits,FALSE,FALSE
+181,"Pears (Raw, 3 by 2½)",100.00,57.00,0.40,0.10,0.00,3.10,15.00,fruits,FALSE,FALSE
+182,Persimmons,100.00,81.00,0.60,0.20,0.00,3.60,21.00,fruits,FALSE,FALSE
+183,Pineapple,100.00,50.00,0.50,0.10,0.00,1.40,13.00,fruits,FALSE,FALSE
+184,Pineapple (Crushed),100.00,50.00,0.50,0.10,0.00,1.40,13.00,fruits,FALSE,FALSE
+185,"Pineapple (Raw, Diced)",100.00,50.00,0.50,0.10,0.00,1.40,13.00,fruits,FALSE,FALSE
+186,Pineapple Juice,240.00,130.00,0.50,0.40,0.00,0.00,33.00,fruits,FALSE,FALSE
+187,"Plums (Raw, 2"" Diameter)",66.00,30.00,0.50,0.10,0.00,1.00,8.00,fruits,FALSE,FALSE
+188,Prunes,100.00,240.00,2.20,0.20,0.00,7.10,64.00,fruits,FALSE,FALSE
+189,Prune Juice,240.00,182.00,0.60,0.20,0.00,0.00,46.00,fruits,FALSE,FALSE
+190,Raisins,100.00,299.00,2.50,0.50,0.10,3.70,79.00,fruits,FALSE,FALSE
+191,"Raspberries (Raw, Red)",100.00,52.00,1.20,0.70,0.10,6.50,12.00,fruits,FALSE,FALSE
+192,Rhubarb (Sweetened),100.00,88.00,0.50,0.10,0.00,1.80,23.00,fruits,FALSE,FALSE
+193,Strawberries (Raw),100.00,32.00,0.70,0.30,0.00,2.00,7.00,fruits,FALSE,FALSE
+194,Tangerines,100.00,53.00,0.80,0.20,0.00,1.80,13.00,fruits,FALSE,FALSE
+195,Watermelon,100.00,30.00,0.60,0.20,0.00,0.40,8.00,fruits,FALSE,FALSE
+196,Biscuits,28.00,140.00,2.10,5.60,2.10,0.40,20.00,breads/cereals/fast food/grains,FALSE,FALSE
+197,Bran Flakes,60.00,210.00,6.00,1.50,0.20,7.00,45.00,breads/cereals/fast food/grains,FALSE,FALSE
+198,Bread (Cracked Wheat),28.00,70.00,3.00,1.00,0.20,1.40,13.00,breads/cereals/fast food/grains,FALSE,FALSE
+199,Rye Bread,28.00,70.00,2.50,1.00,0.20,1.80,13.00,breads/cereals/fast food/grains,FALSE,FALSE
+200,White Bread (20 slices),28.00,70.00,2.00,1.00,0.20,0.80,13.00,breads/cereals/fast food/grains,FALSE,FALSE
+201,Whole-Wheat Bread,28.00,80.00,3.00,1.00,0.20,1.90,14.00,breads/cereals/fast food/grains,FALSE,FALSE
+202,Cornbread (Ground Meal),100.00,200.00,4.00,6.00,1.50,2.00,36.00,breads/cereals/fast food/grains,FALSE,FALSE
+203,Cornflakes,30.00,120.00,2.00,0.50,0.10,1.00,27.00,breads/cereals/fast food/grains,FALSE,FALSE
+204,Corn Grits (Cooked),100.00,70.00,1.30,0.50,0.00,1.00,15.00,breads/cereals/fast food/grains,FALSE,FALSE
+205,Corn Meal,100.00,370.00,9.00,1.50,0.30,7.00,78.00,breads/cereals/fast food/grains,FALSE,FALSE
+206,"Crackers (Soda, 2.5"" square)",5.00,20.00,0.30,0.70,0.10,0.20,3.50,breads/cereals/fast food/grains,FALSE,FALSE
+207,Farina,60.00,210.00,7.00,0.50,0.10,1.00,45.00,breads/cereals/fast food/grains,FALSE,FALSE
+208,"Flour (Wheat, All Purpose)",100.00,364.00,10.00,1.00,0.20,2.70,76.00,breads/cereals/fast food/grains,FALSE,FALSE
+209,"Flour (Wheat, Whole)",100.00,340.00,13.00,2.00,0.30,12.00,72.00,breads/cereals/fast food/grains,FALSE,FALSE
+210,Macaroni,100.00,371.00,13.00,1.50,0.30,3.00,75.00,breads/cereals/fast food/grains,FALSE,FALSE
+211,Macaroni (Baked with Cheese),100.00,330.00,10.00,15.00,7.00,1.00,40.00,breads/cereals/fast food/grains,FALSE,FALSE
+212,Muffins,50.00,190.00,3.00,8.00,1.50,1.00,29.00,breads/cereals/fast food/grains,FALSE,FALSE
+213,Noodles,100.00,200.00,7.00,1.00,0.20,2.00,42.00,breads/cereals/fast food/grains,FALSE,FALSE
+214,Oatmeal,100.00,68.00,2.50,1.50,0.30,1.40,12.00,breads/cereals/fast food/grains,FALSE,FALSE
+215,"Pancakes (4"" Diameter)",50.00,90.00,2.50,3.00,1.00,0.50,15.00,breads/cereals/fast food/grains,FALSE,FALSE
+216,"Wheat Pancakes (4"" Diameter)",50.00,90.00,2.50,3.00,1.00,0.50,15.00,breads/cereals/fast food/grains,FALSE,FALSE
+217,"Pizza (14"" Diameter)",1 slice (100g),285.00,12.00,10.00,4.00,2.00,36.00,breads/cereals/fast food/grains,FALSE,FALSE
+218,Popcorn (Salted),100.00,387.00,12.00,16.00,2.00,15.00,78.00,breads/cereals/fast food/grains,FALSE,FALSE
+219,Puffed Rice,100.00,386.00,7.00,1.00,0.20,1.00,86.00,breads/cereals/fast food/grains,FALSE,FALSE
+220,Puffed Wheat (Presweetened),100.00,375.00,7.00,1.00,0.20,3.00,86.00,breads/cereals/fast food/grains,FALSE,FALSE
+221,Rice (Converted),100.00,130.00,2.70,0.30,0.10,0.60,28.00,breads/cereals/fast food/grains,FALSE,FALSE
+222,Rice (White),100.00,130.00,2.70,0.30,0.10,0.60,28.00,breads/cereals/fast food/grains,FALSE,FALSE
+223,Rice Flakes,100.00,359.00,6.00,1.50,0.20,2.00,77.00,breads/cereals/fast food/grains,FALSE,FALSE
+224,Rice Polish,100.00,363.00,6.00,1.50,0.20,2.00,76.00,breads/cereals/fast food/grains,FALSE,FALSE
+225,Rolls (Refined Flour),30.00,80.00,2.00,0.50,0.10,1.00,15.00,breads/cereals/fast food/grains,FALSE,FALSE
+226,Rolls (Whole-Wheat),30.00,80.00,3.00,1.00,0.20,1.90,14.00,breads/cereals/fast food/grains,FALSE,FALSE
+227,Spaghetti (with Meat Sauce),100.00,160.00,7.00,5.00,1.00,3.00,24.00,breads/cereals/fast food/grains,FALSE,FALSE
+228,Spaghetti (with Tomatoes and Cheese),100.00,210.00,10.00,8.00,3.00,2.00,24.00,breads/cereals/fast food/grains,FALSE,FALSE
+229,Spanish Rice,100.00,150.00,3.00,1.50,0.30,2.00,32.00,breads/cereals/fast food/grains,FALSE,FALSE
+230,Shredded Wheat Biscuit,60.00,210.00,7.00,0.50,0.10,6.00,45.00,breads/cereals/fast food/grains,FALSE,FALSE
+231,Waffles,70.00,250.00,6.00,9.00,2.00,1.00,38.00,breads/cereals/fast food/grains,FALSE,FALSE
+232,Wheat Germ,28.00,100.00,6.00,0.50,0.10,4.00,21.00,breads/cereals/fast food/grains,FALSE,FALSE
+233,Wheat-Germ Cereal (Toasted),60.00,220.00,6.00,1.00,0.20,5.00,45.00,breads/cereals/fast food/grains,FALSE,FALSE
+234,Wheat Meal Cereal (Unrefined),60.00,240.00,8.00,1.50,0.30,6.00,50.00,breads/cereals/fast food/grains,FALSE,FALSE
+235,Wheat (Cooked),100.00,140.00,5.00,0.50,0.10,1.80,30.00,breads/cereals/fast food/grains,FALSE,FALSE
+236,Bean Soup,240.00,180.00,12.00,2.50,0.50,8.00,30.00,soups,FALSE,FALSE
+237,Beef Soup,240.00,250.00,20.00,10.00,4.00,2.00,25.00,soups,FALSE,FALSE
+238,Bouillon,240.00,15.00,1.00,0.50,0.10,0.00,2.00,soups,FALSE,FALSE
+239,Chicken Soup,240.00,150.00,15.00,5.00,1.50,2.00,15.00,soups,FALSE,FALSE
+240,Clam Chowder,240.00,220.00,7.00,11.00,6.00,2.00,23.00,soups,FALSE,FALSE
+241,Cream soups,240.00,250.00,5.00,15.00,8.00,1.00,20.00,soups,FALSE,FALSE
+242,Noodle Soup,240.00,180.00,6.00,5.00,2.00,2.00,29.00,soups,FALSE,FALSE
+243,Split-Pea Soup,240.00,200.00,13.00,1.00,0.20,7.00,35.00,soups,FALSE,FALSE
+244,Tomato Soup,240.00,90.00,3.00,1.00,0.20,2.00,20.00,soups,FALSE,FALSE
+245,Vegetable Soup,240.00,70.00,3.00,1.00,0.20,4.00,13.00,soups,FALSE,FALSE
+246,Apple Betty,240.00,210.00,1.50,5.00,2.00,3.00,40.00,desserts/sweets,FALSE,FALSE
+247,Bread Pudding,240.00,250.00,6.00,7.00,4.00,2.00,45.00,desserts/sweets,FALSE,FALSE
+248,Cakes,100.00,280.00,3.00,12.00,5.00,1.00,44.00,desserts/sweets,FALSE,FALSE
+249,Chocolate Fudge,100.00,380.00,4.00,20.00,12.00,1.00,50.00,desserts/sweets,FALSE,FALSE
+250,Cupcake,100.00,320.00,3.00,12.00,5.00,1.00,48.00,desserts/sweets,FALSE,FALSE
+251,Fruit Cake,100.00,350.00,3.00,14.00,6.00,1.00,54.00,desserts/sweets,FALSE,FALSE
+252,Gingerbread,100.00,340.00,4.00,12.00,3.00,1.00,54.00,desserts/sweets,FALSE,FALSE
+253,Plain Cake (no icing),100.00,250.00,3.00,10.00,3.00,1.00,38.00,desserts/sweets,FALSE,FALSE
+254,Sponge Cake,100.00,220.00,3.00,8.00,3.00,0.50,37.00,desserts/sweets,FALSE,FALSE
+255,Candy,100.00,400.00,0.00,0.00,0.00,0.00,100.00,desserts/sweets,FALSE,FALSE
+256,Chocolate Creams,100.00,500.00,5.00,30.00,15.00,1.00,50.00,desserts/sweets,FALSE,FALSE
+257,Fudge,100.00,400.00,4.00,20.00,12.00,0.50,55.00,desserts/sweets,FALSE,FALSE
+258,Hard Candies,100.00,400.00,0.00,0.00,0.00,0.00,100.00,desserts/sweets,FALSE,FALSE
+259,Marshmallows,100.00,300.00,1.00,0.00,0.00,0.00,75.00,desserts/sweets,FALSE,FALSE
+260,Milk Chocolate,100.00,535.00,7.00,30.00,18.00,3.00,58.00,desserts/sweets,FALSE,FALSE
+261,Chocolate Syrup,100.00,300.00,0.00,0.00,0.00,0.00,75.00,desserts/sweets,FALSE,FALSE
+262,Doughnuts,100.00,450.00,5.00,25.00,10.00,1.00,50.00,desserts/sweets,FALSE,FALSE
+263,Gelatin (made with water),100.00,60.00,1.00,0.00,0.00,0.00,14.00,desserts/sweets,FALSE,FALSE
+264,Honey,100.00,304.00,0.30,0.00,0.00,0.20,82.40,jams/jellies,FALSE,FALSE
+265,Ice Cream,100.00,207.00,3.50,11.00,7.00,0.00,24.00,desserts/sweets,FALSE,FALSE
+266,Ices,100.00,150.00,0.20,0.00,0.00,0.00,37.00,desserts/sweets,FALSE,FALSE
+267,Preserves,100.00,250.00,0.20,0.00,0.00,0.50,65.00,jams/jellies,FALSE,FALSE
+268,Jellies,100.00,250.00,0.00,0.00,0.00,0.00,65.00,jams/jellies,FALSE,FALSE
+269,Molasses,100.00,290.00,0.50,0.10,0.00,0.00,75.00,jams/jellies,FALSE,FALSE
+270,Cane Syrup,100.00,290.00,0.00,0.00,0.00,0.00,75.00,jams/jellies,FALSE,FALSE
+271,"9"" diameter pie",100.00,300.00,2.00,15.00,5.00,1.00,40.00,desserts/sweets,FALSE,FALSE
+272,Cherry Pie,100.00,290.00,2.00,10.00,4.00,1.50,50.00,desserts/sweets,FALSE,FALSE
+273,Custard,100.00,130.00,3.00,5.00,3.00,0.00,20.00,desserts/sweets,FALSE,FALSE
+274,Lemon Meringue Pie,100.00,350.00,3.00,14.00,6.00,1.00,54.00,desserts/sweets,FALSE,FALSE
+275,Mince Pie,100.00,320.00,5.00,14.00,6.00,1.00,45.00,desserts/sweets,FALSE,FALSE
+276,Pumpkin Pie,100.00,320.00,3.00,12.00,5.00,2.00,54.00,desserts/sweets,FALSE,FALSE
+277,Puddings,100.00,150.00,2.00,2.00,1.00,0.00,30.00,desserts/sweets,FALSE,FALSE
+278,Sugar,12.00,48.00,0.00,0.00,0.00,0.00,12.00,desserts/sweets,FALSE,FALSE
+279,"Brown Sugar (firm-packed, dark)",100.00,380.00,0.30,0.10,0.00,0.00,98.00,jams/jellies,FALSE,FALSE
+280,Syrup,100.00,300.00,0.00,0.00,0.00,0.00,80.00,jams/jellies,FALSE,FALSE
+281,Table Blends Sugar,100.00,400.00,0.00,0.00,0.00,0.00,100.00,jams/jellies,FALSE,FALSE
+282,Tapioca Cream Pudding,100.00,120.00,2.00,2.00,1.00,0.00,24.00,desserts/sweets,FALSE,FALSE
+283,Almonds (roasted and salted),100.00,579.00,21.00,50.00,3.70,12.50,21.60,seeds and nuts,FALSE,FALSE
+284,Brazil Nuts,100.00,659.00,14.00,66.00,15.00,7.50,12.00,seeds and nuts,FALSE,FALSE
+285,Cashews,100.00,553.00,18.00,44.00,7.80,3.30,30.20,seeds and nuts,FALSE,FALSE
+286,Coconut (sweetened),100.00,354.00,3.30,33.50,30.00,9.00,15.20,seeds and nuts,FALSE,FALSE
+287,Peanut Butter,100.00,588.00,25.00,50.00,10.00,6.00,20.00,seeds and nuts,FALSE,FALSE
+288,Peanut Butter (natural),100.00,588.00,25.00,50.00,10.00,6.00,20.00,seeds and nuts,FALSE,FALSE
+289,Peanuts,100.00,567.00,25.80,49.20,6.80,8.50,16.10,seeds and nuts,FALSE,FALSE
+290,Pecans,100.00,691.00,9.20,72.00,6.20,9.60,13.90,seeds and nuts,FALSE,FALSE
+291,Sesame Seeds,100.00,573.00,17.00,50.00,7.40,9.00,23.50,seeds and nuts,FALSE,FALSE
+292,Sunflower Seeds,100.00,584.00,21.00,51.00,4.50,8.60,20.00,seeds and nuts,FALSE,FALSE
+293,Walnuts,100.00,654.00,15.20,65.00,6.10,6.70,13.70,seeds and nuts,FALSE,FALSE
+294,"Beer (average, 5% alcohol)",100.00,43.00,0.50,0.00,0.00,0.00,3.60,drinks/alcohol/beverages,FALSE,FALSE
+295,Gin,100.00,263.00,0.00,0.00,0.00,0.00,0.00,drinks/alcohol/beverages,FALSE,FALSE
+296,Wines,100.00,83.00,0.10,0.00,0.00,0.00,2.00,drinks/alcohol/beverages,FALSE,FALSE
+297,Table Wine (12.2% alcohol),100.00,83.00,0.10,0.00,0.00,0.00,2.00,drinks/alcohol/beverages,FALSE,FALSE
+298,Carbonated Drinks (Artificially Sweetened),100.00,1.00,0.00,0.00,0.00,0.00,0.40,drinks/alcohol/beverages,FALSE,FALSE
+299,Club Soda,100.00,0.00,0.00,0.00,0.00,0.00,0.00,drinks/alcohol/beverages,FALSE,FALSE
+300,Cola Drinks,100.00,42.00,0.00,0.00,0.00,0.00,11.00,drinks/alcohol/beverages,FALSE,FALSE
+301,Fruit-Flavored Soda,100.00,46.00,0.00,0.00,0.00,0.00,12.00,drinks/alcohol/beverages,FALSE,FALSE
+302,Ginger Ale,100.00,39.00,0.00,0.00,0.00,0.00,10.00,drinks/alcohol/beverages,FALSE,FALSE
+303,Root Beer,100.00,69.00,0.00,0.00,0.00,0.00,17.00,drinks/alcohol/beverages,FALSE,FALSE
+304,"Coffee (black, brewed)",100.00,2.00,0.30,0.00,0.00,0.00,0.00,drinks/alcohol/beverages,FALSE,FALSE
+305,"Tea (black, brewed)",100.00,1.00,0.20,0.00,0.00,0.00,0.00,drinks/alcohol/beverages,FALSE,FALSE
