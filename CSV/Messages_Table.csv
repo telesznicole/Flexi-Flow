@@ -1,16 +1,16 @@
-id,content,type,content title,user id 1,user id 2,time written,time received,status,workout id,discussion id,community id,upvotes,downvotes,comments
+id,content,type,content_title,user_id_1,user_id_2,time_written,time_received,status,workout_id,discussion_id,community_id,upvotes,downvotes,comments
 1,Want to join me for a run this weekend?,message,NULL,1,32,2023-10-01 10:00:00,2023-10-01 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 2,Sure! What time works for you?,message,NULL,32,1,2023-10-01 11:00:00,2023-10-01 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-3,Any good workout routines you'd recommend?,message,NULL,1,39,2023-10-02 12:00:00,2023-10-02 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-4,"I've been doing HIIT recently, it's great!",message,NULL,39,1,2023-10-02 13:00:00,2023-10-02 13:02:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-5,How's your gym progress going?,message,NULL,2,47,2023-10-03 14:00:00,2023-10-03 14:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-6,"Pretty good, making some gains!",message,NULL,47,2,2023-10-03 15:00:00,2023-10-03 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+3,Any good workout routines youd recommend?,message,NULL,1,39,2023-10-02 12:00:00,2023-10-02 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+4,Ive been doing HIIT recently/its great!,message,NULL,39,1,2023-10-02 13:00:00,2023-10-02 13:02:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+5,Hows your gym progress going?,message,NULL,2,47,2023-10-03 14:00:00,2023-10-03 14:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+6,Pretty good/making some gains!,message,NULL,47,2,2023-10-03 15:00:00,2023-10-03 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 7,Have you tried that new spin class?,message,NULL,2,50,2023-10-04 16:00:00,2023-10-04 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-8,"Not yet, but I’m planning to next week.",message,NULL,50,2,2023-10-04 17:00:00,2023-10-04 17:15:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+8,Not yet/but I’m planning to next week.,message,NULL,50,2,2023-10-04 17:00:00,2023-10-04 17:15:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 9,Want to go for a swim tomorrow?,message,NULL,3,5,2023-10-05 18:00:00,2023-10-05 18:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 10,I’m in! Let’s meet at the pool at 6.,message,NULL,5,3,2023-10-05 19:00:00,2023-10-05 19:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-11,"I found a great yoga session, interested?",message,NULL,3,23,2023-10-06 20:00:00,2023-10-06 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-12,"Absolutely, send me the details.",message,NULL,23,3,2023-10-06 21:00:00,2023-10-06 21:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+11,I found a great yoga session/interested?,message,NULL,3,23,2023-10-06 20:00:00,2023-10-06 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+12,Absolutely/send me the details.,message,NULL,23,3,2023-10-06 21:00:00,2023-10-06 21:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 13,I just hit a new PR on squats!,message,NULL,3,20,2023-10-07 22:00:00,2023-10-07 22:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 14,That’s awesome! Congrats!,message,NULL,20,3,2023-10-08 9:00:00,2023-10-08 9:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 15,Thinking of starting a strength program.,message,NULL,3,19,2023-10-08 10:00:00,2023-10-08 10:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
@@ -18,33 +18,33 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 17,How’s your running form improving?,message,NULL,4,12,2023-10-09 12:00:00,2023-10-09 12:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 18,Getting better! Thanks for the tips!,message,NULL,12,4,2023-10-10 13:00:00,2023-10-10 13:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 19,Ready for tomorrow’s bootcamp class?,message,NULL,4,45,2023-10-10 14:00:00,2023-10-10 14:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-20,"Yes, I’m excited! It’ll be intense!",message,NULL,45,4,2023-10-11 15:00:00,2023-10-11 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+20,Yes/I’m excited! It’ll be intense!,message,NULL,45,4,2023-10-11 15:00:00,2023-10-11 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 21,Have you tried CrossFit?,message,NULL,5,8,2023-10-11 16:00:00,2023-10-11 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-22,"Not yet, thinking about it though.",message,NULL,8,5,2023-10-12 17:00:00,2023-10-12 17:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+22,Not yet/thinking about it though.,message,NULL,8,5,2023-10-12 17:00:00,2023-10-12 17:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 23,How’s your diet coming along?,message,NULL,5,46,2023-10-12 18:00:00,2023-10-12 18:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-24,"It’s been tough, but sticking to it!",message,NULL,46,5,2023-10-13 19:00:00,2023-10-13 19:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+24,It’s been tough/but sticking to it!,message,NULL,46,5,2023-10-13 19:00:00,2023-10-13 19:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 25,Want to hit the weights later?,message,NULL,6,30,2023-10-13 20:00:00,2023-10-13 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-26,"Sure, let’s do leg day.",message,NULL,30,6,2023-10-14 21:00:00,2023-10-14 21:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+26,Sure/let’s do leg day.,message,NULL,30,6,2023-10-14 21:00:00,2023-10-14 21:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 27,How’s your mobility routine?,message,NULL,6,48,2023-10-14 22:00:00,2023-10-14 22:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-28,"I’ve added more stretches, it’s helping.",message,NULL,48,6,2023-10-15 9:00:00,2023-10-15 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+28,I’ve added more stretches/it’s helping.,message,NULL,48,6,2023-10-15 9:00:00,2023-10-15 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 29,Ready for our 5K run next week?,message,NULL,6,15,2023-10-15 10:00:00,2023-10-15 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-30,"Definitely, I’ve been training hard.",message,NULL,15,6,2023-10-16 11:00:00,2023-10-16 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+30,Definitely/I’ve been training hard.,message,NULL,15,6,2023-10-16 11:00:00,2023-10-16 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 31,Let’s start that new fitness challenge.,message,NULL,6,17,2023-10-16 12:00:00,2023-10-16 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-32,"I’m in, let’s crush it!",message,NULL,17,6,2023-10-17 13:00:00,2023-10-17 13:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+32,I’m in/let’s crush it!,message,NULL,17,6,2023-10-17 13:00:00,2023-10-17 13:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 33,How’s your recovery after workouts?,message,NULL,6,43,2023-10-17 14:00:00,2023-10-17 14:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-34,"Going well, foam rolling helps a lot!",message,NULL,43,6,2023-10-18 15:00:00,2023-10-18 15:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+34,Going well/foam rolling helps a lot!,message,NULL,43,6,2023-10-18 15:00:00,2023-10-18 15:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 35,Want to join me for a cycling session?,message,NULL,7,29,2023-10-18 16:00:00,2023-10-18 16:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 36,Yes! I’ve been wanting to get back into it.,message,NULL,29,7,2023-10-19 17:00:00,2023-10-19 17:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 37,How’s your marathon training going?,message,NULL,7,26,2024-10-12 10:00:00,2024-10-12 10:01:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-38,"Pretty tough, but making progress!",message,NULL,26,7,2024-10-12 10:05:00,2024-10-12 10:06:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+38,Pretty tough/but making progress!,message,NULL,26,7,2024-10-12 10:05:00,2024-10-12 10:06:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 39,Do you do any strength training?,message,NULL,7,44,2024-10-12 10:10:00,2024-10-12 10:11:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-40,"Yes, mostly for core and legs.",message,NULL,44,7,2024-10-12 10:15:00,2024-10-12 10:16:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+40,Yes/mostly for core and legs.,message,NULL,44,7,2024-10-12 10:15:00,2024-10-12 10:16:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 41,Let’s sign up for that fitness competition.,message,NULL,8,41,2024-10-12 10:20:00,2024-10-12 10:21:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 42,That sounds fun! I’m in!,message,NULL,41,8,2024-10-12 10:25:00,2024-10-12 10:26:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-43,"I found a new hiking trail, want to try it?",message,NULL,8,38,2024-10-12 10:30:00,2024-10-12 10:31:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-44,"Yes, let’s go this weekend!",message,NULL,38,8,2024-10-12 10:35:00,2024-10-12 10:36:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+43,I found a new hiking trail/want to try it?,message,NULL,8,38,2024-10-12 10:30:00,2024-10-12 10:31:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+44,Yes/let’s go this weekend!,message,NULL,38,8,2024-10-12 10:35:00,2024-10-12 10:36:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 45,Want to do a quick workout later?,message,NULL,8,26,2024-10-12 10:40:00,2024-10-12 10:41:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-46,"Sure, I’ve got time after lunch.",message,NULL,26,8,2024-10-12 10:45:00,2024-10-12 10:46:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+46,Sure/I’ve got time after lunch.,message,NULL,26,8,2024-10-12 10:45:00,2024-10-12 10:46:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 47,Any tips for improving endurance?,message,NULL,8,11,2024-10-12 10:50:00,2024-10-12 10:51:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 48,Focus on steady cardio and consistency.,message,NULL,11,8,2024-10-12 10:55:00,2024-10-12 10:56:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 49,I hit a new personal best in deadlifts!,message,NULL,9,39,2024-10-12 11:00:00,2024-10-12 11:01:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
@@ -52,123 +52,123 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 51,Want to go for a jog tomorrow morning?,message,NULL,9,32,2023-10-01 11:00:00,2023-10-01 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 52,Sounds good! Let’s meet at 7.,message,NULL,32,9,2023-10-02 12:00:00,2023-10-02 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 53,What’s your go-to workout playlist?,message,NULL,9,2,2023-10-02 13:00:00,2023-10-02 13:02:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-54,"Mostly EDM, it keeps me pumped!",message,NULL,2,9,2023-10-03 14:00:00,2023-10-03 14:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+54,Mostly EDM/it keeps me pumped!,message,NULL,2,9,2023-10-03 14:00:00,2023-10-03 14:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 55,Have you been trying intermittent fasting?,message,NULL,10,43,2023-10-03 15:00:00,2023-10-03 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-56,"Yes, it’s working well for me.",message,NULL,43,10,2023-10-04 16:00:00,2023-10-04 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+56,Yes/it’s working well for me.,message,NULL,43,10,2023-10-04 16:00:00,2023-10-04 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 57,Do you follow any fitness influencers?,message,NULL,10,5,2023-10-04 17:00:00,2023-10-04 17:15:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-58,"Yeah, I like following Jeff Nippard.",message,NULL,5,10,2023-10-05 18:00:00,2023-10-05 18:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+58,Yeah/I like following Jeff Nippard.,message,NULL,5,10,2023-10-05 18:00:00,2023-10-05 18:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 59,Let’s do a cardio session tomorrow.,message,NULL,10,38,2023-10-05 19:00:00,2023-10-05 19:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-60,"I’m down, let’s go in the morning.",message,NULL,38,10,2023-10-06 20:00:00,2023-10-06 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+60,I’m down/let’s go in the morning.,message,NULL,38,10,2023-10-06 20:00:00,2023-10-06 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 61,Any recommendations for pre-workout meals?,message,NULL,10,1,2023-10-06 21:00:00,2023-10-06 21:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 62,I usually go for oats and bananas.,message,NULL,1,10,2023-10-07 22:00:00,2023-10-07 22:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 63,How’s your flexibility coming along?,message,NULL,10,6,2023-10-08 9:00:00,2023-10-08 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-64,"Much better, I’m stretching daily now.",message,NULL,6,10,2023-10-08 10:00:00,2023-10-08 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+64,Much better/I’m stretching daily now.,message,NULL,6,10,2023-10-08 10:00:00,2023-10-08 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 65,Do you track your workouts?,message,NULL,11,37,2023-10-09 11:00:00,2023-10-09 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-66,"Yes, I use a fitness app for it.",message,NULL,37,11,2023-10-09 12:00:00,2023-10-09 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+66,Yes/I use a fitness app for it.,message,NULL,37,11,2023-10-09 12:00:00,2023-10-09 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 67,Let’s try that new workout routine I found.,message,NULL,11,9,2023-10-10 13:00:00,2023-10-10 13:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-68,"Sure, send me the details!",message,NULL,9,11,2023-10-10 14:00:00,2023-10-10 14:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+68,Sure/send me the details!,message,NULL,9,11,2023-10-10 14:00:00,2023-10-10 14:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 69,Want to join me for a fitness class?,message,NULL,11,31,2023-10-11 15:00:00,2023-10-11 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-70,"Sounds great, count me in!",message,NULL,31,11,2023-10-11 16:00:00,2023-10-11 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+70,Sounds great/count me in!,message,NULL,31,11,2023-10-11 16:00:00,2023-10-11 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 71,How’s your strength training going?,message,NULL,11,23,2023-10-12 17:00:00,2023-10-12 17:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-72,"It’s getting better, making slow progress.",message,NULL,23,11,2023-10-12 18:00:00,2023-10-12 18:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+72,It’s getting better/making slow progress.,message,NULL,23,11,2023-10-12 18:00:00,2023-10-12 18:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 73,Have you tried those new protein shakes?,message,NULL,12,27,2023-10-13 19:00:00,2023-10-13 19:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-74,"Yes, they’re pretty good!",message,NULL,27,12,2023-10-13 20:00:00,2023-10-13 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+74,Yes/they’re pretty good!,message,NULL,27,12,2023-10-13 20:00:00,2023-10-13 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 75,How do you stay motivated to work out?,message,NULL,12,45,2023-10-14 21:00:00,2023-10-14 21:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 76,I set small goals to keep myself going.,message,NULL,45,12,2023-10-14 22:00:00,2023-10-14 22:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 77,Do you run outdoors or on a treadmill?,message,NULL,12,40,2023-10-15 9:00:00,2023-10-15 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-78,"Mostly outdoors, it’s more fun.",message,NULL,40,12,2023-10-15 10:00:00,2023-10-15 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+78,Mostly outdoors/it’s more fun.,message,NULL,40,12,2023-10-15 10:00:00,2023-10-15 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 79,Any recommendations for shoulder exercises?,message,NULL,13,39,2023-10-16 11:00:00,2023-10-16 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 80,I love doing overhead presses.,message,NULL,39,13,2023-10-16 12:00:00,2023-10-16 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 81,How’s your core workout going?,message,NULL,13,26,2023-10-17 13:00:00,2023-10-17 13:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-82,"Tough, but seeing results!",message,NULL,26,13,2023-10-17 14:00:00,2023-10-17 14:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+82,Tough/but seeing results!,message,NULL,26,13,2023-10-17 14:00:00,2023-10-17 14:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 83,How many rest days do you take a week?,message,NULL,13,6,2023-10-18 15:00:00,2023-10-18 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-84,"Usually two, to recover properly.",message,NULL,6,13,2023-10-18 16:00:00,2023-10-18 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+84,Usually two/to recover properly.,message,NULL,6,13,2023-10-18 16:00:00,2023-10-18 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 85,Do you do bodyweight or weighted squats?,message,NULL,14,33,2023-10-19 17:00:00,2023-10-19 17:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-86,"Mostly bodyweight, but I mix in weights too.",message,NULL,33,14,2024-10-12 10:00:00,2024-10-12 10:01:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+86,Mostly bodyweight/but I mix in weights too.,message,NULL,33,14,2024-10-12 10:00:00,2024-10-12 10:01:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 87,How do you track your fitness progress?,message,NULL,14,29,2024-10-12 10:05:00,2024-10-12 10:06:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 88,I use a fitness journal to log everything.,message,NULL,29,14,2024-10-12 10:10:00,2024-10-12 10:11:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 89,What’s your favorite recovery snack?,message,NULL,14,46,2024-10-12 10:15:00,2024-10-12 10:16:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 90,I usually have a protein shake post-workout.,message,NULL,46,14,2024-10-12 10:20:00,2024-10-12 10:21:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 91,Want to hit the gym later?,message,NULL,14,2,2024-10-12 10:25:00,2024-10-12 10:26:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-92,"Sure, let’s meet around 5 PM.",message,NULL,2,14,2024-10-12 10:30:00,2024-10-12 10:31:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+92,Sure/let’s meet around 5 PM.,message,NULL,2,14,2024-10-12 10:30:00,2024-10-12 10:31:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 93,Have you been keeping up with your running?,message,NULL,15,34,2024-10-12 10:35:00,2024-10-12 10:36:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-94,"Yes, I’m trying to improve my pace.",message,NULL,34,15,2024-10-12 10:40:00,2024-10-12 10:41:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+94,Yes/I’m trying to improve my pace.,message,NULL,34,15,2024-10-12 10:40:00,2024-10-12 10:41:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 95,Do you prefer morning or evening workouts?,message,NULL,15,39,2024-10-12 10:45:00,2024-10-12 10:46:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-96,"Definitely morning, it sets the tone for my day.",message,NULL,39,15,2024-10-12 10:50:00,2024-10-12 10:51:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+96,Definitely morning/it sets the tone for my day.,message,NULL,39,15,2024-10-12 10:50:00,2024-10-12 10:51:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 97,Are you still doing yoga?,message,NULL,16,19,2024-10-12 10:55:00,2024-10-12 10:56:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-98,"Yes, it’s been helping with my flexibility.",message,NULL,19,16,2024-10-12 11:00:00,2024-10-12 11:01:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+98,Yes/it’s been helping with my flexibility.,message,NULL,19,16,2024-10-12 11:00:00,2024-10-12 11:01:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 99,Let’s try that new fitness class together.,message,NULL,16,47,2023-10-01 10:00:00,2023-10-01 10:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-100,"I’m down, let’s sign up for it!",message,NULL,47,16,2023-10-01 11:00:00,2023-10-01 11:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+100,I’m down/let’s sign up for it!,message,NULL,47,16,2023-10-01 11:00:00,2023-10-01 11:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 101,What’s your go-to warm-up routine?,message,NULL,17,37,2023-10-02 12:00:00,2023-10-02 12:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 102,I usually do dynamic stretches and light cardio.,message,NULL,37,17,2023-10-02 13:00:00,2023-10-02 13:02:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 103,Any tips for improving pull-up strength?,message,NULL,17,2,2023-10-03 14:00:00,2023-10-03 14:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 104,Try incorporating negatives into your routine.,message,NULL,2,17,2023-10-03 15:00:00,2023-10-03 15:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 105,Do you prefer running outdoors or at the gym?,message,NULL,18,36,2023-10-04 16:00:00,2023-10-04 16:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-106,"Outdoors, it’s more refreshing.",message,NULL,36,18,2023-10-04 17:00:00,2023-10-04 17:15:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+106,Outdoors/it’s more refreshing.,message,NULL,36,18,2023-10-04 17:00:00,2023-10-04 17:15:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 107,How’s your weight training going?,message,NULL,18,46,2023-10-05 18:00:00,2023-10-05 18:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-108,"Pretty good, I’m getting stronger!",message,NULL,46,18,2023-10-05 19:00:00,2023-10-05 19:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+108,Pretty good/I’m getting stronger!,message,NULL,46,18,2023-10-05 19:00:00,2023-10-05 19:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 109,How many times a week do you train?,message,NULL,18,44,2023-10-06 20:00:00,2023-10-06 20:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 110,Usually around 4-5 times a week.,message,NULL,44,18,2023-10-06 21:00:00,2023-10-06 21:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 111,Any tips for recovery after leg day?,message,NULL,18,5,2023-10-07 22:00:00,2023-10-07 22:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 112,Stretching and foam rolling help a lot!,message,NULL,5,18,2023-10-08 9:00:00,2023-10-08 9:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 113,How’s your HIIT training going?,message,NULL,19,9,2023-10-08 10:00:00,2023-10-08 10:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-114,"It’s intense, but I’m seeing results!",message,NULL,9,19,2023-10-09 11:00:00,2023-10-09 11:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+114,It’s intense/but I’m seeing results!,message,NULL,9,19,2023-10-09 11:00:00,2023-10-09 11:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 115,Let’s do a weightlifting session tomorrow.,message,NULL,19,32,2023-10-09 12:00:00,2023-10-09 12:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-116,"Sounds good, let’s meet at the gym.",message,NULL,32,19,2023-10-10 13:00:00,2023-10-10 13:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+116,Sounds good/let’s meet at the gym.,message,NULL,32,19,2023-10-10 13:00:00,2023-10-10 13:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 117,Do you follow a specific workout program?,message,NULL,20,9,2023-10-10 14:00:00,2023-10-10 14:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-118,"Yes, I’m doing a 6-week strength plan.",message,NULL,9,20,2023-10-11 15:00:00,2023-10-11 15:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+118,Yes/I’m doing a 6-week strength plan.,message,NULL,9,20,2023-10-11 15:00:00,2023-10-11 15:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 119,Have you tried interval running for speed?,message,NULL,20,34,2023-10-11 16:00:00,2023-10-11 16:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-120,"Not yet, but I’ll give it a shot.",message,NULL,34,20,2023-10-12 17:00:00,2023-10-12 17:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+120,Not yet/but I’ll give it a shot.,message,NULL,34,20,2023-10-12 17:00:00,2023-10-12 17:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 121,What’s your post-workout stretch routine?,message,NULL,21,11,2023-10-12 18:00:00,2023-10-12 18:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 122,I focus on hamstrings and quads.,message,NULL,11,21,2023-10-13 19:00:00,2023-10-13 19:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 123,Want to go for a swim later?,message,NULL,21,4,2023-10-13 20:00:00,2023-10-13 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-124,"Sure, let’s meet at the pool around 4 PM.",message,NULL,4,21,2023-10-14 21:00:00,2023-10-14 21:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+124,Sure/let’s meet at the pool around 4 PM.,message,NULL,4,21,2023-10-14 21:00:00,2023-10-14 21:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 125,How’s your training for the 10K going?,message,NULL,22,20,2023-10-14 22:00:00,2023-10-14 22:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-126,"It’s tough, but I’m sticking with it.",message,NULL,20,22,2023-10-15 9:00:00,2023-10-15 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+126,It’s tough/but I’m sticking with it.,message,NULL,20,22,2023-10-15 9:00:00,2023-10-15 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 127,Let’s do some strength training this weekend.,message,NULL,22,30,2023-10-15 10:00:00,2023-10-15 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 128,I’m in! Let’s focus on arms.,message,NULL,30,22,2023-10-16 11:00:00,2023-10-16 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 129,Any tips for improving cardio endurance?,message,NULL,22,38,2023-10-16 12:00:00,2023-10-16 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 130,Try adding sprints to your routine.,message,NULL,38,22,2023-10-17 13:00:00,2023-10-17 13:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 131,How’s your weightlifting going?,message,NULL,22,41,2023-10-17 14:00:00,2023-10-17 14:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-132,"Pretty good, I’m making progress.",message,NULL,41,22,2023-10-18 15:00:00,2023-10-18 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+132,Pretty good/I’m making progress.,message,NULL,41,22,2023-10-18 15:00:00,2023-10-18 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 133,What’s your favorite leg workout?,message,NULL,23,20,2023-10-18 16:00:00,2023-10-18 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 134,I love doing squats and lunges.,message,NULL,20,23,2023-10-19 17:00:00,2023-10-19 17:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 135,Any tips for staying consistent with workouts?,message,NULL,23,11,2024-10-12 10:00:00,2024-10-12 10:01:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 136,Set small goals and track your progress.,message,NULL,11,23,2024-10-12 10:05:00,2024-10-12 10:06:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 137,Want to join me for a Pilates session?,message,NULL,23,12,2024-10-12 10:10:00,2024-10-12 10:11:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-138,"Sure, I’ve been wanting to try that!",message,NULL,12,23,2024-10-12 10:15:00,2024-10-12 10:16:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+138,Sure/I’ve been wanting to try that!,message,NULL,12,23,2024-10-12 10:15:00,2024-10-12 10:16:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 139,How do you stay motivated to work out?,message,NULL,23,15,2024-10-12 10:20:00,2024-10-12 10:21:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 140,I follow fitness challenges to keep it fun.,message,NULL,15,23,2024-10-12 10:25:00,2024-10-12 10:26:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 141,Want to join me for a hike this weekend?,message,NULL,24,1,2024-10-12 10:30:00,2024-10-12 10:31:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-142,"Yes, let’s do it!",message,NULL,1,24,2024-10-12 10:35:00,2024-10-12 10:36:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+142,Yes/let’s do it!,message,NULL,1,24,2024-10-12 10:35:00,2024-10-12 10:36:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 143,How’s your yoga practice going?,message,NULL,24,36,2024-10-12 10:40:00,2024-10-12 10:41:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-144,"It’s been great, feeling more flexible.",message,NULL,36,24,2024-10-12 10:45:00,2024-10-12 10:46:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+144,It’s been great/feeling more flexible.,message,NULL,36,24,2024-10-12 10:45:00,2024-10-12 10:46:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 145,Any tips for improving core strength?,message,NULL,24,20,2024-10-12 10:50:00,2024-10-12 10:51:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 146,Try planks and leg raises!,message,NULL,20,24,2024-10-12 10:55:00,2024-10-12 10:56:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 147,Do you track your calories while working out?,message,NULL,24,49,2024-10-12 11:00:00,2024-10-12 11:01:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-148,"Yes, I use an app for it.",message,NULL,49,24,2023-10-01 10:00:00,2023-10-01 10:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+148,Yes/I use an app for it.,message,NULL,49,24,2023-10-01 10:00:00,2023-10-01 10:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 149,How do you warm up before lifting weights?,message,NULL,25,43,2023-10-01 11:00:00,2023-10-01 11:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 150,I usually do dynamic stretches and light cardio.,message,NULL,43,25,2023-10-02 12:00:00,2023-10-02 12:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 151,What’s your favorite cardio exercise?,message,NULL,25,45,2023-10-02 13:00:00,2023-10-02 13:02:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-152,"I love cycling, it’s a great workout.",message,NULL,45,25,2023-10-03 14:00:00,2023-10-03 14:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+152,I love cycling/it’s a great workout.,message,NULL,45,25,2023-10-03 14:00:00,2023-10-03 14:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 153,Have you tried that new gym near us?,message,NULL,25,18,2023-10-03 15:00:00,2023-10-03 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-154,"Not yet, but I’m planning to soon.",message,NULL,18,25,2023-10-04 16:00:00,2023-10-04 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+154,Not yet/but I’m planning to soon.,message,NULL,18,25,2023-10-04 16:00:00,2023-10-04 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 155,How do you track your workout progress?,message,NULL,25,26,2023-10-04 17:00:00,2023-10-04 17:15:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 156,I use an app to log everything.,message,NULL,26,25,2023-10-05 18:00:00,2023-10-05 18:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 157,Let’s meet for a workout tomorrow!,message,NULL,25,32,2023-10-05 19:00:00,2023-10-05 19:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-158,"Sounds good, see you at the gym.",message,NULL,32,25,2023-10-06 20:00:00,2023-10-06 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+158,Sounds good/see you at the gym.,message,NULL,32,25,2023-10-06 20:00:00,2023-10-06 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 159,Are you joining the boot camp class tonight?,message,NULL,26,28,2023-10-06 21:00:00,2023-10-06 21:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-160,"Yes, see you there!",message,NULL,28,26,2023-10-07 22:00:00,2023-10-07 22:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+160,Yes/see you there!,message,NULL,28,26,2023-10-07 22:00:00,2023-10-07 22:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 161,How’s your core training going?,message,NULL,26,14,2023-10-08 9:00:00,2023-10-08 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-162,"It’s tough, but I’m getting stronger!",message,NULL,14,26,2023-10-08 10:00:00,2023-10-08 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+162,It’s tough/but I’m getting stronger!,message,NULL,14,26,2023-10-08 10:00:00,2023-10-08 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 163,What’s your favorite ab exercise?,message,NULL,26,44,2023-10-09 11:00:00,2023-10-09 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 164,I love doing bicycle crunches.,message,NULL,44,26,2023-10-09 12:00:00,2023-10-09 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 165,Do you do yoga?,message,NULL,27,6,2023-10-10 13:00:00,2023-10-10 13:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-166,"Yes, it’s great for flexibility.",message,NULL,6,27,2023-10-10 14:00:00,2023-10-10 14:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+166,Yes/it’s great for flexibility.,message,NULL,6,27,2023-10-10 14:00:00,2023-10-10 14:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 167,Have you tried weightlifting before?,message,NULL,27,32,2023-10-11 15:00:00,2023-10-11 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-168,"I have, but I’m more into cardio.",message,NULL,32,27,2023-10-11 16:00:00,2023-10-11 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+168,I have/but I’m more into cardio.,message,NULL,32,27,2023-10-11 16:00:00,2023-10-11 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 169,Want to do a morning run tomorrow?,message,NULL,27,8,2023-10-12 17:00:00,2023-10-12 17:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-170,"Sure, let’s meet at 7 AM.",message,NULL,8,27,2023-10-12 18:00:00,2023-10-12 18:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+170,Sure/let’s meet at 7 AM.,message,NULL,8,27,2023-10-12 18:00:00,2023-10-12 18:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 171,How often do you train per week?,message,NULL,28,50,2023-10-13 19:00:00,2023-10-13 19:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 172,Usually 4 times a week.,message,NULL,50,28,2023-10-13 20:00:00,2023-10-13 20:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 173,What’s your go-to post-workout meal?,message,NULL,28,49,2023-10-14 21:00:00,2023-10-14 21:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
@@ -176,33 +176,33 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 175,Do you prefer lifting heavy or lighter weights with more reps?,message,NULL,29,10,2023-10-15 9:00:00,2023-10-15 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 176,I like to mix it up depending on my goals.,message,NULL,10,29,2023-10-15 10:00:00,2023-10-15 10:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 177,What’s your favorite type of cardio?,message,NULL,29,45,2023-10-16 11:00:00,2023-10-16 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-178,"Running, it’s a great stress reliever.",message,NULL,45,29,2023-10-16 12:00:00,2023-10-16 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+178,Running/it’s a great stress reliever.,message,NULL,45,29,2023-10-16 12:00:00,2023-10-16 12:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 179,Do you have a specific fitness goal this month?,message,NULL,29,26,2023-10-17 13:00:00,2023-10-17 13:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-180,"Yes, I’m working on improving my endurance.",message,NULL,26,29,2023-10-17 14:00:00,2023-10-17 14:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+180,Yes/I’m working on improving my endurance.,message,NULL,26,29,2023-10-17 14:00:00,2023-10-17 14:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 181,Have you tried cycling classes?,message,NULL,29,40,2023-10-18 15:00:00,2023-10-18 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-182,"Yes, they’re super fun and challenging.",message,NULL,40,29,2023-10-18 16:00:00,2023-10-18 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+182,Yes/they’re super fun and challenging.,message,NULL,40,29,2023-10-18 16:00:00,2023-10-18 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 183,Any tips for improving squat form?,message,NULL,30,10,2023-10-19 17:00:00,2023-10-19 17:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 184,Focus on keeping your back straight and core tight.,message,NULL,10,30,2024-10-12 10:00:00,2024-10-12 10:01:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 185,How’s your running going?,message,NULL,30,41,2024-10-12 10:05:00,2024-10-12 10:06:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-186,"Pretty good, I’m getting faster!",message,NULL,41,30,2024-10-12 10:10:00,2024-10-12 10:11:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+186,Pretty good/I’m getting faster!,message,NULL,41,30,2024-10-12 10:10:00,2024-10-12 10:11:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 187,What’s your favorite leg exercise?,message,NULL,30,48,2024-10-12 10:15:00,2024-10-12 10:16:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 188,I love doing deadlifts.,message,NULL,48,30,2024-10-12 10:20:00,2024-10-12 10:21:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 189,Do you use any apps to track your fitness?,message,NULL,31,41,2024-10-12 10:25:00,2024-10-12 10:26:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-190,"Yes, I use a running app to log my progress.",message,NULL,41,31,2024-10-12 10:30:00,2024-10-12 10:31:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+190,Yes/I use a running app to log my progress.,message,NULL,41,31,2024-10-12 10:30:00,2024-10-12 10:31:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 191,What’s your recovery routine after a hard workout?,message,NULL,31,16,2024-10-12 10:35:00,2024-10-12 10:36:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 192,I usually stretch and use a foam roller.,message,NULL,16,31,2024-10-12 10:40:00,2024-10-12 10:41:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 193,Want to go for a run tomorrow?,message,NULL,31,4,2024-10-12 10:45:00,2024-10-12 10:46:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-194,"Yes, let’s meet at the park!",message,NULL,4,31,2024-10-12 10:50:00,2024-10-12 10:51:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+194,Yes/let’s meet at the park!,message,NULL,4,31,2024-10-12 10:50:00,2024-10-12 10:51:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 195,How’s your weight training going?,message,NULL,32,35,2024-10-12 10:55:00,2024-10-12 10:56:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-196,"Pretty good, I’m seeing improvements.",message,NULL,35,32,2024-10-12 11:00:00,2024-10-12 11:01:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+196,Pretty good/I’m seeing improvements.,message,NULL,35,32,2024-10-12 11:00:00,2024-10-12 11:01:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 197,How do you keep yourself motivated to work out?,message,NULL,32,31,2023-10-01 10:00:00,2023-10-01 10:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 198,I set small goals and track my progress.,message,NULL,31,32,2023-10-01 11:00:00,2023-10-01 11:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 199,Have you tried boxing workouts?,message,NULL,33,27,2023-10-02 12:00:00,2023-10-02 12:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-200,"Not yet, but I want to!",message,NULL,27,33,2023-10-02 13:00:00,2023-10-02 13:02:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+200,Not yet/but I want to!,message,NULL,27,33,2023-10-02 13:00:00,2023-10-02 13:02:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 201,Any tips for staying consistent with workouts?,message,NULL,33,10,2023-10-03 14:00:00,2023-10-03 14:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 202,Set a schedule and stick to it.,message,NULL,10,33,2023-10-03 15:00:00,2023-10-03 15:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 203,Do you prefer solo workouts or group classes?,message,NULL,33,28,2023-10-04 16:00:00,2023-10-04 16:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-204,"I enjoy both, but group classes are fun!",message,NULL,28,33,2023-10-04 17:00:00,2023-10-04 17:15:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+204,I enjoy both/but group classes are fun!,message,NULL,28,33,2023-10-04 17:00:00,2023-10-04 17:15:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 205,What’s your favorite outdoor activity?,message,NULL,34,38,2023-10-05 18:00:00,2023-10-05 18:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 206,I love hiking in the mountains.,message,NULL,38,34,2023-10-05 19:00:00,2023-10-05 19:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 207,How do you train for long-distance running?,message,NULL,34,22,2023-10-06 20:00:00,2023-10-06 20:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
@@ -210,27 +210,27 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 209,Any advice for improving upper body strength?,message,NULL,34,33,2023-10-07 22:00:00,2023-10-07 22:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 210,Focus on compound exercises like push-ups and pull-ups.,message,NULL,33,34,2023-10-08 9:00:00,2023-10-08 9:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 211,Have you tried resistance band workouts?,message,NULL,34,18,2023-10-08 10:00:00,2023-10-08 10:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-212,"Yes, they’re great for home workouts!",message,NULL,18,34,2023-10-09 11:00:00,2023-10-09 11:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+212,Yes/they’re great for home workouts!,message,NULL,18,34,2023-10-09 11:00:00,2023-10-09 11:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 213,What’s your favorite type of cardio workout?,message,NULL,35,47,2023-10-09 12:00:00,2023-10-09 12:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 214,I love doing HIIT sessions.,message,NULL,47,35,2023-10-10 13:00:00,2023-10-10 13:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 215,Do you track your progress with an app?,message,NULL,35,30,2023-10-10 14:00:00,2023-10-10 14:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-216,"Yes, I log everything in a fitness app.",message,NULL,30,35,2023-10-11 15:00:00,2023-10-11 15:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+216,Yes/I log everything in a fitness app.,message,NULL,30,35,2023-10-11 15:00:00,2023-10-11 15:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 217,How’s your flexibility training going?,message,NULL,35,12,2023-10-11 16:00:00,2023-10-11 16:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
-218,"It’s improving, but I still need to work on it.",message,NULL,12,35,2023-10-12 17:00:00,2023-10-12 17:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
+218,It’s improving/but I still need to work on it.,message,NULL,12,35,2023-10-12 17:00:00,2023-10-12 17:05:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 219,What’s your go-to workout for leg day?,message,NULL,36,26,2023-10-12 18:00:00,2023-10-12 18:10:00,TRUE,NULL,NULL,NULL,NULL,NULL,NULL
 220,I love doing squats and lunges.,message,NULL,26,36,2023-10-13 19:00:00,2023-10-13 19:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 221,How do you stay motivated to run regularly?,message,NULL,36,34,2023-10-13 20:00:00,2023-10-13 20:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 222,I set weekly goals to keep myself on track.,message,NULL,34,36,2023-10-14 21:00:00,2023-10-14 21:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 223,Do you warm up before every workout?,message,NULL,37,35,2023-10-14 22:00:00,2023-10-14 22:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-224,"Yes, I always start with dynamic stretches.",message,NULL,35,37,2023-10-15 9:00:00,2023-10-15 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+224,Yes/I always start with dynamic stretches.,message,NULL,35,37,2023-10-15 9:00:00,2023-10-15 9:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 225,How’s your strength training going?,message,NULL,37,24,2023-10-15 10:00:00,2023-10-15 10:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-226,"I’m making steady progress, thanks!",message,NULL,24,37,2023-10-16 11:00:00,2023-10-16 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+226,I’m making steady progress/thanks!,message,NULL,24,37,2023-10-16 11:00:00,2023-10-16 11:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 227,Have you tried any new fitness challenges lately?,message,NULL,37,32,2023-10-16 12:00:00,2023-10-16 12:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-228,"Not yet, but I’ve been thinking about starting one.",message,NULL,32,37,2023-10-17 13:00:00,2023-10-17 13:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+228,Not yet/but I’ve been thinking about starting one.,message,NULL,32,37,2023-10-17 13:00:00,2023-10-17 13:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 229,What’s your favorite recovery method?,message,NULL,38,11,2023-10-17 14:00:00,2023-10-17 14:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 230,I love using a foam roller after workouts.,message,NULL,11,38,2023-10-18 15:00:00,2023-10-18 15:10:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 231,Do you follow a workout routine?,message,NULL,38,39,2023-10-18 16:00:00,2023-10-18 16:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
-232,"Yes, I try to work out 4-5 times a week.",message,NULL,39,38,2023-10-19 17:00:00,2023-10-19 17:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
+232,Yes/I try to work out 4-5 times a week.,message,NULL,39,38,2023-10-19 17:00:00,2023-10-19 17:05:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 233,How’s your running going?,message,NULL,39,42,2024-10-12 10:00:00,2024-10-12 10:01:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 234,I’m improving my pace each week.,message,NULL,42,39,2024-10-12 10:05:00,2024-10-12 10:06:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
 235,What’s your favorite bodyweight exercise?,message,NULL,39,13,2024-10-12 10:10:00,2024-10-12 10:11:00,FALSE,NULL,NULL,NULL,NULL,NULL,NULL
@@ -242,16 +242,16 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 241,Perfect mix of cardio and strength!,workout comment,NULL,41,NULL,2024-10-12 11:15:00,NULL,NULL,53,NULL,NULL,NULL,NULL,NULL
 242,Can we do this workout again next week?,workout comment,NULL,5,NULL,2024-10-12 11:20:00,NULL,NULL,53,NULL,NULL,NULL,NULL,NULL
 243,Challenging but rewarding! Great workout!,workout comment,NULL,22,NULL,2024-10-12 11:25:00,NULL,NULL,54,NULL,NULL,NULL,NULL,NULL
-244,"I struggled, but I pushed through!",workout comment,NULL,15,NULL,2024-10-12 11:30:00,NULL,NULL,54,NULL,NULL,NULL,NULL,NULL
+244,I struggled/but I pushed through!,workout comment,NULL,15,NULL,2024-10-12 11:30:00,NULL,NULL,54,NULL,NULL,NULL,NULL,NULL
 245,The instructor was fantastic!,workout comment,NULL,33,NULL,2024-10-12 11:35:00,NULL,NULL,54,NULL,NULL,NULL,NULL,NULL
-246,I can't believe how much I sweat!,workout comment,NULL,7,NULL,2024-10-12 9:00:00,NULL,NULL,54,NULL,NULL,NULL,NULL,NULL
+246,I cant believe how much I sweat!,workout comment,NULL,7,NULL,2024-10-12 9:00:00,NULL,NULL,54,NULL,NULL,NULL,NULL,NULL
 247,Loved the energy in this workout!,workout comment,NULL,10,NULL,2024-10-12 9:05:00,NULL,NULL,55,NULL,NULL,NULL,NULL,NULL
-248,"A bit tough, but I'm feeling stronger!",workout comment,NULL,39,NULL,2024-10-12 9:10:00,NULL,NULL,55,NULL,NULL,NULL,NULL,NULL
+248,A bit tough/but Im feeling stronger!,workout comment,NULL,39,NULL,2024-10-12 9:10:00,NULL,NULL,55,NULL,NULL,NULL,NULL,NULL
 249,This workout kicked my butt in the best way!,workout comment,NULL,48,NULL,2024-10-12 9:15:00,NULL,NULL,55,NULL,NULL,NULL,NULL,NULL
-250,"I need to work on my form, but I enjoyed it!",workout comment,NULL,1,NULL,2024-10-12 9:20:00,NULL,NULL,56,NULL,NULL,NULL,NULL,NULL
+250,I need to work on my form/but I enjoyed it!,workout comment,NULL,1,NULL,2024-10-12 9:20:00,NULL,NULL,56,NULL,NULL,NULL,NULL,NULL
 251,Awesome workout! Can’t wait to do it again.,workout comment,NULL,20,NULL,2024-10-12 9:25:00,NULL,NULL,56,NULL,NULL,NULL,NULL,NULL
 252,This is now one of my favorites!,workout comment,NULL,36,NULL,2024-10-12 9:30:00,NULL,NULL,56,NULL,NULL,NULL,NULL,NULL
-253,So fun! I didn't even realize how hard I was working!,workout comment,NULL,9,NULL,2024-10-12 9:35:00,NULL,NULL,57,NULL,NULL,NULL,NULL,NULL
+253,So fun! I didnt even realize how hard I was working!,workout comment,NULL,9,NULL,2024-10-12 9:35:00,NULL,NULL,57,NULL,NULL,NULL,NULL,NULL
 254,Great way to start the day!,workout comment,NULL,28,NULL,2024-10-12 9:40:00,NULL,NULL,57,NULL,NULL,NULL,NULL,NULL
 255,I loved the music during this session!,workout comment,NULL,45,NULL,2024-10-12 9:45:00,NULL,NULL,57,NULL,NULL,NULL,NULL,NULL
 256,This is definitely a repeat for me!,workout comment,NULL,16,NULL,2024-10-12 9:50:00,NULL,NULL,57,NULL,NULL,NULL,NULL,NULL
@@ -260,12 +260,12 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 259,Felt amazing after completing this workout!,workout comment,NULL,4,NULL,2024-10-12 10:05:00,NULL,NULL,58,NULL,NULL,NULL,NULL,NULL
 260,This workout was a perfect pick-me-up!,workout comment,NULL,19,NULL,2024-10-12 10:10:00,NULL,NULL,59,NULL,NULL,NULL,NULL,NULL
 261,I loved the variety of exercises!,workout comment,NULL,29,NULL,2024-10-12 10:15:00,NULL,NULL,59,NULL,NULL,NULL,NULL,NULL
-262,"I’ll be sore tomorrow, but it’s worth it!",workout comment,NULL,50,NULL,2024-10-12 10:20:00,NULL,NULL,59,NULL,NULL,NULL,NULL,NULL
+262,I’ll be sore tomorrow/but it’s worth it!,workout comment,NULL,50,NULL,2024-10-12 10:20:00,NULL,NULL,59,NULL,NULL,NULL,NULL,NULL
 263,Really enjoyed this one! Great instructor!,workout comment,NULL,3,NULL,2024-10-12 10:25:00,NULL,NULL,60,NULL,NULL,NULL,NULL,NULL
 264,This is a great workout for building strength!,workout comment,NULL,25,NULL,2024-10-12 10:30:00,NULL,NULL,60,NULL,NULL,NULL,NULL,NULL
 265,Can we incorporate more workouts like this?,workout comment,NULL,42,NULL,2024-10-12 10:35:00,NULL,NULL,60,NULL,NULL,NULL,NULL,NULL
 266,I pushed myself harder than usual!,workout comment,NULL,11,NULL,2024-10-12 10:40:00,NULL,NULL,60,NULL,NULL,NULL,NULL,NULL
-269,I’m just starting out and curious what exercises worked for you all. I've heard a lot about squats and bench press but would love to know if there are others that helped you.,discussion,Best Exercises for Beginners?,12,NULL,2024-10-13 9:00:00,NULL,NULL,NULL,1,1,45,2,4
+269,I’m just starting out and curious what exercises worked for you all. Ive heard a lot about squats and bench press but would love to know if there are others that helped you.,discussion,Best Exercises for Beginners?,12,NULL,2024-10-13 9:00:00,NULL,NULL,NULL,1,1,45,2,4
 270,I’m feeling overwhelmed with all the info out there. Can anyone suggest a simple starter routine that’s manageable? I want to build strength without burning out!,discussion,How to Start a Weightlifting Routine?,25,NULL,2024-10-13 9:30:00,NULL,NULL,NULL,2,1,32,1,4
 271,I’ve been doing a full-body workout but wondering if splitting it up would be more effective. What splits do you guys follow and what results have you seen?,discussion,Effective Workout Splits,8,NULL,2024-10-13 10:00:00,NULL,NULL,NULL,3,2,27,0,0
 272,Just joined a gym and am confused about which equipment to start with. Any suggestions on the essentials? I want to make sure I’m using my time wisely!,discussion,Essential Gym Equipment for Beginners,3,NULL,2024-10-13 10:30:00,NULL,NULL,NULL,4,2,40,1,3
@@ -278,7 +278,7 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 279,Thinking about trying powerlifting but unsure what to expect. Can anyone share their experiences?,discussion,What to Expect in Powerlifting,14,NULL,2024-10-13 14:00:00,NULL,NULL,NULL,11,7,44,1,3
 280,I’m looking to buy some dumbbells but I’m not sure about the weight. How do you decide what’s right for you?,discussion,Choosing the Right Dumbbells,30,NULL,2024-10-13 14:30:00,NULL,NULL,NULL,12,8,36,0,0
 281,Mobility has always been an issue for me. What exercises do you do to improve your mobility for lifts? I’m tired of feeling stiff!,discussion,Improving Mobility for Lifters,16,NULL,2024-10-13 15:00:00,NULL,NULL,NULL,13,9,32,1,3
-282,"I used to think resting was a waste of time, but I’ve learned it’s essential. How do you all incorporate rest days?",discussion,Importance of Rest Days,9,NULL,2024-10-13 15:30:00,NULL,NULL,NULL,14,10,41,0,0
+282,I used to think resting was a waste of time/but I’ve learned it’s essential. How do you all incorporate rest days?,discussion,Importance of Rest Days,9,NULL,2024-10-13 15:30:00,NULL,NULL,NULL,14,10,41,0,0
 283,What are your favorite recovery techniques? I’m looking for ways to speed up recovery after intense workouts!,discussion,Best Recovery Techniques,11,NULL,2024-10-13 16:00:00,NULL,NULL,NULL,15,10,33,2,3
 284,Just joined CrossFit and feeling a bit lost. What should I know going into my first few classes?,discussion,CrossFit Basics for Newbies,4,NULL,2024-10-13 16:30:00,NULL,NULL,NULL,16,11,50,0,0
 285,What are your favorite HIIT workouts? I’m looking to lose some fat and need ideas that really work!,discussion,HIIT Workouts for Fat Loss,18,NULL,2024-10-13 17:00:00,NULL,NULL,NULL,17,12,30,1,3
@@ -288,7 +288,7 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 289,I want to try circuit training but need help structuring it. What does your ideal circuit look like?,discussion,How to Structure a Circuit Workout,20,NULL,2024-10-13 19:00:00,NULL,NULL,NULL,21,16,49,1,3
 290,What do you eat before a workout? I want to fuel my body without feeling heavy.,discussion,Pre-Workout Nutrition Tips,1,NULL,2024-10-13 19:30:00,NULL,NULL,NULL,22,17,42,0,0
 291,I’d love to share my workout routine and hear yours! Let’s help each other improve!,discussion,Sharing My Workout Routine,27,NULL,2024-10-13 20:00:00,NULL,NULL,NULL,23,18,28,1,3
-292,Life gets hectic! How do you all squeeze in workouts when you're super busy?,discussion,Staying Active During Busy Days,34,NULL,2024-10-13 20:30:00,NULL,NULL,NULL,24,19,33,2,3
+292,Life gets hectic! How do you all squeeze in workouts when youre super busy?,discussion,Staying Active During Busy Days,34,NULL,2024-10-13 20:30:00,NULL,NULL,NULL,24,19,33,2,3
 293,I’ve hit a plateau and feel stuck. What strategies have you used to push through?,discussion,Overcoming Plateaus in Strength Training,17,NULL,2024-10-13 21:00:00,NULL,NULL,NULL,25,20,39,0,0
 294,What conditioning drills do you swear by? I want to up my game for my sport!,discussion,Best Conditioning Drills for Athletes,26,NULL,2024-10-13 21:30:00,NULL,NULL,NULL,26,21,41,1,3
 295,I’m focused on bodyweight training—what exercises have you found most effective?,discussion,Best Bodyweight Exercises for Strength,2,NULL,2024-10-13 22:00:00,NULL,NULL,NULL,27,22,48,2,3
@@ -322,42 +322,42 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 323,What tools do you use to track your strength progress? I need something that keeps me accountable!,discussion,How to Effectively Track Your Progress,6,NULL,2024-10-14 12:00:00,NULL,NULL,NULL,55,47,34,1,3
 324,I’m just starting to run and need advice on technique. What should I focus on?,discussion,Best Running Techniques for Beginners,18,NULL,2024-10-14 12:30:00,NULL,NULL,NULL,56,48,45,1,3
 325,I want to start doing full-body workouts but don’t know where to begin. Any recommendations?,discussion,Full-Body Workouts for Beginners,31,NULL,2024-10-14 13:00:00,NULL,NULL,NULL,57,49,38,0,0
-326,"Let’s share our fitness transformations! What changes have you made, and what motivated you?",discussion,Sharing Our Transformations,33,NULL,2024-10-14 13:30:00,NULL,NULL,NULL,58,50,50,0,0
+326,Let’s share our fitness transformations! What changes have you made/and what motivated you?,discussion,Sharing Our Transformations,33,NULL,2024-10-14 13:30:00,NULL,NULL,NULL,58,50,50,0,0
 327,What challenges have you faced in your fitness journey? Let’s support each other!,discussion,Overcoming Challenges in Fitness,16,NULL,2024-10-14 14:00:00,NULL,NULL,NULL,59,50,29,2,3
 328,I found squats and deadlifts super helpful! They really helped me build a solid foundation.,discussion comment,NULL,34,NULL,2024-10-13 16:30:00,NULL,NULL,NULL,1,1,NULL,NULL,NULL
 329,Don’t forget about lunges! They’ve been a game changer for my leg strength.,discussion comment,NULL,20,NULL,2024-10-13 17:00:00,NULL,NULL,NULL,1,1,NULL,NULL,NULL
 330,I also love doing bench presses; they’re great for upper body strength!,discussion comment,NULL,32,NULL,2024-10-13 17:30:00,NULL,NULL,NULL,1,1,NULL,NULL,NULL
-331,"For a starter routine, I recommend starting with full-body workouts three times a week. Keep it simple!",discussion comment,NULL,7,NULL,2024-10-13 18:00:00,NULL,NULL,NULL,2,1,NULL,NULL,NULL
-332,"Maybe look into bodyweight exercises too, like push-ups and pull-ups, to build strength without overdoing it!",discussion comment,NULL,42,NULL,2024-10-13 18:30:00,NULL,NULL,NULL,2,1,NULL,NULL,NULL
-333,I've found that a mix of cardio and strength training keeps me from feeling overwhelmed.,discussion comment,NULL,48,NULL,2024-10-13 19:00:00,NULL,NULL,NULL,2,1,NULL,NULL,NULL
-334,"I started with a push-pull-leg split, and it made a huge difference for me!",discussion comment,NULL,24,NULL,2024-10-13 19:30:00,NULL,NULL,NULL,3,2,NULL,NULL,NULL
-335,"I've had success with an upper-lower split, which allows me to focus on specific muscle groups more effectively.",discussion comment,NULL,2,NULL,2024-10-13 20:00:00,NULL,NULL,NULL,3,2,NULL,NULL,NULL
+331,For a starter routine/I recommend starting with full-body workouts three times a week. Keep it simple!,discussion comment,NULL,7,NULL,2024-10-13 18:00:00,NULL,NULL,NULL,2,1,NULL,NULL,NULL
+332,Maybe look into bodyweight exercises too/like push-ups and pull-ups/to build strength without overdoing it!,discussion comment,NULL,42,NULL,2024-10-13 18:30:00,NULL,NULL,NULL,2,1,NULL,NULL,NULL
+333,Ive found that a mix of cardio and strength training keeps me from feeling overwhelmed.,discussion comment,NULL,48,NULL,2024-10-13 19:00:00,NULL,NULL,NULL,2,1,NULL,NULL,NULL
+334,I started with a push-pull-leg split/and it made a huge difference for me!,discussion comment,NULL,24,NULL,2024-10-13 19:30:00,NULL,NULL,NULL,3,2,NULL,NULL,NULL
+335,Ive had success with an upper-lower split/which allows me to focus on specific muscle groups more effectively.,discussion comment,NULL,2,NULL,2024-10-13 20:00:00,NULL,NULL,NULL,3,2,NULL,NULL,NULL
 336,Don’t forget to listen to your body! It’s all about what feels right for you.,discussion comment,NULL,21,NULL,2024-10-13 20:30:00,NULL,NULL,NULL,3,2,NULL,NULL,NULL
 337,You can’t go wrong with essentials like a barbell and a good pair of shoes. Don’t stress too much about the rest!,discussion comment,NULL,35,NULL,2024-10-13 21:00:00,NULL,NULL,NULL,4,2,NULL,NULL,NULL
 338,Resistance bands are super helpful for beginners too; they’re versatile and easy to use!,discussion comment,NULL,18,NULL,2024-10-13 21:30:00,NULL,NULL,NULL,4,2,NULL,NULL,NULL
 339,I recommend starting with the leg press and then moving to free weights as you gain confidence!,discussion comment,NULL,45,NULL,2024-10-13 22:00:00,NULL,NULL,NULL,4,2,NULL,NULL,NULL
 340,I love my stationary bike for home workouts! It’s versatile and easy on the joints.,discussion comment,NULL,12,NULL,2024-10-13 22:30:00,NULL,NULL,NULL,5,3,NULL,NULL,NULL
-341,"If you're looking for low-impact, consider an elliptical. It gives a great workout without the strain!",discussion comment,NULL,24,NULL,2024-10-13 23:00:00,NULL,NULL,NULL,5,3,NULL,NULL,NULL
-342,"I have both a treadmill and a rower at home, and I alternate between them for variety!",discussion comment,NULL,22,NULL,2024-10-13 23:30:00,NULL,NULL,NULL,5,3,NULL,NULL,NULL
+341,If youre looking for low-impact/consider an elliptical. It gives a great workout without the strain!,discussion comment,NULL,24,NULL,2024-10-13 23:00:00,NULL,NULL,NULL,5,3,NULL,NULL,NULL
+342,I have both a treadmill and a rower at home/and I alternate between them for variety!,discussion comment,NULL,22,NULL,2024-10-13 23:30:00,NULL,NULL,NULL,5,3,NULL,NULL,NULL
 343,I like to create playlists for my cardio sessions. It keeps me motivated! What genres do you prefer?,discussion comment,NULL,36,NULL,2024-10-14 0:00:00,NULL,NULL,NULL,6,3,NULL,NULL,NULL
 344,Trying out podcasts or audiobooks can make cardio feel less monotonous!,discussion comment,NULL,27,NULL,2024-10-10 8:30:00,NULL,NULL,NULL,6,3,NULL,NULL,NULL
 345,Sometimes I change my routine every few weeks to keep it interesting. Have you tried that?,discussion comment,NULL,42,NULL,2024-10-10 9:15:00,NULL,NULL,NULL,6,3,NULL,NULL,NULL
-346,"For deadlifting, focus on your form first! Start light and practice!",discussion comment,NULL,42,NULL,2024-10-10 10:00:00,NULL,NULL,NULL,7,4,NULL,NULL,NULL
+346,For deadlifting/focus on your form first! Start light and practice!,discussion comment,NULL,42,NULL,2024-10-10 10:00:00,NULL,NULL,NULL,7,4,NULL,NULL,NULL
 347,Make sure to engage your core while lifting to protect your back!,discussion comment,NULL,33,NULL,2024-10-10 11:00:00,NULL,NULL,NULL,7,4,NULL,NULL,NULL
 348,There are plenty of good video tutorials online that can help you with your form!,discussion comment,NULL,11,NULL,2024-10-10 12:00:00,NULL,NULL,NULL,7,4,NULL,NULL,NULL
 349,I started with interval training to build my endurance. It gets easier over time!,discussion comment,NULL,27,NULL,2024-10-11 8:30:00,NULL,NULL,NULL,8,5,NULL,NULL,NULL
 350,I recommend gradually increasing your distance. It helps your body adapt!,discussion comment,NULL,36,NULL,2024-10-11 9:00:00,NULL,NULL,NULL,8,5,NULL,NULL,NULL
 351,Running with a friend can make it feel less painful too! Any friends interested?,discussion comment,NULL,47,NULL,2024-10-11 9:45:00,NULL,NULL,NULL,8,5,NULL,NULL,NULL
-352,"For flexibility, I really love the downward dog pose; it feels amazing!",discussion comment,NULL,29,NULL,2024-10-11 10:15:00,NULL,NULL,NULL,9,6,NULL,NULL,NULL
+352,For flexibility/I really love the downward dog pose; it feels amazing!,discussion comment,NULL,29,NULL,2024-10-11 10:15:00,NULL,NULL,NULL,9,6,NULL,NULL,NULL
 353,The pigeon pose is fantastic for opening up the hips. I swear by it!,discussion comment,NULL,11,NULL,2024-10-11 11:30:00,NULL,NULL,NULL,9,6,NULL,NULL,NULL
 354,Incorporating a few minutes of stretching after workouts has really helped me!,discussion comment,NULL,45,NULL,2024-10-11 12:00:00,NULL,NULL,NULL,9,6,NULL,NULL,NULL
 355,I try to schedule my yoga sessions like appointments. That helps me stay consistent!,discussion comment,NULL,16,NULL,2024-10-11 13:00:00,NULL,NULL,NULL,10,6,NULL,NULL,NULL
 356,Finding a class that fits your schedule can also help; I love the community aspect!,discussion comment,NULL,36,NULL,2024-10-11 14:00:00,NULL,NULL,NULL,10,6,NULL,NULL,NULL
 357,Sometimes I do short sessions at home before bed to help me unwind!,discussion comment,NULL,5,NULL,2024-10-11 15:00:00,NULL,NULL,NULL,10,6,NULL,NULL,NULL
-358,"When trying powerlifting, remember to start with light weights and focus on technique!",discussion comment,NULL,29,NULL,2024-10-11 16:00:00,NULL,NULL,NULL,11,7,NULL,NULL,NULL
+358,When trying powerlifting/remember to start with light weights and focus on technique!,discussion comment,NULL,29,NULL,2024-10-11 16:00:00,NULL,NULL,NULL,11,7,NULL,NULL,NULL
 359,I recommend finding a knowledgeable coach or joining a local club for support!,discussion comment,NULL,21,NULL,2024-10-11 17:00:00,NULL,NULL,NULL,11,7,NULL,NULL,NULL
-360,It's definitely a mental game too; just stay focused and have fun with it!,discussion comment,NULL,43,NULL,2024-10-11 18:00:00,NULL,NULL,NULL,11,7,NULL,NULL,NULL
-361,"Start with a weight you can lift comfortably, and gradually increase it as you get stronger!",discussion comment,NULL,5,NULL,2024-10-11 19:00:00,NULL,NULL,NULL,12,8,NULL,NULL,NULL
+360,Its definitely a mental game too; just stay focused and have fun with it!,discussion comment,NULL,43,NULL,2024-10-11 18:00:00,NULL,NULL,NULL,11,7,NULL,NULL,NULL
+361,Start with a weight you can lift comfortably/and gradually increase it as you get stronger!,discussion comment,NULL,5,NULL,2024-10-11 19:00:00,NULL,NULL,NULL,12,8,NULL,NULL,NULL
 362,It’s all about finding what works for your body; listen to it!,discussion comment,NULL,21,NULL,2024-10-11 13:00:00,NULL,NULL,NULL,12,8,NULL,NULL,NULL
 363,Maybe check out a weight chart or ask a trainer for guidance!,discussion comment,NULL,5,NULL,2024-10-12 8:30:00,NULL,NULL,NULL,12,8,NULL,NULL,NULL
 364,Mobility work is crucial! I love incorporating yoga stretches before my lifts.,discussion comment,NULL,50,NULL,2024-10-12 9:00:00,NULL,NULL,NULL,13,9,NULL,NULL,NULL
@@ -371,29 +371,29 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 372,I think active recovery like a walk or yoga can be beneficial!,discussion comment,NULL,18,NULL,2024-10-17 11:30:00,NULL,NULL,NULL,14,10,NULL,NULL,NULL
 373,You can find good HIIT workouts on YouTube or fitness apps!,discussion comment,NULL,40,NULL,2024-10-18 11:30:00,NULL,NULL,NULL,17,12,NULL,NULL,NULL
 374,I love Tabata workouts; they’re quick and super effective!,discussion comment,NULL,16,NULL,2024-10-19 11:30:00,NULL,NULL,NULL,17,12,NULL,NULL,NULL
-375,Don't forget to mix in strength training with your HIIT for the best results!,discussion comment,NULL,38,NULL,2024-10-20 11:30:00,NULL,NULL,NULL,17,12,NULL,NULL,NULL
-376,"Before trying Pilates, I'd recommend checking out some beginner videos online!",discussion comment,NULL,42,NULL,2024-10-21 11:30:00,NULL,NULL,NULL,18,13,NULL,NULL,NULL
+375,Dont forget to mix in strength training with your HIIT for the best results!,discussion comment,NULL,38,NULL,2024-10-20 11:30:00,NULL,NULL,NULL,17,12,NULL,NULL,NULL
+376,Before trying Pilates/Id recommend checking out some beginner videos online!,discussion comment,NULL,42,NULL,2024-10-21 11:30:00,NULL,NULL,NULL,18,13,NULL,NULL,NULL
 377,Start with simple mat exercises and work your way up from there!,discussion comment,NULL,49,NULL,2024-10-22 11:30:00,NULL,NULL,NULL,18,13,NULL,NULL,NULL
 378,I took a class with a certified instructor and it really helped me learn the basics!,discussion comment,NULL,23,NULL,2024-10-23 11:30:00,NULL,NULL,NULL,18,13,NULL,NULL,NULL
-379,"For a budget home gym, consider multi-use equipment like resistance bands!",discussion comment,NULL,5,NULL,2024-10-24 11:30:00,NULL,NULL,NULL,19,14,NULL,NULL,NULL
+379,For a budget home gym/consider multi-use equipment like resistance bands!,discussion comment,NULL,5,NULL,2024-10-24 11:30:00,NULL,NULL,NULL,19,14,NULL,NULL,NULL
 380,Look for used equipment on local marketplaces; you can find great deals!,discussion comment,NULL,17,NULL,2024-10-25 11:30:00,NULL,NULL,NULL,19,14,NULL,NULL,NULL
 381,A good yoga mat is essential too; you can find affordable ones that last!,discussion comment,NULL,45,NULL,2024-10-26 11:30:00,NULL,NULL,NULL,19,14,NULL,NULL,NULL
 382,It took me a while to find a workout plan that fit my lifestyle; don’t rush it!,discussion comment,NULL,30,NULL,2024-10-27 11:30:00,NULL,NULL,NULL,20,15,NULL,NULL,NULL
 383,Trial and error is okay! Find what keeps you motivated and consistent.,discussion comment,NULL,46,NULL,2024-10-28 11:30:00,NULL,NULL,NULL,20,15,NULL,NULL,NULL
 384,You could try mixing different styles of workouts to see what you enjoy!,discussion comment,NULL,45,NULL,2024-10-29 11:30:00,NULL,NULL,NULL,20,15,NULL,NULL,NULL
-385,"For circuit training, I suggest starting with a warm-up followed by a mix of cardio and strength exercises!",discussion comment,NULL,23,NULL,2024-10-30 11:30:00,NULL,NULL,NULL,21,16,NULL,NULL,NULL
+385,For circuit training/I suggest starting with a warm-up followed by a mix of cardio and strength exercises!,discussion comment,NULL,23,NULL,2024-10-30 11:30:00,NULL,NULL,NULL,21,16,NULL,NULL,NULL
 386,A timer can help keep you on track for your circuits; I love using my phone!,discussion comment,NULL,13,NULL,2024-10-31 11:30:00,NULL,NULL,NULL,21,16,NULL,NULL,NULL
-387,"You could try a full-body circuit that includes push-ups, squats, and burpees!",discussion comment,NULL,11,NULL,2024-11-01 11:30:00,NULL,NULL,NULL,21,16,NULL,NULL,NULL
-388,"Before workouts, I usually eat a banana or some oatmeal. What do you prefer?",discussion comment,NULL,43,NULL,2024-11-02 11:30:00,NULL,NULL,NULL,22,17,NULL,NULL,NULL
-389,"I try to avoid heavy meals right before working out, but a small snack helps!",discussion comment,NULL,20,NULL,2024-11-03 11:30:00,NULL,NULL,NULL,22,17,NULL,NULL,NULL
+387,You could try a full-body circuit that includes push-ups/squats/and burpees!,discussion comment,NULL,11,NULL,2024-11-01 11:30:00,NULL,NULL,NULL,21,16,NULL,NULL,NULL
+388,Before workouts/I usually eat a banana or some oatmeal. What do you prefer?,discussion comment,NULL,43,NULL,2024-11-02 11:30:00,NULL,NULL,NULL,22,17,NULL,NULL,NULL
+389,I try to avoid heavy meals right before working out/but a small snack helps!,discussion comment,NULL,20,NULL,2024-11-03 11:30:00,NULL,NULL,NULL,22,17,NULL,NULL,NULL
 390,What you eat can really depend on the workout; I’ve learned to plan accordingly!,discussion comment,NULL,30,NULL,2024-11-04 11:30:00,NULL,NULL,NULL,22,17,NULL,NULL,NULL
 391,I’d love to share my workout routine! How about you share yours too?,discussion comment,NULL,5,NULL,2024-11-05 11:30:00,NULL,NULL,NULL,23,18,NULL,NULL,NULL
 392,It’s great to hear from others! Let’s inspire each other!,discussion comment,NULL,35,NULL,2024-11-06 11:30:00,NULL,NULL,NULL,23,18,NULL,NULL,NULL
 393,Collaboration can be so motivating; I find it really pushes me!,discussion comment,NULL,1,NULL,2024-11-07 11:30:00,NULL,NULL,NULL,23,18,NULL,NULL,NULL
-394,"When life gets hectic, I try to schedule workouts like any other appointment!",discussion comment,NULL,1,NULL,2024-11-08 11:30:00,NULL,NULL,NULL,24,19,NULL,NULL,NULL
+394,When life gets hectic/I try to schedule workouts like any other appointment!,discussion comment,NULL,1,NULL,2024-11-08 11:30:00,NULL,NULL,NULL,24,19,NULL,NULL,NULL
 395,I focus on shorter workouts during busy weeks; it’s all about consistency!,discussion comment,NULL,9,NULL,2024-11-09 11:30:00,NULL,NULL,NULL,24,19,NULL,NULL,NULL
 396,I keep my workout gear handy to avoid excuses! What about you?,discussion comment,NULL,19,NULL,2024-11-10 11:30:00,NULL,NULL,NULL,24,19,NULL,NULL,NULL
-397,"When I hit a plateau, I mix up my routine to challenge my muscles!",discussion comment,NULL,11,NULL,2024-11-11 11:30:00,NULL,NULL,NULL,25,20,NULL,NULL,NULL
+397,When I hit a plateau/I mix up my routine to challenge my muscles!,discussion comment,NULL,11,NULL,2024-11-11 11:30:00,NULL,NULL,NULL,25,20,NULL,NULL,NULL
 398,It’s helpful to track your progress too; seeing improvements motivates me!,discussion comment,NULL,21,NULL,2024-11-12 11:30:00,NULL,NULL,NULL,25,20,NULL,NULL,NULL
 399,Don’t hesitate to change your goals based on how you feel; it’s all part of the journey!,discussion comment,NULL,50,NULL,2024-11-13 11:30:00,NULL,NULL,NULL,25,20,NULL,NULL,NULL
 400,I think it’s great that you’re exploring different styles of workouts! What have you tried?,discussion comment,NULL,28,NULL,2024-11-14 11:30:00,NULL,NULL,NULL,26,21,NULL,NULL,NULL
@@ -402,99 +402,99 @@ id,content,type,content title,user id 1,user id 2,time written,time received,sta
 403,I love trying out new classes; it’s a great way to keep my fitness journey interesting!,discussion comment,NULL,13,NULL,2024-11-17 11:30:00,NULL,NULL,NULL,27,22,NULL,NULL,NULL
 404,Have you checked out any fitness challenges? They can be fun!,discussion comment,NULL,41,NULL,2024-11-18 11:30:00,NULL,NULL,NULL,27,22,NULL,NULL,NULL
 405,Trying new things can also lead to discovering what you really enjoy!,discussion comment,NULL,44,NULL,2024-11-19 11:30:00,NULL,NULL,NULL,27,22,NULL,NULL,NULL
-406,"If you're feeling low on motivation, consider setting small, achievable goals!",discussion comment,NULL,37,NULL,2024-11-20 11:30:00,NULL,NULL,NULL,28,23,NULL,NULL,NULL
+406,If youre feeling low on motivation/consider setting small/achievable goals!,discussion comment,NULL,37,NULL,2024-11-20 11:30:00,NULL,NULL,NULL,28,23,NULL,NULL,NULL
 407,Having a workout buddy can also keep you accountable and make it more fun!,discussion comment,NULL,43,NULL,2024-11-21 11:30:00,NULL,NULL,NULL,28,23,NULL,NULL,NULL
 408,I often find that tracking my workouts helps me stay motivated and see progress!,discussion comment,NULL,43,NULL,2024-11-22 11:30:00,NULL,NULL,NULL,28,23,NULL,NULL,NULL
-409,"When it comes to working out at home, I find that creating a designated space helps!",discussion comment,NULL,43,NULL,2024-11-23 11:30:00,NULL,NULL,NULL,29,24,NULL,NULL,NULL
+409,When it comes to working out at home/I find that creating a designated space helps!,discussion comment,NULL,43,NULL,2024-11-23 11:30:00,NULL,NULL,NULL,29,24,NULL,NULL,NULL
 410,Sometimes I use online workout videos for guidance; they keep things interesting!,discussion comment,NULL,5,NULL,2024-11-24 11:30:00,NULL,NULL,NULL,29,24,NULL,NULL,NULL
 411,It’s also helpful to have a set schedule to ensure consistency in your workouts!,discussion comment,NULL,18,NULL,2024-11-25 11:30:00,NULL,NULL,NULL,29,24,NULL,NULL,NULL
-412,"For those starting with yoga, remember to listen to your body and not push too hard!",discussion comment,NULL,4,NULL,2024-11-26 11:30:00,NULL,NULL,NULL,30,25,NULL,NULL,NULL
+412,For those starting with yoga/remember to listen to your body and not push too hard!,discussion comment,NULL,4,NULL,2024-11-26 11:30:00,NULL,NULL,NULL,30,25,NULL,NULL,NULL
 413,I’ve found that consistent practice can really improve flexibility over time!,discussion comment,NULL,13,NULL,2024-11-27 11:30:00,NULL,NULL,NULL,30,25,NULL,NULL,NULL
 414,Joining a local yoga class helped me develop my practice and connect with others!,discussion comment,NULL,22,NULL,2024-11-28 11:30:00,NULL,NULL,NULL,30,25,NULL,NULL,NULL
-415,"When starting a nutrition plan, I recommend consulting with a dietitian for personalized advice!",discussion comment,NULL,37,NULL,2024-11-29 11:30:00,NULL,NULL,NULL,31,26,NULL,NULL,NULL
+415,When starting a nutrition plan/I recommend consulting with a dietitian for personalized advice!,discussion comment,NULL,37,NULL,2024-11-29 11:30:00,NULL,NULL,NULL,31,26,NULL,NULL,NULL
 416,I’ve had success with meal prepping; it makes sticking to a plan much easier!,discussion comment,NULL,1,NULL,2024-11-30 11:30:00,NULL,NULL,NULL,31,26,NULL,NULL,NULL
 417,Tracking my food intake has also helped me become more aware of my eating habits!,discussion comment,NULL,2,NULL,2024-12-01 11:30:00,NULL,NULL,NULL,31,26,NULL,NULL,NULL
-418,"For outdoor workouts, I love hiking; it’s a great way to combine exercise and nature!",discussion comment,NULL,41,NULL,2024-12-02 11:30:00,NULL,NULL,NULL,32,27,NULL,NULL,NULL
+418,For outdoor workouts/I love hiking; it’s a great way to combine exercise and nature!,discussion comment,NULL,41,NULL,2024-12-02 11:30:00,NULL,NULL,NULL,32,27,NULL,NULL,NULL
 419,Running in a park is refreshing; the scenery makes it so much more enjoyable!,discussion comment,NULL,31,NULL,2024-12-03 11:30:00,NULL,NULL,NULL,32,27,NULL,NULL,NULL
 420,I also enjoy cycling outside; it’s a fantastic way to get some cardio in!,discussion comment,NULL,21,NULL,2024-12-04 11:30:00,NULL,NULL,NULL,32,27,NULL,NULL,NULL
 421,I often listen to music or podcasts to keep myself entertained during long workouts!,discussion comment,NULL,38,NULL,2024-12-05 11:30:00,NULL,NULL,NULL,33,28,NULL,NULL,NULL
 422,Having a workout playlist that pumps you up can make all the difference!,discussion comment,NULL,26,NULL,2024-12-06 11:30:00,NULL,NULL,NULL,33,28,NULL,NULL,NULL
-423,"I’ve started incorporating affirmations during workouts, which really helps boost my mindset!",discussion comment,NULL,7,NULL,2024-12-07 11:30:00,NULL,NULL,NULL,33,28,NULL,NULL,NULL
+423,I’ve started incorporating affirmations during workouts/which really helps boost my mindset!,discussion comment,NULL,7,NULL,2024-12-07 11:30:00,NULL,NULL,NULL,33,28,NULL,NULL,NULL
 424,Joining online challenges has motivated me to push through tough workouts!,discussion comment,NULL,2,NULL,2024-12-08 11:30:00,NULL,NULL,NULL,34,29,NULL,NULL,NULL
 425,I enjoy sharing my progress on social media; it keeps me accountable and inspired!,discussion comment,NULL,49,NULL,2024-12-09 11:30:00,NULL,NULL,NULL,34,29,NULL,NULL,NULL
 426,Connecting with others who share similar fitness goals can really keep you motivated!,discussion comment,NULL,49,NULL,2024-12-10 11:30:00,NULL,NULL,NULL,34,29,NULL,NULL,NULL
 427,I love using fitness apps to track my workouts; they make it so easy to stay on top!,discussion comment,NULL,1,NULL,2024-12-11 11:30:00,NULL,NULL,NULL,35,30,NULL,NULL,NULL
 428,A fitness journal can also be a great way to reflect on your progress and set goals!,discussion comment,NULL,33,NULL,2024-12-12 11:30:00,NULL,NULL,NULL,35,30,NULL,NULL,NULL
-429,Don't forget to reward yourself for achieving milestones; it keeps the motivation alive!,discussion comment,NULL,13,NULL,2024-12-13 11:30:00,NULL,NULL,NULL,35,30,NULL,NULL,NULL
-430,"For cool-downs, I find stretching or light yoga really helps with recovery!",discussion comment,NULL,43,NULL,2024-12-14 11:30:00,NULL,NULL,NULL,36,31,NULL,NULL,NULL
+429,Dont forget to reward yourself for achieving milestones; it keeps the motivation alive!,discussion comment,NULL,13,NULL,2024-12-13 11:30:00,NULL,NULL,NULL,35,30,NULL,NULL,NULL
+430,For cool-downs/I find stretching or light yoga really helps with recovery!,discussion comment,NULL,43,NULL,2024-12-14 11:30:00,NULL,NULL,NULL,36,31,NULL,NULL,NULL
 431,Hydration is key too! I always keep a water bottle handy during workouts.,discussion comment,NULL,46,NULL,2024-12-15 11:30:00,NULL,NULL,NULL,36,31,NULL,NULL,NULL
 432,You could also try foam rolling after workouts to help reduce muscle soreness!,discussion comment,NULL,23,NULL,2024-12-16 11:30:00,NULL,NULL,NULL,36,31,NULL,NULL,NULL
 433,I think it’s important to celebrate the small victories along your fitness journey!,discussion comment,NULL,6,NULL,2024-12-17 11:30:00,NULL,NULL,NULL,37,32,NULL,NULL,NULL
 434,Finding joy in the process can make all the difference in your fitness routine!,discussion comment,NULL,22,NULL,2024-12-18 11:30:00,NULL,NULL,NULL,37,32,NULL,NULL,NULL
 435,Sometimes just showing up is a victory in itself; be proud of yourself!,discussion comment,NULL,20,NULL,2024-12-19 11:30:00,NULL,NULL,NULL,37,32,NULL,NULL,NULL
-436,"Always remember that every step counts, no matter how small!",discussion comment,NULL,15,NULL,2024-12-20 11:30:00,NULL,NULL,NULL,38,33,NULL,NULL,NULL
-437,"If you’re struggling, don’t hesitate to seek support from friends or professionals!",discussion comment,NULL,8,NULL,2024-12-21 11:30:00,NULL,NULL,NULL,38,33,NULL,NULL,NULL
+436,Always remember that every step counts/no matter how small!,discussion comment,NULL,15,NULL,2024-12-20 11:30:00,NULL,NULL,NULL,38,33,NULL,NULL,NULL
+437,If you’re struggling/don’t hesitate to seek support from friends or professionals!,discussion comment,NULL,8,NULL,2024-12-21 11:30:00,NULL,NULL,NULL,38,33,NULL,NULL,NULL
 438,Your journey is unique; focus on what works best for you!,discussion comment,NULL,33,NULL,2024-12-22 11:30:00,NULL,NULL,NULL,38,33,NULL,NULL,NULL
 439,fitness is key! Experiment with different activities to see what excites you!,discussion comment,NULL,30,NULL,2024-12-23 11:30:00,NULL,NULL,NULL,39,34,NULL,NULL,NULL
-440,"I started taking different classes, and it helped me discover my favorite workouts!",discussion comment,NULL,3,NULL,2024-12-24 11:30:00,NULL,NULL,NULL,39,34,NULL,NULL,NULL
+440,I started taking different classes/and it helped me discover my favorite workouts!,discussion comment,NULL,3,NULL,2024-12-24 11:30:00,NULL,NULL,NULL,39,34,NULL,NULL,NULL
 441,Finding joy in movement can transform your entire fitness experience!,discussion comment,NULL,41,NULL,2024-12-25 11:30:00,NULL,NULL,NULL,39,34,NULL,NULL,NULL
-442,"For anyone feeling intimidated, just remember that everyone starts somewhere!",discussion comment,NULL,29,NULL,2024-12-26 11:30:00,NULL,NULL,NULL,40,35,NULL,NULL,NULL
-443,"It’s great to seek advice, but trust your instincts and listen to your body!",discussion comment,NULL,40,NULL,2024-12-27 11:30:00,NULL,NULL,NULL,40,35,NULL,NULL,NULL
+442,For anyone feeling intimidated/just remember that everyone starts somewhere!,discussion comment,NULL,29,NULL,2024-12-26 11:30:00,NULL,NULL,NULL,40,35,NULL,NULL,NULL
+443,It’s great to seek advice/but trust your instincts and listen to your body!,discussion comment,NULL,40,NULL,2024-12-27 11:30:00,NULL,NULL,NULL,40,35,NULL,NULL,NULL
 444,Connecting with a community can really help ease those nerves!,discussion comment,NULL,8,NULL,2024-12-28 11:30:00,NULL,NULL,NULL,40,35,NULL,NULL,NULL
 445,I love getting workout ideas from fellow fitness enthusiasts; it keeps things fresh!,discussion comment,NULL,20,NULL,2024-12-29 11:30:00,NULL,NULL,NULL,41,36,NULL,NULL,NULL
 446,Swapping routines with friends has been a game-changer for my motivation!,discussion comment,NULL,4,NULL,2024-12-30 11:30:00,NULL,NULL,NULL,41,36,NULL,NULL,NULL
 447,Sharing experiences can also help you learn new techniques or approaches!,discussion comment,NULL,41,NULL,2024-12-31 11:30:00,NULL,NULL,NULL,41,36,NULL,NULL,NULL
-448,Tracking your progress is so important; it helps you see how far you've come!,discussion comment,NULL,39,NULL,2025-01-01 11:30:00,NULL,NULL,NULL,42,37,NULL,NULL,NULL
-449,"I keep a log of my workouts, and it really motivates me to keep pushing!",discussion comment,NULL,25,NULL,2025-01-02 11:30:00,NULL,NULL,NULL,42,37,NULL,NULL,NULL
+448,Tracking your progress is so important; it helps you see how far youve come!,discussion comment,NULL,39,NULL,2025-01-01 11:30:00,NULL,NULL,NULL,42,37,NULL,NULL,NULL
+449,I keep a log of my workouts/and it really motivates me to keep pushing!,discussion comment,NULL,25,NULL,2025-01-02 11:30:00,NULL,NULL,NULL,42,37,NULL,NULL,NULL
 450,I like to set short-term goals; they keep me focused and motivated!,discussion comment,NULL,4,NULL,2025-01-03 11:30:00,NULL,NULL,NULL,42,37,NULL,NULL,NULL
 451,It’s all about consistency! Aim to make workouts a regular part of your routine!,discussion comment,NULL,10,NULL,2025-01-04 11:30:00,NULL,NULL,NULL,43,38,NULL,NULL,NULL
 452,Finding an accountability partner can make a huge difference in sticking to your plans!,discussion comment,NULL,31,NULL,2025-01-05 11:30:00,NULL,NULL,NULL,43,38,NULL,NULL,NULL
 453,A workout calendar has helped me stay organized and committed to my fitness goals!,discussion comment,NULL,37,NULL,2025-01-06 11:30:00,NULL,NULL,NULL,43,38,NULL,NULL,NULL
-454,Don't forget that rest and recovery are as important as the workouts themselves!,discussion comment,NULL,2,NULL,2025-01-07 11:30:00,NULL,NULL,NULL,44,39,NULL,NULL,NULL
+454,Dont forget that rest and recovery are as important as the workouts themselves!,discussion comment,NULL,2,NULL,2025-01-07 11:30:00,NULL,NULL,NULL,44,39,NULL,NULL,NULL
 455,Make sure to listen to your body and adjust your routine as needed!,discussion comment,NULL,9,NULL,2025-01-08 11:30:00,NULL,NULL,NULL,44,39,NULL,NULL,NULL
-456,It's crucial to find a balance that works for you and your lifestyle!,discussion comment,NULL,30,NULL,2025-01-09 11:30:00,NULL,NULL,NULL,44,39,NULL,NULL,NULL
+456,Its crucial to find a balance that works for you and your lifestyle!,discussion comment,NULL,30,NULL,2025-01-09 11:30:00,NULL,NULL,NULL,44,39,NULL,NULL,NULL
 457,Always prioritize your safety and well-being during workouts!,discussion comment,NULL,14,NULL,2025-01-10 11:30:00,NULL,NULL,NULL,45,40,NULL,NULL,NULL
 458,Learning proper techniques is essential to prevent injuries and enhance your workouts!,discussion comment,NULL,4,NULL,2025-01-11 11:30:00,NULL,NULL,NULL,45,40,NULL,NULL,NULL
-459,I found a coach who helped me a lot with my form and technique; it's been invaluable!,discussion comment,NULL,46,NULL,2025-01-12 11:30:00,NULL,NULL,NULL,45,40,NULL,NULL,NULL
-460,"Celebrate your wins, no matter how small! Every step is progress!",discussion comment,NULL,46,NULL,2025-01-13 11:30:00,NULL,NULL,NULL,46,41,NULL,NULL,NULL
+459,I found a coach who helped me a lot with my form and technique; its been invaluable!,discussion comment,NULL,46,NULL,2025-01-12 11:30:00,NULL,NULL,NULL,45,40,NULL,NULL,NULL
+460,Celebrate your wins/no matter how small! Every step is progress!,discussion comment,NULL,46,NULL,2025-01-13 11:30:00,NULL,NULL,NULL,46,41,NULL,NULL,NULL
 461,Sharing achievements with others can help inspire and motivate everyone!,discussion comment,NULL,17,NULL,2025-01-14 11:30:00,NULL,NULL,NULL,46,41,NULL,NULL,NULL
-462,"Keep pushing, and don’t forget to acknowledge your hard work along the way!",discussion comment,NULL,10,NULL,2025-01-15 11:30:00,NULL,NULL,NULL,46,41,NULL,NULL,NULL
-463,"Embrace the journey, and remember that improvement takes time and effort!",discussion comment,NULL,42,NULL,2025-01-16 11:30:00,NULL,NULL,NULL,47,42,NULL,NULL,NULL
+462,Keep pushing/and don’t forget to acknowledge your hard work along the way!,discussion comment,NULL,10,NULL,2025-01-15 11:30:00,NULL,NULL,NULL,46,41,NULL,NULL,NULL
+463,Embrace the journey/and remember that improvement takes time and effort!,discussion comment,NULL,42,NULL,2025-01-16 11:30:00,NULL,NULL,NULL,47,42,NULL,NULL,NULL
 464,Surround yourself with supportive people who encourage your progress!,discussion comment,NULL,17,NULL,2025-01-17 11:30:00,NULL,NULL,NULL,47,42,NULL,NULL,NULL
-465,"Keep your focus on the positive changes you're making, both physically and mentally!",discussion comment,NULL,49,NULL,2025-01-18 11:30:00,NULL,NULL,NULL,47,42,NULL,NULL,NULL
+465,Keep your focus on the positive changes youre making/both physically and mentally!,discussion comment,NULL,49,NULL,2025-01-18 11:30:00,NULL,NULL,NULL,47,42,NULL,NULL,NULL
 466,It’s okay to seek guidance and ask questions—everyone is here to learn and grow!,discussion comment,NULL,24,NULL,2025-01-19 11:30:00,NULL,NULL,NULL,48,43,NULL,NULL,NULL
 467,Stay curious and open to trying new things; you might discover something you love!,discussion comment,NULL,23,NULL,2025-01-20 11:30:00,NULL,NULL,NULL,48,43,NULL,NULL,NULL
 468,Remember that everyone has their own journey; focus on yours and enjoy the process!,discussion comment,NULL,13,NULL,2025-01-21 11:30:00,NULL,NULL,NULL,48,43,NULL,NULL,NULL
 469,Always be patient with yourself; progress takes time!,discussion comment,NULL,6,NULL,2025-01-22 11:30:00,NULL,NULL,NULL,49,44,NULL,NULL,NULL
-470,Keep in mind that it's normal to have ups and downs; resilience is key!,discussion comment,NULL,4,NULL,2025-01-23 11:30:00,NULL,NULL,NULL,49,44,NULL,NULL,NULL
+470,Keep in mind that its normal to have ups and downs; resilience is key!,discussion comment,NULL,4,NULL,2025-01-23 11:30:00,NULL,NULL,NULL,49,44,NULL,NULL,NULL
 471,Embrace the learning experience; every challenge can lead to growth!,discussion comment,NULL,1,NULL,2025-01-24 11:30:00,NULL,NULL,NULL,49,44,NULL,NULL,NULL
-472,"Remember, the journey is just as important as the destination!",discussion comment,NULL,33,NULL,2025-01-25 11:30:00,NULL,NULL,NULL,50,45,NULL,NULL,NULL
-473,"Find what works for you, and don’t compare yourself to others!",discussion comment,NULL,25,NULL,2025-01-26 11:30:00,NULL,NULL,NULL,50,45,NULL,NULL,NULL
+472,Remember/the journey is just as important as the destination!,discussion comment,NULL,33,NULL,2025-01-25 11:30:00,NULL,NULL,NULL,50,45,NULL,NULL,NULL
+473,Find what works for you/and don’t compare yourself to others!,discussion comment,NULL,25,NULL,2025-01-26 11:30:00,NULL,NULL,NULL,50,45,NULL,NULL,NULL
 474,Stay motivated by reminding yourself of your goals and aspirations!,discussion comment,NULL,22,NULL,2025-01-27 11:30:00,NULL,NULL,NULL,50,45,NULL,NULL,NULL
 475,Fitness is a personal journey; focus on what makes you feel good!,discussion comment,NULL,15,NULL,2025-01-28 11:30:00,NULL,NULL,NULL,51,46,NULL,NULL,NULL
-476,"Be open to trying new methods, and don't hesitate to ask for help when needed!",discussion comment,NULL,5,NULL,2025-01-29 11:30:00,NULL,NULL,NULL,51,46,NULL,NULL,NULL
-477,"Stay committed to your goals, and celebrate your progress along the way!",discussion comment,NULL,14,NULL,2025-01-30 11:30:00,NULL,NULL,NULL,51,46,NULL,NULL,NULL
+476,Be open to trying new methods/and dont hesitate to ask for help when needed!,discussion comment,NULL,5,NULL,2025-01-29 11:30:00,NULL,NULL,NULL,51,46,NULL,NULL,NULL
+477,Stay committed to your goals/and celebrate your progress along the way!,discussion comment,NULL,14,NULL,2025-01-30 11:30:00,NULL,NULL,NULL,51,46,NULL,NULL,NULL
 478,Keep experimenting with different styles until you find your passion!,discussion comment,NULL,2,NULL,2025-01-31 11:30:00,NULL,NULL,NULL,52,47,NULL,NULL,NULL
 479,It’s important to stay engaged and excited about your workouts!,discussion comment,NULL,26,NULL,2025-02-01 11:30:00,NULL,NULL,NULL,52,47,NULL,NULL,NULL
 480,Don’t forget to check in with yourself; your mental health is just as important!,discussion comment,NULL,32,NULL,2025-02-02 11:30:00,NULL,NULL,NULL,52,47,NULL,NULL,NULL
 481,Always strive for balance in your workouts to prevent burnout and injuries!,discussion comment,NULL,40,NULL,2025-02-03 11:30:00,NULL,NULL,NULL,53,48,NULL,NULL,NULL
 482,Make sure to mix cardio and strength training for a well-rounded routine!,discussion comment,NULL,12,NULL,2025-02-04 11:30:00,NULL,NULL,NULL,53,48,NULL,NULL,NULL
 483,Regularly evaluate your progress and adjust your goals as needed!,discussion comment,NULL,6,NULL,2025-02-05 11:30:00,NULL,NULL,NULL,53,48,NULL,NULL,NULL
-484,"Embrace the changes and keep pushing forward, no matter the obstacles!",discussion comment,NULL,23,NULL,2025-02-06 11:30:00,NULL,NULL,NULL,54,49,NULL,NULL,NULL
+484,Embrace the changes and keep pushing forward/no matter the obstacles!,discussion comment,NULL,23,NULL,2025-02-06 11:30:00,NULL,NULL,NULL,54,49,NULL,NULL,NULL
 485,Every workout is a step towards a healthier you; keep that in mind!,discussion comment,NULL,17,NULL,2025-02-07 11:30:00,NULL,NULL,NULL,54,49,NULL,NULL,NULL
 486,Stay motivated by surrounding yourself with positive influences!,discussion comment,NULL,8,NULL,2025-02-08 11:30:00,NULL,NULL,NULL,54,49,NULL,NULL,NULL
 487,Remember that your journey is unique; focus on what you enjoy!,discussion comment,NULL,21,NULL,2025-02-09 11:30:00,NULL,NULL,NULL,55,50,NULL,NULL,NULL
 488,Seek out communities that support and inspire your fitness journey!,discussion comment,NULL,50,NULL,2025-02-10 11:30:00,NULL,NULL,NULL,55,50,NULL,NULL,NULL
 489,Keep exploring different options until you find what resonates with you!,discussion comment,NULL,6,NULL,2025-02-11 11:30:00,NULL,NULL,NULL,55,50,NULL,NULL,NULL
-490,"Stay true to yourself and your goals, and don’t forget to have fun along the way!",discussion comment,NULL,21,NULL,2025-02-12 11:30:00,NULL,NULL,NULL,56,51,NULL,NULL,NULL
-491,"It’s important to find joy in movement, no matter how you choose to exercise!",discussion comment,NULL,16,NULL,2025-02-13 11:30:00,NULL,NULL,NULL,56,51,NULL,NULL,NULL
-492,"Celebrate your efforts, and keep pushing forward, even on tough days!",discussion comment,NULL,45,NULL,2025-02-14 11:30:00,NULL,NULL,NULL,56,51,NULL,NULL,NULL
+490,Stay true to yourself and your goals/and don’t forget to have fun along the way!,discussion comment,NULL,21,NULL,2025-02-12 11:30:00,NULL,NULL,NULL,56,51,NULL,NULL,NULL
+491,It’s important to find joy in movement/no matter how you choose to exercise!,discussion comment,NULL,16,NULL,2025-02-13 11:30:00,NULL,NULL,NULL,56,51,NULL,NULL,NULL
+492,Celebrate your efforts/and keep pushing forward/even on tough days!,discussion comment,NULL,45,NULL,2025-02-14 11:30:00,NULL,NULL,NULL,56,51,NULL,NULL,NULL
 493,Stay open to new ideas and approaches; fitness is all about experimentation!,discussion comment,NULL,15,NULL,2025-02-15 11:30:00,NULL,NULL,NULL,57,52,NULL,NULL,NULL
-494,Don't be afraid to adapt your routines as you grow and change!,discussion comment,NULL,11,NULL,2025-02-16 11:30:00,NULL,NULL,NULL,57,52,NULL,NULL,NULL
-495,"Keep that curiosity alive, and don't hesitate to try something new!",discussion comment,NULL,33,NULL,2025-02-17 11:30:00,NULL,NULL,NULL,57,52,NULL,NULL,NULL
+494,Dont be afraid to adapt your routines as you grow and change!,discussion comment,NULL,11,NULL,2025-02-16 11:30:00,NULL,NULL,NULL,57,52,NULL,NULL,NULL
+495,Keep that curiosity alive/and dont hesitate to try something new!,discussion comment,NULL,33,NULL,2025-02-17 11:30:00,NULL,NULL,NULL,57,52,NULL,NULL,NULL
 496,Embrace your journey and the community around you; we’re all in this together!,discussion comment,NULL,15,NULL,2025-02-18 11:30:00,NULL,NULL,NULL,58,53,NULL,NULL,NULL
 497,Stay connected with others who share similar goals to keep each other motivated!,discussion comment,NULL,6,NULL,2025-02-19 11:30:00,NULL,NULL,NULL,58,53,NULL,NULL,NULL
-498,"Remember, we are all learning and growing; let's support each other along the way!",discussion comment,NULL,20,NULL,2025-02-20 11:30:00,NULL,NULL,NULL,58,53,NULL,NULL,NULL
+498,Remember/we are all learning and growing; lets support each other along the way!,discussion comment,NULL,20,NULL,2025-02-20 11:30:00,NULL,NULL,NULL,58,53,NULL,NULL,NULL
 499,Share your stories and struggles; we can all learn from each other!,discussion comment,NULL,46,NULL,2025-02-21 11:30:00,NULL,NULL,NULL,59,54,NULL,NULL,NULL
-500,"Encourage one another to keep going, especially during tough times!",discussion comment,NULL,17,NULL,2025-02-22 11:30:00,NULL,NULL,NULL,59,54,NULL,NULL,NULL
+500,Encourage one another to keep going/especially during tough times!,discussion comment,NULL,17,NULL,2025-02-22 11:30:00,NULL,NULL,NULL,59,54,NULL,NULL,NULL
 501,It’s important to build a supportive community; we’re stronger together!,discussion comment,NULL,40,NULL,2025-02-23 11:30:00,NULL,NULL,NULL,59,54,NULL,NULL,NULL
