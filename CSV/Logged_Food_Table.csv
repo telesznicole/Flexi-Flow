@@ -1,4 +1,4 @@
-id,user,date,meal,meal name,meal id,food id,calories,protein,fat,saturated fat,fiber,carbohydrates
+id,user_id,date,meal,meal_name,meal_id,food_id,calories,protein,fat,saturated_fat,fiber,carbohydrates
 1,6,2024-10-01 8:00:00,dessert,NULL,NULL,4,350,15,10,3,2,45
 2,4,2024-10-01 12:00:00,lunch,8,Garden Fresh Delights,NULL,600,25,20,7,5,80
 3,5,2024-10-01 18:00:00,dessert,1,Classic Comfort Combo,NULL,700,30,25,10,8,90
