@@ -1,4 +1,4 @@
-id,username,password,name,picture,activity level,food level,recovery level,activity goal,food goal,recovery goal
+id,username,password,name,picture,activity_level,food_level,recovery_level,activity_goal,food_goal,recovery_goal
 1,fitfan01,Strong@2024,Emily Johnson,pictures/girl1.jpg,5,3215,35,110,3400,115
 2,healthguru99,Workout*123,Michael Smith,pictures/guy1.jpg,35,655,40,40,3500,90
 3,cardioqueen22,Flexibility!456,Sarah Williams,pictures/girl2.jpg,25,840,20,110,4000,65
