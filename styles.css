@@ -1,26 +1,4 @@
-/* @font-face {
-    font-family: 'SF Pro';
-    src: url('fonts/SF-Pro.ttf') format('ttf'),
-        url('fonts/SF-Pro-Text-UltralightItalic.otf') format('ttf'),
-        url('fonts/SF-Pro-Text-Ultralight.otf') format('otf'),
-        url('fonts/SF-Pro-Text-ThinItalic.otf') format('otf'),
-        url('fonts/SF-Pro-Text-Thin.otf') format('otf'),
-        url('fonts/SF-Pro-Text-SemiboldItalic.otf') format('otf'),
-        url('fonts/SF-Pro-Text-Semibold.otf') format('otf'),
-        url('fonts/SF-Pro-Text-RegularItalic.otf') format('otf'),
-        url('fonts/SF-Pro-Text-Regular.otf') format('otf'),
-        url('fonts/SF-Pro-Text-MediumItalic.otf') format('otf'),
-        url('fonts/SF-Pro-Text-Medium.otf') format('otf'),
-        url('fonts/SF-Pro-Text-LightItalic.otf') format('otf'),
-        url('fonts/SF-Pro-Text-Light.otf') format('otf'),
-        url('fonts/SF-Pro-Text-HeavyItalic.otf') format('otf'),
-        url('fonts/SF-Pro-Text-Heavy.otf') format('otf'),
-        url('fonts/SF-Pro-Text-BoldItalic.otf') format('otf'),
-        url('fonts/SF-Pro-Text-Bold.otf') format('otf'),
-        url('fonts/SF-Pro-Text-BlackItalic.otf') format('otf'),
-        url('fonts/SF-Pro-Text-Black.otf') format('otf'),
-        url('fonts/SF-Pro-Italic.ttf') format('otf');
-} */
+
 
 /* SF Pro Ultralight */
 @font-face {
@@ -264,4 +242,59 @@
     font-family: 'SF Pro';
     font-weight: 900; /* Black */
     font-style: italic;
+}
+
+.nav-bar {
+    display: flex;
+    position: fixed; /* Keep the nav-bar fixed */
+    bottom: 20px;    /* Distance from the bottom */
+    left: 50%;       /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment adjustment */
+    justify-content: center;
+    width: calc(100% - 40px); /* Use full width minus margins */
+    max-width: 600px;  /* Ensure it doesn't exceed 600px */
+    margin: 0 auto;  /* Center margin automatically */
+    flex-wrap: wrap;
+    transition: color 0.3s, font-weight 0.3s; /* Smooth transition for color */
+    border: 2px solid #D9D9D9;
+    border-radius: 48px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    gap: 10px;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+
+.nav-bar-titles {
+    font-family: 'SF Pro';
+    font-weight: 400; /* Regular */
+    font-size: 10px;
+    color: black;
+    transition: color 0.3s, font-weight 0.3s; /* Smooth transition for color and font-weight */
+}
+
+.nav-bar-titles:hover {
+    color: #DA7659;
+    font-weight: 600;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column; /* Stack icon on top of text */
+    align-items: center;    /* Center align the icon and text */
+    text-align: center;     /* Center text alignment */
+    width: 60px;
+    height: 57px;
+}
+
+.btn img {
+    height: 24px;
+    margin-bottom: 4px;     /* Space between icon and text */
+    transition: transform 0.3s; /* Smooth transition for the icon */
+}
+
+.btn:hover img {
+    transform: scale(1.1); /* Enlarge icon slightly (10%) on hover */
 }

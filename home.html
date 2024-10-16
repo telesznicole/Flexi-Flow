@@ -1,12 +1,65 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" href="styles.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <script>
+            // JavaScript for icon hover effect
+            document.addEventListener('DOMContentLoaded', () => {
+                const navButtons = document.querySelectorAll('.nav-bar-titles');
+
+                navButtons.forEach(button => {
+                    const icon = button.querySelector('img'); // Get the icon inside the button
+                    const originalSrc = icon.src; // Store the original icon source
+                    const hoverSrc = icon.dataset.hover; // Get the hover source from data attribute
+
+                    // Change to hover icon on mouseover
+                    button.addEventListener('mouseover', () => {
+                        if (hoverSrc) { // Check if hoverSrc exists
+                            icon.src = hoverSrc; // Change to hover icon
+                        }
+                    });
+
+                    // Change back to original icon on mouseout
+                    button.addEventListener('mouseout', () => {
+                        icon.src = originalSrc; // Change back to original icon
+                    });
+                });
+            });
+
+            function getDate() {
+                const currentDate = new Date();
+                const date = currentDate.toLocaleDateString();  // Get current date as a string
+                return date;  // Return the date so it can be stored or used later
+            }
+        
+            function getTime() {
+                const currentDate = new Date();
+                const time = currentDate.toLocaleTimeString();  // Get current time as a string
+                return time;  // Return the time so it can be stored or used later
+            }
+        
+            function getDateTime() {
+                const currentDate = new Date();
+                const date = currentDate.toLocaleDateString();
+                const time = currentDate.toLocaleTimeString();
+                const dateTime = `${date} ${time}`;  // Combine date and time
+                return dateTime;  // Return the combined date and time so it can be stored or used later
+            }
+        
+            function displayDateTime() {
+                document.getElementById("dateDisplay").innerHTML = getDate();       // Display the date
+                document.getElementById("timeDisplay").innerHTML = getTime();       // Display the time
+                document.getElementById("dateTimeDisplay").innerHTML = getDateTime(); // Display both date and time
+            }
+        </script>
     </head>
 
-    <body>
-        <p>*side scrolling bar for date*</p>
+    <body onload="displayDateTime()">
+        <p>*side scrolling bar for date: <span id="dateDisplay"></span>*</p>
 
         <div>
             <p class="regular" style="font-size: 16px;">Good Morning</p>
@@ -22,10 +75,29 @@
             <p>*tiles containing logged info*</p>
         </div>
 
-        <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <nav>
+            <div class="btn-group nav-bar">
+                <a href="#" class="btn nav-bar-titles">
+                    <img src="icons/house.svg" alt="Home icon" data-hover="icons/house_filled.svg">
+                    Home
+                </a>
+                <a href="#" class="btn nav-bar-titles">
+                    <img src="icons/dumbell.svg" alt="Workouts icon" data-hover="icons/dumbell_filled.svg">
+                    Workouts
+                </a>
+                <a href="#" class="btn nav-bar-titles">
+                    <img src="icons/plus.svg" alt="Quick add icon" data-hover="icons/plus_filled.svg">
+                    Quick Add
+                </a>
+                <a href="#" class="btn nav-bar-titles">
+                    <img src="icons/comment.svg" alt="Community icon" data-hover="icons/comment_filled.svg">
+                    Community
+                </a>
+                <a href="#" class="btn nav-bar-titles">
+                    <img src="icons/profile.svg" alt="Profile icon" data-hover="icons/profile_filled.svg">
+                    Profile
+                </a>
+            </div>
+        </nav>
     </body>
-
-    <nav>
-        <p>*nav bar here*</p>
-    </nav>
 </html>
