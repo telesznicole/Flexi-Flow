@@ -266,13 +266,17 @@
     z-index: 1000; /* Ensure it stays on top */
 }
 
-
 .nav-bar-titles {
     font-family: 'SF Pro';
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 10px;
     color: black;
-    transition: color 0.3s, font-weight 0.3s; /* Smooth transition for color and font-weight */
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.nav-bar-titles-selected {
+    font-weight: 600 !important;
+    color: #DA7659 !important;
 }
 
 .nav-bar-titles:hover {
@@ -287,6 +291,7 @@
     text-align: center;     /* Center text alignment */
     width: 60px;
     height: 57px;
+    border: none;
 }
 
 .btn img {
