@@ -1,104 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 
-        <script>
-            // JavaScript for icon hover effect
-            document.addEventListener('DOMContentLoaded', () => {
-                const navButtons = document.querySelectorAll('.nav-bar-titles');
+    
 
-                navButtons.forEach(button => {
-                    const icon = button.querySelector('img'); // Get the icon inside the button
-                    const originalSrc = icon.src; // Store the original icon source
-                    const hoverSrc = icon.dataset.hover; // Get the hover source from data attribute
+    <script>
+        // JavaScript for icon hover effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-bar-titles');
 
-                    // Change to hover icon on mouseover
-                    button.addEventListener('mouseover', () => {
-                        if (hoverSrc) { // Check if hoverSrc exists
-                            icon.src = hoverSrc; // Change to hover icon
-                        }
-                    });
+            navButtons.forEach(button => {
+                const icon = button.querySelector('img'); // Get the icon inside the button
+                const originalSrc = icon.src; // Store the original icon source
+                const hoverSrc = icon.dataset.hover; // Get the hover source from data attribute
 
-                    // Change back to original icon on mouseout
-                    button.addEventListener('mouseout', () => {
-                        icon.src = originalSrc; // Change back to original icon
-                    });
+                // Change to hover icon on mouseover
+                button.addEventListener('mouseover', () => {
+                    if (hoverSrc) { // Check if hoverSrc exists
+                        icon.src = hoverSrc; // Change to hover icon
+                    }
+                });
+
+                // Change back to original icon on mouseout
+                button.addEventListener('mouseout', () => {
+                    icon.src = originalSrc; // Change back to original icon
                 });
             });
+        });
+    </script>
+</head>
 
-            function getDate() {
-                const currentDate = new Date();
-                const date = currentDate.toLocaleDateString();  // Get current date as a string
-                return date;  // Return the date so it can be stored or used later
-            }
+<body style="padding-top: 20px;">
+    <div class="container">
+        <!-- Calendar Header (Month name) -->
+        <h1 class="regular" style="font-size: 24px;" id="month"></h1>
+
+        <div class="calendar-container">
+            <!-- Left Arrow -->
+            <img src="icons/left_arrow.png" alt="Left Arrow" class="calendar-arrow left-arrow" id="prevWeek">
         
-            function getTime() {
-                const currentDate = new Date();
-                const time = currentDate.toLocaleTimeString();  // Get current time as a string
-                return time;  // Return the time so it can be stored or used later
-            }
-        
-            function getDateTime() {
-                const currentDate = new Date();
-                const date = currentDate.toLocaleDateString();
-                const time = currentDate.toLocaleTimeString();
-                const dateTime = `${date} ${time}`;  // Combine date and time
-                return dateTime;  // Return the combined date and time so it can be stored or used later
-            }
-        
-            function displayDateTime() {
-                document.getElementById("dateDisplay").innerHTML = getDate();       // Display the date
-                document.getElementById("timeDisplay").innerHTML = getTime();       // Display the time
-                document.getElementById("dateTimeDisplay").innerHTML = getDateTime(); // Display both date and time
-            }
-        </script>
-    </head>
-
-    <body onload="displayDateTime()">
-        <p>*side scrolling bar for date: <span id="dateDisplay"></span>*</p>
-
-        <div>
-            <p class="regular" style="font-size: 16px;">Good Morning</p>
-            <p class="semibold" style="font-size: 20px;">Professor Lomelino</p>
-        </div>
-
-        <div>
-            <p>*tile containing info about what user has logged today*</p>
-        </div>
-
-        <div>
-            <p>Logged Activity</p>
-            <p>*tiles containing logged info*</p>
-        </div>
-
-        <nav>
-            <div class="btn-group nav-bar">
-                <a href="home.html" class="btn nav-bar-titles nav-bar-titles-selected">
-                    <img src="icons/house_filled.svg" alt="Home icon" data-hover="icons/house_filled.svg">
-                    Home
-                </a>
-                <a href="#" class="btn nav-bar-titles">
-                    <img src="icons/dumbell.svg" alt="Workouts icon" data-hover="icons/dumbell_filled.svg">
-                    Workouts
-                </a>
-                <a href="#" class="btn nav-bar-titles">
-                    <img src="icons/plus.svg" alt="Quick add icon" data-hover="icons/plus_filled.svg">
-                    Quick Add
-                </a>
-                <a href="#" class="btn nav-bar-titles">
-                    <img src="icons/comment.svg" alt="Community icon" data-hover="icons/comment_filled.svg">
-                    Community
-                </a>
-                <a href="#" class="btn nav-bar-titles">
-                    <img src="icons/profile.svg" alt="Profile icon" data-hover="icons/profile_filled.svg">
-                    Profile
-                </a>
+            <!-- Days of the week -->
+            <div class="row" id="weekRow">
+                <!-- Days of the current week will be dynamically inserted here -->
             </div>
-        </nav>
         
-    </body>
+            <!-- Right Arrow -->
+            <img src="icons/right_arrow.png" alt="Right Arrow" class="calendar-arrow right-arrow" id="nextWeek">
+        </div>            
+    </div>
+
+    <script>
+        const monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        let currentDate = new Date(); // Store the current date
+        const weekRow = document.getElementById('weekRow');
+        const monthHeader = document.getElementById("month");
+
+        function updateCalendar() {
+            // Calculate the start (Sunday) and end (Saturday) of the current week
+            const currentDay = currentDate.getDay();
+            const currentDateNum = currentDate.getDate();
+            const startOfWeek = new Date(currentDate);
+            startOfWeek.setDate(currentDateNum - currentDay); // Set to Sunday of the current week
+            
+            // Clear the existing days
+            weekRow.innerHTML = '';
+
+            // Generate the week days (Sunday to Saturday)
+            for (let i = 0; i <= 6; i++) {
+                const day = new Date(startOfWeek);
+                day.setDate(startOfWeek.getDate() + i); // Add each day of the week
+                const dayNum = day.getDate();
+                const dayName = day.toLocaleString('default', { weekday: 'narrow' });
+                const isToday = day.toDateString() === new Date().toDateString();
+                
+                const dayCol = document.createElement('div');
+                dayCol.classList.add('col', 'calendar-day');
+                if (isToday) {
+                    dayCol.classList.add('current-day');
+                }
+                dayCol.innerHTML = `<day>${dayName}</day><date>${dayNum}</date>`;
+                weekRow.appendChild(dayCol);
+            }
+
+            // Update the month header
+            monthHeader.innerText = monthNames[currentDate.getMonth()];
+        }
+
+        // Event listeners for the arrows
+        document.getElementById('prevWeek').addEventListener('click', () => {
+            currentDate.setDate(currentDate.getDate() - 7); // Move back a week
+            updateCalendar(); // Update the calendar display
+        });
+
+        document.getElementById('nextWeek').addEventListener('click', () => {
+            currentDate.setDate(currentDate.getDate() + 7); // Move forward a week
+            updateCalendar(); // Update the calendar display
+        });
+
+        // Initial calendar setup
+        updateCalendar();
+    </script>
+
+    <div>
+        <p class="regular" style="font-size: 16px;">Good Morning</p>
+        <p class="semibold" style="font-size: 20px;">Professor Lomelino</p>
+    </div>
+
+    <div>
+        <p>*tile containing info about what user has logged today*</p>
+    </div>
+
+    <div>
+        <p>Logged Activity</p>
+        <p>*tiles containing logged info*</p>
+    </div>
+
+    <nav>
+        <div class="btn-group nav-bar">
+            <a href="home.html" class="btn nav-bar-titles nav-bar-titles-selected">
+                <img src="icons/house_filled.svg" alt="Home icon" data-hover="icons/house_filled.svg">
+                Home
+            </a>
+            <a href="#" class="btn nav-bar-titles">
+                <img src="icons/dumbell.svg" alt="Workouts icon" data-hover="icons/dumbell_filled.svg">
+                Workouts
+            </a>
+            <a href="#" class="btn nav-bar-titles">
+                <img src="icons/plus.svg" alt="Quick add icon" data-hover="icons/plus_filled.svg">
+                Quick Add
+            </a>
+            <a href="#" class="btn nav-bar-titles">
+                <img src="icons/comment.svg" alt="Community icon" data-hover="icons/comment_filled.svg">
+                Community
+            </a>
+            <a href="#" class="btn nav-bar-titles">
+                <img src="icons/profile.svg" alt="Profile icon" data-hover="icons/profile_filled.svg">
+                Profile
+            </a>
+        </div>
+    </nav>
+
+</body>
 </html>

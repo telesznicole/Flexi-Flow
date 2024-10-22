@@ -244,6 +244,10 @@
     font-style: italic;
 }
 
+.container {
+    width: 800px;
+}
+
 .nav-bar {
     display: flex;
     position: fixed; /* Keep the nav-bar fixed */
@@ -286,9 +290,9 @@
 
 .btn {
     display: flex;
-    flex-direction: column; /* Stack icon on top of text */
-    align-items: center;    /* Center align the icon and text */
-    text-align: center;     /* Center text alignment */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 60px;
     height: 57px;
     border: none;
@@ -296,10 +300,97 @@
 
 .btn img {
     height: 24px;
-    margin-bottom: 4px;     /* Space between icon and text */
-    transition: transform 0.3s; /* Smooth transition for the icon */
+    margin-bottom: 4px;
+    transition: transform 0.3s;
 }
 
 .btn:hover img {
-    transform: scale(1.1); /* Enlarge icon slightly (10%) on hover */
+    transform: scale(1.1);
+}
+
+.calendar-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.calendar-day date {
+    font-family: 'SF Pro';
+    font-size: 14pt;
+    line-height: 1.2;
+    display: block;
+}
+
+.calendar-day day {
+    font-family: 'SF Pro';
+    font-size: 20pt;
+    line-height: 1.2;
+    display: block;
+    height: 40px;
+}
+
+.current-day {
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.current-day day {
+    font-size: 20pt;
+    display: block;
+    line-height: 1.2;
+
+    font-family: 'SF Pro';
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    
+    position: relative;
+    background-color: #A73A04;
+    border-radius: 50%;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.current-day date {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 14pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    line-height: 1.2;
+}
+
+.calendar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-arrow {
+    width: 8px;
+    cursor: pointer;
+    z-index: 10; /* Ensures the arrows are on top of other elements */
+}
+
+#weekRow {
+    flex-grow: 1;
+    text-align: center;
 }
