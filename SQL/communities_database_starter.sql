@@ -59,8 +59,24 @@ INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('47', 'Strength Prog
 INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('48', 'Running Techniques Forum', 'pictures/track-19217_1280.jpg');
 INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('49', 'Total Body Strength Group', 'pictures/gym-2649824_1280.jpg');
 INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('50', 'Fitness Transformation', 'pictures/man-461195_1280.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('51', 'Functional Fitness Group', 'pictures/functional_fitness.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('52', 'Strength Training for Seniors', 'pictures/senior_strength.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('53', 'Flexibility & Stretching Techniques', 'pictures/flexibility.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('54', 'Kettlebell Training Tips', 'pictures/kettlebell_training.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('55', 'Women’s Fitness Forum', 'pictures/womens_fitness.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('56', 'Core Stability Group', 'pictures/core_stability.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('57', 'Triathlon Training Community', 'pictures/triathlon.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('58', 'Fitness Gear Reviews', 'pictures/fitness_gear.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('59', 'Advanced Powerlifting Community', 'pictures/powerlifting.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('60', 'Recovery & Foam Rolling Tips', 'pictures/foam_roller.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('61', 'Strength Training for Busy Schedules', 'pictures/strength.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('62', 'Senior Fitness & Wellness', 'pictures/senior_fitness.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('63', 'Fitness Motivation & Accountability', 'pictures/motivation.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('64', 'Pre-workout & Supplement Advice', 'pictures/supplements.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('65', 'Outdoor Fitness Adventures', 'pictures/nature_walk.jpg');
+INSERT INTO `communities` (`id`, `name`, `picture`) VALUES ('66', 'Fitness Travel Tips', 'pictures/plane.jpg');
 
 -- Setting AUTO_INCREMENT to continue from max id + 1
-ALTER TABLE `communities` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+ALTER TABLE `communities` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 COMMIT;
