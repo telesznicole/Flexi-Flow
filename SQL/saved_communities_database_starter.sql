@@ -104,8 +104,40 @@ INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('92', 
 INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('93', '49', '36');
 INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('94', '50', '4');
 INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('95', '50', '14');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('96', '51', '7');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('97', '51', '28');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('98', '52', '17');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('99', '52', '44');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('100', '53', '10');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('101', '53', '25');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('102', '54', '3');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('103', '54', '33');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('104', '55', '11');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('105', '55', '47');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('106', '56', '14');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('107', '56', '48');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('108', '57', '21');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('109', '57', '50');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('110', '58', '6');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('111', '58', '32');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('112', '59', '9');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('113', '59', '40');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('114', '60', '13');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('115', '60', '35');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('116', '61', '16');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('117', '61', '37');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('118', '62', '1');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('119', '62', '45');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('120', '63', '23');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('121', '63', '36');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('122', '64', '4');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('123', '64', '18');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('124', '65', '20');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('125', '65', '31');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('126', '66', '5');
+INSERT INTO `saved_communities` (`id`, `community_id`, `user_id`) VALUES ('127', '66', '27');
 
 -- Setting AUTO_INCREMENT to continue from max id + 1
-ALTER TABLE `saved_communities` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+ALTER TABLE `saved_communities` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 COMMIT;
