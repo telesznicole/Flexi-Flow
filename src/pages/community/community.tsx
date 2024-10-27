@@ -25,6 +25,7 @@ export default function Community() {
   ]
 
   const onClickCommunity = () => navigate('/community-list')
+  const onClickFriend = () => navigate('/friend')
 
   return (
     <Layout active='community'>
@@ -50,7 +51,7 @@ export default function Community() {
                     <div className={classNames({
                       [style.friend]: true,
                       [style.dot]: item.dot
-                    })} key={index}>
+                    })} key={index} onClick={onClickFriend}>
                       <img src={base(item.image)} />
                       <span>{item.name}</span>
                     </div>
