@@ -32,7 +32,7 @@
     </script>
 
     <script>
-        function selectButton(selectedButton, chartContainerId, loggedInfoId, titleId) {
+        function selectButton(selectedButton, loggedInfoId, titleId) {
             // Get all buttons
             const buttons = document.querySelectorAll('.logged-info-button');
 
@@ -45,18 +45,6 @@
             // Add the 'selected' class to the clicked button
             selectedButton.classList.add('selected');
             selectedButton.querySelector('.info-button-icon').classList.add('selected');
-
-            // Get all chart containers
-            const chartContainers = document.querySelectorAll('.chart-container');
-
-            // Remove the 'selected' class from all chart containers
-            chartContainers.forEach(container => {
-                container.classList.remove('selected');
-            });
-
-            // Add the 'selected' class to the corresponding chart container
-            const selectedChartContainer = document.getElementById(chartContainerId);
-            selectedChartContainer.classList.add('selected');
 
             // Get all logged info containers
             const loggedInfo = document.querySelectorAll('.horizontal-tile');
@@ -92,12 +80,12 @@
         <!-- Calendar Header with Month name and Calendar Icon -->
         <div class="calendar-header d-flex justify-content-between align-items-center">
             <h1 class="regular" style="font-size: 24px;" id="month"></h1>
-            <a href="home_alt.html"><img src="icons/calendar_icon.svg" alt="Calendar Icon" class="calendar-icon"></a>
+            <a href="home.html"><img src="icons/line.3.horizontal.svg" alt="Calendar Icon" class="calendar-icon"></a>
         </div>
     
-        <div class="calendar-container">
+        <div class="calendar-container-alt">
             <!-- Left Arrow -->
-            <img src="icons/left_arrow.png" alt="Left Arrow" class="calendar-arrow left-arrow" id="prevWeek">
+            <!-- <img src="icons/left_arrow.png" alt="Left Arrow" class="calendar-arrow left-arrow" id="prevWeek"> -->
         
             <!-- Days of the week -->
             <div class="row" id="weekRow">
@@ -105,53 +93,18 @@
             </div>
         
             <!-- Right Arrow -->
-            <img src="icons/right_arrow.png" alt="Right Arrow" class="calendar-arrow right-arrow" id="nextWeek">
-        </div>   
-        
-        <div>
-            <p class="regular" style="font-size: 16px; margin-bottom: 6px;">Good Morning</p>
-            <p class="semibold" style="font-size: 20px; margin-top: 0;">Professor Lomelino</p>
+            <!-- <img src="icons/right_arrow.png" alt="Right Arrow" class="calendar-arrow right-arrow" id="nextWeek"> -->
         </div>
 
-        <div class="logged-info-tile" style="position: relative;">
-            <div class="chart-set">
-                <div class="chart-container selected" id="A_chart">
-                    <canvas id="activityChart" width="138" height="138" class="logged-info-chart"></canvas>
-                    <div class="center-text logged-info-percentage" id="A_percentageText">
-                        <!-- Percentage text will be set by JavaScript -->
-                    </div>
-                    <div class="center-text logged-info-details" id="A_detailsText">
-                        <!-- Details text will be set by JavaScript -->
-                    </div>
-                </div>
-                <div class="chart-container" id="F_chart">
-                    <canvas id="foodChart" width="138" height="138" class="logged-info-chart"></canvas>
-                    <div class="center-text logged-info-percentage" id="F_percentageText">
-                        <!-- Percentage text will be set by JavaScript -->
-                    </div>
-                    <div class="center-text logged-info-details" id="F_detailsText">
-                        <!-- Details text will be set by JavaScript -->
-                    </div>
-                </div>
-                <div class="chart-container" id="R_chart">
-                    <canvas id="recoveryChart" width="138" height="138" class="logged-info-chart"></canvas>
-                    <div class="center-text logged-info-percentage" id="R_percentageText">
-                        <!-- Percentage text will be set by JavaScript -->
-                    </div>
-                    <div class="center-text logged-info-details" id="R_detailsText">
-                        <!-- Details text will be set by JavaScript -->
-                    </div>
-                </div>
-            </div>
-
+        <div class="logged-info-tile" style="position: relative; background-color: white;">
             <div class="logged-info-buttons">
-                <span class="logged-info-button selected" onclick="selectButton(this, 'A_chart', 'A_logged', 'A_title')">
+                <span class="logged-info-button selected" onclick="selectButton(this, 'A_logged', 'A_title')">
                     <img src="icons/flame.svg" alt="Activity Icon" class="info-button-icon selected"> Activity
                 </span>
-                <span class="logged-info-button" onclick="selectButton(this, 'F_chart', 'F_logged', 'F_title')">
+                <span class="logged-info-button" onclick="selectButton(this, 'F_logged', 'F_title')">
                     <img src="icons/fork.knife.svg" alt="Food Icon" class="info-button-icon"> Food
                 </span>
-                <span class="logged-info-button" onclick="selectButton(this, 'R_chart', 'R_logged', 'R_title')">
+                <span class="logged-info-button" onclick="selectButton(this, 'R_logged', 'R_title')">
                     <img src="icons/lotus.svg" alt="Recovery Icon" class="info-button-icon"> Recovery
                 </span>
             </div>
@@ -205,8 +158,6 @@
         </div>
     </div>
 
-    
-
     <script>
         const monthNames = [
             "January", "February", "March", "April", "May", "June",
@@ -218,46 +169,104 @@
         const monthHeader = document.getElementById("month");
 
         function updateCalendar() {
-            // Calculate the start (Sunday) and end (Saturday) of the current week
-            const currentDay = currentDate.getDay();
-            const currentDateNum = currentDate.getDate();
-            const startOfWeek = new Date(currentDate);
-            startOfWeek.setDate(currentDateNum - currentDay); // Set to Sunday of the current week
-            
+            // Get the first day of the month and the last day of the month
+            const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+            const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+
             // Clear the existing days
             weekRow.innerHTML = '';
 
-            // Generate the week days (Sunday to Saturday)
-            for (let i = 0; i <= 6; i++) {
-                const day = new Date(startOfWeek);
-                day.setDate(startOfWeek.getDate() + i); // Add each day of the week
-                const dayNum = day.getDate();
-                const dayName = day.toLocaleString('default', { weekday: 'narrow' });
-                const isToday = day.toDateString() === new Date().toDateString();
-                
+            // Calculate the number of leading empty cells for the first week
+            const leadingEmptyDays = firstDayOfMonth.getDay(); // Get the day of the week (0 = Sunday, 6 = Saturday)
+
+            // Create an array for the days in the month
+            const daysInMonth = Array(lastDayOfMonth.getDate()).fill().map((_, i) => i + 1);
+
+            // Create a 2D array to hold the weeks
+            const calendarDays = [];
+
+            // Create the first week
+            const firstWeek = Array(7).fill(null);
+            for (let i = 0; i < leadingEmptyDays; i++) {
+                firstWeek[i] = null; // Fill leading empty days
+            }
+
+            // Fill in the first week with the days of the month
+            let dayCounter = 1;
+            for (let i = leadingEmptyDays; i < 7 && dayCounter <= lastDayOfMonth.getDate(); i++) {
+                firstWeek[i] = dayCounter++;
+            }
+            calendarDays.push(firstWeek); // Add the first week to the calendarDays array
+
+            // Create subsequent weeks
+            while (dayCounter <= lastDayOfMonth.getDate()) {
+                const week = Array(7).fill(null);
+                for (let i = 0; i < 7; i++) {
+                    if (dayCounter <= lastDayOfMonth.getDate()) {
+                        week[i] = dayCounter++;
+                    }
+                }
+                calendarDays.push(week);
+            }
+
+            // Generate the calendar
+            // Create the top row for day initials
+            const initialsRow = document.createElement('div');
+            initialsRow.classList.add('row', 'calendar-initials-row');
+            const dayNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S']; // Day initials
+
+            dayNames.forEach(initial => {
                 const dayCol = document.createElement('div');
                 dayCol.classList.add('col', 'calendar-day');
-                if (isToday) {
-                    dayCol.classList.add('current-day');
+                dayCol.innerHTML = `<strong>${initial}</strong>`; // Display initials in bold
+                initialsRow.appendChild(dayCol);
+            });
+            weekRow.appendChild(initialsRow); // Append the initials row first
+
+            // Append the days of the month rows
+            for (let week of calendarDays) {
+                const newRow = document.createElement('div');
+                newRow.classList.add('row');
+
+                for (let day of week) {
+                    const dayCol = document.createElement('div');
+                    dayCol.classList.add('col', 'calendar-day');
+
+                    if (day === null) {
+                        dayCol.classList.add('empty-day'); // For leading/trailing empty days
+                        dayCol.innerHTML = ''; // No content for empty days
+                    } else {
+                        const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+                        const isToday = date.toDateString() === new Date().toDateString();
+                        if (isToday) {
+                            dayCol.classList.add('current-day'); // Add current-day class
+                            dayCol.innerHTML = `<day>${day}</day>`; // Use day tag for today's date
+                        } else {
+                            dayCol.innerHTML = `<date>${day}</date>`; // Only show the date number
+                        }
+                    }
+
+                    newRow.appendChild(dayCol); // Append the day column to the new row
                 }
-                dayCol.innerHTML = `<day>${dayName}</day><date>${dayNum}</date>`;
-                weekRow.appendChild(dayCol);
+
+                weekRow.appendChild(newRow); // Append the week row to the weekRow container
             }
 
             // Update the month header
             monthHeader.innerText = monthNames[currentDate.getMonth()];
         }
 
-        // Event listeners for the arrows
-        document.getElementById('prevWeek').addEventListener('click', () => {
-            currentDate.setDate(currentDate.getDate() - 7); // Move back a week
-            updateCalendar(); // Update the calendar display
-        });
 
-        document.getElementById('nextWeek').addEventListener('click', () => {
-            currentDate.setDate(currentDate.getDate() + 7); // Move forward a week
-            updateCalendar(); // Update the calendar display
-        });
+        // // Event listeners for the arrows
+        // document.getElementById('prevWeek').addEventListener('click', () => {
+        //     currentDate.setDate(currentDate.getDate() - 7); // Move back a week
+        //     updateCalendar(); // Update the calendar display
+        // });
+
+        // document.getElementById('nextWeek').addEventListener('click', () => {
+        //     currentDate.setDate(currentDate.getDate() + 7); // Move forward a week
+        //     updateCalendar(); // Update the calendar display
+        // });
 
         // Initial calendar setup
         updateCalendar();

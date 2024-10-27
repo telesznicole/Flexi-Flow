@@ -346,6 +346,12 @@
     gap: 10px;
 }
 
+.calendar-container-alt {
+    background-color: #f0f0f0; /* Change this to your desired color */
+    padding: 10px; /* Optional: Add some padding for better spacing */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
 .current-day day {
     font-size: 20pt;
     display: block;
