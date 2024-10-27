@@ -7,7 +7,8 @@ export const TABBAR_CONFIG = [
   {
     id: 'workouts',
     icon: 'icon1',
-    title: 'Workouts'
+    title: 'Workouts',
+    route: '/workouts'
   },
   {
     id: 'add',
@@ -17,7 +18,8 @@ export const TABBAR_CONFIG = [
   {
     id: 'community',
     icon: 'msg',
-    title: 'Community'
+    title: 'Community',
+    route: '/community'
   },
   {
     id: 'user',
