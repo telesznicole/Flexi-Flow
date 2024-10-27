@@ -1,0 +1,6 @@
+$color-primary: #cd7b60;
+$text-color: #323232;
+
+@function unit($p) {
+  @return calc(1rem * $p / 16);
+}

@@ -1,3 +1,9 @@
+import Layout from '../../components/layout/layout'
+
 export default function Community() {
-  return <div>Community</div>
+  return (
+    <Layout active='community'>
+      <div>Community</div>
+    </Layout>
+  )
 }
