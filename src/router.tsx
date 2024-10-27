@@ -6,11 +6,12 @@ const Community = lazy(() => import('./pages/community/community'))
 const CommunityList = lazy(() => import('./pages/community/community-list'))
 const CommunityDetail = lazy(() => import('./pages/community/community-detail'))
 const Workouts = lazy(() => import('./pages/workouts/workouts'))
+const Profile = lazy(() => import('./pages/profile/profile'))
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Navigate to='/community' />
+    element: <Navigate to='/profile' />
   },
   {
     path: '/community',
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: '/community-detail',
     element: <CommunityDetail />
+  },
+  {
+    path: '/profile',
+    element: <Profile />
   }
 ])
 

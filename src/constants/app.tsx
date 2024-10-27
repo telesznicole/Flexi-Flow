@@ -22,8 +22,9 @@ export const TABBAR_CONFIG = [
     route: '/community'
   },
   {
-    id: 'user',
+    id: 'profile',
     icon: 'user',
-    title: 'Profile'
+    title: 'Profile',
+    route: '/profile'
   }
 ]
