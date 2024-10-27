@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Back button styling */
+    .back-button {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      color: black;
+      text-decoration: none;
+      font-weight: normal;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+
+    .back-button svg {
+      margin-right: 8px;
+    }
+
+    /* Search bar styling with fixed width */
+    .search-bar-container {
+      position: relative;
+      margin-bottom: 24px;
+      width: 90%; /* Same width as "Create New Activity" button */
+      margin-left: 5%; /* Center-align with the button */
+    }
+
+    .search-bar {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid #D9D9D9;
+      padding: 8px 40px 8px 15px;
+      box-sizing: border-box;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-category {
+      border-radius: 20px;
+      padding: 5px 15px;
+      border: none;
+      color: black;
+      background-color: transparent;
+    }
+
+    .btn-category.active {
+      background-color: #da7659;
+      color: white;
+      border: 1px solid #da7659;
+    }
+
+    .activity-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .activity-card {
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    /* Custom container to keep left-aligned layout */
+    .custom-container {
+      padding: 0 5%;
+      margin-bottom: 80px; /* Leave space for the fixed button */
+    }
+
+    /* Fixed Create New Activity button styling */
+    .btn-create {
+      background-color: #da7659;
+      color: white;
+      border: none;
+      width: 90%;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      position: fixed;
+      left: 5%;
+      bottom: 34px;
+      max-width: 90%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back Button with Activity Title, aligned with Search Bar -->
+  <a href="#" class="back-button" style="margin-left: 5%;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+    </svg>
+    Activity
+  </a>
+
+  <!-- Search Bar with Icon -->
+  <div class="search-bar-container">
+    <input type="text" class="form-control search-bar" placeholder="Search activity">
+    <img src="icon/search.jpg" alt="Search" class="search-icon">
+  </div>
+
+  <!-- Category Buttons -->
+  <div class="d-flex justify-content-around mb-4">
+    <button class="btn btn-category active" onclick="filterActivities('all')">All</button>
+    <button class="btn btn-category" onclick="filterActivities('recent')">Recent</button>
+    <button class="btn btn-category" onclick="filterActivities('frequent')">Frequent</button>
+  </div>
+
+  <!-- Activity Cards Container with Left Alignment -->
+  <div class="custom-container">
+    <div id="activityContainer" class="row">
+      <!-- Running Activity Card with Link to running.html -->
+      <div class="col-6 mb-3" data-category="all recent frequent">
+        <a href="running.html" style="text-decoration: none; color: black;">
+          <div class="activity-card">
+            <img src="img/running.jpg" alt="Running">
+            <p class="fs-5 mt-1">Running</p>
+          </div>
+        </a>
+      </div>
+      <!-- Other Activity Cards -->
+      <div class="col-6 mb-3" data-category="all recent">
+        <div class="activity-card">
+          <img src="img/yoga.jpg" alt="Yoga">
+          <p class="fs-5 mt-1">Yoga</p>
+        </div>
+      </div>
+      <div class="col-6 mb-3" data-category="all frequent">
+        <div class="activity-card">
+          <img src="img/cycling.jpg" alt="Cycling">
+          <p class="fs-5 mt-1">Cycling</p>
+        </div>
+      </div>
+      <div class="col-6 mb-3" data-category="all">
+        <div class="activity-card">
+          <img src="img/brisk_walking.jpg" alt="Brisk Walking">
+          <p class="fs-5 mt-1">Brisk Walking</p>
+        </div>
+      </div>
+      <div class="col-6 mb-3" data-category="all">
+        <div class="activity-card">
+          <img src="img/jump_rope.jpg" alt="Jump Rope">
+          <p class="fs-5 mt-1">Jump Rope</p>
+        </div>
+      </div>
+      <div class="col-6 mb-3" data-category="all">
+        <div class="activity-card">
+          <img src="img/weightlifting.jpg" alt="Weightlifting">
+          <p class="fs-5 mt-1">Weightlifting</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed "Create New Activity" Button -->
+  <button type="button" class="btn-create">Create New Activity</button>
+
+  <script>
+    function filterActivities(category) {
+      // Update button styles
+      document.querySelectorAll('.btn-category').forEach(button => {
+        button.classList.remove('active');
+      });
+      document.querySelector(`[onclick="filterActivities('${category}')"]`).classList.add('active');
+
+      // Filter activity cards based on category
+      document.querySelectorAll('#activityContainer .col-6').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category').includes(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

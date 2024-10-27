@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Settings</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+   /* iPhone 状态栏模拟 */
+   .status-bar {
+     background-color: #f7f7f7;
+     height: 20px;
+     padding: 5px 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-family: 'Helvetica Neue', sans-serif;
+     font-size: 14px;
+     color: #333;
+   }
+
+   /* 页面布局 */
+   .container {
+     padding-top: 30px;
+     padding-left: 20px;
+     padding-right: 20px;
+   }
+
+   .back-button {
+     font-size: 18px;
+     color: black;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+   }
+
+   .settings-item {
+     display: flex;
+     align-items: center;
+     background-color: #f7f7f7;
+     border-radius: 8px;
+     padding: 10px 15px;
+     margin-bottom: 10px;
+     font-size: 16px;
+   }
+
+   .settings-item img {
+     width: 20px;
+     height: 20px;
+     margin-right: 10px;
+   }
+
+   .btn-signout {
+     background-color: #f07d6a;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     width: 100%;
+     padding: 10px;
+     font-size: 18px;
+     position: fixed;
+     bottom: 34px;
+     left: 0;
+     right: 0;
+     margin: 0 auto;
+     max-width: 90%;
+   }
+ </style>
+</head>
+<body>
+
+ <!-- iPhone 状态栏 -->
+ <div class="status-bar">
+   <div class="left">
+     <span>9:41 AM</span>
+   </div>
+   <div class="right">
+     <span>100%</span>
+   </div>
+ </div>
+
+ <!-- 返回按钮和设置页面内容 -->
+ <div class="container">
+   <a href="index.html" class="back-button">&larr; Settings</a>
+
+   <div class="settings-item">
+     <img src="icon/personal.png" alt="Personal Icon">
+     Personal
+   </div>
+
+   <div class="settings-item">
+     <img src="icon/reset_goals.png" alt="Reset Goals Icon">
+     Reset Goals
+   </div>
+
+   <div class="settings-item">
+     <img src="icon/connected_devices.png" alt="Connected Devices Icon">
+     Connected Devices
+   </div>
+
+   <div class="settings-item">
+     <img src="icon/notifications.png" alt="Notifications Icon">
+     Notifications
+   </div>
+
+   <div class="settings-item">
+     <img src="icon/help.png" alt="Help Icon">
+     Help
+   </div>
+ </div>
+
+ <!-- Sign Out 按钮 -->
+ <button class="btn-signout">Sign Out</button>
+
+</body>
+</html>
