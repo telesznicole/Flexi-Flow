@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { lazy } from 'react'
-import { createBrowserRouter, Navigate } from 'react-router-dom'
+import { createHashRouter, Navigate } from 'react-router-dom'
 
 const Community = lazy(() => import('./pages/community/community'))
 const CommunityList = lazy(() => import('./pages/community/community-list'))
@@ -9,7 +9,7 @@ const Workouts = lazy(() => import('./pages/workouts/workouts'))
 const Profile = lazy(() => import('./pages/profile/profile'))
 const Friend = lazy(() => import('./pages/friend/friend'))
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Navigate to='/profile' />
@@ -38,8 +38,6 @@ const router = createBrowserRouter([
     path: '/friend',
     element: <Friend />
   }
-], {
-  basename: import.meta.env.BASE_URL
-})
+])
 
 export default router
