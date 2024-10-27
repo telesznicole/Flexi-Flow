@@ -3,6 +3,7 @@ import { lazy } from 'react'
 import { createBrowserRouter, Navigate } from 'react-router-dom'
 
 const Community = lazy(() => import('./pages/community/community'))
+const CommunityList = lazy(() => import('./pages/community/community-list'))
 const Workouts = lazy(() => import('./pages/workouts/workouts'))
 
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: '/workouts',
     element: <Workouts />
+  },
+  {
+    path: '/community-list',
+    element: <CommunityList />
   }
 ])
 

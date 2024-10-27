@@ -130,9 +130,17 @@
 }
 
 .discover {
+  --col: 2;
   gap: unit(15);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(var(--col), 1fr);
+
+  :global(.pad) & {
+    --col: 3;
+  }
+  :global(.pc) & {
+    --col: 4;
+  }
 
   &Item {
     position: relative;

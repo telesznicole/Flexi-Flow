@@ -2,8 +2,10 @@ import classNames from 'classnames'
 import Layout from '../../components/layout/layout'
 import style from './community.module.scss'
 import { base } from '../../utils/common'
+import { useNavigate } from 'react-router-dom'
 
 export default function Community() {
+  const navigate = useNavigate()
   const fiends = [
     { image: '/images/avatar/1.png', name: 'Matt', dot: true },
     { image: '/images/avatar/2.png', name: 'Family' },
@@ -21,6 +23,8 @@ export default function Community() {
     { image: '/images/pics/7.png', title: 'Ping pang' },
     { image: '/images/pics/8.png', title: 'Skateboarding' },
   ]
+
+  const onClickCommunity = () => navigate('/community-list')
 
   return (
     <Layout active='community'>
@@ -71,7 +75,7 @@ export default function Community() {
             <div className={style.communities}>
               {
                 communities.map((item, index) => (
-                  <div className={style.community} key={index}>
+                  <div className={style.community} key={index} onClick={onClickCommunity}>
                     <img src={item.image} />
                     <span>{item.title}</span>
                   </div>
