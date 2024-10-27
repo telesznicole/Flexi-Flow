@@ -4,6 +4,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom'
 
 const Community = lazy(() => import('./pages/community/community'))
 const CommunityList = lazy(() => import('./pages/community/community-list'))
+const CommunityDetail = lazy(() => import('./pages/community/community-detail'))
 const Workouts = lazy(() => import('./pages/workouts/workouts'))
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: '/community-list',
     element: <CommunityList />
+  },
+  {
+    path: '/community-detail',
+    element: <CommunityDetail />
   }
 ])
 

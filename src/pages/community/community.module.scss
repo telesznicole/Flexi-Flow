@@ -54,6 +54,7 @@
   width: calc(100% + unit(28));
   margin-left: unit(-14);
   overflow-x: auto;
+  overflow-y: hidden;
   &::-webkit-scrollbar {
     display: none;
   }

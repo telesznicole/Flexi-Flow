@@ -1,15 +1,19 @@
 import classNames from 'classnames'
 import { CommunityItem as ComItem } from '../../mock/community'
 import style from './community-list.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 export type CommunityItemProps = {
   item: ComItem
+  cut?: boolean
 }
 
 export default function CommunityItem(props: CommunityItemProps) {
-  const { item } = props
+  const { item, cut } = props
+  const navigate = useNavigate()
+  const onClick = () => navigate('/community-detail')
   return (
-    <div className={style.item}>
+    <div className={style.item} onClick={onClick}>
       <div className={style.head}>
         <img className={style.avatar} src={item.avatar} />
         <div className={style.info}>
@@ -20,7 +24,7 @@ export default function CommunityItem(props: CommunityItemProps) {
       <div className={style.title}>{item.title}</div>
       <div className={classNames({
         [style.content]: true,
-        [style.cut]: true,
+        [style.cut]: cut,
       })}>{item.content}</div>
       <div className={style.footer}>
         <div className={style.action}>

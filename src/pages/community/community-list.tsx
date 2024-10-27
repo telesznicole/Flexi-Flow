@@ -9,7 +9,7 @@ export default function CommunityList() {
     <>
       <Header title='Distance Running' showBack />
       <div className={style.page}>
-        {listData.map(item => <CommunityItem key={item.id} item={item} />)}
+        {listData.map(item => <CommunityItem key={item.id} item={item} cut />)}
       </div>
     </>
   )

@@ -13,6 +13,19 @@ export type CommunityItem = {
   comment: number;
 }
 
+export type Comment = {
+  id: string;
+  avatar: string;
+  name: string;
+  content: string;
+  time: string;
+}
+
+export type CommunityDetailData = {
+  community: CommunityItem;
+  comments: Comment[];
+}
+
 export function mockCommunityItem(): CommunityItem {
   return {
     id: Random.id(),
@@ -29,4 +42,21 @@ export function mockCommunityItem(): CommunityItem {
 
 export function mockCommunityList(size: number) {
   return Array(size).fill(null).map(mockCommunityItem)
+}
+
+export function mockCommentItem(): Comment {
+  return {
+    id: Random.id(),
+    avatar: mockAvatarURL(),
+    name: Random.name(),
+    time: mockDistanceTime(),
+    content: Random.paragraph(1)
+  }
+}
+
+export function mockCommunityDetail(): CommunityDetailData {
+  return {
+    community: mockCommunityItem(),
+    comments: Array(5).fill(null).map(mockCommentItem)
+  }
 }
