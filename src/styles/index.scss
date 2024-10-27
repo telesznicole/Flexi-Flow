@@ -3,3 +3,13 @@ body {
   color: $text-color;
   font-size: unit(14);
 }
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  overflow: auto;
+}
