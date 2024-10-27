@@ -77,7 +77,7 @@ export default function Community() {
               {
                 communities.map((item, index) => (
                   <div className={style.community} key={index} onClick={onClickCommunity}>
-                    <img src={item.image} />
+                    <img src={base(item.image)} />
                     <span>{item.title}</span>
                   </div>
                 ))
@@ -95,7 +95,7 @@ export default function Community() {
             {
               discover.map((item, index) => (
                 <div className={style.discoverItem} key={index}>
-                  <img src={item.image} />
+                  <img src={base(item.image)} />
                   <span>{item.title}</span>
                 </div>
               ))

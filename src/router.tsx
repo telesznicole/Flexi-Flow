@@ -38,6 +38,8 @@ const router = createBrowserRouter([
     path: '/friend',
     element: <Friend />
   }
-])
+], {
+  basename: import.meta.env.BASE_URL
+})
 
 export default router

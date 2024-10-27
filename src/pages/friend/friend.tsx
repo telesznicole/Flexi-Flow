@@ -41,7 +41,7 @@ export default function Friend() {
         <div className={style.items}>
           {items.map((item, index) => (
             <div className={style.card} key={index}>
-              <img className={style.cardPic} src={item.pic} />
+              <img className={style.cardPic} src={base(item.pic)} />
               <div className={style.cardInfo}>
                 <div className={style.cardTitle}>{item.title}</div>
                 <div className={style.cardDis}>{item.dis}</div>
