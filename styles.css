@@ -1,0 +1,362 @@
+/* SF Pro Ultralight */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Ultralight.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-UltralightItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* SF Pro Thin */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Thin.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-ThinItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* SF Pro Light */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* SF Pro Regular */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* SF Pro Medium */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* SF Pro Semibold */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-SemiboldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* SF Pro Bold */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* SF Pro Heavy */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Heavy.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-HeavyItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* SF Pro Black */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* SF Pro Font Variants */
+.ultralight {
+    font-family: 'SF Pro';
+    font-weight: 100; /* Ultralight */
+    font-style: normal;
+}
+
+.ultralight-italic {
+    font-family: 'SF Pro';
+    font-weight: 100; /* Ultralight */
+    font-style: italic;
+}
+
+.thin {
+    font-family: 'SF Pro';
+    font-weight: 200; /* Thin */
+    font-style: normal;
+}
+
+.thin-italic {
+    font-family: 'SF Pro';
+    font-weight: 200; /* Thin */
+    font-style: italic;
+}
+
+.light {
+    font-family: 'SF Pro';
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+
+.light-italic {
+    font-family: 'SF Pro';
+    font-weight: 300; /* Light */
+    font-style: italic;
+}
+
+.regular {
+    font-family: 'SF Pro';
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+.regular-italic {
+    font-family: 'SF Pro';
+    font-weight: 400; /* Regular */
+    font-style: italic;
+}
+
+.medium {
+    font-family: 'SF Pro';
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+.medium-italic {
+    font-family: 'SF Pro';
+    font-weight: 500; /* Medium */
+    font-style: italic;
+}
+
+.semibold {
+    font-family: 'SF Pro';
+    font-weight: 600; /* Semibold */
+    font-style: normal;
+}
+
+.semibold-italic {
+    font-family: 'SF Pro';
+    font-weight: 600; /* Semibold */
+    font-style: italic;
+}
+
+.bold {
+    font-family: 'SF Pro';
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+.bold-italic {
+    font-family: 'SF Pro';
+    font-weight: 700; /* Bold */
+    font-style: italic;
+}
+
+.heavy {
+    font-family: 'SF Pro';
+    font-weight: 800; /* Heavy */
+    font-style: normal;
+}
+
+.heavy-italic {
+    font-family: 'SF Pro';
+    font-weight: 800; /* Heavy */
+    font-style: italic;
+}
+
+.black {
+    font-family: 'SF Pro';
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+.black-italic {
+    font-family: 'SF Pro';
+    font-weight: 900; /* Black */
+    font-style: italic;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 80px;
+}
+
+.login-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-button {
+    border: 1px solid #D9D9D9;
+    border-radius: 14pt;
+    width: 353px;
+    padding: 12px;
+    gap: 12px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.login-icon {
+    height: 22px;
+    width: auto;
+}
+
+.login-text {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-text-alt {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 20px;
+    display: block;
+    margin-right: auto;
+    color: #878787;
+}
+
+.login-button-alt {
+    display: flex;
+    gap: 12px;
+}
+
+.line {
+    width: 100%;
+}
+
+.login-bottom-content {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.login-bottom-text {
+    font: 'SF Pro';
+    font-weight: 400px;
+    font-size: 10pt;
+}
+
+.login-bottom-text-bold {
+    font: 'SF Pro';
+    font-weight: 700;
+    font-size: 10pt;
+    color: #DA7659 !important;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.login-input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    color: #333;
+  }
+
+  .login-input::placeholder {
+    color: #888; /* Lighter color for placeholder */
+  }
+
+  .action-button {
+    border-radius: 14pt;
+    width: 353px;
+    padding: 12px;
+    gap: 12px;
+    background-color: #DA7659;
+    justify-content: space-around;
+    display: flex;
+}
+
+.action-text {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
+
+.bottom-items {
+    display: flex;
+    position: fixed; /* Keep the nav-bar fixed */
+    bottom: 20px;    /* Distance from the bottom */
+    left: 50%;       /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment adjustment */
+    justify-content: center;
+    gap: 6px;
+    flex-direction: column;
+}
