@@ -446,7 +446,7 @@
     transition: flex 0.3s; /* Smooth transition for resizing */
     max-width: 300px; /* Optional max width for each container */
     margin: 10px; /* Space around the charts */
-    scale: 0.25;
+    scale: 0.5;
     opacity: 0.5;
     flex: 1;
 }
