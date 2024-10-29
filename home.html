@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // JavaScript for icon hover effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-bar-titles');
+
+            navButtons.forEach(button => {
+                const icon = button.querySelector('img'); // Get the icon inside the button
+                const originalSrc = icon.src; // Store the original icon source
+                const hoverSrc = icon.dataset.hover; // Get the hover source from data attribute
+
+                // Change to hover icon on mouseover
+                button.addEventListener('mouseover', () => {
+                    if (hoverSrc) { // Check if hoverSrc exists
+                        icon.src = hoverSrc; // Change to hover icon
+                    }
+                });
+
+                // Change back to original icon on mouseout
+                button.addEventListener('mouseout', () => {
+                    icon.src = originalSrc; // Change back to original icon
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function selectButton(selectedButton, chartContainerId, loggedInfoId, titleId) {
+            // Get all buttons
+            const buttons = document.querySelectorAll('.logged-info-button');
+
+            // Remove the 'selected' class from all buttons
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+                button.querySelector('.info-button-icon').classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the clicked button
+            selectedButton.classList.add('selected');
+            selectedButton.querySelector('.info-button-icon').classList.add('selected');
+
+            // Get all chart containers
+            const chartContainers = document.querySelectorAll('.chart-container');
+
+            // Remove the 'selected' class from all chart containers
+            chartContainers.forEach(container => {
+                container.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the corresponding chart container
+            const selectedChartContainer = document.getElementById(chartContainerId);
+            selectedChartContainer.classList.add('selected');
+
+            // Get all logged info containers
+            const loggedInfo = document.querySelectorAll('.horizontal-tile');
+
+            // Remove the 'selected' class from all logged info containers
+            loggedInfo.forEach(info => {
+                info.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the corresponding logged info container
+            const selectedLoggedInfo = document.getElementById(loggedInfoId);
+            selectedLoggedInfo.classList.add('selected');
+
+            // Get all title containers
+            const titleList = document.querySelectorAll('.title');
+
+            // Remove the 'selected' class from all title containers
+            titleList.forEach(title => {
+                title.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the corresponding title container
+            const selectedTitle = document.getElementById(titleId);
+            selectedTitle.classList.add('selected');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body style="padding-top: 20px;">
+    <div class="container">
+        <!-- Calendar Header with Month name and Calendar Icon -->
+        <div class="calendar-header d-flex justify-content-between align-items-center">
+            <h1 class="regular" style="font-size: 24px;" id="month"></h1>
+            <a href="home_alt.html"><img src="icons/calendar_icon.svg" alt="Calendar Icon" class="calendar-icon"></a>
+        </div>
+    
+        <div class="calendar-container">
+            <!-- Left Arrow -->
+            <img src="icons/left_arrow.png" alt="Left Arrow" class="calendar-arrow left-arrow" id="prevWeek">
+        
+            <!-- Days of the week -->
+            <div class="row" id="weekRow">
+                <!-- Days of the current week will be dynamically inserted here -->
+            </div>
+        
+            <!-- Right Arrow -->
+            <img src="icons/right_arrow.png" alt="Right Arrow" class="calendar-arrow right-arrow" id="nextWeek">
+        </div>   
+        
+        <div>
+            <p class="regular" style="font-size: 16px; margin-bottom: 6px;">Good Morning</p>
+            <p class="semibold" style="font-size: 20px; margin-top: 0;">Professor Lomelino</p>
+        </div>
+
+        <div class="logged-info-tile" style="position: relative;">
+            <div class="chart-set">
+                <div class="chart-container selected" id="A_chart">
+                    <canvas id="activityChart" width="138" height="138" class="logged-info-chart"></canvas>
+                    <div class="center-text logged-info-percentage" id="A_percentageText">
+                        <!-- Percentage text will be set by JavaScript -->
+                    </div>
+                    <div class="center-text logged-info-details" id="A_detailsText">
+                        <!-- Details text will be set by JavaScript -->
+                    </div>
+                </div>
+                <div class="chart-container" id="F_chart">
+                    <canvas id="foodChart" width="138" height="138" class="logged-info-chart"></canvas>
+                    <div class="center-text logged-info-percentage" id="F_percentageText">
+                        <!-- Percentage text will be set by JavaScript -->
+                    </div>
+                    <div class="center-text logged-info-details" id="F_detailsText">
+                        <!-- Details text will be set by JavaScript -->
+                    </div>
+                </div>
+                <div class="chart-container" id="R_chart">
+                    <canvas id="recoveryChart" width="138" height="138" class="logged-info-chart"></canvas>
+                    <div class="center-text logged-info-percentage" id="R_percentageText">
+                        <!-- Percentage text will be set by JavaScript -->
+                    </div>
+                    <div class="center-text logged-info-details" id="R_detailsText">
+                        <!-- Details text will be set by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="logged-info-buttons">
+                <span class="logged-info-button selected" onclick="selectButton(this, 'A_chart', 'A_logged', 'A_title')">
+                    <img src="icons/flame.svg" alt="Activity Icon" class="info-button-icon selected"> Activity
+                </span>
+                <span class="logged-info-button" onclick="selectButton(this, 'F_chart', 'F_logged', 'F_title')">
+                    <img src="icons/fork.knife.svg" alt="Food Icon" class="info-button-icon"> Food
+                </span>
+                <span class="logged-info-button" onclick="selectButton(this, 'R_chart', 'R_logged', 'R_title')">
+                    <img src="icons/lotus.svg" alt="Recovery Icon" class="info-button-icon"> Recovery
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <div class="title selected" id="A_title">Logged Activity</div>
+            <div class="title" id="F_title">Logged Food</div>
+            <div class="title" id="R_title">Logged Recovery</div>
+
+            <div class="horizontal-tile selected" id="A_logged">
+                <img src="pictures/running.png" alt="Running" class="horizontal-tile-pic">
+                <div class="horizontal-tile-content">
+                    <div class="horizontal-tile-title-content">
+                        <span class="horizontal-tile-title">Neighborhood Run</span>
+                        <span class="horizontal-tile-time">07:31</span>
+                    </div>
+                    <p class="horizontal-tile-descriptor">1.6mi</p>
+                </div>
+            </div>
+
+            <div class="horizontal-tile" id="R_logged">
+                <img src="pictures/bed.png" alt="Bed" class="horizontal-tile-pic">
+                <div class="horizontal-tile-content">
+                    <div class="horizontal-tile-title-content">
+                        <span class="horizontal-tile-title">Deep Sleep</span>
+                        <span class="horizontal-tile-time">06:00</span>
+                    </div>
+                    <p class="horizontal-tile-descriptor">7 hr 26 m</p>
+                </div>
+            </div>
+
+            <div class="horizontal-tile" id="F_logged">
+                <div class="horizontal-tile-content">
+                    <div class="horizontal-tile-title-content">
+                        <span class="horizontal-tile-title">Breakfast</span>
+                        <span class="horizontal-tile-time">08:37</span>
+                    </div>
+                    <div class="horizontal-tile-title-content">
+                        <span class="food-tile-title">Scrambled Eggs</span>
+                        <span class="food-tile-title">148 cal</span>
+                    </div>
+                    <p class="food-tile-descriptor">2 large brown eggs</p>
+                    <div class="horizontal-tile-title-content">
+                        <span class="food-tile-title">Bacon</span>
+                        <span class="food-tile-title">140 cal</span>
+                    </div>
+                    <p class="food-tile-descriptor">2 strips, Publix Brown Sugar Smoked Bacon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        const monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        let currentDate = new Date(); // Store the current date
+        const weekRow = document.getElementById('weekRow');
+        const monthHeader = document.getElementById("month");
+
+        function updateCalendar() {
+            // Calculate the start (Sunday) and end (Saturday) of the current week
+            const currentDay = currentDate.getDay();
+            const currentDateNum = currentDate.getDate();
+            const startOfWeek = new Date(currentDate);
+            startOfWeek.setDate(currentDateNum - currentDay); // Set to Sunday of the current week
+            
+            // Clear the existing days
+            weekRow.innerHTML = '';
+
+            // Generate the week days (Sunday to Saturday)
+            for (let i = 0; i <= 6; i++) {
+                const day = new Date(startOfWeek);
+                day.setDate(startOfWeek.getDate() + i); // Add each day of the week
+                const dayNum = day.getDate();
+                const dayName = day.toLocaleString('default', { weekday: 'narrow' });
+                const isToday = day.toDateString() === new Date().toDateString();
+                
+                const dayCol = document.createElement('div');
+                dayCol.classList.add('col', 'calendar-day');
+                if (isToday) {
+                    dayCol.classList.add('current-day');
+                }
+                dayCol.innerHTML = `<day>${dayName}</day><date>${dayNum}</date>`;
+                weekRow.appendChild(dayCol);
+            }
+
+            // Update the month header
+            monthHeader.innerText = monthNames[currentDate.getMonth()];
+        }
+
+        // Event listeners for the arrows
+        document.getElementById('prevWeek').addEventListener('click', () => {
+            currentDate.setDate(currentDate.getDate() - 7); // Move back a week
+            updateCalendar(); // Update the calendar display
+        });
+
+        document.getElementById('nextWeek').addEventListener('click', () => {
+            currentDate.setDate(currentDate.getDate() + 7); // Move forward a week
+            updateCalendar(); // Update the calendar display
+        });
+
+        // Initial calendar setup
+        updateCalendar();
+    </script>
+
+    <nav>
+        <div class="btn-group nav-bar">
+            <a href="home.html" class="btn nav-bar-titles nav-bar-titles-selected">
+                <img src="icons/house_filled.svg" alt="Home icon" data-hover="icons/house_filled.svg">
+                Home
+            </a>
+            <a href="#" class="btn nav-bar-titles">
+                <img src="icons/dumbell.svg" alt="Workouts icon" data-hover="icons/dumbell_filled.svg">
+                Workouts
+            </a>
+            <a href="#" class="btn nav-bar-titles">
+                <img src="icons/plus.svg" alt="Quick add icon" data-hover="icons/plus_filled.svg">
+                Quick Add
+            </a>
+            <a href="#" class="btn nav-bar-titles">
+                <img src="icons/comment.svg" alt="Community icon" data-hover="icons/comment_filled.svg">
+                Community
+            </a>
+            <a href="#" class="btn nav-bar-titles">
+                <img src="icons/profile.svg" alt="Profile icon" data-hover="icons/profile_filled.svg">
+                Profile
+            </a>
+        </div>
+    </nav>
+
+    <!-- External JavaScript files for chart generation -->
+    <script src="charts/activity_chart.js"></script>
+    <script src="charts/food_chart.js"></script>
+    <script src="charts/recovery_chart.js"></script>
+</body>
+</html>
