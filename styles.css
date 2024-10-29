@@ -617,6 +617,7 @@
     font-weight: 600;
     color: black;
     display: inline;
+}
 
 .logo {
     display: block;
@@ -741,5 +742,4 @@
 
 .a {
     text-decoration: none !important;
-
 }
