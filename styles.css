@@ -327,13 +327,13 @@
     font-size: 16px;
     flex: 1;
     color: #333;
-  }
+}
 
-  .login-input::placeholder {
+.login-input::placeholder {
     color: #888; /* Lighter color for placeholder */
-  }
+}
 
-  .action-button {
+.action-button {
     border-radius: 14pt;
     width: 353px;
     padding: 12px;
@@ -341,6 +341,7 @@
     background-color: #DA7659;
     justify-content: space-around;
     display: flex;
+    text-decoration: none !important;
 }
 
 .action-text {
@@ -348,6 +349,7 @@
     font-weight: 400;
     font-size: 20px;
     color: white;
+    text-decoration: none !important;
 }
 
 .bottom-items {
@@ -359,4 +361,8 @@
     justify-content: center;
     gap: 6px;
     flex-direction: column;
+}
+
+.a {
+    text-decoration: none !important;
 }
