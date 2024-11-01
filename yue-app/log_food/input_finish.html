@@ -6,7 +6,26 @@
  <title>Create New Meal</title>
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
  <style>
-   /* iPhone 状态栏模拟 */
+   /* Import SF Pro Font */
+   @font-face {
+     font-family: 'SF Pro';
+     src: url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
+     font-weight: 400;
+     font-style: normal;
+   }
+   @font-face {
+     font-family: 'SF Pro';
+     src: url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
+     font-weight: 700;
+     font-style: normal;
+   }
+
+   /* Apply SF Pro globally */
+   body {
+     font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
+
+   /* iPhone Status Bar Simulation */
    .status-bar {
      background-color: #f7f7f7;
      height: 20px;
@@ -14,20 +33,19 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     font-family: 'Helvetica Neue', sans-serif;
      font-size: 14px;
      color: #333;
    }
 
-   /* 页面布局 */
+   /* Page layout */
    .container {
      padding-top: 30px;
-     padding-bottom: 80px; /* 为底部按钮留出空间 */
+     padding-bottom: 80px; /* Space for the bottom button */
    }
 
    .back-button {
      font-size: 18px;
-     color: black; /* 返回键颜色 */
+     color: black;
      text-decoration: none;
      display: flex;
      align-items: center;
@@ -86,7 +104,7 @@
      font-size: 16px;
    }
 
-   /* 固定底部按钮 */
+   /* Fixed bottom button */
    .btn-create {
      background-color: #f07d6a;
      color: white;
@@ -101,7 +119,7 @@
      max-width: 90%;
    }
 
-   /* 弹出框样式 */
+   /* Modal overlay */
    .modal-overlay {
      position: fixed;
      top: 0;
@@ -143,7 +161,7 @@
 </head>
 <body>
 
- <!-- iPhone 状态栏 -->
+ <!-- iPhone Status Bar -->
  <div class="status-bar">
    <div class="left">
      <span>9:41 AM</span>
@@ -153,7 +171,7 @@
    </div>
  </div>
 
- <!-- Input Finish 页面内容 -->
+ <!-- Input Finish Page Content -->
  <div class="container">
    <div class="header-row">
      <a href="logfood_before.html" class="back-button">
@@ -190,11 +208,11 @@
      <span>80 cal</span>
    </div>
 
-   <!-- 固定的“Create New Meal”按钮 -->
+   <!-- Fixed "Create New Meal" Button -->
    <button type="button" class="btn-create" onclick="showModal()">Create new meal</button>
  </div>
 
- <!-- 弹出框 -->
+ <!-- Modal -->
  <div class="modal-overlay" id="modal" style="display: none;">
    <div class="modal-content" id="modalContent">
      <h5>Add Feta Salad?</h5>
@@ -209,17 +227,17 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
  <script>
-   // 显示弹出框
+   // Show modal
    function showModal() {
      document.getElementById('modal').style.display = 'flex';
    }
 
-   // 关闭弹出框
+   // Close modal
    function closeModal() {
      document.getElementById('modal').style.display = 'none';
    }
 
-   // 确认添加，显示添加成功提示并跳转
+   // Confirm add and show success message
    function confirmAdd() {
      const modalContent = document.getElementById('modalContent');
      modalContent.innerHTML = `
@@ -228,8 +246,8 @@
      `;
      setTimeout(() => {
        closeModal();
-       location.href = 'logfood_after.html'; // 跳转到已添加状态页面
-     }, 2000); // 2秒后自动关闭并跳转
+       location.href = 'logfood_after.html'; // Redirect to logged food page
+     }, 2000); // Auto-close and redirect after 2 seconds
    }
  </script>
 </body>
