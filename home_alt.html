@@ -165,108 +165,101 @@
         ];
 
         let currentDate = new Date(); // Store the current date
+        let selectedDate = currentDate; // Track the selected date
         const weekRow = document.getElementById('weekRow');
         const monthHeader = document.getElementById("month");
 
         function updateCalendar() {
-            // Get the first day of the month and the last day of the month
-            const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
-            const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+    const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+    const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+    
+    // Clear the existing days
+    weekRow.innerHTML = '';
 
-            // Clear the existing days
-            weekRow.innerHTML = '';
+    const leadingEmptyDays = firstDayOfMonth.getDay();
+    const daysInMonth = Array(lastDayOfMonth.getDate()).fill().map((_, i) => i + 1);
+    const calendarDays = [];
 
-            // Calculate the number of leading empty cells for the first week
-            const leadingEmptyDays = firstDayOfMonth.getDay(); // Get the day of the week (0 = Sunday, 6 = Saturday)
+    // Create the first week
+    const firstWeek = Array(7).fill(null);
+    for (let i = 0; i < leadingEmptyDays; i++) {
+        firstWeek[i] = null;
+    }
 
-            // Create an array for the days in the month
-            const daysInMonth = Array(lastDayOfMonth.getDate()).fill().map((_, i) => i + 1);
+    let dayCounter = 1;
+    for (let i = leadingEmptyDays; i < 7 && dayCounter <= lastDayOfMonth.getDate(); i++) {
+        firstWeek[i] = dayCounter++;
+    }
+    calendarDays.push(firstWeek);
 
-            // Create a 2D array to hold the weeks
-            const calendarDays = [];
-
-            // Create the first week
-            const firstWeek = Array(7).fill(null);
-            for (let i = 0; i < leadingEmptyDays; i++) {
-                firstWeek[i] = null; // Fill leading empty days
+    // Create subsequent weeks
+    while (dayCounter <= lastDayOfMonth.getDate()) {
+        const week = Array(7).fill(null);
+        for (let i = 0; i < 7; i++) {
+            if (dayCounter <= lastDayOfMonth.getDate()) {
+                week[i] = dayCounter++;
             }
+        }
+        calendarDays.push(week);
+    }
 
-            // Fill in the first week with the days of the month
-            let dayCounter = 1;
-            for (let i = leadingEmptyDays; i < 7 && dayCounter <= lastDayOfMonth.getDate(); i++) {
-                firstWeek[i] = dayCounter++;
-            }
-            calendarDays.push(firstWeek); // Add the first week to the calendarDays array
+    // Create the top row for day initials
+    const initialsRow = document.createElement('div');
+    initialsRow.classList.add('row', 'calendar-initials-row');
+    const dayNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
-            // Create subsequent weeks
-            while (dayCounter <= lastDayOfMonth.getDate()) {
-                const week = Array(7).fill(null);
-                for (let i = 0; i < 7; i++) {
-                    if (dayCounter <= lastDayOfMonth.getDate()) {
-                        week[i] = dayCounter++;
-                    }
+    dayNames.forEach(initial => {
+        const dayCol = document.createElement('div');
+        dayCol.classList.add('col', 'calendar-day');
+        dayCol.innerHTML = `<strong>${initial}</strong>`;
+        initialsRow.appendChild(dayCol);
+    });
+    weekRow.appendChild(initialsRow);
+
+    // Append the days of the month rows
+    for (let week of calendarDays) {
+        const newRow = document.createElement('div');
+        newRow.classList.add('row');
+
+        for (let day of week) {
+            const dayCol = document.createElement('div');
+            dayCol.classList.add('col', 'calendar-day');
+
+            if (day === null) {
+                dayCol.classList.add('empty-day');
+                dayCol.innerHTML = '';
+            } else {
+                const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+                const isToday = date.toDateString() === new Date().toDateString();
+                const isSelected = selectedDate && date.toDateString() === selectedDate.toDateString();
+                
+                if (isToday) {
+                    dayCol.classList.add('current-day'); // Highlight current day
                 }
-                calendarDays.push(week);
-            }
-
-            // Generate the calendar
-            // Create the top row for day initials
-            const initialsRow = document.createElement('div');
-            initialsRow.classList.add('row', 'calendar-initials-row');
-            const dayNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S']; // Day initials
-
-            dayNames.forEach(initial => {
-                const dayCol = document.createElement('div');
-                dayCol.classList.add('col', 'calendar-day');
-                dayCol.innerHTML = `<strong>${initial}</strong>`; // Display initials in bold
-                initialsRow.appendChild(dayCol);
-            });
-            weekRow.appendChild(initialsRow); // Append the initials row first
-
-            // Append the days of the month rows
-            for (let week of calendarDays) {
-                const newRow = document.createElement('div');
-                newRow.classList.add('row');
-
-                for (let day of week) {
-                    const dayCol = document.createElement('div');
-                    dayCol.classList.add('col', 'calendar-day');
-
-                    if (day === null) {
-                        dayCol.classList.add('empty-day'); // For leading/trailing empty days
-                        dayCol.innerHTML = ''; // No content for empty days
-                    } else {
-                        const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
-                        const isToday = date.toDateString() === new Date().toDateString();
-                        if (isToday) {
-                            dayCol.classList.add('current-day'); // Add current-day class
-                            dayCol.innerHTML = `<day>${day}</day>`; // Use day tag for today's date
-                        } else {
-                            dayCol.innerHTML = `<date>${day}</date>`; // Only show the date number
-                        }
-                    }
-
-                    newRow.appendChild(dayCol); // Append the day column to the new row
+                
+                if (isSelected) {
+                    dayCol.classList.add('selected-day'); // Highlight selected day
                 }
 
-                weekRow.appendChild(newRow); // Append the week row to the weekRow container
+                dayCol.innerHTML = `<day>${day}</day>`; // Display the day number
+
+                // Add click event listener for selecting a day
+                dayCol.addEventListener('click', () => {
+                    selectedDate = new Date(date); // Update selected date
+                    updateCalendar(); // Refresh the calendar to update highlights
+                });
             }
 
-            // Update the month header
-            monthHeader.innerText = monthNames[currentDate.getMonth()];
+            newRow.appendChild(dayCol);
         }
 
+        weekRow.appendChild(newRow);
+    }
 
-        // // Event listeners for the arrows
-        // document.getElementById('prevWeek').addEventListener('click', () => {
-        //     currentDate.setDate(currentDate.getDate() - 7); // Move back a week
-        //     updateCalendar(); // Update the calendar display
-        // });
+    // Update the month header
+    monthHeader.innerText = monthNames[currentDate.getMonth()];
+}
 
-        // document.getElementById('nextWeek').addEventListener('click', () => {
-        //     currentDate.setDate(currentDate.getDate() + 7); // Move forward a week
-        //     updateCalendar(); // Update the calendar display
-        // });
 
         // Initial calendar setup
         updateCalendar();
