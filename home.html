@@ -214,39 +214,51 @@
         ];
 
         let currentDate = new Date(); // Store the current date
+        let selectedDate = currentDate; // Track the selected date
         const weekRow = document.getElementById('weekRow');
         const monthHeader = document.getElementById("month");
 
         function updateCalendar() {
-            // Calculate the start (Sunday) and end (Saturday) of the current week
             const currentDay = currentDate.getDay();
             const currentDateNum = currentDate.getDate();
             const startOfWeek = new Date(currentDate);
-            startOfWeek.setDate(currentDateNum - currentDay); // Set to Sunday of the current week
-            
-            // Clear the existing days
+            startOfWeek.setDate(currentDateNum - currentDay);
+
             weekRow.innerHTML = '';
 
-            // Generate the week days (Sunday to Saturday)
             for (let i = 0; i <= 6; i++) {
                 const day = new Date(startOfWeek);
-                day.setDate(startOfWeek.getDate() + i); // Add each day of the week
+                day.setDate(startOfWeek.getDate() + i);
                 const dayNum = day.getDate();
                 const dayName = day.toLocaleString('default', { weekday: 'narrow' });
                 const isToday = day.toDateString() === new Date().toDateString();
-                
+                const isSelected = selectedDate && day.toDateString() === selectedDate.toDateString();
+
                 const dayCol = document.createElement('div');
                 dayCol.classList.add('col', 'calendar-day');
+                
                 if (isToday) {
-                    dayCol.classList.add('current-day');
+                    dayCol.classList.add('current-day'); // Highlight for today
                 }
+                
+                if (isSelected) {
+                    dayCol.classList.add('selected-day'); // Highlight for selected day
+                }
+
                 dayCol.innerHTML = `<day>${dayName}</day><date>${dayNum}</date>`;
+
+                // Add event listener for selecting a day
+                dayCol.addEventListener('click', () => {
+                    selectedDate = new Date(day); // Update selected date
+                    updateCalendar(); // Refresh the calendar to update highlights
+                });
+
                 weekRow.appendChild(dayCol);
             }
 
-            // Update the month header
             monthHeader.innerText = monthNames[currentDate.getMonth()];
         }
+
 
         // Event listeners for the arrows
         document.getElementById('prevWeek').addEventListener('click', () => {
