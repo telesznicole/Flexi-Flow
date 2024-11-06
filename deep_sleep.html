@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"
+        integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        #main {
+            width: 100%;
+            height: 16rem;
+        }
+
+        #mains {
+            width: 100%;
+            height: 16rem;
+        }
+    </style>
+    <title>Deep Sleep</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'SF PRO';
+        src: url('./font/SF-Pro-Text-Bold.otf');
+    }
+
+    body {
+        font-size: 20px;
+        font-family: 'SF PRO';
+    }
+
+    .bar {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-d {
+        display: flex;
+        align-items: center;
+    }
+
+    .card {
+        width: 17.5rem;
+        height: 8.5rem;
+        flex-shrink: 0;
+    }
+</style>
+
+<body>
+    <div class="main" style="padding:0 1rem;display: flex;flex-direction: column;justify-content: center;">
+        <div class="bar">
+            <img src="./img/chevron-left-solid%201.png" style="width: 0.45rem; height: 0.7rem;margin-right: 0.25rem">
+            <div style="color: #323232; font-weight: 400;font-size: 1rem; word-wrap: break-word">Neighborhood Run</div>
+        </div>
+
+        <div style="background: #F8F8F8; border-radius: 8px;margin: .6rem 0;overflow: auto;">
+            <div id="main"></div>
+        </div>
+        <div
+            style="width: auto; height: 100%; background: #F8F8F8; border-radius: 8px; padding: 10px; margin-top: 24px;display: flex;flex-direction: column;">
+            <span style="font-size: 1rem;color: var(--orange, #DA7659);">Overview</span>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Time Logged</span>
+                <span style="font-size: .7rem;">07:31</span>
+            </div>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Distance</span>
+                <span style="font-size: .7rem;">1.6 mi</span>
+            </div>
+        </div>
+        <div
+            style="width: auto; height: 100%; background: #F8F8F8; border-radius: 8px; padding: 10px; margin-top: 24px;display: flex;flex-direction: column;">
+            <div style="font-size: 1rem;color: var(--orange, #DA7659);display: flex;justify-content: space-between;">
+                <span>Sleep Quality</span>
+                <span>72%</span>
+            </div>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Time to Fall Asleep</span>
+                <span style="font-size: .7rem;">38 min</span>
+            </div>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Light Sleep</span>
+                <span style="font-size: .7rem;">4 h 26 m</span>
+            </div>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Deep Sleep</span>
+                <span style="font-size: .7rem;">1 h 52 m</span>
+            </div>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">REM Sleep</span>
+                <span style="font-size: .7rem;">1 h 08 m</span>
+            </div>
+        </div>
+        <div
+            style="background: #F8F8F8; border-radius: 8px;margin: .6rem 0;overflow: auto;padding: 0 .5rem;color: var(--black, #323232);">
+            <div id="mains"></div>
+            <div style="margin-top: .6rem;">
+                <div style="display: flex;width: 100%;margin: .3rem 0;">
+                    <span style="font-size: .7rem;width: 50%;">Resting</span>
+                    <span style="font-size: .7rem;">98 bpm</span>
+                </div>
+                <div style="display: flex;width: 100%;margin: .3rem 0;">
+                    <span style="font-size: .7rem;width: 50%;">High</span>
+                    <span style="font-size: .7rem;">170 bpm</span>
+                </div>
+                <div style="display: flex;width: 100%;margin: .3rem 0;">
+                    <span style="font-size: .7rem;width: 50%;">Low</span>
+                    <span style="font-size: .7rem;">44 bpm</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var myCharts = echarts.init(document.getElementById('mains'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: "#F8F8F8",
+            color: ['#80FFA5'],
+            title: {
+                text: 'Calories',
+                top: '15',
+                textStyle: {
+                    color: '#DA7659',
+                    fontSize: '1rem'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '6%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    name: 'time (min)',
+                    nameLocation: 'middle',
+                    nameGap: '30',
+                    nameTextStyle: {
+                        color: "#000",
+                        fontSize: ".4rem"
+                    },
+                    boundaryGap: false,
+                    data: [0, 5, 10, 15, 17]
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'cal',
+                    nameGap: '30',
+                    nameTextStyle: {
+                        color: "#000",
+                        fontSize: ".4rem"
+                    },
+                    nameLocation: 'middle'
+                }
+            ],
+            series: [
+                {
+                    name: 'Line 1',
+                    type: 'line',
+                    stack: 'Total',
+                    smooth: true,
+                    lineStyle: {
+                        width: 0
+                    },
+                    showSymbol: false,
+                    areaStyle: {
+                        opacity: 0.8,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                                offset: 0,
+                                color: 'red'
+                            },
+                            {
+                                offset: 1,
+                                color: '#FFF'
+                            }
+                        ])
+                    },
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [140, 232, 101, 264, 90, 340, 250]
+                }
+            ]
+        };
+        var options = {
+            backgroundColor: "#F8F8F8",
+            color: ['#80FFA5'],
+            title: {
+                text: 'Heart Rate',
+                top: '15',
+                textStyle: {
+                    color: '#DA7659',
+                    fontSize: '1rem'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '6%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    name: 'time (min)',
+                    nameLocation: 'middle',
+                    nameGap: '30',
+                    nameTextStyle: {
+                        color: "#000",
+                        fontSize: ".4rem"
+                    },
+                    boundaryGap: false,
+                    data: [0, 5, 10, 15, 17]
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'cal',
+                    nameGap: '30',
+                    nameTextStyle: {
+                        color: "#000",
+                        fontSize: ".4rem"
+                    },
+                    nameLocation: 'middle'
+                }
+            ],
+            series: [
+                {
+                    name: 'Line 1',
+                    type: 'line',
+                    stack: 'Total',
+                    smooth: true,
+                    lineStyle: {
+                        width: 0
+                    },
+                    showSymbol: false,
+                    areaStyle: {
+                        opacity: 0.8,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                                offset: 0,
+                                color: 'red'
+                            },
+                            {
+                                offset: 1,
+                                color: '#FFF'
+                            }
+                        ])
+                    },
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [140, 232, 101, 264, 90, 340, 250]
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        myCharts.setOption(option);
+    </script>
+</body>
+<script>
+</script>
+
+</html>
