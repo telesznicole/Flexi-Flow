@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"
+        integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        #mapid {
+            height: 8.2rem;
+            border-radius: .9rem;
+        }
+
+        #main {
+            width: 100%;
+            height: 16rem;
+        }
+
+        #mains {
+            width: 100%;
+            height: 16rem;
+        }
+    </style>
+    <title>neighborhood_run</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'SF PRO';
+        src: url('./font/SF-Pro-Text-Bold.otf');
+    }
+
+    body {
+        font-size: 20px;
+        font-family: 'SF PRO';
+    }
+
+    .bar {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-d {
+        display: flex;
+        align-items: center;
+    }
+
+    .card {
+        width: 17.5rem;
+        height: 8.5rem;
+        flex-shrink: 0;
+    }
+</style>
+
+<body>
+    <div class="main" style="padding:0 1rem;display: flex;flex-direction: column;justify-content: center;">
+        <div class="bar">
+            <img src="./img/chevron-left-solid%201.png" style="width: 0.45rem; height: 0.7rem;margin-right: 0.25rem">
+            <div style="color: #323232; font-weight: 400;font-size: 1rem; word-wrap: break-word">Neighborhood Run</div>
+        </div>
+        <div id="mapid"></div>
+        <div
+            style="width: auto; height: 100%; background: #F8F8F8; border-radius: 8px; padding: 10px; margin-top: 24px;display: flex;flex-direction: column;">
+            <span style="font-size: 1rem;color: var(--orange, #DA7659);">Overview</span>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Time Logged</span>
+                <span style="font-size: .7rem;">07:31</span>
+            </div>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Distance</span>
+                <span style="font-size: .7rem;">1.6 mi</span>
+            </div>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Duration</span>
+                <span style="font-size: .7rem;">16:32.47</span>
+            </div>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Pace</span>
+                <span style="font-size: .7rem;">6.7 mph</span>
+            </div>
+            <div style="display: flex;width: 100%;margin: .3rem 0;">
+                <span style="font-size: .7rem;width: 50%;">Elevation Gain</span>
+                <span style="font-size: .7rem;">62.3 ft</span>
+            </div>
+        </div>
+        <div style="background: #F8F8F8; border-radius: 8px;margin: .6rem 0;overflow: auto;">
+            <div id="main"></div>
+        </div>
+        <div
+            style="background: #F8F8F8; border-radius: 8px;margin: .6rem 0;overflow: auto;padding: 0 .5rem;color: var(--black, #323232);">
+            <div id="mains"></div>
+            <div style="margin-top: .6rem;">
+                <div style="display: flex;width: 100%;margin: .3rem 0;">
+                    <span style="font-size: .7rem;width: 50%;">Resting</span>
+                    <span style="font-size: .7rem;">98 bpm</span>
+                </div>
+                <div style="display: flex;width: 100%;margin: .3rem 0;">
+                    <span style="font-size: .7rem;width: 50%;">High</span>
+                    <span style="font-size: .7rem;">170 bpm</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        var myCharts = echarts.init(document.getElementById('mains'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            backgroundColor: "#F8F8F8",
+            color: ['#80FFA5'],
+            title: {
+                text: 'Calories',
+                top: '15',
+                textStyle: {
+                    color: '#DA7659',
+                    fontSize: '1rem'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '6%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    name: 'time (min)',
+                    nameLocation: 'middle',
+                    nameGap: '30',
+                    nameTextStyle: {
+                        color: "#000",
+                        fontSize: ".4rem"
+                    },
+                    boundaryGap: false,
+                    data: [0, 5, 10, 15, 17]
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'cal',
+                    nameGap: '30',
+                    nameTextStyle: {
+                        color: "#000",
+                        fontSize: ".4rem"
+                    },
+                    nameLocation: 'middle'
+                }
+            ],
+            series: [
+                {
+                    name: 'Line 1',
+                    type: 'line',
+                    stack: 'Total',
+                    smooth: true,
+                    lineStyle: {
+                        width: 0
+                    },
+                    showSymbol: false,
+                    areaStyle: {
+                        opacity: 0.8,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                                offset: 0,
+                                color: 'red'
+                            },
+                            {
+                                offset: 1,
+                                color: '#FFF'
+                            }
+                        ])
+                    },
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [140, 232, 101, 264, 90, 340, 250]
+                }
+            ]
+        };
+        var options = {
+            backgroundColor: "#F8F8F8",
+            color: ['#80FFA5'],
+            title: {
+                text: 'Heart Rate',
+                top: '15',
+                textStyle: {
+                    color: '#DA7659',
+                    fontSize: '1rem'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '6%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    name: 'time (min)',
+                    nameLocation: 'middle',
+                    nameGap: '30',
+                    nameTextStyle: {
+                        color: "#000",
+                        fontSize: ".4rem"
+                    },
+                    boundaryGap: false,
+                    data: [0, 5, 10, 15, 17]
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'cal',
+                    nameGap: '30',
+                    nameTextStyle: {
+                        color: "#000",
+                        fontSize: ".4rem"
+                    },
+                    nameLocation: 'middle'
+                }
+            ],
+            series: [
+                {
+                    name: 'Line 1',
+                    type: 'line',
+                    stack: 'Total',
+                    smooth: true,
+                    lineStyle: {
+                        width: 0
+                    },
+                    showSymbol: false,
+                    areaStyle: {
+                        opacity: 0.8,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            {
+                                offset: 0,
+                                color: 'red'
+                            },
+                            {
+                                offset: 1,
+                                color: '#FFF'
+                            }
+                        ])
+                    },
+                    emphasis: {
+                        focus: 'series'
+                    },
+                    data: [140, 232, 101, 264, 90, 340, 250]
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        myCharts.setOption(option);
+    </script>
+    <!-- 引入 Leaflet 的 JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // 初始化地图
+        var map = L.map('mapid', { attributionControl: false, zoomControl: false }).setView([51.505, -0.09], 13); // 设置地图中心点和缩放级别
+
+        // 添加地图底图
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    </script>
+</body>
+<script>
+</script>
+
+</html>
