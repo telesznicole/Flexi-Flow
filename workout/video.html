@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <title>Video Slider with Dynamic Text</title>
+    <style>
+        @font-face {
+            font-family: 'SF PRO';
+            src: url('./font/SF-Pro-Text-Bold.otf');
+        }
+
+        body {
+            font-size: 20px;
+            padding: 0 1rem;
+            font-family: 'SF PRO';
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .flex-d {
+            display: flex;
+            align-items: center;
+        }
+
+        .card {
+            width: 17.5rem;
+            height: 8.5rem;
+            flex-shrink: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            /* height: 11rem; */
+        }
+
+        .swiper-pagination-bullet {
+            width: 0.4rem;
+            height: 0.4rem;
+            border: 0.1rem solid #000000;
+            background: #ffffff;
+            opacity: 0.4;
+        }
+
+        .swiper-pagination-bullet-active {
+            width: 0.4rem;
+            height: 0.4rem;
+            background-color: #000;
+            opacity: 1;
+        }
+
+        .swiper-pagination {
+            position: relative !important;
+            margin: .8rem 0;
+        }
+
+        .play {
+            position: absolute;
+            left: calc(50% - 0.75rem);
+            top: calc(50% - 0.75rem);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bar">
+        <img src="../icons/left_arrow.png" style="width: 0.45rem; height: 0.7rem; margin-right: 0.25rem">
+        <div style="color: #323232; font-weight: 400; font-size: 1rem; word-wrap: break-word">Core Workout</div>
+    </div>
+    
+    <div style="width: calc(100% - 40px); max-width: 600px; justify-self: center;">
+        <div style="margin-top: 1.2rem;">
+            <div class="swiper">
+                <div class="swiper-wrapper" id="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div style="font-size: 20pt;" id="videoTitle">Toe Taps</div>
+        <div
+            style="width: auto; height: 100%; background: #F8F8F8; border-radius: 0.4rem; padding: 0.5rem; margin-top: 1.2rem;">
+            <div id="text"
+                style="color: black; font-size: 12pt; font-family: SF Pro; font-weight: 400; word-wrap: break-word">
+                Improved Coordination: The movement helps enhance your coordination and balance, making it useful for
+                various physical activities. Strengthening Muscles: Toe taps engage the muscles in your lower legs,
+                particularly the calves and ankles, contributing to overall leg strength.</div>
+        </div>
+        <div style="font-size: 20pt;">Comments</div>
+        <div class="flex-d" style="font-size: 12pt; margin: 1rem 0;">Sort by best <img src="../icons/mingcute_down-line.png"
+                style="width: 1.2rem; height: 1.2rem;"></div>
+        <div
+            style="width: 100%; height: 100%; flex-direction: column; justify-content: flex-start; align-items: center; gap: 0.3rem; display: inline-flex; margin: 0.3rem 0;">
+            <div style="align-self: stretch; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div
+                    style="height: 1.2rem; justify-content: flex-start; align-items: flex-start; gap: 0.3rem; display: flex">
+                    <img style="width: 1.2rem; height: 1.2rem; border-radius: 499.95rem" src="Ellipse 1.png" />
+                    <div
+                        style="flex: 1 1 0; color: #323232; font-size: 16pt; font-family: SF Pro; font-weight: 400; line-height: 1.2rem; word-wrap: break-word">
+                        username</div>
+                </div>
+                <div
+                    style="color: #323232; font-size: 16pt; font-family: SF Pro; font-weight: 400; line-height: 1.2rem; word-wrap: break-word">
+                    10 min ago</div>
+            </div>
+            <div
+                style="align-self: stretch; color: #323232; font-size: 12pt; font-family: SF Pro; font-weight: 400; word-wrap: break-word">
+                I like this video!</div>
+        </div>
+        <div
+            style="width: 100%; height: 100%; flex-direction: column; justify-content: flex-start; align-items: center; gap: 0.3rem; display: inline-flex; margin: 0.3rem 0;">
+            <div style="align-self: stretch; justify-content: space-between; align-items: flex-start; display: inline-flex">
+                <div
+                    style="height: 1.2rem; justify-content: flex-start; align-items: flex-start; gap: 0.3rem; display: flex">
+                    <img style="width: 1.2rem; height: 1.2rem; border-radius: 499.95rem" src="Ellipse 1.png" />
+                    <div
+                        style="flex: 1 1 0; color: #323232; font-size: 16pt; font-family: SF Pro; font-weight: 400; line-height: 1.2rem; word-wrap: break-word">
+                        username</div>
+                </div>
+                <div
+                    style="color: #323232; font-size: 16pt; font-family: SF Pro; font-weight: 400; line-height: 1.2rem; word-wrap: break-word">
+                    10 min ago</div>
+            </div>
+            <div
+                style="align-self: stretch; color: #323232; font-size: 12pt; font-family: SF Pro; font-weight: 400; word-wrap: break-word">
+                I like this video!</div>
+        </div>
+    </div>
+
+    <script>
+        // 数据源
+        const swiperData = [
+            {
+                title: 'Toe Taps',
+                videoImg: 'ScreenVideo.png',
+                text: 'Improved Coordination: The movement helps enhance your coordination and balance, making it useful for various physical activities. Strengthening Muscles: Toe taps engage the muscles in your lower legs, particularly the calves and ankles, contributing to overall leg strength.'
+            },
+            {
+                title: 'Alternating Leg Lower',
+                videoImg: 'ScreenVideo.png',
+                text: 'Core Strengthening: This exercise engages the abdominal muscles, helping to build core strength and stability. Lower Back Support: Strengthening the core can alleviate pressure on the lower back, promoting better posture and reducing the risk of back pain.'
+            },
+            {
+                title: 'Single Leg Lower To Abduction',
+                videoImg: 'ScreenVideo.png',
+                text: 'Core Strengthening: This exercise engages the core muscles, helping to improve stability and strength in the abdominal region. Hip Strength and Stability: It targets the hip muscles, particularly the glutes and hip abductors, promoting strength and stability in the hips, which is essential for various movements.'
+            },
+            {
+                title: 'Double Leg Lower Slow',
+                videoImg: 'ScreenVideo.png',
+                text: 'Core Strengthening: This exercise significantly engages the abdominal muscles, helping to build core strength and stability. Lower Back Support: Strengthening the core can help alleviate pressure on the lower back, promoting better posture and reducing the risk of back pain.'
+            }
+        ];
+
+        // 获取容器元素
+        const swiperWrapper = document.getElementById('swiper-wrapper');
+        const videoTitle = document.getElementById('videoTitle');
+        const text = document.getElementById('text');
+
+        // 循环生成滑块元素
+        swiperData.forEach((slide) => {
+            const slideElement = document.createElement('div');
+            slideElement.className = 'swiper-slide';
+            slideElement.innerHTML = `
+                <div class="play"><img src="play.png" style="width: 2.1rem; height: 2.1rem;"></div>
+                <img src="${slide.videoImg}" style="width: 100%; height: auto;">
+            `;
+            swiperWrapper.appendChild(slideElement);
+        });
+
+        // 初始化 Swiper
+        const mySwiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                bulletClass: 'swiper-pagination-bullet',
+                bulletActiveClass: 'swiper-pagination-bullet-active',
+            },
+            // 监听滑动事件
+            on: {
+                slideChange: function () {
+                    const activeIndex = this.activeIndex;
+                    const activeSlide = swiperData[activeIndex % swiperData.length];
+                    videoTitle.textContent = activeSlide.title;
+                    text.textContent = activeSlide.text;
+                }
+            }
+        });
+
+        // 初始显示第一个滑块的文字
+        videoTitle.textContent = swiperData[0].title;
+        text.textContent = swiperData[0].text;
+    </script>
+</body>
+
+</html>
