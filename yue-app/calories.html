@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calories</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Import SF Pro Font */
+    @font-face {
+      font-family: 'SF Pro';
+      src: url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'SF Pro';
+      src: url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* Apply SF Pro globally */
+    body {
+      font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /* Page Layout */
+    .container {
+      padding: 20px 23px;
+    }
+
+    .back-button {
+      font-size: 18px;
+      color: black;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    /* Time Option Styling */
+    .time-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .time-option {
+      padding: 5px 10px;
+      text-align: center;
+    }
+
+    .time-option.active {
+      color: white;
+      background-color: #f07d6a;
+      border-radius: 15px;
+    }
+
+    /* Calories Summary and Chart */
+    .calories-summary {
+      font-size: 28px;
+      color: #f07d6a;
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    /* Chart Container */
+    .chart-container {
+      background-color: #f2f2f2;
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .chart-title {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Content -->
+  <div class="container">
+    <a href="#" class="back-button">&larr; Calories</a>
+
+    <!-- Time Options -->
+    <div class="time-options">
+      <span class="time-option active">D</span>
+      <span class="time-option">W</span>
+      <span class="time-option">M</span>
+      <span class="time-option">6M</span>
+      <span class="time-option">Y</span>
+    </div>
+
+    <!-- Date and Calories Summary -->
+    <div class="chart-container">
+      <div class="chart-title">
+        <span>&larr;</span>
+        <span>Tuesday, March 12</span>
+        <span>&rarr;</span>
+      </div>
+      <div class="calories-summary">288/2000 cal</div>
+
+      <!-- Chart Example -->
+      <div style="text-align: center;">
+        <img src="img/calories-chart1.png" alt="Bar Chart Example" style="width: 100%; border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
