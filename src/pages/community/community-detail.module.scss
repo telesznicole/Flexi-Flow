@@ -1,0 +1,52 @@
+.page {
+  padding: unit(12);
+  padding-top: unit(4);
+}
+
+.caption {
+  margin-top: unit(20);
+  margin-bottom: unit(8);
+}
+.sort {
+  display: flex;
+  align-items: center;
+  font-size: unit(12);
+  margin-bottom: unit(12);
+  & > i {
+    font-size: unit(8);
+    margin-left: unit(4);
+  }
+}
+.comment {
+  display: flex;
+  align-items: center;
+  font-size: unit(12);
+  &:not(:last-child) {
+    margin-bottom: unit(8);
+  }
+  .info {
+    flex: 1;
+    width: 0;
+    margin-right: unit(8);
+  }
+  .top {
+    gap: unit(8);
+    display: flex;
+    align-items: center;
+    margin-bottom: unit(4);
+  }
+  .avatar {
+    width: unit(20);
+    height: unit(20);
+    border-radius: 100%;
+  }
+  .content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+  }
+  .time {
+    font-size: unit(10);
+  }
+}

@@ -1,0 +1,134 @@
+.page {
+  position: relative;
+  padding: unit(12);
+  max-width: 750px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.tools {
+  top: 0;
+  right: 0;
+  position: absolute;
+  gap: unit(4);
+  display: flex;
+  align-items: center;
+  padding: unit(12);
+  .toolAction {
+    width: unit(24);
+    height: unit(24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: unit(26);
+
+  &Avatar {
+    width: auto;
+    height: unit(122);
+    object-fit: cover;
+  }
+
+  &Name {
+    margin-top: unit(10);
+  }
+}
+
+.part {
+  &:not(:last-child) {
+    margin-bottom: unit(24);
+  }
+  &Head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: unit(12);
+  }
+
+  &Right {
+    font-size: unit(12);
+  }
+}
+
+.goals {
+  gap: unit(20);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.goalItem {
+  padding: unit(8);
+  border-radius: unit(8);
+  background: #f8f8f8;
+
+  &Icon {
+    color: $color-primary;
+    margin-bottom: unit(4);
+  }
+
+  &Title {
+    font-weight: bold;
+    margin-bottom: unit(12);
+    color: $color-primary;
+    font-size: unit(12);
+  }
+
+  &Data {
+    &Value {
+      font-weight: bold;
+      font-size: unit(14);
+    }
+    &Unit {
+      font-size: unit(10);
+      margin-left: unit(4);
+      color: #939393;
+    }
+  }
+}
+
+.status {
+  --col: 2;
+  gap: unit(20);
+  display: grid;
+  grid-template-columns: repeat(var(--col), 1fr);
+
+  :global(.pad) & {
+    --col: 3;
+  }
+
+  :global(.pc) & {
+    --col: 3;
+  }
+
+  &Item {
+    padding: unit(12) unit(8);
+    border-radius: unit(8);
+    background: #f8f8f8;
+
+    &Title {
+      margin-bottom: unit(8);
+    }
+
+    &Pic {
+      width: 100%;
+      aspect-ratio: 274 / 216;
+      background-image: url("@/assets/images/status.png");
+      background-size: 100% 300%;
+      &[data-pic="0"] {
+        background-position-y: -100%;
+      }
+      &[data-pic="1"] {
+        background-position-y: 0%;
+      }
+      &[data-pic="2"] {
+        background-position-y: -200%;
+      }
+    }
+  }
+}

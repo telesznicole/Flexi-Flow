@@ -1,58 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Selection Test</title>
-    <style>
-        .logged-info-button {
-            cursor: pointer;
-            padding: 10px;
-            display: inline-block; /* Ensures they sit side by side */
-            margin: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .logged-info-button.selected {
-            background-color: #f0f0f0; /* Change this to whatever you like */
-            border: 2px solid #007bff; /* Example border for selected button */
-        }
-
-        .info-button-icon {
-            margin-right: 5px; /* Space between icon and text */
-        }
-    </style>
-</head>
-<body>
-    <div class="logged-info-buttons">
-        <span class="logged-info-button selected" onclick="selectButton(this)">
-            <img src="icons/flame.svg" alt="Activity Icon" class="info-button-icon"> Activity
-        </span>
-        <span class="logged-info-button" onclick="selectButton(this)">
-            <img src="icons/fork.knife.svg" alt="Food Icon" class="info-button-icon"> Food
-        </span>
-        <span class="logged-info-button" onclick="selectButton(this)">
-            <img src="icons/lotus.svg" alt="Recovery Icon" class="info-button-icon"> Recovery
-        </span>
-    </div>
-
-    <script>
-        function selectButton(selectedButton) {
-            // Get all buttons
-            const buttons = document.querySelectorAll('.logged-info-button');
-
-            // Remove the 'selected' class from all buttons
-            buttons.forEach(button => {
-                button.classList.remove('selected');
-                button.querySelector('.info-button-icon').classList.remove('selected');
-            });
-
-            // Add the 'selected' class to the clicked button
-            selectedButton.classList.add('selected');
-            selectedButton.querySelector('.info-button-icon').classList.add('selected');
-        }
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="/icon.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexi flow</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
