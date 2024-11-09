@@ -32,9 +32,6 @@
     </div>
 
     <div class="bottom-items">
-        <!-- <a class="action-button" href=home.html>
-            <div class="action-text">Login</div>
-        </a> -->
         <a class="action-button" id="login" onclick="getInputValues()" href="#">
             <div class="action-text">Login</div>
         </a>
@@ -62,7 +59,7 @@
             var xhr = new XMLHttpRequest();
             
             // Configure the request
-            xhr.open("GET", "CRUD/readUser.php?FFusername=" + encodeURIComponent(usernameValue) + "&FFpassword=" + encodeURIComponent(passwordValue), true);
+            xhr.open("GET", "readUser.php?FFusername=" + encodeURIComponent(usernameValue) + "&FFpassword=" + encodeURIComponent(passwordValue), true);
 
             // Define what happens when the response is received
             xhr.onload = function() {
