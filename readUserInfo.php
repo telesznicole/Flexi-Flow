@@ -7,8 +7,6 @@ if (isset($_GET['userId']) && isset($_GET['field'])) {
     $userId = $_GET['userId'];
     $field = $_GET['field'];  // The field you want to retrieve (e.g., 'FFname', 'activity_level', etc.)
 
-    
-
     // Attempt to connect to the database
     try {
         $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

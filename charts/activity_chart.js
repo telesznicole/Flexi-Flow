@@ -3,7 +3,7 @@ function updateActivityChart(A_goal, A_current) {
 
     // Update the text content of the percentage and details elements
     document.getElementById('A_percentageText').innerText = `${A_percentage}%`;
-    document.getElementById('A_detailsText').innerText = `${A_current}/${A_goal} min`;
+    document.getElementById('A_detailsText').innerText = `${A_current}/${A_goal} cal`;
 
     // Get chart context and create/update chart
     const activityctx = document.getElementById('activityChart').getContext('2d');

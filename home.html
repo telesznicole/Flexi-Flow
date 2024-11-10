@@ -119,6 +119,42 @@
             });
         }
     </script>
+
+<script>
+    // Function to request specific user information by userId and field
+    function getWorkoutInfo(user_id, date) {
+        return new Promise(function(resolve, reject) {
+            // Create a new XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+            
+            // Build the URL with GET parameters (userId and field)
+            var url = "readLoggedWorkouts.php?user_id=" + encodeURIComponent(user_id) + "&date=" + encodeURIComponent(date);
+            
+            // Configure the request
+            xhr.open("GET", url, true);
+        
+            // Define what happens when the response is received
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    // Parse the response (which will be the user field value)
+                    var result = xhr.responseText.trim();
+                    
+                    // Check if the result is a valid response or error message
+                    if (result !== "User not found" && result !== "Field not found") {
+                        resolve(result); // Resolve the promise with the result
+                    } else {
+                        reject(result); // Reject the promise with the error message
+                    }
+                } else {
+                    reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                }
+            };
+        
+            // Send the request
+            xhr.send();
+        });
+    }
+</script>
     
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -146,8 +182,27 @@
         </div>   
         
         <div>
-            <p class="regular" style="font-size: 16px; margin-bottom: 6px;">Good Morning</p>
-            <p class="semibold" style="font-size: 20px; margin-top: 0;" id="userIdDisplay">Professor Lomelino</p>
+            <p class="regular" id='greeting' style="font-size: 16px; margin-bottom: 6px;"></p>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const hours = new Date().getHours();  // Get the current hour (0-23)
+                    let greeting = '';
+
+                    // Determine the greeting based on the time of day
+                    if (hours < 12) {
+                        greeting = 'Good Morning';
+                    } else if (hours < 18) {
+                        greeting = 'Good Afternoon';
+                    } else {
+                        greeting = 'Good Evening';
+                    }
+
+                    // Set the greeting text in the paragraph element
+                    document.getElementById('greeting').textContent = greeting;
+                });
+            </script>
+
+            <p class="semibold" style="font-size: 20px; margin-top: 0;" id="userIdDisplay"></p>
             <script>
                 const userId = localStorage.getItem('userId');
                 if (userId) {
@@ -210,19 +265,112 @@
             <div class="title" id="F_title">Logged Food</div>
             <div class="title" id="R_title">Logged Recovery</div>
 
-            <div class="horizontal-tile selected" id="A_logged">
-                <img src="pictures/running.png" alt="Running" class="horizontal-tile-pic">
-                <div class="horizontal-tile-content">
-                    <div class="horizontal-tile-title-content">
-                        <span class="horizontal-tile-title">Neighborhood Run</span>
-                        <span class="horizontal-tile-time">07:31</span>
-                    </div>
-                    <p class="horizontal-tile-descriptor">1.6mi</p>
-                </div>
-            </div>
+            <div id="workouts-container"></div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const today = new Date();
+                    const formattedDate = today.getFullYear() + '-' 
+                    + String(today.getMonth() + 1).padStart(2, '0') + '-' 
+                    + String(today.getDate()).padStart(2, '0');
+
+                    let workoutDataObject = {};
+
+                    // Call the getUserInfo function to retrieve the data for a specific field
+                    getWorkoutInfo(userId, formattedDate).then(response => {
+                        console.log("User Info for " + formattedDate + ":", response); // Log the response to the console
+
+                        // Split the response by newlines and filter out any empty lines
+                        const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
+
+                        const workouts = [];
+                        let currentWorkout = {};
+                        let isNewWorkout = false;
+
+                        // Process each entry line by line
+                        entries.forEach(entry => {
+                            const [key, value] = entry.split(':').map(str => str.trim());
+
+                            if (key && value) {
+                                if (key === 'id') {
+                                    // If we find the start of a new workout (id), push the current workout if it exists
+                                    if (Object.keys(currentWorkout).length > 0) {
+                                        workouts.push(currentWorkout); // Save the previous workout
+                                    }
+                                    currentWorkout = {}; // Start a new workout object
+                                    currentWorkout['id'] = value; // Add the workout id
+                                } else if (key === 'Workout Title') {
+                                    // If we find the workout title, finalize the current workout
+                                    currentWorkout[key] = value; // Add the title
+                                    workouts.push(currentWorkout); // Push this workout
+                                    currentWorkout = {}; // Reset for the next workout
+                                } else {
+                                    // Otherwise, keep adding key-value pairs for the current workout
+                                    if (key == 'start') console.log(key + ":            " + String(value));
+                                    currentWorkout[key] = String(value);
+                                }
+                            }
+                        });
+
+                        // Handle any potential last workout
+                        if (Object.keys(currentWorkout).length > 0) {
+                            workouts.push(currentWorkout);
+                        }
+
+                        console.log(workouts); // Log all workout objects to ensure they are correctly split
+
+                        // Check if workouts container exists
+                        const workoutsContainer = document.querySelector('#workouts-container');
+                        if (!workoutsContainer) {
+                            console.error('Workouts container not found!');
+                            return;
+                        }
+
+                        // Render each workout
+                        workouts.forEach(workoutData => {
+                            const workoutTitle = workoutData['Workout Title'];
+                            const start = workoutData['start'];
+                            const duration = workoutData['duration'];
+                            const sets = workoutData['sets'];
+                            const reps = workoutData['reps'];
+                            const distance = workoutData['distance'];
+
+                            // Handle HTML creation for each workout
+                            const newWorkoutDiv = document.createElement('div');
+                            newWorkoutDiv.classList.add('horizontal-tile', 'selected'); 
+                            newWorkoutDiv.id = 'A_logged';
+
+                            newWorkoutDiv.innerHTML = `
+                                <div class="horizontal-tile-content">
+                                    <div class="horizontal-tile-title-content">
+                                        <span class="horizontal-tile-title">${workoutTitle || 'N/A'}</span>
+                                        <span class="horizontal-tile-time">${formatTime(start)}</span>
+                                    </div>
+                                    <p class="horizontal-tile-descriptor">
+                                        ${sets == 0 ? `Duration: ${duration || 'N/A'} minutes` : `Sets: ${sets || 'N/A'}, Reps: ${reps || 'N/A'}`}
+                                        ${sets == 0 && distance ? `, Distance: ${distance || 'N/A'} miles` : ''}
+                                    </p>
+                                </div>
+                            `;
+
+                            workoutsContainer.appendChild(newWorkoutDiv);
+                        });
+                    }).catch(error => {
+                        console.error("Error fetching user info:", error); // Log any errors that occur
+                    });
+                });
+
+                function formatTime(timeString) {
+                    // Format the time to HH:MM
+                    if (!timeString) return '';
+                    if (timeString.length == 2) timeString = timeString + ':00';
+                    if (timeString.length == 3) timeString = timeString + '0';
+                    return timeString;
+                }
+            </script>
+
 
             <div class="horizontal-tile" id="R_logged">
-                <img src="pictures/bed.png" alt="Bed" class="horizontal-tile-pic">
+                <!-- <img src="pictures/bed.png" alt="Bed" class="horizontal-tile-pic"> -->
                 <div class="horizontal-tile-content">
                     <div class="horizontal-tile-title-content">
                         <span class="horizontal-tile-title">Deep Sleep</span>
