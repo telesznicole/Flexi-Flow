@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>comments</title>
+
+    <head>
+        <!-- Other meta tags and title -->
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="navBar">
+            <image class="back-icon" src="./images/back.png" onclick="window.location.href='distance.html'" style="cursor: pointer;"></image>
+            Distance Running
+        </div>
+        <div class="com-box">
+            <div class="user-info">
+                <div class="avatar">
+                    <image class="avatar-img" src="./images/johnnyvastro.png"></image>
+                </div>
+                <div class="username">
+                    <div class="name">
+                        johnnyvastro
+                    </div>
+                    <div class="info">
+                        15 mins ago
+                    </div>
+                </div>
+            </div>
+            <div class="dis-title">
+                <text class="dis-title_text">
+                    How should I train for distance running?
+                </text>
+            </div>
+            <div class="dis-content">
+                <text class="dis-content_text">
+                    Training for distance running typically involves a mix of long runs, speed work, tempo runs, and
+                    recovery runs. Long runs build endurance, speed work improves pace, and tempo runs help increase
+                    lactate threshold. A well-rounded training plan also includes rest days and cross training to
+                    prevent injury. </text>
+            </div>
+            <div class="handle">
+                <div class="handle-items">
+                    <div class="items-icon">
+                        <image class="icons" src="./images/appreciate_fill_light.png"></image>
+                    </div>
+                    21
+                </div>
+                <div class="handle-items">
+                    <div class="items-icon">
+                        <image class="icons" src="./images/oppose_light.png"></image>
+                    </div>
+                    2
+                </div>
+                <div class="handle-items">
+                    <div class="items-icon">
+                        <image class="icons" src="./images/community.png"></image>
+                    </div>
+                    6
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <text class="title-text">
+                Comments
+            </text>
+        </div>
+        <div class="order">
+            Sort by best
+            <image class="order-icon" src="./images/unfold.png"></image>
+        </div>
+        <div class="comment">
+            <div class="com-user_info">
+                <div class="com-info">
+                    <image class="com-avatar" src="./images/family1.png"></image>
+                    <text class="com-name">Emma</text>
+                </div>
+                <div class="time">2 mins ago</div>
+            </div>
+            <div class="com-content">
+                Start by building a solid mileage base！！！！
+            </div>
+        </div>
+        <div class="comment">
+            <div class="com-user_info">
+                <div class="com-info">
+                    <image class="com-avatar" src="./images/family2.png"></image>
+                    <text class="com-name">Olivia</text>
+                </div>
+                <div class="time">8 mins ago</div>
+            </div>
+            <div class="com-content">
+                Incorporate a weekly long run to build stamina. </div>
+        </div>
+        <div class="comment">
+            <div class="com-user_info">
+                <div class="com-info">
+                    <image class="com-avatar" src="./images/Max.png"></image>
+                    <text class="com-name">Ava</text>
+                </div>
+                <div class="time">14 mins ago</div>
+            </div>
+            <div class="com-content">
+                Include interval training and tempo runs in your regimen ! ! ! </div>
+        </div>
+        <div class="comment">
+            <div class="com-user_info">
+                <div class="com-info">
+                    <image class="com-avatar" src="./images/Matt.png"></image>
+                    <text class="com-name">Isabella</text>
+                </div>
+                <div class="time">15 mins ago</div>
+            </div>
+            <div class="com-content">
+                These are slower-paced runs meant to promote recovery while keeping your legs moving. </div>
+        </div>
+        <div class="comment">
+            <div class="com-user_info">
+                <div class="com-info">
+                    <image class="com-avatar" src="./images/family3.png"></image>
+                    <text class="com-name">Kevin</text>
+                </div>
+                <div class="time">15 mins ago</div>
+            </div>
+            <div class="com-content">
+                Allow for adequate rest days to give your body time to recover and adapt to training loads.        </div>
+    </div>
+
+    <nav>
+        <div class="btn-group nav-bar">
+            <a href="home.html" class="btn nav-bar-titles" style="text-decoration: none !important;">
+                <img src="icons/house.svg" alt="Home icon" data-hover="icons/house_filled.svg">
+                Home
+            </a>
+            <a href="workout.html" class="btn nav-bar-titles" style="text-decoration: none !important;">
+                <img src="icons/dumbell.svg" alt="Workouts icon" data-hover="icons/dumbell_filled.svg">
+                Workouts
+            </a>
+            <a href="#" class="btn nav-bar-titles" style="text-decoration: none !important;">
+                <img src="icons/plus.svg" alt="Quick add icon" data-hover="icons/plus_filled.svg">
+                Quick Add
+            </a>
+            <a href="community.html" class="btn nav-bar-titles nav-bar-titles-selected" style="text-decoration: none !important;">
+                <img src="icons/comment_filled.svg" alt="Community icon" data-hover="icons/comment_filled.svg">
+                Community
+            </a>
+            <a href="profile.html" class="btn nav-bar-titles" style="text-decoration: none !important;">
+                <img src="icons/profile.svg" alt="Profile icon" data-hover="icons/profile_filled.svg">
+                Profile
+            </a>
+        </div>
+    </nav>
+</body>
+<style>
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* padding-bottom: 70px; */
+    }
+
+    .navBar {
+        display: flex;
+        align-items: center;
+        width: 95%;
+        height: 40px;
+        /* background-color: aqua; */
+        margin: 20px 0 0 0;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .back-icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+
+    .com-box {
+        width: 95%;
+        height: auto;
+        background-color: rgb(248, 248, 248);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .user-info {
+        display: flex;
+        width: auto;
+        height: 50px;
+        /* background-color: aqua; */
+        margin: 15px 0 5px 15px;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background-color: blue;
+    }
+
+    .avatar-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .username {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        /* background-color: aqua; */
+    }
+
+    .name {
+        font-size: 18px;
+        font-weight: 400;
+        /* margin-bottom: 5px; */
+    }
+
+    .info {
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+    .dis-title {
+        width: 95%;
+        height: auto;
+        /* background-color: aqua; */
+        margin-left: 15px;
+    }
+
+    .dis-title_text {
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+
+    .dis-content {
+        width: 90%;
+        height: auto;
+        /* background-color: aqua; */
+        margin: 3px 0 0 15px;
+    }
+
+    .dis-content_text {
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .handle {
+        display: flex;
+        justify-content: flex-end;
+        width: 95%;
+        height: 20px;
+        margin-top: 5px;
+    }
+
+    .handle-items {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        margin-right: 15px;
+        font-size: 15px;
+    }
+
+    .items-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        margin-left: 6px;
+        /* margin-right: 5px; */
+    }
+
+    .icons {
+        width: 100%;
+        height: 100%;
+    }
+
+    .title {
+        display: flex;
+        width: 95%;
+        height: auto;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .title-text {
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    .order {
+        width: 95%;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        margin: 20px 0 20px 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .order-icon {
+        width: 20px;
+        height: 20px;
+        margin: 0 0 0 10px;
+    }
+
+    .comment {
+        width: 95%;
+        height: auto;
+        margin-bottom: 8px;
+        /* background-color: aqua; */
+    }
+
+    .com-user_info {
+        display: flex;
+        width: 100%;
+        height: 45px;
+        justify-content: space-between;
+    }
+
+    .com-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .com-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .com-name {
+        margin: 0 0 0 10px;
+    }
+
+    .time {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+    }
+
+    .com-content {
+        margin-top: 5px;
+        font-size: 13px;
+        margin: 5px 0 0 5px;
+    }
+    .nav-items {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .nav-icon {
+        width: 30px;
+        height: 30px;
+        /* margin-right: 10px; */
+    }
+
+    .a {
+        text-decoration: none !important;
+    }
+
+    .nav-bar {
+        display: flex;
+        position: fixed; /* Keep the nav-bar fixed */
+        bottom: 20px;    /* Distance from the bottom */
+        left: 50%;       /* Center horizontally */
+        transform: translateX(-50%); /* Center alignment adjustment */
+        justify-content: center;
+        width: calc(100% - 40px); /* Use full width minus margins */
+        max-width: 600px;  /* Ensure it doesn't exceed 600px */
+        margin: 0 auto;  /* Center margin automatically */
+        flex-wrap: wrap;
+        transition: color 0.3s, font-weight 0.3s; /* Smooth transition for color */
+        border: 2px solid #D9D9D9;
+        border-radius: 48px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 6px;
+        padding-right: 6px;
+        gap: 10px;
+        z-index: 1000; /* Ensure it stays on top */
+        background-color: white !important;
+    }
+
+    .nav-bar-titles {
+        font-family: 'SF Pro';
+        font-weight: 400;
+        font-size: 10px;
+        color: black;
+        transition: color 0.3s, font-weight 0.3s;
+    }
+
+    .nav-bar-titles-selected {
+        font-weight: 600 !important;
+        color: #DA7659 !important;
+    }
+
+    .nav-bar-titles:hover {
+        color: #DA7659;
+        font-weight: 600;
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 60px;
+        height: 57px;
+        border: none;
+    }
+
+    .btn img {
+        height: 24px;
+        margin-bottom: 4px;
+        transition: transform 0.3s;
+    }
+
+    .btn:hover img {
+        transform: scale(1.1);
+    }
+
+    .container {
+    width: 800px;
+}
+</style>
+
+</html>
