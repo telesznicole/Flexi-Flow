@@ -513,7 +513,7 @@
     filter: invert(100%);
 }
 
-.main-container{
+.main-container.selected{
     display: block;
 }
 
@@ -543,18 +543,6 @@
 }
 
 .horizontal-tile {
-    background-color: #F8F8F8;
-    display: flex;
-    align-items: center !important;
-    border-radius: 14px;
-    padding-right: 10px;
-    margin-bottom: 12px;
-    min-height: 65px;
-    overflow: hidden;
-    display: none;
-}
-
-.horizontal-tile.selected {
     background-color: #F8F8F8;
     display: flex;
     align-items: center !important;

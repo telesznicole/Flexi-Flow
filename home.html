@@ -32,7 +32,7 @@
     </script>
 
     <script>
-        function selectButton(selectedButton, chartContainerId, loggedInfoId, titleId, containerId) {
+        function selectButton(selectedButton, chartContainerId, titleId, containerId) {
             // Get all buttons
             const buttons = document.querySelectorAll('.logged-info-button');
 
@@ -58,18 +58,6 @@
             const selectedChartContainer = document.getElementById(chartContainerId);
             selectedChartContainer.classList.add('selected');
 
-            // Get all logged info containers
-            const loggedInfo = document.querySelectorAll('.horizontal-tile');
-
-            // Remove the 'selected' class from all logged info containers
-            loggedInfo.forEach(info => {
-                info.classList.remove('selected');
-            });
-
-            // Add the 'selected' class to the corresponding logged info container
-            const selectedLoggedInfo = document.getElementById(loggedInfoId);
-            selectedLoggedInfo.classList.add('selected');
-
             // Get all title containers
             const titleList = document.querySelectorAll('.title');
 
@@ -89,10 +77,10 @@
             loggedContainer.forEach(cont => {
                 cont.classList.remove('selected');
             });
-            console.log(loggedContainer);
 
             // Add the 'selected' class to the corresponding main-container container
             const selectedMainContainer = document.getElementById(containerId);
+            console.log('chartContainerId: ' + chartContainerId + ', titleId: ' + titleId + ', containerId: ' + containerId);
             selectedMainContainer.classList.add('selected');
         }
     </script>
@@ -178,6 +166,42 @@
                 
                 // Build the URL with GET parameters (userId and field)
                 var url = "readLoggedRecovery.php?user_id=" + encodeURIComponent(user_id) + "&start=" + encodeURIComponent(start);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
+            
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
+                    } else {
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                    }
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
+
+    <script>
+        // Function to request recovery information by user_id and start
+        function getFoodInfo(user_id, date) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readLoggedFood.php?user_id=" + encodeURIComponent(user_id) + "&date=" + encodeURIComponent(date);
                 
                 // Configure the request
                 xhr.open("GET", url, true);
@@ -296,13 +320,13 @@
             </div>
 
             <div class="logged-info-buttons">
-                <span class="logged-info-button selected" onclick="selectButton(this, 'A_chart', 'A_logged', 'A_title', 'workouts-container')">
+                <span class="logged-info-button selected" onclick="selectButton(this, 'A_chart', 'A_title', 'workouts-container')">
                     <img src="icons/flame.svg" alt="Activity Icon" class="info-button-icon selected"> Activity
                 </span>
-                <span class="logged-info-button" onclick="selectButton(this, 'F_chart', 'F_logged', 'F_title', 'food-container')">
+                <span class="logged-info-button" onclick="selectButton(this, 'F_chart', 'F_title', 'foods-container')">
                     <img src="icons/fork.knife.svg" alt="Food Icon" class="info-button-icon"> Food
                 </span>
-                <span class="logged-info-button" onclick="selectButton(this, 'R_chart', 'R_logged', 'R_title', 'recoveries-container')">
+                <span class="logged-info-button" onclick="selectButton(this, 'R_chart', 'R_title', 'recoveries-container')">
                     <img src="icons/lotus.svg" alt="Recovery Icon" class="info-button-icon"> Recovery
                 </span>
             </div>
@@ -316,29 +340,35 @@
             <div class="main-container selected" id="workouts-container"></div>
             <!-- script to get workouts for the current day -->
             <script>
+                let global_workouts = null;  // Global variable to store the workouts data
+            
                 document.addEventListener('DOMContentLoaded', () => {
+                    if (global_workouts) {
+                        // If global_workouts already has data, directly use it
+                        console.log("Using cached workouts data:");
+                        console.log(global_workouts);
+                        renderWorkouts(global_workouts);
+                        return;  // Exit if data is already cached
+                    }
+            
                     const today = new Date();
                     const formattedDate = today.getFullYear() + '-' 
-                    + String(today.getMonth() + 1).padStart(2, '0') + '-' 
-                    + String(today.getDate()).padStart(2, '0');
-
-                    let workoutDataObject = {};
-
-                    // Call the getUserInfo function to retrieve the data for a specific field
+                        + String(today.getMonth() + 1).padStart(2, '0') + '-' 
+                        + String(today.getDate()).padStart(2, '0');
+            
+                    // Fetch the data and process it only if it's not cached
                     getWorkoutInfo(userId, formattedDate).then(response => {
-                        // console.log("User Info for " + formattedDate + ":", response); // Log the response to the console
-
                         // Split the response by newlines and filter out any empty lines
                         const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
-
+            
                         const workouts = [];
                         let currentWorkout = {};
                         let isNewWorkout = false;
-
+            
                         // Process each entry line by line
                         entries.forEach(entry => {
                             const [key, value] = entry.split(':').map(str => str.trim());
-
+            
                             if (key && value) {
                                 if (key === 'id') {
                                     // If we find the start of a new workout (id), push the current workout if it exists
@@ -358,55 +388,69 @@
                                 }
                             }
                         });
-
+            
                         // Handle any potential last workout
                         if (Object.keys(currentWorkout).length > 0) {
                             workouts.push(currentWorkout);
                         }
-
-                        // console.log(workouts); // Log all workout objects to ensure they are correctly split
-
+            
+                        // Store the workouts data in the global variable to avoid refetching
+                        global_workouts = workouts;
+            
                         // Check if workouts container exists
                         const workoutsContainer = document.querySelector('#workouts-container');
                         if (!workoutsContainer) {
                             console.error('Workouts container not found!');
                             return;
                         }
-
-                        // Render each workout
-                        workouts.forEach(workoutData => {
-                            const workoutTitle = workoutData['Workout Title'];
-                            const start = workoutData['start'];
-                            const duration = workoutData['duration'];
-                            const sets = workoutData['sets'];
-                            const reps = workoutData['reps'];
-                            const distance = workoutData['distance'];
-
-                            // Handle HTML creation for each workout
-                            const newWorkoutDiv = document.createElement('div');
-                            newWorkoutDiv.classList.add('horizontal-tile', 'selected'); 
-                            newWorkoutDiv.id = 'A_logged';
-
-                            newWorkoutDiv.innerHTML = `
-                                <div class="horizontal-tile-content">
-                                    <div class="horizontal-tile-title-content">
-                                        <span class="horizontal-tile-title">${workoutTitle || 'N/A'}</span>
-                                        <span class="horizontal-tile-time">${formatTime(start)}</span>
-                                    </div>
-                                    <p class="horizontal-tile-descriptor">
-                                        ${sets == 0 ? `Duration: ${duration || 'N/A'} minutes` : `Sets: ${sets || 'N/A'}, Reps: ${reps || 'N/A'}`}
-                                        ${sets == 0 && distance ? `, Distance: ${distance || 'N/A'} miles` : ''}
-                                    </p>
-                                </div>
-                            `;
-
-                            workoutsContainer.appendChild(newWorkoutDiv);
-                        });
+            
+                        // Render the workouts
+                        renderWorkouts(workouts);
+            
+                        // Optionally, log the global_workouts after data is cached
+                        console.log("Fetched workouts data:");
+                        console.log(global_workouts);
                     }).catch(error => {
                         console.error("Error fetching user info:", error); // Log any errors that occur
                     });
                 });
-
+            
+                function renderWorkouts(workouts) {
+                    const workoutsContainer = document.querySelector('#workouts-container');
+                    
+                    // Clear the container before adding new workouts (if needed)
+                    workoutsContainer.innerHTML = '';
+            
+                    workouts.forEach(workoutData => {
+                        const workoutTitle = workoutData['Workout Title'];
+                        const start = workoutData['start'];
+                        const duration = workoutData['duration'];
+                        const sets = workoutData['sets'];
+                        const reps = workoutData['reps'];
+                        const distance = workoutData['distance'];
+            
+                        // Handle HTML creation for each workout
+                        const newWorkoutDiv = document.createElement('div');
+                        newWorkoutDiv.classList.add('horizontal-tile', 'selected'); 
+                        newWorkoutDiv.id = 'A_logged';
+            
+                        newWorkoutDiv.innerHTML = `
+                            <div class="horizontal-tile-content">
+                                <div class="horizontal-tile-title-content">
+                                    <span class="horizontal-tile-title">${workoutTitle || 'N/A'}</span>
+                                    <span class="horizontal-tile-time">${formatTime(start)}</span>
+                                </div>
+                                <p class="horizontal-tile-descriptor">
+                                    ${sets == 0 ? `Duration: ${duration || 'N/A'} minutes` : `Sets: ${sets || 'N/A'}, Reps: ${reps || 'N/A'}`}
+                                    ${sets == 0 && distance ? `, Distance: ${distance || 'N/A'} miles` : ''}
+                                </p>
+                            </div>
+                        `;
+            
+                        workoutsContainer.appendChild(newWorkoutDiv);
+                    });
+                }
+            
                 function formatTime(timeString) {
                     // Format the time to HH:MM
                     if (!timeString) return '';
@@ -415,8 +459,10 @@
                     return timeString;
                 }
             </script>
+            
 
             <div class="main-container" id="recoveries-container"></div>
+            <!-- script to get recoveries for the current day -->
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const today = new Date();
@@ -429,7 +475,7 @@
 
                     // Call the getRecoveryInfo function to retrieve the data for a specific field
                     getRecoveryInfo(userId, formattedDate).then(response => {
-                        console.log("User Info for " + formattedDate + ":", response); // Log the response to the console
+                        // console.log("User Info for " + formattedDate + ":", response); // Log the response to the console
 
                         // Split the response by newlines and filter out any empty lines
                         const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
@@ -466,8 +512,6 @@
                         if (Object.keys(currentRecovery).length > 0) {
                             recoveries.push(currentRecovery);
                         }
-
-                        // console.log(recoveries); // Log all recovery objects to ensure they are correctly split
 
                         // Check if recoveries container exists
                         const recoveriesContainer = document.querySelector('#recoveries-container');
@@ -517,8 +561,8 @@
             </script>
 
 
-            <div class="main-container" id="food-container">
-                <div class="horizontal-tile" id="F_logged">
+            <div class="main-container" id="foods-container">
+                <!-- <div class="horizontal-tile" id="F_logged">
                     <div class="horizontal-tile-content">
                         <div class="horizontal-tile-title-content">
                             <span class="horizontal-tile-title">Breakfast</span>
@@ -535,7 +579,102 @@
                         </div>
                         <p class="food-tile-descriptor">2 strips, Publix Brown Sugar Smoked Bacon</p>
                     </div>
-                </div>
+                </div> -->
+
+                <!-- script to get meals for current day -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                    const today = new Date();
+                    const formattedDate = today.getFullYear() + '-' 
+                    + String(today.getMonth() + 1).padStart(2, '0') + '-' 
+                    + String(today.getDate()).padStart(2, '0') 
+                    + ' 23:59:59'; // bogus ending time
+
+                    let foodDataObject = {};
+
+                    // Call the getRecoveryInfo function to retrieve the data for a specific field
+                    getFoodInfo(userId, formattedDate).then(response => {
+                        // console.log("Food Info for " + formattedDate + ":", response); // Log the response to the console
+
+                        // Split the response by newlines and filter out any empty lines
+                        const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
+
+                        const foods = [];
+                        let currentFood = {};
+                        let isNewFood = false;
+
+                        // Process each entry line by line
+                        entries.forEach(entry => {
+                            const [key, value] = entry.split(':').map(str => str.trim());
+
+                            if (key && value) {
+                                if (key === 'id') {
+                                    // If we find the start of a new recovery (id), push the current recovery if it exists
+                                    if (Object.keys(currentFood).length > 0) {
+                                        foods.push(currentFood); // Save the previous recovery
+                                    }
+                                    currentFood = {}; // Start a new recovery object
+                                    currentFood['id'] = value; // Add the recovery id
+                                } else if (key === 'food_name') {
+                                    // If we find the recovery title, finalize the current recovery
+                                    currentFood[key] = value; // Add the title
+                                    foods.push(currentFood); // Push this recovery
+                                    currentFood = {}; // Reset for the next recovery
+                                } else {
+                                    // Otherwise, keep adding key-value pairs for the current recovery
+                                    currentFood[key] = String(value);
+                                }
+                            }
+                        });
+
+                        // Handle any potential last recovery
+                        if (Object.keys(currentFood).length > 0) {
+                            foods.push(currentFood);
+                        }
+
+                        // Check if recoveries container exists
+                        const foodsContainer = document.querySelector('#foods-container');
+                        if (!foodsContainer) {
+                            console.error('Foods container not found!');
+                            return;
+                        }
+
+                        // Render each food
+                        foods.forEach(foodData => {
+                            meal = foodData['meal_name'];
+                            if (meal == 'NULL') meal = foodData['food_name'];
+                            // const foodTitle = foodData['food_name'];
+                            const time = foodData['date'].split(' ')[1];
+
+                            // Handle HTML creation for each recovery
+                            const newFoodDiv = document.createElement('div');
+                            newFoodDiv.classList.add('horizontal-tile', 'selected'); 
+                            newFoodDiv.id = 'F_logged';
+
+                            newFoodDiv.innerHTML = `
+                                <div class="horizontal-tile-content">
+                                    <div class="horizontal-tile-title-content">
+                                        <span class="horizontal-tile-title">${meal}</span>
+                                        <span class="horizontal-tile-time">${formatTime3(time)}</span>
+                                    </div>
+                                </div>
+                            `;
+
+                            foodsContainer.appendChild(newFoodDiv);
+                        });
+                    }).catch(error => {
+                        console.error("Error fetching recovery info:", error); // Log any errors that occur
+                    });
+                });
+
+                function formatTime3(timeString) {
+                    // Format the time to HH:MM
+                    if (!timeString) return '';
+                    if (timeString.length == 2) timeString = timeString + ':00';
+                    if (timeString.length == 3) timeString = timeString + '0';
+                    return timeString;
+                }
+                 </script>
             </div>
             
         </div>
