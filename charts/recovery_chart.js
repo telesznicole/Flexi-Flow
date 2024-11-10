@@ -1,6 +1,5 @@
-const R_goal = 100; // goal
-const R_current = 10; // current value
-const R_percentage = ((R_current / R_goal) * 100).toFixed(0); // Calculate percentage and round it to 0 decimal places
+function updateRecoveryChart(R_goal, R_current) {
+    const R_percentage = ((R_current / R_goal) * 100).toFixed(0); // Calculate percentage and round it to 0 decimal places
 
 // Set the text content of the percentage and details elements
 document.getElementById('R_percentageText').innerText = `${R_percentage}%`;
@@ -69,3 +68,5 @@ const recoveryChart = new Chart(recoveryctx, {
         }
     ]
 });
+
+}

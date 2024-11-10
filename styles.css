@@ -513,6 +513,14 @@
     filter: invert(100%);
 }
 
+.main-container.selected{
+    display: block;
+}
+
+.main-container{
+    display: none;
+}
+
 .logged-info-percentage {
     position: absolute;
     top: 40%;
@@ -525,7 +533,8 @@
 
 .logged-info-details {
     position: absolute;
-    top: 52%;
+    width: 100px;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 10px;
@@ -533,19 +542,14 @@
     color: #878787;
 }
 
-.horizontal-tile {
-    background-color: #F8F8F8;
+.meal-items {
     display: flex;
-    align-items: center !important;
-    border-radius: 14px;
-    padding-right: 10px;
-    margin-bottom: 12px;
-    min-height: 65px;
-    overflow: hidden;
-    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: inherit;
 }
 
-.horizontal-tile.selected {
+.horizontal-tile {
     background-color: #F8F8F8;
     display: flex;
     align-items: center !important;

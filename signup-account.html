@@ -15,24 +15,26 @@
             <span>
                 <img src="pictures/person.svg" alt="Person Icon" class="login-icon">
             </span>
-            <input type="text" class="login-input" placeholder="Email, phone, or username">
+            <input type="text" id="username" class="login-input" placeholder="Email, phone, or username">
         </div>
         <div class="login-button">
             <span>
                 <img src="pictures/lock.svg" alt="Lock" class="login-icon">
             </span>
-            <input type="text" class="login-input" placeholder="Password">
+            <input type="text" id="password" class="login-input" placeholder="Password">
         </div>
         <div class="login-button">
             <span>
                 <img src="pictures/lock.svg" alt="Lock" class="login-icon">
             </span>
-            <input type="text" class="login-input" placeholder="Confirm Password">
+            <input type="text" id="confPassword" class="login-input" placeholder="Confirm Password">
         </div>
+        <div class="form-text" id="alert-text-1" style="max-width: 353px; color: #CF1110; display: none;">A user with that username already exists.</div>
+        <div class="form-text" id="alert-text-2" style="max-width: 353px; color: #CF1110; display: none;">Passwords do not match.</div>
     </div>
 
     <div class="bottom-items">
-        <a class="action-button" href=home.html>
+        <a class="action-button" id="signup" onclick="getInputValues()" href="#">
             <div class="action-text">Sign Up</div>
         </a>
         <div class="login-bottom-content">
@@ -40,5 +42,53 @@
             <a href=login-account.html class="login-bottom-text-bold">Login</a>
         </div>
     </div>
+
+    <script>
+        // Function to capture and save input values, look up user
+        function getInputValues() {
+            // Get the input values by their unique IDs
+            const usernameValue = document.getElementById('username').value;
+            const passwordValue1 = document.getElementById('password').value;
+            const passwordValue2 = document.getElementById('confPassword').value;
+            const alertText1 = document.getElementById('alert-text-1');
+            const alertText2 = document.getElementById('alert-text-2');
+
+            // Check if the username is empty
+            if (usernameValue == "") {
+                alert("Please enter a username.");
+                return;
+            }
+
+            if (passwordValue1 != passwordValue2){
+                alertText2.style.display = 'block';
+            } else {
+                alertText2.style.display = 'none';
+
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+            
+                // Configure the request
+                xhr.open("GET", "createUser.php?FFusername=" + encodeURIComponent(usernameValue) + "&FFpassword=" + encodeURIComponent(passwordValue1), true);
+
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response as a boolean value
+                        var result = xhr.responseText.trim().toLowerCase();
+
+                        if (result === "false") {
+                            alertText1.style.display = 'block';
+                        } else {
+                            localStorage.setItem('userId', result);
+                            window.location.href = "home.html";
+                        }
+                    }
+                };
+
+                //Send the request
+                xhr.send();
+            }
+        }
+    </script>
 </body>
 </html>
