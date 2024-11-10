@@ -32,7 +32,7 @@
     </script>
 
     <script>
-        function selectButton(selectedButton, chartContainerId, loggedInfoId, titleId) {
+        function selectButton(selectedButton, chartContainerId, loggedInfoId, titleId, containerId) {
             // Get all buttons
             const buttons = document.querySelectorAll('.logged-info-button');
 
@@ -81,6 +81,19 @@
             // Add the 'selected' class to the corresponding title container
             const selectedTitle = document.getElementById(titleId);
             selectedTitle.classList.add('selected');
+
+            // Get all main-container containers
+            const loggedContainer = document.querySelectorAll('.main-container');
+
+            // Remove the 'selected' class from all main-container containers
+            loggedContainer.forEach(cont => {
+                cont.classList.remove('selected');
+            });
+            console.log(loggedContainer);
+
+            // Add the 'selected' class to the corresponding main-container container
+            const selectedMainContainer = document.getElementById(containerId);
+            selectedMainContainer.classList.add('selected');
         }
     </script>
 
@@ -120,43 +133,78 @@
         }
     </script>
 
-<script>
-    // Function to request specific user information by userId and field
-    function getWorkoutInfo(user_id, date) {
-        return new Promise(function(resolve, reject) {
-            // Create a new XMLHttpRequest
-            var xhr = new XMLHttpRequest();
+    <script>
+        // Function to request workout information by user_id and date
+        function getWorkoutInfo(user_id, date) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readLoggedWorkouts.php?user_id=" + encodeURIComponent(user_id) + "&date=" + encodeURIComponent(date);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
             
-            // Build the URL with GET parameters (userId and field)
-            var url = "readLoggedWorkouts.php?user_id=" + encodeURIComponent(user_id) + "&date=" + encodeURIComponent(date);
-            
-            // Configure the request
-            xhr.open("GET", url, true);
-        
-            // Define what happens when the response is received
-            xhr.onload = function() {
-                if (xhr.status == 200) {
-                    // Parse the response (which will be the user field value)
-                    var result = xhr.responseText.trim();
-                    
-                    // Check if the result is a valid response or error message
-                    if (result !== "User not found" && result !== "Field not found") {
-                        resolve(result); // Resolve the promise with the result
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
                     } else {
-                        reject(result); // Reject the promise with the error message
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
                     }
-                } else {
-                    reject("Error: " + xhr.status);  // Reject the promise if there's a request error
-                }
-            };
-        
-            // Send the request
-            xhr.send();
-        });
-    }
-</script>
-    
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
 
+    <script>
+        // Function to request recovery information by user_id and start
+        function getRecoveryInfo(user_id, start) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readLoggedRecovery.php?user_id=" + encodeURIComponent(user_id) + "&start=" + encodeURIComponent(start);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
+            
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
+                    } else {
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                    }
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -248,13 +296,13 @@
             </div>
 
             <div class="logged-info-buttons">
-                <span class="logged-info-button selected" onclick="selectButton(this, 'A_chart', 'A_logged', 'A_title')">
+                <span class="logged-info-button selected" onclick="selectButton(this, 'A_chart', 'A_logged', 'A_title', 'workouts-container')">
                     <img src="icons/flame.svg" alt="Activity Icon" class="info-button-icon selected"> Activity
                 </span>
-                <span class="logged-info-button" onclick="selectButton(this, 'F_chart', 'F_logged', 'F_title')">
+                <span class="logged-info-button" onclick="selectButton(this, 'F_chart', 'F_logged', 'F_title', 'food-container')">
                     <img src="icons/fork.knife.svg" alt="Food Icon" class="info-button-icon"> Food
                 </span>
-                <span class="logged-info-button" onclick="selectButton(this, 'R_chart', 'R_logged', 'R_title')">
+                <span class="logged-info-button" onclick="selectButton(this, 'R_chart', 'R_logged', 'R_title', 'recoveries-container')">
                     <img src="icons/lotus.svg" alt="Recovery Icon" class="info-button-icon"> Recovery
                 </span>
             </div>
@@ -265,7 +313,8 @@
             <div class="title" id="F_title">Logged Food</div>
             <div class="title" id="R_title">Logged Recovery</div>
 
-            <div id="workouts-container"></div>
+            <div class="main-container selected" id="workouts-container"></div>
+            <!-- script to get workouts for the current day -->
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const today = new Date();
@@ -277,7 +326,7 @@
 
                     // Call the getUserInfo function to retrieve the data for a specific field
                     getWorkoutInfo(userId, formattedDate).then(response => {
-                        console.log("User Info for " + formattedDate + ":", response); // Log the response to the console
+                        // console.log("User Info for " + formattedDate + ":", response); // Log the response to the console
 
                         // Split the response by newlines and filter out any empty lines
                         const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
@@ -305,7 +354,6 @@
                                     currentWorkout = {}; // Reset for the next workout
                                 } else {
                                     // Otherwise, keep adding key-value pairs for the current workout
-                                    if (key == 'start') console.log(key + ":            " + String(value));
                                     currentWorkout[key] = String(value);
                                 }
                             }
@@ -316,7 +364,7 @@
                             workouts.push(currentWorkout);
                         }
 
-                        console.log(workouts); // Log all workout objects to ensure they are correctly split
+                        // console.log(workouts); // Log all workout objects to ensure they are correctly split
 
                         // Check if workouts container exists
                         const workoutsContainer = document.querySelector('#workouts-container');
@@ -368,36 +416,128 @@
                 }
             </script>
 
+            <div class="main-container" id="recoveries-container"></div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const today = new Date();
+                    const formattedDate = today.getFullYear() + '-' 
+                    + String(today.getMonth() + 1).padStart(2, '0') + '-' 
+                    + String(today.getDate()).padStart(2, '0') 
+                    + ' 23:59:59'; // bogus ending time
 
-            <div class="horizontal-tile" id="R_logged">
-                <!-- <img src="pictures/bed.png" alt="Bed" class="horizontal-tile-pic"> -->
-                <div class="horizontal-tile-content">
-                    <div class="horizontal-tile-title-content">
-                        <span class="horizontal-tile-title">Deep Sleep</span>
-                        <span class="horizontal-tile-time">06:00</span>
+                    let recoveryDataObject = {};
+
+                    // Call the getRecoveryInfo function to retrieve the data for a specific field
+                    getRecoveryInfo(userId, formattedDate).then(response => {
+                        console.log("User Info for " + formattedDate + ":", response); // Log the response to the console
+
+                        // Split the response by newlines and filter out any empty lines
+                        const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
+
+                        const recoveries = [];
+                        let currentRecovery = {};
+                        let isNewRecovery = false;
+
+                        // Process each entry line by line
+                        entries.forEach(entry => {
+                            const [key, value] = entry.split(':').map(str => str.trim());
+
+                            if (key && value) {
+                                if (key === 'id') {
+                                    // If we find the start of a new recovery (id), push the current recovery if it exists
+                                    if (Object.keys(currentRecovery).length > 0) {
+                                        recoveries.push(currentRecovery); // Save the previous recovery
+                                    }
+                                    currentRecovery = {}; // Start a new recovery object
+                                    currentRecovery['id'] = value; // Add the recovery id
+                                } else if (key === 'Recovery Title') {
+                                    // If we find the recovery title, finalize the current recovery
+                                    currentRecovery[key] = value; // Add the title
+                                    recoveries.push(currentRecovery); // Push this recovery
+                                    currentRecovery = {}; // Reset for the next recovery
+                                } else {
+                                    // Otherwise, keep adding key-value pairs for the current recovery
+                                    currentRecovery[key] = String(value);
+                                }
+                            }
+                        });
+
+                        // Handle any potential last recovery
+                        if (Object.keys(currentRecovery).length > 0) {
+                            recoveries.push(currentRecovery);
+                        }
+
+                        // console.log(recoveries); // Log all recovery objects to ensure they are correctly split
+
+                        // Check if recoveries container exists
+                        const recoveriesContainer = document.querySelector('#recoveries-container');
+                        if (!recoveriesContainer) {
+                            console.error('Recoveries container not found!');
+                            return;
+                        }
+
+                        // Render each recovery
+                        recoveries.forEach(recoveryData => {
+                            const recoveryTitle = recoveryData['Recovery Title'];
+                            duration = recoveryData['duration'];
+                            if (duration == "00") duration = "20";
+                            const start = recoveryData['start'].split(' ')[1];
+
+                            // Handle HTML creation for each recovery
+                            const newRecoveryDiv = document.createElement('div');
+                            newRecoveryDiv.classList.add('horizontal-tile', 'selected'); 
+                            newRecoveryDiv.id = 'R_logged';
+
+                            newRecoveryDiv.innerHTML = `
+                                <div class="horizontal-tile-content">
+                                    <div class="horizontal-tile-title-content">
+                                        <span class="horizontal-tile-title">${recoveryTitle}</span>
+                                        <span class="horizontal-tile-time">${formatTime2(start)}</span>
+                                    </div>
+                                    <p class="horizontal-tile-descriptor">
+                                        ${`Duration: ${duration}`}
+                                    </p>
+                                </div>
+                            `;
+
+                            recoveriesContainer.appendChild(newRecoveryDiv);
+                        });
+                    }).catch(error => {
+                        console.error("Error fetching recovery info:", error); // Log any errors that occur
+                    });
+                });
+
+                function formatTime2(timeString) {
+                    // Format the time to HH:MM
+                    if (!timeString) return '';
+                    if (timeString.length == 2) timeString = timeString + ':00';
+                    if (timeString.length == 3) timeString = timeString + '0';
+                    return timeString;
+                }
+            </script>
+
+
+            <div class="main-container" id="food-container">
+                <div class="horizontal-tile" id="F_logged">
+                    <div class="horizontal-tile-content">
+                        <div class="horizontal-tile-title-content">
+                            <span class="horizontal-tile-title">Breakfast</span>
+                            <span class="horizontal-tile-time">08:37</span>
+                        </div>
+                        <div class="horizontal-tile-title-content">
+                            <span class="food-tile-title">Scrambled Eggs</span>
+                            <span class="food-tile-title">148 cal</span>
+                        </div>
+                        <p class="food-tile-descriptor">2 large brown eggs</p>
+                        <div class="horizontal-tile-title-content">
+                            <span class="food-tile-title">Bacon</span>
+                            <span class="food-tile-title">140 cal</span>
+                        </div>
+                        <p class="food-tile-descriptor">2 strips, Publix Brown Sugar Smoked Bacon</p>
                     </div>
-                    <p class="horizontal-tile-descriptor">7 hr 26 m</p>
                 </div>
             </div>
-
-            <div class="horizontal-tile" id="F_logged">
-                <div class="horizontal-tile-content">
-                    <div class="horizontal-tile-title-content">
-                        <span class="horizontal-tile-title">Breakfast</span>
-                        <span class="horizontal-tile-time">08:37</span>
-                    </div>
-                    <div class="horizontal-tile-title-content">
-                        <span class="food-tile-title">Scrambled Eggs</span>
-                        <span class="food-tile-title">148 cal</span>
-                    </div>
-                    <p class="food-tile-descriptor">2 large brown eggs</p>
-                    <div class="horizontal-tile-title-content">
-                        <span class="food-tile-title">Bacon</span>
-                        <span class="food-tile-title">140 cal</span>
-                    </div>
-                    <p class="food-tile-descriptor">2 strips, Publix Brown Sugar Smoked Bacon</p>
-                </div>
-            </div>
+            
         </div>
     </div>
 
@@ -535,6 +675,7 @@
             console.error("Error fetching data:", error); // Handle any errors that occur
         });
     </script>
+
     <script src="charts/recovery_chart.js"></script>
     <script>
         let R_goal;

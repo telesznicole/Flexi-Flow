@@ -513,6 +513,14 @@
     filter: invert(100%);
 }
 
+.main-container{
+    display: block;
+}
+
+.main-container{
+    display: none;
+}
+
 .logged-info-percentage {
     position: absolute;
     top: 40%;
