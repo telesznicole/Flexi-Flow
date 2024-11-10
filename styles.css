@@ -1,0 +1,762 @@
+/* SF Pro Ultralight */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Ultralight.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-UltralightItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* SF Pro Thin */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Thin.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-ThinItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* SF Pro Light */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* SF Pro Regular */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* SF Pro Medium */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* SF Pro Semibold */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-SemiboldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* SF Pro Bold */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* SF Pro Heavy */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Heavy.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-HeavyItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* SF Pro Black */
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro-Text-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* SF Pro Font Variants */
+.ultralight {
+    font-family: 'SF Pro';
+    font-weight: 100; /* Ultralight */
+    font-style: normal;
+}
+
+.ultralight-italic {
+    font-family: 'SF Pro';
+    font-weight: 100; /* Ultralight */
+    font-style: italic;
+}
+
+.thin {
+    font-family: 'SF Pro';
+    font-weight: 200; /* Thin */
+    font-style: normal;
+}
+
+.thin-italic {
+    font-family: 'SF Pro';
+    font-weight: 200; /* Thin */
+    font-style: italic;
+}
+
+.light {
+    font-family: 'SF Pro';
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+
+.light-italic {
+    font-family: 'SF Pro';
+    font-weight: 300; /* Light */
+    font-style: italic;
+}
+
+.regular {
+    font-family: 'SF Pro';
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+.regular-italic {
+    font-family: 'SF Pro';
+    font-weight: 400; /* Regular */
+    font-style: italic;
+}
+
+.medium {
+    font-family: 'SF Pro';
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+.medium-italic {
+    font-family: 'SF Pro';
+    font-weight: 500; /* Medium */
+    font-style: italic;
+}
+
+.semibold {
+    font-family: 'SF Pro';
+    font-weight: 600; /* Semibold */
+    font-style: normal;
+}
+
+.semibold-italic {
+    font-family: 'SF Pro';
+    font-weight: 600; /* Semibold */
+    font-style: italic;
+}
+
+.bold {
+    font-family: 'SF Pro';
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+.bold-italic {
+    font-family: 'SF Pro';
+    font-weight: 700; /* Bold */
+    font-style: italic;
+}
+
+.heavy {
+    font-family: 'SF Pro';
+    font-weight: 800; /* Heavy */
+    font-style: normal;
+}
+
+.heavy-italic {
+    font-family: 'SF Pro';
+    font-weight: 800; /* Heavy */
+    font-style: italic;
+}
+
+.black {
+    font-family: 'SF Pro';
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+.black-italic {
+    font-family: 'SF Pro';
+    font-weight: 900; /* Black */
+    font-style: italic;
+}
+
+
+.container {
+    width: 800px;
+}
+
+.nav-bar {
+    display: flex;
+    position: fixed; /* Keep the nav-bar fixed */
+    bottom: 20px;    /* Distance from the bottom */
+    left: 50%;       /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment adjustment */
+    justify-content: center;
+    width: calc(100% - 40px); /* Use full width minus margins */
+    max-width: 600px;  /* Ensure it doesn't exceed 600px */
+    margin: 0 auto;  /* Center margin automatically */
+    flex-wrap: wrap;
+    transition: color 0.3s, font-weight 0.3s; /* Smooth transition for color */
+    border: 2px solid #D9D9D9;
+    border-radius: 48px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    gap: 10px;
+    z-index: 1000; /* Ensure it stays on top */
+    background-color: white !important;
+}
+
+.nav-bar-titles {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 10px;
+    color: black;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.nav-bar-titles-selected {
+    font-weight: 600 !important;
+    color: #DA7659 !important;
+}
+
+.nav-bar-titles:hover {
+    color: #DA7659;
+    font-weight: 600;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 60px;
+    height: 57px;
+    border: none;
+}
+
+.btn img {
+    height: 24px;
+    margin-bottom: 4px;
+    transition: transform 0.3s;
+}
+
+.btn:hover img {
+    transform: scale(1.1);
+}
+
+.calendar-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    font-family: 'SF Pro';
+    font-weight: 300;
+    font-style: normal;
+}
+
+.calendar-day date {
+    font-family: 'SF Pro';
+    font-size: 14pt;
+    line-height: 1.2;
+    display: block;
+}
+
+.calendar-day day {
+    font-family: 'SF Pro';
+    font-size: 20pt;
+    line-height: 1.2;
+    display: block;
+    height: 40px;
+}
+
+.current-day {
+    font-weight: bold;
+}
+
+.selected-day day {
+    background-color: #DA7659; /* Your chosen color for the selected day */
+    color: white; /* Ensure text is visible */
+    border-radius: 50%; /* Optional: make it circular */
+    border-radius: 50%;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.calendar-container-alt {
+    background-color: #f0f0f0; /* Change this to your desired color */
+    padding: 10px; /* Optional: Add some padding for better spacing */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.current-day day {
+    font-size: 20pt;
+    display: block;
+    line-height: 1.2;
+
+    font-family: 'SF Pro';
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    
+    position: relative;
+    background-color: #A73A04;
+    border-radius: 50%;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.current-day date {
+    font-family: 'SF Pro';
+    font-weight: 600;
+    font-size: 14pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    line-height: 1.2;
+}
+
+.calendar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 24px;
+}
+
+.calendar-arrow {
+    width: 8px;
+    cursor: pointer;
+    z-index: 10; /* Ensures the arrows are on top of other elements */
+}
+
+#weekRow {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-icon {
+    height: 24px; /* Matches the font size of the month */
+}
+
+.calendar-icon {
+    height: 24px; /* Match the font size of the month */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    z-index: 10; /* Ensures the arrows are on top of other elements */
+    cursor: pointer;
+}
+
+.calendar-icon:hover {
+    transform: scale(1.2); /* Enlarge by 1.2 times on hover */
+}
+
+.logged-info-tile {
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Ensures content fits within the div with no overflow */
+    border-radius: 14px;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+
+.chart-set {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.chart-container {
+    position: relative; /* Ensure positioning for the percentage and details text */
+    text-align: center; /* Center text below each chart */
+    transition: flex 0.3s; /* Smooth transition for resizing */
+    max-width: 300px; /* Optional max width for each container */
+    margin: 10px; /* Space around the charts */
+    scale: 0.5;
+    opacity: 0.5;
+    flex: 1;
+}
+
+.chart-container.selected {
+    scale: 1;
+    opacity: 1;
+    flex: 2;
+}
+
+.logged-info-chart {
+    height: 138px;
+    width: auto;
+    margin-bottom: 12px;
+}
+
+.logged-info-buttons {
+    display: flex;
+    align-items: center;
+    gap: 74px;
+}
+
+.logged-info-button {
+    padding: 6px 12px;
+    border-radius: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+.logged-info-button.selected {
+    padding: 6px 12px;
+    border-radius: 18px;
+    color: white;
+    background-color: #DA7659;
+}
+
+.info-button-icon {
+    width: 16px; /* Adjust size as needed */
+    height: 16px;
+    margin-right: 4px; /* Space between icon and text */
+    vertical-align: middle; /* Aligns icon with text */
+    cursor: pointer;
+}
+
+.info-button-icon.selected {
+    width: 16px; /* Adjust size as needed */
+    height: 16px;
+    margin-right: 4px; /* Space between icon and text */
+    vertical-align: middle; /* Aligns icon with text */
+    filter: invert(100%);
+}
+
+.main-container.selected{
+    display: block;
+}
+
+.main-container{
+    display: none;
+}
+
+.logged-info-percentage {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 700;
+    color: #A73A04;
+}
+
+.logged-info-details {
+    position: absolute;
+    width: 100px;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: 400;
+    color: #878787;
+}
+
+.meal-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: inherit;
+}
+
+.horizontal-tile {
+    background-color: #F8F8F8;
+    display: flex;
+    align-items: center !important;
+    border-radius: 14px;
+    padding-right: 10px;
+    margin-bottom: 12px;
+    min-height: 65px;
+    overflow: hidden;
+}
+
+.horizontal-tile-title-content {
+    display: flex; /* Keep it as a row */
+    justify-content: space-between;/* Spread title and time */
+    flex-grow: 1; /* Allows the content to take up available space */
+    margin-right: 10px; /* Space between image and text */
+    width: 100%;
+    line-height: normal;
+}
+
+.horizontal-tile-content {
+    display: flex; /* Keep it as a row */
+    margin-left: 10px; /* Space between image and text */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 12px;
+}
+
+.horizontal-tile-pic {
+    height: auto;
+    width: 108px;
+    margin: 0;
+}
+
+.horizontal-tile-title {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 20pt;
+    color: #A73A04;
+    padding-bottom: 6px;
+}
+
+.horizontal-tile-time {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 20pt;
+    color: #A73A04;
+}
+
+.horizontal-tile-descriptor {
+    margin-top: 8px;       /* Space between title/time and the descriptor */
+    font-size: 14px;       /* Adjust font size */
+    color: #878787;           /* Adjust color */
+    margin-top: 0;
+}
+
+.food-tile-title {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 14pt;
+    color: #878787;
+}
+
+.food-tile-descriptor {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 12pt;
+    color: #878787;
+}
+
+.title {
+    font-family: 'SF Pro';
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    display: none;
+}
+
+.title.selected {
+    font-family: 'SF Pro';
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    display: inline;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 80px;
+}
+
+.login-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-button {
+    border: 1px solid #D9D9D9;
+    border-radius: 14pt;
+    width: 353px;
+    padding: 12px;
+    gap: 12px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.login-icon {
+    height: 22px;
+    width: auto;
+}
+
+.login-text {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-text-alt {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 20px;
+    display: block;
+    margin-right: auto;
+    color: #878787;
+}
+
+.login-button-alt {
+    display: flex;
+    gap: 12px;
+}
+
+.line {
+    width: 100%;
+}
+
+.login-bottom-content {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.login-bottom-text {
+    font: 'SF Pro';
+    font-weight: 400px;
+    font-size: 10pt;
+}
+
+.login-bottom-text-bold {
+    font: 'SF Pro';
+    font-weight: 700;
+    font-size: 10pt;
+    color: #DA7659 !important;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.login-input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    color: #333;
+}
+
+.login-input::placeholder {
+    color: #888; /* Lighter color for placeholder */
+}
+
+.action-button {
+    border-radius: 14pt;
+    width: 353px;
+    padding: 12px;
+    gap: 12px;
+    background-color: #DA7659;
+    justify-content: space-around;
+    display: flex;
+    text-decoration: none !important;
+}
+
+.action-text {
+    font-family: 'SF Pro';
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    text-decoration: none !important;
+}
+
+.bottom-items {
+    display: flex;
+    position: fixed; /* Keep the nav-bar fixed */
+    bottom: 20px;    /* Distance from the bottom */
+    left: 50%;       /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment adjustment */
+    justify-content: center;
+    gap: 6px;
+    flex-direction: column;
+}
+
+.a {
+    text-decoration: none !important;
+}

@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // JavaScript for icon hover effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-bar-titles');
+
+            navButtons.forEach(button => {
+                const icon = button.querySelector('img'); // Get the icon inside the button
+                const originalSrc = icon.src; // Store the original icon source
+                const hoverSrc = icon.dataset.hover; // Get the hover source from data attribute
+
+                // Change to hover icon on mouseover
+                button.addEventListener('mouseover', () => {
+                    if (hoverSrc) { // Check if hoverSrc exists
+                        icon.src = hoverSrc; // Change to hover icon
+                    }
+                });
+
+                // Change back to original icon on mouseout
+                button.addEventListener('mouseout', () => {
+                    icon.src = originalSrc; // Change back to original icon
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function selectButton(selectedButton, chartContainerId, titleId, containerId) {
+            // Get all buttons
+            const buttons = document.querySelectorAll('.logged-info-button');
+
+            // Remove the 'selected' class from all buttons
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+                button.querySelector('.info-button-icon').classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the clicked button
+            selectedButton.classList.add('selected');
+            selectedButton.querySelector('.info-button-icon').classList.add('selected');
+
+            // Get all chart containers
+            const chartContainers = document.querySelectorAll('.chart-container');
+
+            // Remove the 'selected' class from all chart containers
+            chartContainers.forEach(container => {
+                container.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the corresponding chart container
+            const selectedChartContainer = document.getElementById(chartContainerId);
+            selectedChartContainer.classList.add('selected');
+
+            // Get all title containers
+            const titleList = document.querySelectorAll('.title');
+
+            // Remove the 'selected' class from all title containers
+            titleList.forEach(title => {
+                title.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the corresponding title container
+            const selectedTitle = document.getElementById(titleId);
+            selectedTitle.classList.add('selected');
+
+            // Get all main-container containers
+            const loggedContainer = document.querySelectorAll('.main-container');
+
+            // Remove the 'selected' class from all main-container containers
+            loggedContainer.forEach(cont => {
+                cont.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the corresponding main-container container
+            const selectedMainContainer = document.getElementById(containerId);
+            selectedMainContainer.classList.add('selected');
+        }
+    </script>
+
+    <script>
+        // Function to request specific user information by userId and field
+        function getUserInfo(userId, field) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readUserInfo.php?userId=" + encodeURIComponent(userId) + "&field=" + encodeURIComponent(field);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
+            
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
+                    } else {
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                    }
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
+
+    <script>
+        // Function to request workout information by user_id and date
+        function getWorkoutInfo(user_id, date) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readLoggedWorkouts.php?user_id=" + encodeURIComponent(user_id) + "&date=" + encodeURIComponent(date);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
+            
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
+                    } else {
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                    }
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
+
+    <script>
+        // Function to request recovery information by user_id and start
+        function getRecoveryInfo(user_id, start) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readLoggedRecovery.php?user_id=" + encodeURIComponent(user_id) + "&start=" + encodeURIComponent(start);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
+            
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
+                    } else {
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                    }
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
+
+    <script>
+        // Function to request recovery information by user_id and start
+        function getFoodInfo(user_id, date) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readLoggedFood.php?user_id=" + encodeURIComponent(user_id) + "&date=" + encodeURIComponent(date);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
+            
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
+                    } else {
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                    }
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
+
+    <script>
+        let selectedDay = new Date();
+    </script>
+
+    <script>
+        // Function to request recovery information by user_id and start
+        function getMealInfo(meal_id) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readMeals.php?meal_id=" + encodeURIComponent(meal_id);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
+            
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
+                    } else {
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                    }
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body style="padding-top: 20px;">
+    <div class="container">
+        <!-- Calendar Header with Month name and Calendar Icon -->
+        <div class="calendar-header d-flex justify-content-between align-items-center">
+            <h1 class="regular" style="font-size: 24px;" id="month"></h1>
+            <a href="home.html"><img src="icons/line.3.horizontal.svg" alt="Calendar Icon" class="calendar-icon"></a>
+        </div>
+    
+        <div class="calendar-container-alt">
+            <!-- Left Arrow -->
+            <!-- <img src="icons/left_arrow.png" alt="Left Arrow" class="calendar-arrow left-arrow" id="prevWeek"> -->
+        
+            <!-- Days of the week -->
+            <div class="row" id="weekRow">
+                <!-- Days of the current week will be dynamically inserted here -->
+            </div>
+        
+            <!-- Right Arrow -->
+            <!-- <img src="icons/right_arrow.png" alt="Right Arrow" class="calendar-arrow right-arrow" id="nextWeek"> -->
+        </div>
+
+        <script>
+            const userId = localStorage.getItem('userId');
+        </script>
+
+        <div class="logged-info-tile" style="position: relative; background-color: white;">
+            <div class="logged-info-buttons">
+                <span class="logged-info-button selected" onclick="selectButton(this, 'A_logged', 'A_title', 'workouts-container')">
+                    <img src="icons/flame.svg" alt="Activity Icon" class="info-button-icon selected"> Activity
+                </span>
+                <span class="logged-info-button" onclick="selectButton(this, 'F_logged', 'F_title', 'foods-container')">
+                    <img src="icons/fork.knife.svg" alt="Food Icon" class="info-button-icon"> Food
+                </span>
+                <span class="logged-info-button" onclick="selectButton(this, 'R_logged', 'R_title', 'recoveries-container')">
+                    <img src="icons/lotus.svg" alt="Recovery Icon" class="info-button-icon"> Recovery
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <div class="title selected" id="A_title">Logged Activity</div>
+            <div class="title" id="F_title">Logged Food</div>
+            <div class="title" id="R_title">Logged Recovery</div>
+
+            <div class="main-container selected" id="workouts-container"></div>
+            <!-- script to get workouts for the current day -->
+            <script>
+                let global_workouts = null;  // Global variable to store the workouts data
+            
+                document.addEventListener('DOMContentLoaded', () => {
+                    if (global_workouts) {
+                        // If global_workouts already has data, directly use it
+                        renderWorkouts(global_workouts);
+                        return;  // Exit if data is already cached
+                    }
+            
+                    const selectedDay = new Date();
+                    const formattedDate = selectedDay.getFullYear() + '-' 
+                        + String(selectedDay.getMonth() + 1).padStart(2, '0') + '-' 
+                        + String(selectedDay.getDate()).padStart(2, '0');
+            
+                    // Fetch the data and process it only if it's not cached
+                    getWorkoutInfo(userId, formattedDate).then(response => {
+                        // Split the response by newlines and filter out any empty lines
+                        const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
+            
+                        const workouts = [];
+                        let currentWorkout = {};
+                        let isNewWorkout = false;
+            
+                        // Process each entry line by line
+                        entries.forEach(entry => {
+                            const [key, value] = entry.split(':').map(str => str.trim());
+            
+                            if (key && value) {
+                                if (key === 'id') {
+                                    // If we find the start of a new workout (id), push the current workout if it exists
+                                    if (Object.keys(currentWorkout).length > 0) {
+                                        workouts.push(currentWorkout); // Save the previous workout
+                                    }
+                                    currentWorkout = {}; // Start a new workout object
+                                    currentWorkout['id'] = value; // Add the workout id
+                                } else if (key === 'Workout Title') {
+                                    // If we find the workout title, finalize the current workout
+                                    currentWorkout[key] = value; // Add the title
+                                    workouts.push(currentWorkout); // Push this workout
+                                    currentWorkout = {}; // Reset for the next workout
+                                } else {
+                                    // Otherwise, keep adding key-value pairs for the current workout
+                                    currentWorkout[key] = String(value);
+                                }
+                            }
+                        });
+            
+                        // Handle any potential last workout
+                        if (Object.keys(currentWorkout).length > 0) {
+                            workouts.push(currentWorkout);
+                        }
+            
+                        // Store the workouts data in the global variable to avoid refetching
+                        global_workouts = workouts;
+            
+                        // Check if workouts container exists
+                        const workoutsContainer = document.querySelector('#workouts-container');
+                        if (!workoutsContainer) {
+                            console.error('Workouts container not found!');
+                            return;
+                        }
+            
+                        // Render the workouts
+                        renderWorkouts(workouts);
+                    }).catch(error => {
+                        console.error("Error fetching user info:", error); // Log any errors that occur
+                    });
+                });
+            
+                function renderWorkouts(workouts) {
+                    const workoutsContainer = document.querySelector('#workouts-container');
+                    
+                    // Clear the container before adding new workouts (if needed)
+                    workoutsContainer.innerHTML = '';
+            
+                    workouts.forEach(workoutData => {
+                        const workoutTitle = workoutData['Workout Title'];
+                        const start = workoutData['start'];
+                        const duration = workoutData['duration'];
+                        const sets = workoutData['sets'];
+                        const reps = workoutData['reps'];
+                        const distance = workoutData['distance'];
+            
+                        // Handle HTML creation for each workout
+                        const newWorkoutDiv = document.createElement('div');
+                        newWorkoutDiv.classList.add('horizontal-tile', 'selected'); 
+                        newWorkoutDiv.id = 'A_logged';
+            
+                        newWorkoutDiv.innerHTML = `
+                            <div class="horizontal-tile-content" onclick="window.location.href='logged_info/neighborhood_run.html'" style="cursor: pointer;">
+                                <div class="horizontal-tile-title-content">
+                                    <span class="horizontal-tile-title">${workoutTitle || 'N/A'}</span>
+                                    <span class="horizontal-tile-time">${formatTime(start)}</span>
+                                </div>
+                                <p class="horizontal-tile-descriptor">
+                                    ${sets == 0 ? `Duration: ${duration || 'N/A'} minutes` : `Sets: ${sets || 'N/A'}, Reps: ${reps || 'N/A'}`}
+                                    ${sets == 0 && distance ? `, Distance: ${distance || 'N/A'} miles` : ''}
+                                </p>
+                            </div>
+                        `;
+            
+                        workoutsContainer.appendChild(newWorkoutDiv);
+                    });
+                }
+            
+                function formatTime(timeString) {
+                    // Format the time to HH:MM
+                    if (!timeString) return '';
+                    if (timeString.length == 2) timeString = timeString + ':00';
+                    if (timeString.length == 3) timeString = timeString + '0';
+                    return timeString;
+                }
+            </script>
+            
+
+            <div class="main-container" id="recoveries-container"></div>
+            <!-- script to get recoveries for the current day -->
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const selectedDay = new Date();
+                    const formattedDate = selectedDay.getFullYear() + '-' 
+                    + String(selectedDay.getMonth() + 1).padStart(2, '0') + '-' 
+                    + String(selectedDay.getDate()).padStart(2, '0') 
+                    + ' 23:59:59'; // bogus ending time
+
+                    let recoveryDataObject = {};
+
+                    // Call the getRecoveryInfo function to retrieve the data for a specific field
+                    getRecoveryInfo(userId, formattedDate).then(response => {
+                        // Split the response by newlines and filter out any empty lines
+                        const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
+
+                        const recoveries = [];
+                        let currentRecovery = {};
+                        let isNewRecovery = false;
+
+                        // Process each entry line by line
+                        entries.forEach(entry => {
+                            const [key, value] = entry.split(':').map(str => str.trim());
+
+                            if (key && value) {
+                                if (key === 'id') {
+                                    // If we find the start of a new recovery (id), push the current recovery if it exists
+                                    if (Object.keys(currentRecovery).length > 0) {
+                                        recoveries.push(currentRecovery); // Save the previous recovery
+                                    }
+                                    currentRecovery = {}; // Start a new recovery object
+                                    currentRecovery['id'] = value; // Add the recovery id
+                                } else if (key === 'Recovery Title') {
+                                    // If we find the recovery title, finalize the current recovery
+                                    currentRecovery[key] = value; // Add the title
+                                    recoveries.push(currentRecovery); // Push this recovery
+                                    currentRecovery = {}; // Reset for the next recovery
+                                } else {
+                                    // Otherwise, keep adding key-value pairs for the current recovery
+                                    currentRecovery[key] = String(value);
+                                }
+                            }
+                        });
+
+                        // Handle any potential last recovery
+                        if (Object.keys(currentRecovery).length > 0) {
+                            recoveries.push(currentRecovery);
+                        }
+
+                        // Check if recoveries container exists
+                        const recoveriesContainer = document.querySelector('#recoveries-container');
+                        if (!recoveriesContainer) {
+                            console.error('Recoveries container not found!');
+                            return;
+                        }
+
+                        // Render each recovery
+                        recoveries.forEach(recoveryData => {
+                            const recoveryTitle = recoveryData['Recovery Title'];
+                            duration = recoveryData['duration'];
+                            if (duration == "00") duration = "20";
+                            const start = recoveryData['start'].split(' ')[1];
+
+                            // Handle HTML creation for each recovery
+                            const newRecoveryDiv = document.createElement('div');
+                            newRecoveryDiv.classList.add('horizontal-tile', 'selected'); 
+                            newRecoveryDiv.id = 'R_logged';
+
+                            newRecoveryDiv.innerHTML = `
+                                <div class="horizontal-tile-content" onclick="window.location.href='logged_info/deep_sleep.html'" style="cursor: pointer;">
+                                    <div class="horizontal-tile-title-content">
+                                        <span class="horizontal-tile-title">${recoveryTitle}</span>
+                                        <span class="horizontal-tile-time">${formatTime2(start)}</span>
+                                    </div>
+                                    <p class="horizontal-tile-descriptor">
+                                        ${`Duration: ${duration}`}
+                                    </p>
+                                </div>
+                            `;
+
+                            recoveriesContainer.appendChild(newRecoveryDiv);
+                        });
+                    }).catch(error => {
+                        console.error("Error fetching recovery info:", error); // Log any errors that occur
+                    });
+                });
+
+                function formatTime2(timeString) {
+                    // Format the time to HH:MM
+                    if (!timeString) return '';
+                    if (timeString.length == 2) timeString = timeString + ':00';
+                    if (timeString.length == 3) timeString = timeString + '0';
+                    return timeString;
+                }
+            </script>
+
+
+            <div class="main-container" id="foods-container">
+                <!-- script to get meals for current day -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const selectedDay = new Date();
+                        const formattedDate = selectedDay.getFullYear() + '-' 
+                            + String(selectedDay.getMonth() + 1).padStart(2, '0') + '-' 
+                            + String(selectedDay.getDate()).padStart(2, '0') 
+                            + ' 23:59:59'; // bogus ending time
+                
+                        let foodDataObject = {};
+                
+                        // Call the getRecoveryInfo function to retrieve the data for a specific field
+                        getFoodInfo(userId, formattedDate).then(response => {
+                            // Split the response by newlines and filter out any empty lines
+                            const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
+                
+                            const foods = [];
+                            let currentFood = {};
+                            let isNewFood = false;
+                
+                            // Process each entry line by line
+                            entries.forEach(entry => {
+                                const [key, value] = entry.split(':').map(str => str.trim());
+                
+                                if (key && value) {
+                                    if (key === 'id') {
+                                        // If we find the start of a new recovery (id), push the current recovery if it exists
+                                        if (Object.keys(currentFood).length > 0) {
+                                            foods.push(currentFood); // Save the previous recovery
+                                        }
+                                        currentFood = {}; // Start a new recovery object
+                                        currentFood['id'] = value; // Add the recovery id
+                                    } else if (key === 'food_name') {
+                                        // If we find the recovery title, finalize the current recovery
+                                        currentFood[key] = value; // Add the title
+                                        foods.push(currentFood); // Push this recovery
+                                        currentFood = {}; // Reset for the next recovery
+                                    } else {
+                                        // Otherwise, keep adding key-value pairs for the current recovery
+                                        currentFood[key] = String(value);
+                                    }
+                                }
+                            });
+                
+                            // Handle any potential last recovery
+                            if (Object.keys(currentFood).length > 0) {
+                                foods.push(currentFood);
+                            }
+                
+                            // Check if foods container exists
+                            const foodsContainer = document.querySelector('#foods-container');
+                            if (!foodsContainer) {
+                                console.error('Foods container not found!');
+                                return;
+                            }
+                
+                            // Render each food
+                            foods.forEach(foodData => {
+                                const meal = foodData['meal'].charAt(0).toUpperCase() + foodData['meal'].slice(1);
+                                const time = foodData['date'].split(' ')[1];
+                
+                                // Call the getMealInfo function to retrieve the data for the food items associated with that meal
+                                if (foodData['meal_name'] !== 'NULL') {
+                                    getMealInfo(foodData['meal_name'])
+                                        .then(response => {
+                                            // Process the response to remove empty lines
+                                            const meal_items = response.split('- ').filter(entry => entry.trim() !== '');
+                                            const foodAndCalories = [];
+                                            meal_items.forEach(item => {
+                                                // Find the calories part by checking for the substring "(Calories: "
+                                                const caloriesIndex = item.indexOf("(Calories: ");
+                                                
+                                                if (caloriesIndex !== -1) {
+                                                    // If calories are found, split the food name and calories part
+                                                    const foodName = item.substring(0, caloriesIndex).trim();  // Extract food name
+                                                    const calories = item.substring(caloriesIndex + 11).replace(')', '').trim();  // Extract calories number and remove the closing parenthesis
+
+                                                    // Push the key-value pair to the array
+                                                    foodAndCalories.push({
+                                                        food: foodName,
+                                                        calories: calories
+                                                    });
+                                                } else {
+                                                    // If no calories part is found, consider the item as just food with 'N/A' for calories
+                                                    foodAndCalories.push({
+                                                        food: item.trim(),
+                                                        calories: 'N/A'
+                                                    });
+                                                }
+                                            });
+                
+                                            // Remove the last character if it's a space
+                                            const cleaned_meal_items = meal_items.map(item => {
+                                                if (item.charAt(item.length - 1) === ' ') {
+                                                    return item.slice(0, -1); // Remove the last character (space)
+                                                }
+                                                return item;  // If no space at the end, return the item as is
+                                            });
+                
+                                            // Dynamically create HTML for the meal items
+                                            let mealItemsHTML = '';
+                                            i = 0;
+                                            cleaned_meal_items.forEach(item => {
+                                                
+                                                let [foodName, calorieInfo] = [foodAndCalories[i].food, foodAndCalories[i].calories];  // Split into food name and calorie info
+                                                mealItemsHTML += `
+                                                    <div class="horizontal-tile-title-content">
+                                                        <span class="food-tile-title">${foodName}</span>
+                                                        <span class="food-tile-title">${calorieInfo} cal</span>
+                                                    </div>
+                                                `;
+                                                i++;
+                                            });
+                
+                                            // Handle HTML creation for each food item
+                                            const newFoodDiv = document.createElement('div');
+                                            newFoodDiv.classList.add('horizontal-tile', 'selected');
+                                            newFoodDiv.id = 'F_logged';
+                
+                                            newFoodDiv.innerHTML = `
+                                                <div class="horizontal-tile-content">
+                                                    <div class="horizontal-tile-title-content">
+                                                        <span class="horizontal-tile-title">${meal}</span>
+                                                        <span class="horizontal-tile-time">${formatTime3(time)}</span>
+                                                    </div>
+                                                    <!-- Insert the dynamically generated meal items here -->
+                                                    <div class="meal-items">
+                                                        ${mealItemsHTML}
+                                                    </div>
+                                                </div>
+                                            `;
+                
+                                            // Append the newFoodDiv to your container
+                                            foodsContainer.appendChild(newFoodDiv);
+                
+                                        })
+                                        .catch(error => {
+                                            // Handle any errors from getMealInfo
+                                            console.error('Error fetching meal info:', error);
+                                        });
+                                }
+                                else{
+                                    // Handle HTML creation for each food item
+                                    const newFoodDiv = document.createElement('div');
+                                            newFoodDiv.classList.add('horizontal-tile', 'selected');
+                                            newFoodDiv.id = 'F_logged';
+                
+                                            newFoodDiv.innerHTML = `
+                                                <div class="horizontal-tile-content" onclick="window.location.href='logged_info/breakfast.html'" style="cursor: pointer;">
+                                                    <div class="horizontal-tile-title-content">
+                                                        <span class="horizontal-tile-title">${meal}</span>
+                                                        <span class="horizontal-tile-time">${formatTime3(time)}</span>
+                                                    </div>
+                                                    <!-- Insert the dynamically generated meal items here -->
+                                                    <div class="meal-items">
+                                                        <div class="horizontal-tile-title-content">
+                                                            <span class="food-tile-title">${foodData['food_name']}</span>
+                                                            <span class="food-tile-title">${foodData['calories']} cal</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `;
+                
+                                            // Append the newFoodDiv to your container
+                                            foodsContainer.appendChild(newFoodDiv);
+                                }
+                            }); // This is the end of foods.forEach
+                
+                            function formatTime3(timeString) {
+                                // Format the time to HH:MM
+                                if (!timeString) return '';
+                                if (timeString.length == 2) timeString = timeString + ':00';
+                                if (timeString.length == 3) timeString = timeString + '0';
+                                return timeString;
+                            }
+                
+                        }).catch(error => {
+                            console.error("Error fetching recovery info:", error); // Log any errors that occur
+                        });
+                    });
+                </script>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        let currentDate = new Date(); // Store the current date
+        let selectedDate = currentDate; // Track the selected date
+        const weekRow = document.getElementById('weekRow');
+        const monthHeader = document.getElementById("month");
+
+        function updateCalendar() {
+    const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+    const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+    
+    // Clear the existing days
+    weekRow.innerHTML = '';
+
+    const leadingEmptyDays = firstDayOfMonth.getDay();
+    const daysInMonth = Array(lastDayOfMonth.getDate()).fill().map((_, i) => i + 1);
+    const calendarDays = [];
+
+    // Create the first week
+    const firstWeek = Array(7).fill(null);
+    for (let i = 0; i < leadingEmptyDays; i++) {
+        firstWeek[i] = null;
+    }
+
+    let dayCounter = 1;
+    for (let i = leadingEmptyDays; i < 7 && dayCounter <= lastDayOfMonth.getDate(); i++) {
+        firstWeek[i] = dayCounter++;
+    }
+    calendarDays.push(firstWeek);
+
+    // Create subsequent weeks
+    while (dayCounter <= lastDayOfMonth.getDate()) {
+        const week = Array(7).fill(null);
+        for (let i = 0; i < 7; i++) {
+            if (dayCounter <= lastDayOfMonth.getDate()) {
+                week[i] = dayCounter++;
+            }
+        }
+        calendarDays.push(week);
+    }
+
+    // Create the top row for day initials
+    const initialsRow = document.createElement('div');
+    initialsRow.classList.add('row', 'calendar-initials-row');
+    const dayNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
+    dayNames.forEach(initial => {
+        const dayCol = document.createElement('div');
+        dayCol.classList.add('col', 'calendar-day');
+        dayCol.innerHTML = `<strong>${initial}</strong>`;
+        initialsRow.appendChild(dayCol);
+    });
+    weekRow.appendChild(initialsRow);
+
+    // Append the days of the month rows
+    for (let week of calendarDays) {
+        const newRow = document.createElement('div');
+        newRow.classList.add('row');
+
+        for (let day of week) {
+            const dayCol = document.createElement('div');
+            dayCol.classList.add('col', 'calendar-day');
+
+            if (day === null) {
+                dayCol.classList.add('empty-day');
+                dayCol.innerHTML = '';
+            } else {
+                const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+                const isToday = date.toDateString() === new Date().toDateString();
+                const isSelected = selectedDate && date.toDateString() === selectedDate.toDateString();
+                
+                if (isToday) {
+                    dayCol.classList.add('current-day'); // Highlight current day
+                }
+                
+                if (isSelected) {
+                    dayCol.classList.add('selected-day'); // Highlight selected day
+                }
+
+                dayCol.innerHTML = `<day>${day}</day>`; // Display the day number
+
+                // Add click event listener for selecting a day
+                dayCol.addEventListener('click', () => {
+                    selectedDate = new Date(date); // Update selected date
+                    updateCalendar(); // Refresh the calendar to update highlights
+                });
+            }
+
+            newRow.appendChild(dayCol);
+        }
+
+        weekRow.appendChild(newRow);
+    }
+
+    // Update the month header
+    monthHeader.innerText = monthNames[currentDate.getMonth()];
+}
+
+
+        // Initial calendar setup
+        updateCalendar();
+    </script>
+
+    <nav>
+        <div class="btn-group nav-bar">
+            <a href="home.html" class="btn nav-bar-titles nav-bar-titles-selected">
+                <img src="icons/house_filled.svg" alt="Home icon" data-hover="icons/house_filled.svg">
+                Home
+            </a>
+            <a href="workout.html" class="btn nav-bar-titles">
+                <img src="icons/dumbell.svg" alt="Workouts icon" data-hover="icons/dumbell_filled.svg">
+                Workouts
+            </a>
+            <a href="quick_add.html" class="btn nav-bar-titles">
+                <img src="icons/plus.svg" alt="Quick add icon" data-hover="icons/plus_filled.svg">
+                Quick Add
+            </a>
+            <a href="community.html" class="btn nav-bar-titles">
+                <img src="icons/comment.svg" alt="Community icon" data-hover="icons/comment_filled.svg">
+                Community
+            </a>
+            <a href="profile.html" class="btn nav-bar-titles">
+                <img src="icons/profile.svg" alt="Profile icon" data-hover="icons/profile_filled.svg">
+                Profile
+            </a>
+        </div>
+    </nav>
+
+    <!-- External JavaScript files for chart generation -->
+    <script src="charts/activity_chart.js"></script>
+    <script src="charts/food_chart.js"></script>
+    <script src="charts/recovery_chart.js"></script>
+</body>
+</html>

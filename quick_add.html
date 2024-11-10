@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log Food</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Import SF Pro Font */
+    @font-face {
+      font-family: 'SF Pro';
+      src: url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'SF Pro';
+      src: url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* Apply SF Pro globally */
+    body {
+      font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /* iPhone Status Bar Simulation */
+    .status-bar {
+      background-color: #f7f7f7;
+      height: 20px;
+      padding: 5px 23px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Page Layout */
+    .container {
+      padding: 30px 23px 0 23px;
+    }
+
+    .back-button {
+      font-size: 18px;
+      color: black;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    /* Title Styling */
+    .title {
+      font-size: 20px;
+      font-weight: normal;
+      text-align: left;
+      margin-bottom: 114px;
+    }
+
+    .username {
+      font-weight: bold;
+      display: block;
+      margin-top: 5px;
+    }
+
+    /* Button Styling */
+    .log-button {
+      background-color: #DA7659;
+      color: white;
+      border: none;
+      border-radius: 28px;
+      width: calc(100% - 46px);
+      height: 84px;
+      font-size: 18px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      padding-left: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .log-button img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .a {
+      text-decoration: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Content -->
+  <div class="container">
+    <a onclick="window.location.href='home.html'" style="cursor: pointer;" class="back-button">&larr; Back</a>
+
+    <p class="title">
+      What would you like to log today,<br>
+      <span class="username">Professor Lomelino?</span>
+    </p>
+
+    <!-- Buttons -->
+     <a style="text-decoration: none !important;" href="log_activity/index.html">
+      <button class="log-button">
+        <img src="icons/activity.png" alt="Activity Icon">
+        Activity
+      </button>
+     </a>
+
+    <a style="text-decoration: none !important;" href="log_food/logfood_before.html">
+      <button class="log-button">
+        <img src="icons/food.png" alt="Food Icon">
+        Food
+      </button>
+    </a>
+
+    <button class="log-button">
+      <img src="icons/recovery.png" alt="Recovery Icon">
+      Recovery
+    </button>
+  </div>
+
+</body>
+</html>

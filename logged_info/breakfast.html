@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"
+        integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        #main {
+            width: 100%;
+            height: 320px;
+        }
+
+        #mains {
+            width: 100%;
+            height: 320px;
+        }
+    </style>
+    <title>breakfast</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'SF PRO';
+        src: url('./font/SF-Pro-Text-Bold.otf');
+    }
+
+    body {
+        font-size: 20px;
+        font-family: 'SF PRO';
+    }
+
+    .bar {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-d {
+        display: flex;
+        align-items: center;
+    }
+
+    .card {
+        width: 350px;
+        height: 170px;
+        flex-shrink: 0;
+    }
+</style>
+
+<body>
+    <div class="main" style="padding:0 1rem;display: flex;flex-direction: column;justify-content: center;">
+        <div class="bar">
+            <img src="../icons/left_arrow.png" style="width: .45rem; height: .7rem;margin-right: .25rem; cursor: pointer;" onclick="history.back()">
+            <div style="color: #323232; font-weight: 400;font-size: 1rem; word-wrap: break-word">Breakfast</div>
+        </div>
+        <div class="flex-d" style="margin: .6rem 0" id="ech">
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 20%;">
+                <div style="width: 5rem;height: 5rem;" id="ech1"></div>
+                <span style="transform: scale(0.75);">Calories</span>
+            </div>
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 20%;">
+                <div style="width: 5rem;height: 5rem;" id="ech2"></div>
+                <span style="transform: scale(0.75);">Carbohydrates</span>
+            </div>
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 20%;">
+                <div style="width: 5rem;height: 5rem;" id="ech3"></div>
+                <span style="transform: scale(0.75);">Fats</span>
+            </div>
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 20%;">
+                <div style="width: 5em;height: 5rem;" id="ech4"></div>
+                <span style="transform: scale(0.75);">Cholesterol</span>
+            </div>
+            <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 20%;">
+                <div style="width: 5rem;height: 5rem;" id="ech5"></div>
+                <span style="transform: scale(0.75);">Protein</span>
+            </div>
+        </div>
+        <div
+            style="width: auto; height: 100%; background: #F8F8F8; border-radius: .4rem; padding: .5rem; margin: .3rem;display: flex;flex-direction: column;">
+            <div class="flex-d" style="justify-content: space-between;font-size: 1rem;">
+                <span>Scrambled Eggs</span>
+                <span>148 cal</span>
+            </div>
+            <span style="font-size: .7rem;">2 large brown eggs</span>
+        </div>
+        <div
+            style="width: auto; height: 100%; background: #F8F8F8; border-radius: .4rem; padding: .5rem; margin: .3rem;display: flex;flex-direction: column;">
+            <div class="flex-d" style="justify-content: space-between;font-size: 1rem;">
+                <span>Bacon</span>
+                <span>148 cal</span>
+            </div>
+            <span style="font-size: .7rem;">2 strips, Publix Brown Sugar Smoked Bacon</span>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        var ech1 = echarts.init(document.getElementById('ech1'));
+        var ech2 = echarts.init(document.getElementById('ech2'));
+        var ech3 = echarts.init(document.getElementById('ech3'));
+        var ech4 = echarts.init(document.getElementById('ech4'));
+        var ech5 = echarts.init(document.getElementById('ech5'));
+        option = {
+
+            series: [
+                {
+                    name: '1',
+                    type: 'gauge',
+                    center: ['50%', '55%'],
+                    radius: '100%',
+                    min: 0,
+                    max: 400,
+                    splitNumber: 10,
+                    axisLine: {
+                        roundCap: true,
+                        lineStyle: {
+                            color: [
+                                [80 / 100, '#A73A04'],
+                                [1, '#D9D9D9'],
+
+                            ],
+                            width: 8,
+                            shadowColor: '#fff',
+                            shadowBlur: 1,
+
+                        }
+                    },
+                    pointer: {
+                        show: false
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            fontWeight: 'bolder',
+                            color: 'transparent',
+                            shadowColor: '#fff',
+                            shadowBlur: 10
+                        }
+                    },
+                    axisTick: {
+                        length: 11,
+                        lineStyle: {
+                            color: 'transparent',
+                            shadowColor: '#fff',
+                            shadowBlur: 10
+                        }
+                    },
+                    splitLine: {
+                        length: 20,
+                        lineStyle: {
+                            width: 3,
+                            color: 'transparent',
+                            shadowColor: '#fff',
+                            shadowBlur: 10
+                        }
+                    },
+                    title: {
+                        textStyle: {
+                            color: '#000',
+                            shadowColor: '#fff',
+                            shadowBlur: 10
+                        }
+                    },
+                    detail: { //show : true ,
+                        borderColor: '#fff',
+                        shadowColor: '#fff',
+
+                        textStyle: {
+                            fontSize: '12px',
+                            color: '#000',
+                        },
+                        formatter: '{value}%',
+                        offsetCenter: ["0", '5%']
+                    },
+                    data: [
+                        { value: 80, name: "" }
+                    ]
+                }
+
+            ]
+        };
+        ech1.setOption(option);
+        ech1.setOption({
+            series: [
+                {
+                    axisLine: {
+                        lineStyle: {
+                            color: [
+                                [60 / 100, '#A73A04'],
+                                [1, '#D9D9D9'],
+
+                            ]
+
+                        }
+                    },
+                    detail: {
+                        formatter: '{value}cal',
+                    },
+                    data: [
+                        { value: 60, name: "" }
+                    ]
+                }]
+        })
+        ech2.setOption(option);
+        ech2.setOption({
+            series: [
+                {
+                    axisLine: {
+                        lineStyle: {
+                            color: [
+                                [30 / 100, '#A73A04'],
+                                [1, '#D9D9D9'],
+
+                            ]
+
+                        }
+                    },
+                    detail: {
+                        formatter: '{value}g',
+                    },
+                    data: [
+                        { value: 30, name: "" }
+                    ]
+                }]
+        })
+        ech3.setOption(option);
+        ech3.setOption({
+            series: [
+                {
+                    axisLine: {
+                        lineStyle: {
+                            color: [
+                                [38 / 100, '#A73A04'],
+                                [1, '#D9D9D9'],
+
+                            ]
+
+                        }
+                    },
+                    detail: {
+                        formatter: '{value}g',
+                    },
+                    data: [
+                        { value: 38, name: "" }
+                    ]
+                }]
+        })
+        ech4.setOption(option);
+        ech4.setOption({
+            series: [
+                {
+                    axisLine: {
+                        lineStyle: {
+                            color: [
+                                [50 / 100, '#A73A04'],
+                                [1, '#D9D9D9'],
+
+                            ]
+
+                        }
+                    },
+                    detail: {
+                        formatter: '{value}mg',
+                    },
+                    data: [
+                        { value: 145, name: "" }
+                    ]
+                }]
+        })
+        ech5.setOption(option);
+        ech5.setOption({
+            series: [
+                {
+                    axisLine: {
+                        lineStyle: {
+                            color: [
+                                [30 / 100, '#A73A04'],
+                                [1, '#D9D9D9'],
+
+                            ]
+
+                        }
+                    },
+                    detail: {
+                        formatter: '{value}g',
+                    },
+                    data: [
+                        { value: 26, name: "" }
+                    ]
+                }]
+        })
+    </script>
+</body>
+<script>
+</script>
+
+</html>

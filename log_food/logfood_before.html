@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Meal Selection</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+   /* Import SF Pro Font */
+   @font-face {
+     font-family: 'SF Pro';
+     src: url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
+     font-weight: 400;
+     font-style: normal;
+   }
+   @font-face {
+     font-family: 'SF Pro';
+     src: url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
+     font-weight: 700;
+     font-style: normal;
+   }
+
+   /* Apply SF Pro globally */
+   body {
+     font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
+
+   /* iPhone Status Bar Simulation */
+   .status-bar {
+     background-color: #f7f7f7;
+     height: 20px;
+     padding: 5px 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 14px;
+     color: #333;
+   }
+
+   /* Page Layout */
+   .container {
+     padding-top: 30px;
+   }
+
+   .back-button {
+     font-size: 18px;
+     color: black;
+     text-decoration: none;
+   }
+
+   .search-bar-container {
+     position: relative;
+     width: 90%;
+     margin: 16px auto;
+   }
+
+   .search-bar {
+     width: 100%;
+     border-radius: 14px;
+     border: 1px solid #D9D9D9;
+     padding: 8px 40px 8px 15px;
+     box-sizing: border-box;
+   }
+
+   .search-icon {
+     position: absolute;
+     right: 15px;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 20px;
+     height: 20px;
+   }
+
+   .section-title {
+     font-size: 18px;
+     font-weight: bold;
+     margin: 20px 5% 10px;
+   }
+
+   .meal-item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 15px;
+     border-radius: 10px;
+     background-color: #f2f2f2;
+     margin: 8px 5%;
+     font-size: 16px;
+   }
+
+   /* Fixed Bottom Button */
+   .btn-create {
+     background-color: #f07d6a;
+     color: white;
+     border: none;
+     width: 90%;
+     padding: 10px;
+     border-radius: 8px;
+     font-size: 16px;
+     position: fixed;
+     left: 5%;
+     bottom: 34px;
+     max-width: 90%;
+   }
+ </style>
+</head>
+<body>
+
+
+ <!-- Meal Selection Page -->
+ <div class="container">
+   <!-- Back Button -->
+   <a href="../quick_add.html" class="back-button">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+       <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 1 1 .708.708L2.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+     </svg>
+     Meal
+   </a>
+
+   <!-- Meal Dropdown and Search Bar -->
+   <div class="d-flex align-items-center justify-content-between" style="margin: 16px 5% 0;">
+     <select class="form-select" style="width: auto; border: none; font-size: 18px;">
+       <option>Breakfast</option>
+       <option>Lunch</option>
+       <option>Dinner</option>
+     </select>
+   </div>
+
+   <!-- Search Bar with Icon -->
+   <div class="search-bar-container">
+    <input type="text" class="form-control search-bar" id="searchInput" placeholder="Search meals">
+    <img src="icon/search.jpg" alt="Search" class="search-icon" onclick="searchMeal()">
+</div>
+
+<script>
+  function searchMeal() {
+      const searchTerm = document.getElementById('searchInput').value;
+  
+      // AJAX 请求
+      fetch('searchMeal.php', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `searchTerm=${encodeURIComponent(searchTerm)}`,
+      })
+      .then(response => response.json())
+      .then(data => {
+          const resultsContainer = document.querySelector('.search-results');
+          resultsContainer.innerHTML = ''; // 清空之前的结果
+  
+          if (data.message) {
+              // 如果返回消息，显示提示文字
+              const message = document.createElement('p');
+              message.textContent = data.message;
+              resultsContainer.appendChild(message);
+          } else if (data.length > 0) {
+              // 如果有数据，逐条显示
+              data.forEach(item => {
+                  const mealItem = document.createElement('div');
+                  mealItem.className = 'meal-item';
+                  mealItem.innerHTML = `
+                      <span>${item.meal_name || 'Unknown Meal'}</span>
+                      <span>${item.calories || 0} cal</span>
+                  `;
+                  resultsContainer.appendChild(mealItem);
+              });
+          } else {
+              // 如果没有数据，显示默认提示
+              const noDataMessage = document.createElement('p');
+              noDataMessage.textContent = 'No meals logged with this name.';
+              resultsContainer.appendChild(noDataMessage);
+          }
+      })
+      .catch(error => console.error('Error:', error));
+  }
+  </script>
+
+
+  
+
+
+   <!-- Meal Sections -->
+   <div class="section-title">Recents</div>
+   <div class="meal-item">
+     <span>Baked Chicken</span>
+     <span>330 cal</span>
+   </div>
+
+   <div class="section-title">Frequent</div>
+   <div class="meal-item">
+     <span>Scrambled Eggs</span>
+     <span>189 cal</span>
+   </div>
+   <div class="meal-item">
+     <span>Bacon</span>
+     <span>60 cal</span>
+   </div>
+
+   <div class="section-title">Meals</div>
+   <div class="meal-item">
+     <span>Cesar Salad</span>
+     <span>537 cal</span>
+   </div>
+
+   <!-- Fixed "Create New Meal" Button -->
+   <button type="button" class="btn-create" onclick="location.href='input.html'">Create new meal</button>
+ </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+  
+</body>
+</html>

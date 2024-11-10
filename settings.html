@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Settings</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+   /* Import SF Pro Font */
+   @font-face {
+     font-family: 'SF Pro';
+     src: url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
+     font-weight: 400;
+     font-style: normal;
+   }
+   @font-face {
+     font-family: 'SF Pro';
+     src: url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
+     font-weight: 700;
+     font-style: normal;
+   }
+
+   /* Apply SF Pro globally */
+   body {
+     font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
+
+   /* Page Layout */
+   .container {
+     padding-top: 30px;
+     padding-left: 20px;
+     padding-right: 20px;
+   }
+
+   .back-button {
+     font-size: 18px;
+     color: black;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+   }
+
+   .settings-item {
+     display: flex;
+     align-items: center;
+     background-color: #f7f7f7;
+     border-radius: 8px;
+     padding: 10px 15px;
+     margin-bottom: 10px;
+     font-size: 16px;
+   }
+
+   .settings-item img {
+     width: 20px;
+     height: 20px;
+     margin-right: 10px;
+   }
+
+   .btn-signout {
+     background-color: #DA7659;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     width: 100%;
+     padding: 10px;
+     font-size: 18px;
+     position: fixed;
+     bottom: 34px;
+     left: 0;
+     right: 0;
+     margin: 0 auto;
+     max-width: 90%;
+   }
+ </style>
+</head>
+<body>
+ <!-- Back Button and Settings Content -->
+ <div class="container">
+   <a href="javascript:history.back()" class="back-button" style="cursor: pointer;">&larr; Settings</a>
+
+   <div class="settings-item">
+     <img src="chat-icon/personal.png" alt="Personal Icon">
+     Personal
+   </div>
+
+   <div class="settings-item">
+     <img src="chat-icon/reset_goals.png" alt="Reset Goals Icon">
+     Reset Goals
+   </div>
+
+   <div class="settings-item">
+     <img src="chat-icon/connected_devices.png" alt="Connected Devices Icon">
+     Connected Devices
+   </div>
+
+   <div class="settings-item">
+     <img src="chat-icon/notifications.png" alt="Notifications Icon">
+     Notifications
+   </div>
+
+   <div class="settings-item">
+     <img src="chat-icon/help.png" alt="Help Icon">
+     Help
+   </div>
+ </div>
+
+ <!-- Sign Out Button -->
+ <button class="btn-signout" onclick="window.location.href='login.html'" style="cursor: pointer;">Sign Out</button>
+
+</body>
+</html>
