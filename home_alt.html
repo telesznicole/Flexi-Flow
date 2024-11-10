@@ -407,7 +407,7 @@
                         newWorkoutDiv.id = 'A_logged';
             
                         newWorkoutDiv.innerHTML = `
-                            <div class="horizontal-tile-content">
+                            <div class="horizontal-tile-content" onclick="window.location.href='logged_info/neighborhood_run.html'" style="cursor: pointer;">
                                 <div class="horizontal-tile-title-content">
                                     <span class="horizontal-tile-title">${workoutTitle || 'N/A'}</span>
                                     <span class="horizontal-tile-time">${formatTime(start)}</span>
@@ -503,7 +503,7 @@
                             newRecoveryDiv.id = 'R_logged';
 
                             newRecoveryDiv.innerHTML = `
-                                <div class="horizontal-tile-content">
+                                <div class="horizontal-tile-content" onclick="window.location.href='logged_info/deep_sleep.html'" style="cursor: pointer;">
                                     <div class="horizontal-tile-title-content">
                                         <span class="horizontal-tile-title">${recoveryTitle}</span>
                                         <span class="horizontal-tile-time">${formatTime2(start)}</span>
@@ -680,7 +680,7 @@
                                             newFoodDiv.id = 'F_logged';
                 
                                             newFoodDiv.innerHTML = `
-                                                <div class="horizontal-tile-content">
+                                                <div class="horizontal-tile-content" onclick="window.location.href='logged_info/breakfast.html'" style="cursor: pointer;">
                                                     <div class="horizontal-tile-title-content">
                                                         <span class="horizontal-tile-title">${meal}</span>
                                                         <span class="horizontal-tile-time">${formatTime3(time)}</span>
@@ -836,7 +836,7 @@
                 <img src="icons/dumbell.svg" alt="Workouts icon" data-hover="icons/dumbell_filled.svg">
                 Workouts
             </a>
-            <a href="#" class="btn nav-bar-titles">
+            <a href="quick_add.html" class="btn nav-bar-titles">
                 <img src="icons/plus.svg" alt="Quick add icon" data-hover="icons/plus_filled.svg">
                 Quick Add
             </a>

@@ -9,6 +9,31 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>workout</title>
 
+    <script>
+        // JavaScript for icon hover effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-bar-titles');
+
+            navButtons.forEach(button => {
+                const icon = button.querySelector('img'); // Get the icon inside the button
+                const originalSrc = icon.src; // Store the original icon source
+                const hoverSrc = icon.dataset.hover; // Get the hover source from data attribute
+
+                // Change to hover icon on mouseover
+                button.addEventListener('mouseover', () => {
+                    if (hoverSrc) { // Check if hoverSrc exists
+                        icon.src = hoverSrc; // Change to hover icon
+                    }
+                });
+
+                // Change back to original icon on mouseout
+                button.addEventListener('mouseout', () => {
+                    icon.src = originalSrc; // Change back to original icon
+                });
+            });
+        });
+    </script>
+
     <head>
         <!-- Other meta tags and title -->
         <link rel="stylesheet" href="./css/index.css">
@@ -29,7 +54,7 @@
             </text>
         </div>
         <div class="featured-box" style="width: 98%;overflow-x: auto;white-space: nowrap;scrollbar-width: none;margin-bottom: 10px;">
-            <div class="featured-item" style="width: 200px;">
+            <div class="featured-item" onclick="window.location.href='workout/index.html'" style="cursor: pointer;" style="width: 200px;">
                 <image class="featured-img" src="./images/core.png"/>
                 <div class="featured-reason">
                     <text class="reason-text">
@@ -271,7 +296,7 @@
                 <img src="icons/dumbell_filled.svg" alt="Workouts icon" data-hover="icons/dumbell_filled.svg">
                 Workouts
             </a>
-            <a href="#" class="btn nav-bar-titles" style="text-decoration: none !important;">
+            <a href="quick_add.html" class="btn nav-bar-titles">
                 <img src="icons/plus.svg" alt="Quick add icon" data-hover="icons/plus_filled.svg">
                 Quick Add
             </a>
