@@ -525,7 +525,8 @@
 
 .logged-info-details {
     position: absolute;
-    top: 52%;
+    width: 100px;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 10px;

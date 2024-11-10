@@ -76,10 +76,11 @@
                         // Parse the response as a boolean value
                         var result = xhr.responseText.trim().toLowerCase();
 
-                        if (result === "true") {
-                            window.location.href = "home.html";
-                        } else {
+                        if (result === "false") {
                             alertText1.style.display = 'block';
+                        } else {
+                            localStorage.setItem('userId', result);
+                            window.location.href = "home.html";
                         }
                     }
                 };

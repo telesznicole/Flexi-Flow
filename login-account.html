@@ -59,7 +59,7 @@
             var xhr = new XMLHttpRequest();
             
             // Configure the request
-            xhr.open("GET", "readUser.php?FFusername=" + encodeURIComponent(usernameValue) + "&FFpassword=" + encodeURIComponent(passwordValue), true);
+            xhr.open("GET", "loginUser.php?FFusername=" + encodeURIComponent(usernameValue) + "&FFpassword=" + encodeURIComponent(passwordValue), true);
 
             // Define what happens when the response is received
             xhr.onload = function() {
@@ -67,11 +67,12 @@
                     // Parse the response as a boolean value
                     var result = xhr.responseText.trim().toLowerCase();
 
-                    if (result === "true") {
-                        alertText.style.display = 'none';
-                        window.location.href = "home.html";
-                    } else {
+                    if (result === "false") {
                         alertText.style.display = 'block';
+                    } else {
+                        alertText.style.display = 'none';
+                        localStorage.setItem('userId', result);
+                        window.location.href = "home.html";
                     }
                 }
             };

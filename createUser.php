@@ -51,7 +51,7 @@ if (isset($_GET['FFusername']) && isset($_GET['FFpassword'])) {
             
             $insertStmt->execute(); // Execute the insert statement
             
-            echo "true"; // Successfully added new user
+            echo $user['id']; // Successfully added new user
         }
     } catch (PDOException $e) {
         die("ERROR: Could not connect. " . $e->getMessage());

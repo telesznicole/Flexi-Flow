@@ -84,6 +84,43 @@
         }
     </script>
 
+    <script>
+        // Function to request specific user information by userId and field
+        function getUserInfo(userId, field) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readUserInfo.php?userId=" + encodeURIComponent(userId) + "&field=" + encodeURIComponent(field);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
+            
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
+                    } else {
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                    }
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
+    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -110,7 +147,18 @@
         
         <div>
             <p class="regular" style="font-size: 16px; margin-bottom: 6px;">Good Morning</p>
-            <p class="semibold" style="font-size: 20px; margin-top: 0;">Professor Lomelino</p>
+            <p class="semibold" style="font-size: 20px; margin-top: 0;" id="userIdDisplay">Professor Lomelino</p>
+            <script>
+                const userId = localStorage.getItem('userId');
+                if (userId) {
+                    getUserInfo(userId, 'FFname').then((response) => {
+                        document.getElementById('userIdDisplay').innerText = response;
+                    }).catch((error) => {
+                        console.error(error);
+                        document.getElementById('userIdDisplay').innerText = "Error fetching user info.";
+                    });
+                }
+            </script>
         </div>
 
         <div class="logged-info-tile" style="position: relative;">
@@ -204,8 +252,6 @@
             </div>
         </div>
     </div>
-
-    
 
     <script>
         const monthNames = [
@@ -302,7 +348,64 @@
 
     <!-- External JavaScript files for chart generation -->
     <script src="charts/activity_chart.js"></script>
+    <!-- Inline script to pass dynamic values to the chart function -->
+    <script>
+        let A_goal;
+        let A_current;
+    
+        // Using Promise.all to wait for both asynchronous calls to complete
+        Promise.all([
+            getUserInfo(userId, 'activity_goal').then(response => parseFloat(response)),
+            getUserInfo(userId, 'activity_level').then(response => parseFloat(response))
+        ]).then(([goal, current]) => {
+            A_goal = goal; // Assign parsed value of 'activity_goal'
+            A_current = current; // Assign parsed value of 'activity_level'
+    
+            // Now that the values are assigned, call the function
+            updateActivityChart(A_goal, A_current);
+        }).catch(error => {
+            console.error("Error fetching data:", error); // Handle any errors that occur
+        });
+    </script>
+    
     <script src="charts/food_chart.js"></script>
+    <script>
+        let F_goal;
+        let F_current;
+    
+        // Using Promise.all to wait for both asynchronous calls to complete
+        Promise.all([
+            getUserInfo(userId, 'food_goal').then(response => parseFloat(response)),
+            getUserInfo(userId, 'food_level').then(response => parseFloat(response))
+        ]).then(([goal, current]) => {
+            F_goal = goal; // Assign parsed value of 'activity_goal'
+            F_current = current; // Assign parsed value of 'activity_level'
+    
+            // Now that the values are assigned, call the function
+            updateFoodChart(F_goal, F_current);
+        }).catch(error => {
+            console.error("Error fetching data:", error); // Handle any errors that occur
+        });
+    </script>
     <script src="charts/recovery_chart.js"></script>
+    <script>
+        let R_goal;
+        let R_current;
+    
+        // Using Promise.all to wait for both asynchronous calls to complete
+        Promise.all([
+            getUserInfo(userId, 'recovery_goal').then(response => parseFloat(response)),
+            getUserInfo(userId, 'recovery_level').then(response => parseFloat(response))
+        ]).then(([goal, current]) => {
+            R_goal = goal; // Assign parsed value of 'activity_goal'
+            R_current = current; // Assign parsed value of 'activity_level'
+    
+            // Now that the values are assigned, call the function
+            updateRecoveryChart(R_goal, R_current);
+        }).catch(error => {
+            console.error("Error fetching data:", error); // Handle any errors that occur
+        });
+    </script>
+    
 </body>
 </html>

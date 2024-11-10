@@ -24,7 +24,7 @@ if (isset($_GET['FFusername']) && isset($_GET['FFpassword'])) {
         if ($user) {
             // Check if the FFpassword matches the stored one
             if ($FFpassword === $user['FFpassword']) {
-                echo "true"; // Username and password match
+                echo $user['id']; // Username and password match
             } else {
                 echo "false"; // Password doesn't match
             }
