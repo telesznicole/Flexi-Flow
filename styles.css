@@ -542,6 +542,13 @@
     color: #878787;
 }
 
+.meal-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: inherit;
+}
+
 .horizontal-tile {
     background-color: #F8F8F8;
     display: flex;

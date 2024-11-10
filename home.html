@@ -80,7 +80,6 @@
 
             // Add the 'selected' class to the corresponding main-container container
             const selectedMainContainer = document.getElementById(containerId);
-            console.log('chartContainerId: ' + chartContainerId + ', titleId: ' + titleId + ', containerId: ' + containerId);
             selectedMainContainer.classList.add('selected');
         }
     </script>
@@ -228,6 +227,42 @@
             });
         }
     </script>
+
+<script>
+    // Function to request recovery information by user_id and start
+    function getMealInfo(meal_id) {
+        return new Promise(function(resolve, reject) {
+            // Create a new XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+            
+            // Build the URL with GET parameters (userId and field)
+            var url = "readMeals.php?meal_id=" + encodeURIComponent(meal_id);
+            
+            // Configure the request
+            xhr.open("GET", url, true);
+        
+            // Define what happens when the response is received
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    // Parse the response (which will be the user field value)
+                    var result = xhr.responseText.trim();
+                    
+                    // Check if the result is a valid response or error message
+                    if (result !== "User not found" && result !== "Field not found") {
+                        resolve(result); // Resolve the promise with the result
+                    } else {
+                        reject(result); // Reject the promise with the error message
+                    }
+                } else {
+                    reject("Error: " + xhr.status);  // Reject the promise if there's a request error
+                }
+            };
+        
+            // Send the request
+            xhr.send();
+        });
+    }
+</script>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -406,10 +441,6 @@
             
                         // Render the workouts
                         renderWorkouts(workouts);
-            
-                        // Optionally, log the global_workouts after data is cached
-                        console.log("Fetched workouts data:");
-                        console.log(global_workouts);
                     }).catch(error => {
                         console.error("Error fetching user info:", error); // Log any errors that occur
                     });
@@ -584,97 +615,192 @@
                 <!-- script to get meals for current day -->
                 <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                    const today = new Date();
-                    const formattedDate = today.getFullYear() + '-' 
-                    + String(today.getMonth() + 1).padStart(2, '0') + '-' 
-                    + String(today.getDate()).padStart(2, '0') 
-                    + ' 23:59:59'; // bogus ending time
-
-                    let foodDataObject = {};
-
-                    // Call the getRecoveryInfo function to retrieve the data for a specific field
-                    getFoodInfo(userId, formattedDate).then(response => {
-                        // console.log("Food Info for " + formattedDate + ":", response); // Log the response to the console
-
-                        // Split the response by newlines and filter out any empty lines
-                        const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
-
-                        const foods = [];
-                        let currentFood = {};
-                        let isNewFood = false;
-
-                        // Process each entry line by line
-                        entries.forEach(entry => {
-                            const [key, value] = entry.split(':').map(str => str.trim());
-
-                            if (key && value) {
-                                if (key === 'id') {
-                                    // If we find the start of a new recovery (id), push the current recovery if it exists
-                                    if (Object.keys(currentFood).length > 0) {
-                                        foods.push(currentFood); // Save the previous recovery
+                        const today = new Date();
+                        const formattedDate = today.getFullYear() + '-' 
+                            + String(today.getMonth() + 1).padStart(2, '0') + '-' 
+                            + String(today.getDate()).padStart(2, '0') 
+                            + ' 23:59:59'; // bogus ending time
+                
+                        let foodDataObject = {};
+                
+                        // Call the getRecoveryInfo function to retrieve the data for a specific field
+                        getFoodInfo(userId, formattedDate).then(response => {
+                            console.log("Food Info for " + formattedDate + ":", response); // Log the response to the console
+                
+                            // Split the response by newlines and filter out any empty lines
+                            const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
+                
+                            const foods = [];
+                            let currentFood = {};
+                            let isNewFood = false;
+                
+                            // Process each entry line by line
+                            entries.forEach(entry => {
+                                const [key, value] = entry.split(':').map(str => str.trim());
+                
+                                if (key && value) {
+                                    if (key === 'id') {
+                                        // If we find the start of a new recovery (id), push the current recovery if it exists
+                                        if (Object.keys(currentFood).length > 0) {
+                                            foods.push(currentFood); // Save the previous recovery
+                                        }
+                                        currentFood = {}; // Start a new recovery object
+                                        currentFood['id'] = value; // Add the recovery id
+                                    } else if (key === 'food_name') {
+                                        // If we find the recovery title, finalize the current recovery
+                                        currentFood[key] = value; // Add the title
+                                        foods.push(currentFood); // Push this recovery
+                                        currentFood = {}; // Reset for the next recovery
+                                    } else {
+                                        // Otherwise, keep adding key-value pairs for the current recovery
+                                        currentFood[key] = String(value);
                                     }
-                                    currentFood = {}; // Start a new recovery object
-                                    currentFood['id'] = value; // Add the recovery id
-                                } else if (key === 'food_name') {
-                                    // If we find the recovery title, finalize the current recovery
-                                    currentFood[key] = value; // Add the title
-                                    foods.push(currentFood); // Push this recovery
-                                    currentFood = {}; // Reset for the next recovery
-                                } else {
-                                    // Otherwise, keep adding key-value pairs for the current recovery
-                                    currentFood[key] = String(value);
                                 }
+                            });
+                
+                            // Handle any potential last recovery
+                            if (Object.keys(currentFood).length > 0) {
+                                foods.push(currentFood);
                             }
+                
+                            // Check if foods container exists
+                            const foodsContainer = document.querySelector('#foods-container');
+                            if (!foodsContainer) {
+                                console.error('Foods container not found!');
+                                return;
+                            }
+                
+                            // Render each food
+                            foods.forEach(foodData => {
+                                const meal = foodData['meal'].charAt(0).toUpperCase() + foodData['meal'].slice(1);
+                                const time = foodData['date'].split(' ')[1];
+                
+                                // Call the getMealInfo function to retrieve the data for the food items associated with that meal
+                                if (foodData['meal_name'] !== 'NULL') {
+                                    getMealInfo(foodData['meal_name'])
+                                        .then(response => {
+                                            console.log(response);  // Log the response for debugging
+                
+                                            // Process the response to remove empty lines
+                                            const meal_items = response.split('- ').filter(entry => entry.trim() !== '');
+                                            const foodAndCalories = [];
+                                            meal_items.forEach(item => {
+                                                // Find the calories part by checking for the substring "(Calories: "
+                                                const caloriesIndex = item.indexOf("(Calories: ");
+                                                
+                                                if (caloriesIndex !== -1) {
+                                                    // If calories are found, split the food name and calories part
+                                                    const foodName = item.substring(0, caloriesIndex).trim();  // Extract food name
+                                                    const calories = item.substring(caloriesIndex + 11).replace(')', '').trim();  // Extract calories number and remove the closing parenthesis
+
+                                                    // Push the key-value pair to the array
+                                                    foodAndCalories.push({
+                                                        food: foodName,
+                                                        calories: calories
+                                                    });
+                                                } else {
+                                                    // If no calories part is found, consider the item as just food with 'N/A' for calories
+                                                    foodAndCalories.push({
+                                                        food: item.trim(),
+                                                        calories: 'N/A'
+                                                    });
+                                                }
+                                            });
+                
+                                            // Remove the last character if it's a space
+                                            const cleaned_meal_items = meal_items.map(item => {
+                                                if (item.charAt(item.length - 1) === ' ') {
+                                                    return item.slice(0, -1); // Remove the last character (space)
+                                                }
+                                                return item;  // If no space at the end, return the item as is
+                                            });
+                
+                                            console.log(cleaned_meal_items); // Log the cleaned items
+                
+                                            // Dynamically create HTML for the meal items
+                                            let mealItemsHTML = '';
+                                            console.log(foodAndCalories);
+                                            i = 0;
+                                            cleaned_meal_items.forEach(item => {
+                                                
+                                                let [foodName, calorieInfo] = [foodAndCalories[i].food, foodAndCalories[i].calories];  // Split into food name and calorie info
+                                                mealItemsHTML += `
+                                                    <div class="horizontal-tile-title-content">
+                                                        <span class="food-tile-title">${foodName}</span>
+                                                        <span class="food-tile-title">${calorieInfo} cal</span>
+                                                    </div>
+                                                `;
+                                                i++;
+                                            });
+                
+                                            // Handle HTML creation for each food item
+                                            const newFoodDiv = document.createElement('div');
+                                            newFoodDiv.classList.add('horizontal-tile', 'selected');
+                                            newFoodDiv.id = 'F_logged';
+                
+                                            newFoodDiv.innerHTML = `
+                                                <div class="horizontal-tile-content">
+                                                    <div class="horizontal-tile-title-content">
+                                                        <span class="horizontal-tile-title">${meal}</span>
+                                                        <span class="horizontal-tile-time">${formatTime3(time)}</span>
+                                                    </div>
+                                                    <!-- Insert the dynamically generated meal items here -->
+                                                    <div class="meal-items">
+                                                        ${mealItemsHTML}
+                                                    </div>
+                                                </div>
+                                            `;
+                
+                                            // Append the newFoodDiv to your container
+                                            foodsContainer.appendChild(newFoodDiv);
+                
+                                        })
+                                        .catch(error => {
+                                            // Handle any errors from getMealInfo
+                                            console.error('Error fetching meal info:', error);
+                                        });
+                                }
+                                else{
+                                    // Handle HTML creation for each food item
+                                    const newFoodDiv = document.createElement('div');
+                                            newFoodDiv.classList.add('horizontal-tile', 'selected');
+                                            newFoodDiv.id = 'F_logged';
+                
+                                            newFoodDiv.innerHTML = `
+                                                <div class="horizontal-tile-content">
+                                                    <div class="horizontal-tile-title-content">
+                                                        <span class="horizontal-tile-title">${meal}</span>
+                                                        <span class="horizontal-tile-time">${formatTime3(time)}</span>
+                                                    </div>
+                                                    <!-- Insert the dynamically generated meal items here -->
+                                                    <div class="meal-items">
+                                                        <div class="horizontal-tile-title-content">
+                                                            <span class="food-tile-title">${foodData['food_name']}</span>
+                                                            <span class="food-tile-title">${foodData['calories']} cal</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `;
+                
+                                            // Append the newFoodDiv to your container
+                                            foodsContainer.appendChild(newFoodDiv);
+                                }
+                            }); // This is the end of foods.forEach
+                
+                            function formatTime3(timeString) {
+                                // Format the time to HH:MM
+                                if (!timeString) return '';
+                                if (timeString.length == 2) timeString = timeString + ':00';
+                                if (timeString.length == 3) timeString = timeString + '0';
+                                return timeString;
+                            }
+                
+                        }).catch(error => {
+                            console.error("Error fetching recovery info:", error); // Log any errors that occur
                         });
-
-                        // Handle any potential last recovery
-                        if (Object.keys(currentFood).length > 0) {
-                            foods.push(currentFood);
-                        }
-
-                        // Check if recoveries container exists
-                        const foodsContainer = document.querySelector('#foods-container');
-                        if (!foodsContainer) {
-                            console.error('Foods container not found!');
-                            return;
-                        }
-
-                        // Render each food
-                        foods.forEach(foodData => {
-                            meal = foodData['meal_name'];
-                            if (meal == 'NULL') meal = foodData['food_name'];
-                            // const foodTitle = foodData['food_name'];
-                            const time = foodData['date'].split(' ')[1];
-
-                            // Handle HTML creation for each recovery
-                            const newFoodDiv = document.createElement('div');
-                            newFoodDiv.classList.add('horizontal-tile', 'selected'); 
-                            newFoodDiv.id = 'F_logged';
-
-                            newFoodDiv.innerHTML = `
-                                <div class="horizontal-tile-content">
-                                    <div class="horizontal-tile-title-content">
-                                        <span class="horizontal-tile-title">${meal}</span>
-                                        <span class="horizontal-tile-time">${formatTime3(time)}</span>
-                                    </div>
-                                </div>
-                            `;
-
-                            foodsContainer.appendChild(newFoodDiv);
-                        });
-                    }).catch(error => {
-                        console.error("Error fetching recovery info:", error); // Log any errors that occur
                     });
-                });
-
-                function formatTime3(timeString) {
-                    // Format the time to HH:MM
-                    if (!timeString) return '';
-                    if (timeString.length == 2) timeString = timeString + ':00';
-                    if (timeString.length == 3) timeString = timeString + '0';
-                    return timeString;
-                }
-                 </script>
+                </script>
+                
             </div>
             
         </div>
