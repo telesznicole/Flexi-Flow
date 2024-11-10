@@ -9,6 +9,31 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>profile</title>
 
+    <script>
+        // JavaScript for icon hover effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-bar-titles');
+
+            navButtons.forEach(button => {
+                const icon = button.querySelector('img'); // Get the icon inside the button
+                const originalSrc = icon.src; // Store the original icon source
+                const hoverSrc = icon.dataset.hover; // Get the hover source from data attribute
+
+                // Change to hover icon on mouseover
+                button.addEventListener('mouseover', () => {
+                    if (hoverSrc) { // Check if hoverSrc exists
+                        icon.src = hoverSrc; // Change to hover icon
+                    }
+                });
+
+                // Change back to original icon on mouseout
+                button.addEventListener('mouseout', () => {
+                    icon.src = originalSrc; // Change back to original icon
+                });
+            });
+        });
+    </script>
+
     <head>
         <!-- Other meta tags and title -->
         <link rel="stylesheet" href="./css/index.css">
@@ -16,6 +41,10 @@
 </head>
 
 <body>
+    <div class="topBar">
+        <span><image src="icons/logout.svg" onclick="window.location.href='login.html'" style="cursor: pointer;"></image></span>
+        <span><image src="icons/settings.svg" onclick="window.location.href='settings.html'" style="cursor: pointer;"></image></span>
+    </div>
     <div class="main-container">
         <div class="user-info">
             <div class="user-avatar">
@@ -78,12 +107,12 @@
             <text class="title-text">
                 Health Status
             </text>
-            <text class="see-all">
+            <text class="see-all" onclick="window.location.href='health.html'" style="cursor: pointer;">
                 See all
             </text>
         </div>
         <div class="status-box">
-            <div class="status-item">
+            <div class="status-item" onclick="window.location.href='calories.html'" style="cursor: pointer;">
                 <div class="status-title">
                     Calories
                 </div>
@@ -125,7 +154,7 @@
                 <img src="icons/dumbell.svg" alt="Workouts icon" data-hover="icons/dumbell_filled.svg">
                 Workouts
             </a>
-            <a href="#" class="btn nav-bar-titles" style="text-decoration: none !important;">
+            <a href="quick_add.html" class="btn nav-bar-titles" style="text-decoration: none !important;">
                 <img src="icons/plus.svg" alt="Quick add icon" data-hover="icons/plus_filled.svg">
                 Quick Add
             </a>
@@ -141,6 +170,13 @@
     </nav>
 </body>
 <style>
+    .topBar {
+        justify-content: right;
+        display: flex;
+        padding-right: 24px;
+        padding-top: 12px;
+    }
+
     .nav-items {
         display: flex;
         width: 60px;
