@@ -228,41 +228,45 @@
         }
     </script>
 
-<script>
-    // Function to request recovery information by user_id and start
-    function getMealInfo(meal_id) {
-        return new Promise(function(resolve, reject) {
-            // Create a new XMLHttpRequest
-            var xhr = new XMLHttpRequest();
+    <script>
+        let selectedDay = new Date();
+    </script>
+
+    <script>
+        // Function to request recovery information by user_id and start
+        function getMealInfo(meal_id) {
+            return new Promise(function(resolve, reject) {
+                // Create a new XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                
+                // Build the URL with GET parameters (userId and field)
+                var url = "readMeals.php?meal_id=" + encodeURIComponent(meal_id);
+                
+                // Configure the request
+                xhr.open("GET", url, true);
             
-            // Build the URL with GET parameters (userId and field)
-            var url = "readMeals.php?meal_id=" + encodeURIComponent(meal_id);
-            
-            // Configure the request
-            xhr.open("GET", url, true);
-        
-            // Define what happens when the response is received
-            xhr.onload = function() {
-                if (xhr.status == 200) {
-                    // Parse the response (which will be the user field value)
-                    var result = xhr.responseText.trim();
-                    
-                    // Check if the result is a valid response or error message
-                    if (result !== "User not found" && result !== "Field not found") {
-                        resolve(result); // Resolve the promise with the result
+                // Define what happens when the response is received
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        // Parse the response (which will be the user field value)
+                        var result = xhr.responseText.trim();
+                        
+                        // Check if the result is a valid response or error message
+                        if (result !== "User not found" && result !== "Field not found") {
+                            resolve(result); // Resolve the promise with the result
+                        } else {
+                            reject(result); // Reject the promise with the error message
+                        }
                     } else {
-                        reject(result); // Reject the promise with the error message
+                        reject("Error: " + xhr.status);  // Reject the promise if there's a request error
                     }
-                } else {
-                    reject("Error: " + xhr.status);  // Reject the promise if there's a request error
-                }
-            };
-        
-            // Send the request
-            xhr.send();
-        });
-    }
-</script>
+                };
+            
+                // Send the request
+                xhr.send();
+            });
+        }
+    </script>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -380,16 +384,14 @@
                 document.addEventListener('DOMContentLoaded', () => {
                     if (global_workouts) {
                         // If global_workouts already has data, directly use it
-                        console.log("Using cached workouts data:");
-                        console.log(global_workouts);
                         renderWorkouts(global_workouts);
                         return;  // Exit if data is already cached
                     }
             
-                    const today = new Date();
-                    const formattedDate = today.getFullYear() + '-' 
-                        + String(today.getMonth() + 1).padStart(2, '0') + '-' 
-                        + String(today.getDate()).padStart(2, '0');
+                    const selectedDay = new Date();
+                    const formattedDate = selectedDay.getFullYear() + '-' 
+                        + String(selectedDay.getMonth() + 1).padStart(2, '0') + '-' 
+                        + String(selectedDay.getDate()).padStart(2, '0');
             
                     // Fetch the data and process it only if it's not cached
                     getWorkoutInfo(userId, formattedDate).then(response => {
@@ -496,18 +498,16 @@
             <!-- script to get recoveries for the current day -->
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
-                    const today = new Date();
-                    const formattedDate = today.getFullYear() + '-' 
-                    + String(today.getMonth() + 1).padStart(2, '0') + '-' 
-                    + String(today.getDate()).padStart(2, '0') 
+                    const selectedDay = new Date();
+                    const formattedDate = selectedDay.getFullYear() + '-' 
+                    + String(selectedDay.getMonth() + 1).padStart(2, '0') + '-' 
+                    + String(selectedDay.getDate()).padStart(2, '0') 
                     + ' 23:59:59'; // bogus ending time
 
                     let recoveryDataObject = {};
 
                     // Call the getRecoveryInfo function to retrieve the data for a specific field
                     getRecoveryInfo(userId, formattedDate).then(response => {
-                        // console.log("User Info for " + formattedDate + ":", response); // Log the response to the console
-
                         // Split the response by newlines and filter out any empty lines
                         const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
 
@@ -593,40 +593,19 @@
 
 
             <div class="main-container" id="foods-container">
-                <!-- <div class="horizontal-tile" id="F_logged">
-                    <div class="horizontal-tile-content">
-                        <div class="horizontal-tile-title-content">
-                            <span class="horizontal-tile-title">Breakfast</span>
-                            <span class="horizontal-tile-time">08:37</span>
-                        </div>
-                        <div class="horizontal-tile-title-content">
-                            <span class="food-tile-title">Scrambled Eggs</span>
-                            <span class="food-tile-title">148 cal</span>
-                        </div>
-                        <p class="food-tile-descriptor">2 large brown eggs</p>
-                        <div class="horizontal-tile-title-content">
-                            <span class="food-tile-title">Bacon</span>
-                            <span class="food-tile-title">140 cal</span>
-                        </div>
-                        <p class="food-tile-descriptor">2 strips, Publix Brown Sugar Smoked Bacon</p>
-                    </div>
-                </div> -->
-
                 <!-- script to get meals for current day -->
                 <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                        const today = new Date();
-                        const formattedDate = today.getFullYear() + '-' 
-                            + String(today.getMonth() + 1).padStart(2, '0') + '-' 
-                            + String(today.getDate()).padStart(2, '0') 
+                        const selectedDay = new Date();
+                        const formattedDate = selectedDay.getFullYear() + '-' 
+                            + String(selectedDay.getMonth() + 1).padStart(2, '0') + '-' 
+                            + String(selectedDay.getDate()).padStart(2, '0') 
                             + ' 23:59:59'; // bogus ending time
                 
                         let foodDataObject = {};
                 
                         // Call the getRecoveryInfo function to retrieve the data for a specific field
                         getFoodInfo(userId, formattedDate).then(response => {
-                            console.log("Food Info for " + formattedDate + ":", response); // Log the response to the console
-                
                             // Split the response by newlines and filter out any empty lines
                             const entries = response.split('\n').filter(entry => entry.trim() !== ''); // Remove empty lines
                 
@@ -679,8 +658,6 @@
                                 if (foodData['meal_name'] !== 'NULL') {
                                     getMealInfo(foodData['meal_name'])
                                         .then(response => {
-                                            console.log(response);  // Log the response for debugging
-                
                                             // Process the response to remove empty lines
                                             const meal_items = response.split('- ').filter(entry => entry.trim() !== '');
                                             const foodAndCalories = [];
@@ -715,11 +692,8 @@
                                                 return item;  // If no space at the end, return the item as is
                                             });
                 
-                                            console.log(cleaned_meal_items); // Log the cleaned items
-                
                                             // Dynamically create HTML for the meal items
                                             let mealItemsHTML = '';
-                                            console.log(foodAndCalories);
                                             i = 0;
                                             cleaned_meal_items.forEach(item => {
                                                 
@@ -842,6 +816,8 @@
                 
                 if (isSelected) {
                     dayCol.classList.add('selected-day'); // Highlight for selected day
+                    selectedDay = day;
+                    console.log(selectedDay);
                 }
 
                 dayCol.innerHTML = `<day>${dayName}</day><date>${dayNum}</date>`;
