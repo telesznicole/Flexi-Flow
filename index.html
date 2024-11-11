@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open New Window on Load</title>
+    <title>Redirect on Load</title>
 </head>
-<body onload="openNewWindow()">
-
-    <script>
-        function openNewWindow() {
-            window.open("https://www.example.com", "_blank", "width=800,height=600");
+<body onload="redirectToNewPage()"><script>
+        function redirectToNewPage() {
+            window.location.href = "login.html";
         }
     </script>
 </body>
